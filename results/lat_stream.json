@@ -1,0 +1,34 @@
+[
+ {
+  "model": "glm-4.5-flash",
+  "ttfb_ms": 18268.6,
+  "first_tok_ms": 18268.7,
+  "total_ms": 18270.3,
+  "chars": 83,
+  "head": "{\"action\":\"CAST:Chop\",\"confidence\":0.9,\"why\":\"In combat, Chop ready, close target\"}"
+ },
+ {
+  "model": "glm-4.5-flash",
+  "ttfb_ms": 20441.4,
+  "first_tok_ms": 20441.4,
+  "total_ms": 20442.1,
+  "chars": 83,
+  "head": "{\"action\":\"CAST:Chop\",\"confidence\":0.9,\"why\":\"In combat, Chop ready, close target\"}"
+ },
+ {
+  "model": "glm-4-flash-250414",
+  "ttfb_ms": 6002.3,
+  "first_tok_ms": 0,
+  "total_ms": 6002.6,
+  "chars": 0,
+  "head": ""
+ },
+ {
+  "model": "glm-4-flash-250414",
+  "ttfb_ms": 5819.2,
+  "first_tok_ms": 0,
+  "total_ms": 5819.6,
+  "chars": 0,
+  "head": ""
+ }
+]

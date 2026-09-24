@@ -1,0 +1,19 @@
+# Generated caches and Python bytecode
+.cache/
+__pycache__/
+*.py[cod]
+
+# Local Python environments
+.venv/
+venv/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

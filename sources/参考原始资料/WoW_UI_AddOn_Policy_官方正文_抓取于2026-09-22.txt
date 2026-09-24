@@ -1,0 +1,30 @@
+Topic: UI Add-On Development Policy
+Topic created: 2018-11-19T21:09:46.832Z
+Staff posts extracted: 2
+
+--- post 1 | Kaivax | 2018-11-19T21:09:46.908Z ---
+7/15/2009 Music Distribution through UI Add-Ons
+We have recently seen a number of User Interface Add-Ons that are making modifications to the World of Warcraft in-game music files and wanted to take a moment to go over some important points with the community in connection with this. While we are currently allowing Add-Ons that remove or replace existing sound files, keep in mind that it is illegal to distribute copyrighted materials, in this case in-game music and audio files, without authorization. One of the primary goals of the user interface is to allow players to customize their game experience and we hope to avoid making any modifications in the future that will prevent this.
+4/13/2009 UI Add-On Development Policy Update
+On March 20, we released the new add-on development policy to the public as an ongoing effort to help ensure add-on integrity, safety, and quality for the community. Since that time we have been in touch with many UI development communities on what the policy means to them and the continuing development of these add-ons. We would like to announce further that we are providing a sixty-day grace period beginning at the time of the initial release of the policy for UI developers to comply with the new policy. After May 19th, Blizzard Entertainment will begin to enforce the Add-on Development policy, and developers found to be in violation of this policy will be contacted directly.
+World of Warcraft User Interface Add-On Development Policy
+With the continuing popularity of World of Warcraft user interface add-ons (referred to hereafter as “add-ons”) created by the community of players, Blizzard Entertainment has formalized design and distribution guidelines for add-ons. These guidelines have been put in place to ensure the integrity of World of Warcraft and to help promote an enjoyable gaming environment for all of our players - failure to abide by them may result in measures up to and including taking formal legal action.
+1) Add-ons must be free of charge.
+All add-ons must be distributed free of charge. Developers may not create “premium” versions of add-ons with additional for-pay features, charge money to download an add-on, charge for services related to the add-on, or otherwise require some form of monetary compensation to download or access an add-on.
+2) Add-on code must be completely visible.
+The programming code of an add-on must in no way be hidden or obfuscated, and must be freely accessible to and viewable by the general public.
+3) Add-ons must not negatively impact World of Warcraft realms or other players.
+Add-ons will perform no function which, in Blizzard Entertainment’s sole discretion, negatively impacts the performance of the World of Warcraft realms or otherwise negatively affects the game for other players. For example, this includes but is not limited to excessive use of the chat system, unnecessary loading from the hard disk, and slow frame rates.
+4) Add-ons may not include advertisements.
+Add-ons may not be used to advertise any goods or services.
+5) Add-ons may not solicit donations.
+Add-ons may not include requests for donations. We recognize the immense amount of effort and resources that go into developing an add-on; however, such requests should be limited to the add-on website or distribution site and should not appear in the game.
+6) Add-ons must not contain offensive or objectionable material.
+World of Warcraft has been given a “T” by the ESRB, and similar ratings from other ratings boards around the world. Blizzard Entertainment requires that add-ons not include any material that would not be allowed under these ratings.
+7) Add-ons must abide by World of Warcraft ToU and EULA.
+All add-ons must follow the World of Warcraft Terms of Use and the World of Warcraft End User License Agreement.
+8) Blizzard Entertainment has the right to disable add-on functionality as it sees fit.
+To maintain the integrity World of Warcraft and ensure the best possible gaming experience for our players, Blizzard Entertainment reserves the right to disable any add-on functionality within World of Warcraft at its sole discretion. For more information…
+If you are an add-on developer and have any questions about and this User Interface Add-On Development Policy and how it pertains to the add-on that you’ve developed, please don’t hesitate to email us at WoWUI@blizzard.com.
+
+--- post 2 | Kaivax | 2018-11-19T21:09:54.293Z ---

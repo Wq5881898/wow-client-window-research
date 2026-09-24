@@ -1,0 +1,19 @@
+[
+ {
+  "model": "glm-4.5-flash",
+  "total_ms": 25197.6,
+  "ttfb_ms": 25197.4,
+  "gen_ms": 0.2,
+  "completion_tokens": 26,
+  "usage": {
+   "completion_tokens": 26,
+   "prompt_tokens": 160,
+   "prompt_tokens_details": {
+    "cached_tokens": 155
+   },
+   "total_tokens": 186
+  },
+  "txt": "{\"action\":\"CAST:Chop\",\"confidence\":0.9,\"why\":\"In combat, Chop ready, close target\"}",
+  "label": "ZAI-nothink"
+ }
+]

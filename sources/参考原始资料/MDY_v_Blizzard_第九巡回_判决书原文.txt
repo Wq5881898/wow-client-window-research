@@ -1,0 +1,2091 @@
+Title: MDY INDUSTRIES, LLC v. Blizzard Entertainment – CourtListener.com
+
+URL Source: https://www.courtlistener.com/opinion/205002/mdy-industries-llc-v-blizzard-entertainment/
+
+Markdown Content:
+FOR PUBLICATION  
+  UNITED STATES COURT OF APPEALS  
+       FOR THE NINTH CIRCUIT
+MDY INDUSTRIES, LLC,   
+ Plaintiff-counter-defendant-  
+ Appellant,  
+ v.  
+BLIZZARD ENTERTAINMENT, INC. and No. 09-15932  
+VIVENDI GAMES, INC.,  
+ Defendants-third-party-plaintiffs-  D.C. No.  
+ 2:06-CV-02555-  
+ Appellees, DGC
+
+v.  
+MICHAEL DONNELLY,  
+ Third-party-defendant-Appellant.  
+ 
+
+MDY INDUSTRIES, LLC,   
+ Plaintiff-counter-defendant-  
+ Appellee, No. 09-16044  
+ v. D.C. No.  
+BLIZZARD ENTERTAINMENT, INC. and 2:06-CV-02555-  
+VIVENDI GAMES, INC.,  DGC  
+ Defendants-third-party-plaintiffs- ORDER AND  
+ Appellants, AMENDED  
+ v. OPINION  
+MICHAEL DONNELLY,  
+ Third-party-defendant-Appellee.  
+   
+ Appeal from the United States District Court  
+ for the District of Arizona  
+ David G. Campbell, District Judge, Presiding
+
+2657  
+ 2658 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+ Argued and Submitted  
+ June 7, 2010—Seattle, Washington
+
+Filed December 14, 2010  
+ Amended February 17, 2011
+
+Before: William C. Canby, Jr., Consuelo M. Callahan and  
+ Sandra S. Ikuta, Circuit Judges.
+
+Opinion by Judge Callahan  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2663  
+ COUNSEL
+
+Lance C. Venable (argued) and Joseph R. Meaney of Ven-  
+able, Campillo, Logan & Meaney, P.C., for plaintiff-  
+appellant/cross-appellee MDY Industries LLC and plaintiff-  
+appellant/third-party-defendant-appellee Michael Donnelly.
+
+Christian S. Genetski (argued), Shane M. McGee, and Jacob  
+A. Sommer of Sonnenschein Nath & Rosenthal LLP, for  
+defendants-appellees/cross-appellants Blizzard Entertainment,  
+Inc. and Vivendi Games, Inc.
+
+George A. Riley, David R. Eberhart, and David S. Almeling  
+of O’Melveny & Myers LLP, for amicus curiae Business  
+Software Alliance.
+
+Scott E. Bain, Keith Kupferschmid, and Mark Bohannon, for  
+amicus curiae Software & Information Industry Association.
+
+Brian W. Carver of the University of California, Berkeley,  
+School of Information, and Sherwin Siy and Jef Pearlman, for  
+amicus curiae Public Knowledge.
+
+Robert H. Rotstein, Steven J. Metalitz, and J. Matthew Wil-  
+liams of Mitchell Silberberg & Knupp LLP, for amicus curiae  
+Motion Picture Association of America, Inc.  
+ 2664 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+ ORDER
+
+Our opinion filed on December 14, 2010, is amended to  
+include the following footnote at the end of Section V(E)(2):
+
+For the first time in its petition for rehearing, MDY  
+ raises the applicability of Section 1201(f) and the  
+ question whether Glider is an “independently created  
+ computer program” under that subsection and thus  
+ exempt from the coverage of Section 1201(a).  
+ Because this argument was not raised to the district  
+ court or presented in the parties’ briefs on appeal, we  
+ decline to reach it.
+
+With this amendment, the plaintiffs-appellants’ petition for  
+panel rehearing is DENIED. No further petition for rehearing  
+will be entertained.
+
+OPINION
+
+CALLAHAN, Circuit Judge:
+
+Blizzard Entertainment, Inc. (“Blizzard”) is the creator of  
+World of Warcraft (“WoW”), a popular multiplayer online  
+role-playing game in which players interact in a virtual world  
+while advancing through the game’s 70 levels. MDY Indus-  
+tries, LLC and its sole member Michael Donnelly  
+(“Donnelly”) (sometimes referred to collectively as “MDY”)  
+developed and sold Glider, a software program that automati-  
+cally plays the early levels of WoW for players.
+
+MDY brought this action for a declaratory judgment to  
+establish that its Glider sales do not infringe Blizzard’s copy-  
+right or other rights, and Blizzard asserted counterclaims  
+under the Digital Millennium Copyright Act (“DMCA”),
+
+17  
+U.S.C. § 1201
+
+ et seq., and for tortious interference with con-  
+          MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT        2665  
+tract under Arizona law. The district court found MDY and  
+Donnelly liable for secondary copyright infringement, viola-  
+tions of DMCA §§ 1201(a)(2) and (b)(1), and tortious inter-  
+ference with contract. We reverse the district court except as  
+to MDY’s liability for violation of DMCA § 1201(a)(2) and  
+remand for trial on Blizzard’s claim for tortious interference  
+with contract.
+I.
+
+A. World of Warcraft
+
+In November 2004, Blizzard created WoW, a “massively  
+multiplayer online role-playing game” in which players inter-  
+act in a virtual world. WoW has ten million subscribers, of  
+which two and a half million are in North America. The WoW  
+software has two components: (1) the game client software  
+that a player installs on the computer; and (2) the game server  
+software, which the player accesses on a subscription basis by  
+connecting to WoW’s online servers. WoW does not have  
+single-player or offline modes.
+
+WoW players roleplay different characters, such as  
+humans, elves, and dwarves. A player’s central objective is to  
+advance the character through the game’s 70 levels by partici-  
+pating in quests and engaging in battles with monsters. As a  
+player advances, the character collects rewards such as in-  
+game currency, weapons, and armor. WoW’s virtual world  
+has its own economy, in which characters use their virtual  
+currency to buy and sell items directly from each other,  
+through vendors, or using auction houses. Some players also  
+utilize WoW’s chat capabilities to interact with others.
+
+B. Blizzard’s use agreements
+
+Each WoW player must read and accept Blizzard’s End  
+User License Agreement (“EULA”) and Terms of Use  
+(“ToU”) on multiple occasions. The EULA pertains to the  
+ 2666 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+game client, so a player agrees to it both before installing the  
+game client and upon first running it. The ToU pertains to the  
+online service, so a player agrees to it both when creating an  
+account and upon first connecting to the online service. Play-  
+ers who do not accept both the EULA and the ToU may return  
+the game client for a refund.
+
+C. Development of Glider and Warden
+
+Donnelly is a WoW player and software programmer. In  
+March 2005, he developed Glider, a software “bot” (short for  
+robot) that automates play of WoW’s early levels, for his per-  
+sonal use. A user need not be at the computer while Glider is  
+running. As explained in the Frequently Asked Questions  
+(“FAQ”) on MDY’s website for Glider:
+
+Glider . . . moves the mouse around and pushes keys  
+ on the keyboard. You tell it about your character,  
+ where you want to kill things, and when you want to  
+ kill. Then it kills for you, automatically. You can do  
+ something else, like eat dinner or go to a movie, and  
+ when you return, you’ll have a lot more experience  
+ and loot.
+
+Glider does not alter or copy WoW’s game client software,  
+does not allow a player to avoid paying monthly subscription  
+dues to Blizzard, and has no commercial use independent of  
+WoW. Glider was not initially designed to avoid detection by  
+Blizzard.
+
+The parties dispute Glider’s impact on the WoW experi-  
+ence. Blizzard contends that Glider disrupts WoW’s environ-  
+ment for non-Glider players by enabling Glider users to  
+advance quickly and unfairly through the game and to amass  
+additional game assets. MDY contends that Glider has a mini-  
+mal effect on non-Glider players, enhances the WoW experi-  
+ence for Glider users, and facilitates disabled players’ access  
+to WoW by auto-playing the game for them.  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2667  
+ In summer 2005, Donnelly began selling Glider through  
+MDY’s website for fifteen to twenty-five dollars per license.  
+Prior to marketing Glider, Donnelly reviewed Blizzard’s  
+EULA and client-server manipulation policy. He reached the  
+conclusion that Blizzard had not prohibited bots in those doc-  
+uments.
+
+In September 2005, Blizzard launched Warden, a technol-  
+ogy that it developed to prevent its players who use unautho-  
+rized third-party software, including bots, from connecting to  
+WoW’s servers. Warden was able to detect Glider, and Bliz-  
+zard immediately used Warden to ban most Glider users.  
+MDY responded by modifying Glider to avoid detection and  
+promoting its new anti-detection features on its website’s  
+FAQ. It added a subscription service, Glider Elite, which  
+offered “additional protection from game detection software”  
+for five dollars a month.
+
+Thus, by late 2005, MDY was aware that Blizzard was pro-  
+hibiting bots. MDY modified its website to indicate that using  
+Glider violated Blizzard’s ToU. In November 2005, Donnelly  
+wrote in an email interview, “Avoiding detection is rather  
+exciting, to be sure. Since Blizzard does not want bots run-  
+ning at all, it’s a violation to use them.” Following MDY’s  
+anti-detection modifications, Warden only occasionally  
+detected Glider. As of September 2008, MDY had gross reve-  
+nues of $3.5 million based on 120,000 Glider license sales.
+
+D. Financial and practical impact of Glider
+
+Blizzard claims that from December 2004 to March 2008,  
+it received 465,000 complaints about WoW bots, several  
+thousand of which named Glider. Blizzard spends $940,000  
+annually to respond to these complaints, and the parties have  
+stipulated that Glider is the principal bot used by WoW play-  
+ers. Blizzard introduced evidence that it may have lost  
+monthly subscription fees from Glider users, who were able  
+to reach WoW’s highest levels in fewer weeks than players  
+ 2668 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+playing manually. Donnelly acknowledged in a November  
+2005 email that MDY’s business strategy was to make Bliz-  
+zard’s anti-bot detection attempts financially prohibitive:
+
+The trick here is that Blizzard has a finite amount of  
+ development and test resources, so we want to make  
+ it bad business to spend that much time altering their  
+ detection code to find Glider, since Glider’s negative  
+ effect on the game is debatable . . . . [W]e attack  
+ th[is] weakness and try to make it a bad idea or make  
+ their changes very risky, since they don’t want to  
+ risk banning or crashing innocent customers.
+
+E. Pre-litigation contact between MDY and Blizzard
+
+In August 2006, Blizzard sent MDY a cease-and-desist let-  
+ter alleging that MDY’s website hosted WoW screenshots and  
+a Glider install file, all of which infringed Blizzard’s copy-  
+rights. Donnelly removed the screenshots and requested Bliz-  
+zard to clarify why the install file was infringing, but Blizzard  
+did not respond. In October 2006, Blizzard’s counsel visited  
+Donnelly’s home, threatening suit unless MDY immediately  
+ceased selling Glider and remitted all profits to Blizzard.  
+MDY immediately commenced this action.
+
+II.
+
+On December 1, 2006, MDY filed an amended complaint  
+seeking a declaration that Glider does not infringe Blizzard’s  
+copyright or other rights. In February 2007, Blizzard filed  
+counterclaims and third-party claims against MDY and Don-  
+nelly for, inter alia, contributory and vicarious copyright  
+infringement, violation of DMCA §§ 1201(a)(2) and (b)(1),  
+and tortious interference with contract.
+
+In July 2008, the district court granted Blizzard partial sum-  
+mary judgment, finding that MDY’s Glider sales contribu-  
+torily and vicariously infringed Blizzard’s copyrights and  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2669  
+tortiously interfered with Blizzard’s contracts. The district  
+court also granted MDY partial summary judgment, finding  
+that MDY did not violate DMCA § 1201(a)(2) with respect to  
+accessing the game software’s source code.
+
+In September 2008, the parties stipulated to entry of a $6  
+million judgment against MDY for the copyright infringement  
+and tortious interference with contract claims. They further  
+stipulated that Donnelly would be personally liable for the  
+same amount if found personally liable at trial. After a Janu-  
+ary 2009 bench trial, the district court held MDY liable under  
+DMCA §§ 1201(a)(2) and (b)(1). It also held Donnelly per-  
+sonally liable for MDY’s copyright infringement, DMCA vio-  
+lations, and tortious interference with contract.
+
+On April 1, 2009, the district court entered judgment  
+against MDY and Donnelly for $6.5 million, an adjusted fig-  
+ure to which the parties stipulated based on MDY’s DMCA  
+liability and post-summary judgment Glider sales. The district  
+court permanently enjoined MDY from distributing Glider.  
+MDY’s efforts to stay injunctive relief pending appeal were  
+unsuccessful. On April 29, 2009, MDY timely filed this  
+appeal. On May 12, 2009, Blizzard timely cross-appealed the  
+district court’s holding that MDY did not violate DMCA  
+§§ 1201(a)(2) and (b)(1) as to the game software’s source  
+code.
+
+III.
+
+We review de novo the district court’s (1) orders granting  
+or denying summary judgment; (2) conclusions of law after a  
+bench trial; and (3) interpretations of state law. Padfield v.  
+AIG Life Ins.,
+
+[290 F.3d 1121, 1124](https://www.courtlistener.com/opinion/777726/jorita-padfield-v-aig-life-insurance-company-a-corporation/#1124)
+
+ (9th Cir. 2002); Twentieth  
+Century Fox Film Corp. v. Entm’t Distrib., 
+[429 F.3d 869](https://www.courtlistener.com/c/F.3d/429/869/)
+
+, 879  
+(9th Cir. 2005); Laws v. Sony Music Entm’t, Inc., 
+[448 F.3d 1134, 1137](https://www.courtlistener.com/opinion/794451/debra-laws-v-sony-music-entertainment-inc-dba-epic-records-a/#1137)
+
+ (9th Cir. 2006). We review the district court’s  
+findings of fact for clear error. Twentieth Century Fox, 429  
+F.3d at 879.  
+2670       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+                                  IV.
+[1] We first consider whether MDY committed contribu-  
+tory or vicarious infringement (collectively, “secondary  
+infringement”) of Blizzard’s copyright by selling Glider to  
+WoW players.1 See ProCD, Inc. v. Zeidenberg,
+
+[86 F.3d 1447, 1454](https://www.courtlistener.com/opinion/720542/procd-inc-v-zeidenberg/#1454)
+
+ (7th Cir. 1996) (“A copyright is a right against the  
+world. Contracts, by contrast, generally affect only their par-  
+ties.”). To establish secondary infringement, Blizzard must  
+first demonstrate direct infringement. See A&M Records, Inc.  
+v. Napster, Inc., 
+[239 F.3d 1004, 1019, 1022](https://www.courtlistener.com/opinion/772042/am-records-inc-v-napster-inc/#1019)
+
+ (9th Cir. 2001).  
+To establish direct infringement, Blizzard must demonstrate  
+copyright ownership and violation of one of its exclusive  
+rights by Glider users. 
+[Id. at 1013](https://www.courtlistener.com/opinion/772042/am-records-inc-v-napster-inc/#1013)
+
+. MDY is liable for contribu-  
+tory infringement if it has “intentionally induc[ed] or  
+encourag[ed] direct infringement” by Glider users. MGM Stu-  
+dios Inc. v. Grokster, Ltd., 
+[545 U.S. 913, 930](https://www.courtlistener.com/opinion/799994/metro-goldwyn-mayer-studios-inc-v-grokster-ltd/#930)
+
+ (2005). MDY  
+is liable for vicarious infringement if it (1) has the right and  
+ability to control Glider users’ putatively infringing activity  
+and (2) derives a direct financial benefit from their activity.  
+
+[Id.](https://www.courtlistener.com/opinion/799994/metro-goldwyn-mayer-studios-inc-v-grokster-ltd/)
+
+ If Glider users directly infringe, MDY does not dispute  
+that it satisfies the other elements of contributory and vicari-  
+ous infringement.
+[2] As a copyright owner, Blizzard possesses the exclusive  
+right to reproduce its work.
+
+17 U.S.C. § 106
+
+(1). The parties  
+agree that when playing WoW, a player’s computer creates a  
+copy of the game’s software in the computer’s random access  
+memory (“RAM”), a form of temporary memory used by  
+computers to run software programs. This copy potentially  
+infringes unless the player (1) is a licensee whose use of the  
+software is within the scope of the license or (2) owns the  
+copy of the software. See Sun Microsystems, Inc. v. Microsoft  
+Corp., 
+[188 F.3d 1115, 1121](https://www.courtlistener.com/opinion/765835/sun-microsystems-inc-a-delaware-corporation-v-microsoft-corporation-a/#1121)
+
+ (9th Cir. 1999) (“Sun I”); 17  
+  1  
+   Alternatively, MDY asks that we determine whether there are any gen-  
+uine issues of material fact that warrant a remand for trial on Blizzard’s  
+secondary copyright infringement claims. We find none.  
+          MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT             
+2671  
+U.S.C. § 117
+
+(a). As to the scope of the license, ToU § 4(B),  
+“Limitations on Your Use of the Service,” provides:
+You agree that you will not . . . (ii) create or use  
+ cheats, bots, “mods,” and/or hacks, or any other  
+ third-party software designed to modify the World of  
+ Warcraft experience; or (iii) use any third-party soft-  
+ ware that intercepts, “mines,” or otherwise collects  
+ information from or through the Program or Service.
+
+By contrast, if the player owns the copy of the software, the  
+“essential step” defense provides that the player does not  
+infringe by making a copy of the computer program where the  
+copy is created and used solely “as an essential step in the uti-  
+lization of the computer program in conjunction with a  
+machine.”
+
+17 U.S.C. § 117
+
+(a)(1).
+A. Essential step defense
+
+We consider whether WoW players, including Glider users,  
+are owners or licensees of their copies of WoW software. If  
+WoW players own their copies, as MDY contends, then  
+Glider users do not infringe by reproducing WoW software in  
+RAM while playing, and MDY is not secondarily liable for  
+copyright infringement.
+
+[3] In Vernor v. Autodesk, Inc., we recently distinguished  
+between “owners” and “licensees” of copies for purposes of  
+the essential step defense. Vernor v. Autodesk, Inc.,
+
+[621 F.3d 1102, 1108-09](https://www.courtlistener.com/opinion/175116/vernor-v-autodesk-inc/#1108)
+
+ (9th Cir. 2010; see also MAI Sys. Corp. v.  
+Peak Computer, Inc., 
+[991 F.2d 511](https://www.courtlistener.com/opinion/604904/mai-systems-corp-v-peak-computer-inc/)
+
+, 519 n.5 (9th Cir. 1993);  
+Triad Sys. Corp. v. Se. Express Co., 
+[64 F.3d 1330](https://www.courtlistener.com/c/F.3d/64/1330/)
+
+, 1333,  
+1335-36 (9th Cir. 1995); Wall Data, Inc. v. Los Angeles  
+County Sheriff’s Dep’t, 
+[447 F.3d 769, 784-85](https://www.courtlistener.com/opinion/794298/wall-data-inc-v-los-angeles-county-sheriffs-department/#784)
+
+ (9th Cir. 2006).  
+In Vernor, we held “that a software user is a licensee rather  
+than an owner of a copy where the copyright owner (1) speci-  
+fies that the user is granted a license; (2) significantly restricts  
+the user’s ability to transfer the software; and (3) imposes  
+2672       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+notable use” restrictions. 
+[621 F.3d at 1111](https://www.courtlistener.com/opinion/175116/vernor-v-autodesk-inc/#1111)
+
+ (internal footnote  
+omitted).
+[4] Applying Vernor, we hold that WoW players are  
+licensees of WoW’s game client software. Blizzard reserves  
+title in the software and grants players a non-exclusive, lim-  
+ited license. Blizzard also imposes transfer restrictions if a  
+player seeks to transfer the license: the player must (1) trans-  
+fer all original packaging and documentation; (2) permanently  
+delete all of the copies and installation of the game client; and  
+(3) transfer only to a recipient who accepts the EULA. A  
+player may not sell or give away the account.
+
+[5] Blizzard also imposes a variety of use restrictions. The  
+game must be used only for non-commercial entertainment  
+purposes and may not be used in cyber cafes and computer  
+gaming centers without Blizzard’s permission. Players may  
+not concurrently use unauthorized third-party programs. Also,  
+Blizzard may alter the game client itself remotely without a  
+player’s knowledge or permission, and may terminate the  
+EULA and ToU if players violate their terms. Termination  
+ends a player’s license to access and play WoW. Following  
+termination, players must immediately destroy their copies of  
+the game and uninstall the game client from their computers,  
+but need not return the software to Blizzard.
+
+[6] Since WoW players, including Glider users, do not  
+own their copies of the software, Glider users may not claim  
+the essential step defense.
+
+17 U.S.C. § 117
+
+(a)(1). Thus, when  
+their computers copy WoW software into RAM, the players  
+may infringe unless their usage is within the scope of Bliz-  
+zard’s limited license.
+B. Contractual covenants vs. license conditions
+
+[7] “A copyright owner who grants a nonexclusive, limited  
+license ordinarily waives the right to sue licensees for copy-  
+right infringement, and it may sue only for breach of con-  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2673  
+tract.” Sun I,
+
+[188 F.3d at 1121](https://www.courtlistener.com/opinion/765835/sun-microsystems-inc-a-delaware-corporation-v-microsoft-corporation-a/#1121)
+
+ (internal quotations omitted).  
+However, if the licensee acts outside the scope of the license,  
+the licensor may sue for copyright infringement. 
+[Id.](https://www.courtlistener.com/opinion/765835/sun-microsystems-inc-a-delaware-corporation-v-microsoft-corporation-a/)
+
+ (citing  
+S.O.S., Inc. v. Payday, Inc., 
+[886 F.2d 1081, 1087](https://www.courtlistener.com/opinion/530022/sos-inc-v-payday-inc/#1087)
+
+ (9th Cir.  
+1989)). Enforcing a copyright license “raises issues that lie at  
+the intersection of copyright and contract law.” 
+[Id. at 1122](https://www.courtlistener.com/opinion/530022/sos-inc-v-payday-inc/#1122)
+
+.
+[8] We refer to contractual terms that limit a license’s  
+scope as “conditions,” the breach of which constitute copy-  
+right infringement.
+
+[Id. at 1120](https://www.courtlistener.com/opinion/530022/sos-inc-v-payday-inc/#1120)
+
+. We refer to all other license  
+terms as “covenants,” the breach of which is actionable only  
+under contract law. 
+[Id.](https://www.courtlistener.com/opinion/530022/sos-inc-v-payday-inc/)
+
+ We distinguish between conditions and  
+covenants according to state contract law, to the extent consis-  
+tent with federal copyright law and policy. Foad Consulting  
+Group v. Musil Govan Azzalino, 
+[270 F.3d 821, 827](https://www.courtlistener.com/opinion/775482/foad-consulting-group-inc-v-musil-govan-azzalino/#827)
+
+ (9th Cir.  
+2001).
+[9] A Glider user commits copyright infringement by play-  
+ing WoW while violating a ToU term that is a license condi-  
+tion. To establish copyright infringement, then, Blizzard must  
+demonstrate that the violated term — ToU § 4(B) — is a con-  
+dition rather than a covenant. Sun I,
+
+[188 F.3d at 1122](https://www.courtlistener.com/opinion/765835/sun-microsystems-inc-a-delaware-corporation-v-microsoft-corporation-a/#1122)
+
+. Bliz-  
+zard’s EULAs and ToUs provide that they are to be  
+interpreted according to Delaware law. Accordingly, we first  
+construe them under Delaware law, and then evaluate whether  
+that construction is consistent with federal copyright law and  
+policy.
+A covenant is a contractual promise, i.e., a manifestation of  
+intention to act or refrain from acting in a particular way, such  
+that the promisee is justified in understanding that the promi-  
+sor has made a commitment. See Travel Centers of Am. LLC  
+v. Brog, No. 3751-CC,
+
+2008 Del. Ch. LEXIS 183
+
+, *9 (Del.  
+Ch. Dec. 5, 2008); see also Restatement (Second) of Con-  
+tracts § 2 (1981). A condition precedent is an act or event that  
+must occur before a duty to perform a promise arises. AES  
+P.R., L.P. v. Alstom Power, Inc., 
+[429 F. Supp. 2d 713, 717](https://www.courtlistener.com/opinion/2487665/aes-puerto-rico-lp-v-alstom-power-inc/#717)
+
+ (D.  
+Del. 2006) (citing Delaware state law); see also Restatement  
+2674      MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+(Second) of Contracts § 224. Conditions precedent are disfa-  
+vored because they tend to work forfeitures. AES, 
+[429 F. Supp. 2d at 717](https://www.courtlistener.com/opinion/2487665/aes-puerto-rico-lp-v-alstom-power-inc/#717)
+
+ (internal citations omitted). Wherever possi-  
+ble, equity construes ambiguous contract provisions as cove-  
+nants rather than conditions. See Wilmington Tr. Co. v. Clark,  
+
+[325 A.2d 383, 386](https://www.courtlistener.com/opinion/5125206/wilmington-trust-co-v-clark/#386)
+
+ (Del. Ch. 1974). However, if the contract  
+is unambiguous, the court construes it according to its terms.  
+AES, 
+[429 F. Supp. 2d at 717](https://www.courtlistener.com/opinion/2487665/aes-puerto-rico-lp-v-alstom-power-inc/)
+
+ (citing 17 Am. Jur. 2d Contracts  
+§ 460 (2006)).
+[10] Applying these principles, ToU § 4(B)(ii) and (iii)’s  
+prohibitions against bots and unauthorized third-party soft-  
+ware are covenants rather than copyright-enforceable condi-  
+tions. See Greenwood v. CompuCredit Corp.,
+
+[615 F.3d 1204, 1212](https://www.courtlistener.com/opinion/173486/greenwood-v-compucredit-corp/#1212)
+
+, (9th Cir. 2010) (“[H]eadings and titles are not meant to  
+take the place of the detailed provisions of the text,” and . . .  
+“the heading of a section cannot limit the plain meaning of the  
+text.” (quoting Bhd. of R.R. Trainmen v. Balt. & Ohio R.R.,  
+
+[331 U.S. 519](https://www.courtlistener.com/opinion/104439/brotherhood-of-railroad-trainmen-v-baltimore-ohio-railroad/)
+
+, 528—29 (1947))). Although ToU § 4 is titled,  
+“Limitations on Your Use of the Service,” nothing in that sec-  
+tion conditions Blizzard’s grant of a limited license on play-  
+ers’ compliance with ToU § 4’s restrictions. To the extent that  
+the title introduces any ambiguity, under Delaware law, ToU  
+§ 4(B) is not a condition, but is a contractual covenant. Cf.  
+Sun Microsystems, Inc. v. Microsoft Corp., 
+[81 F. Supp. 2d 1026, 1031-32](https://www.courtlistener.com/opinion/2420873/sun-microsystems-inc-v-microsoft-corp/#1031)
+
+ (N.D. Cal. 2000) (“Sun II”) (where Sun  
+licensed Microsoft to create only derivative works compatible  
+with other Sun software, Microsoft’s “compatibility obliga-  
+tions” were covenants because the license was not specifically  
+conditioned on their fulfillment).
+To recover for copyright infringement based on breach of  
+a license agreement, (1) the copying must exceed the scope of  
+the defendant’s license and (2) the copyright owner’s com-  
+plaint must be grounded in an exclusive right of copyright  
+(e.g., unlawful reproduction or distribution). See Storage  
+Tech. Corp. v. Custom Hardware Eng’g & Consulting, Inc.,  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2675
+
+[421 F.3d 1307, 1315-16](https://www.courtlistener.com/opinion/791767/storage-technology-corporation-doing-business-as-storagetek-v-custom/#1315)
+
+ (Fed. Cir. 2005). Contractual rights,  
+however, can be much broader:
+[C]onsider a license in which the copyright owner  
+ grants a person the right to make one and only one  
+ copy of a book with the caveat that the licensee may  
+ not read the last ten pages. Obviously, a licensee  
+ who made a hundred copies of the book would be  
+ liable for copyright infringement because the copy-  
+ ing would violate the Copyright Act’s prohibition on  
+ reproduction and would exceed the scope of the  
+ license. Alternatively, if the licensee made a single  
+ copy of the book, but read the last ten pages, the  
+ only cause of action would be for breach of contract,  
+ because reading a book does not violate any right  
+ protected by copyright law.
+
+[Id. at 1316](https://www.courtlistener.com/opinion/791767/storage-technology-corporation-doing-business-as-storagetek-v-custom/#1316)
+
+. Consistent with this approach, we have held that  
+the potential for infringement exists only where the licensee’s  
+action (1) exceeds the license’s scope (2) in a manner that  
+implicates one of the licensor’s exclusive statutory rights. See,  
+e.g., Sun I, 118 F.3d at 1121-22 (remanding for infringement  
+determination where defendant allegedly violated a license  
+term regulating the creation of derivative works).2
+[11] Here, ToU § 4 contains certain restrictions that are  
+ 2  
+ See also S.O.S.,
+
+[886 F.2d at 1089](https://www.courtlistener.com/opinion/530022/sos-inc-v-payday-inc/#1089)
+
+ (remanding for infringement determi-  
+nation where licensee exceeded the license’s scope by preparing a modi-  
+fied version of software programs without licensor’s authorization); LGS  
+Architects, Inc. v. Concordia Homes, Inc., 
+[434 F.3d 1150, 1154-57](https://www.courtlistener.com/opinion/792998/lgs-architects-inc-v-concordia-homes-of-nevada/#1154)
+
+ (9th  
+Cir. 2006) (licensor likely to prove infringement where licensee used  
+architectural plans for project outside the license’s scope, where licensee’s  
+use may have included unauthorized reproduction, distribution, and public  
+display of the plans); Frank Music Corp. v. Metro-Goldwyn-Mayer, Inc.,  
+
+[772 F.2d 505, 511](https://www.courtlistener.com/opinion/8943812/frank-music-corp-v-metro-goldwyn-mayer-inc/#511)
+
+ (9th Cir. 1985) (hotel infringed copyright by publicly  
+performing copyrighted music with representations of movie scenes,  
+where its public performance license expressly prohibited the use of  
+accompanying visual representations).  
+2676       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+grounded in Blizzard’s exclusive rights of copyright and other  
+restrictions that are not. For instance, ToU § 4(D) forbids cre-  
+ation of derivative works based on WoW without Blizzard’s  
+consent. A player who violates this prohibition would exceed  
+the scope of her license and violate one of Blizzard’s exclu-  
+sive rights under the Copyright Act. In contrast, ToU  
+§ 4(C)(ii) prohibits a player’s disruption of another player’s  
+game experience. Id. A player might violate this prohibition  
+while playing the game by harassing another player with  
+unsolicited instant messages. Although this conduct may vio-  
+late the contractual covenants with Blizzard, it would not vio-  
+late any of Blizzard’s exclusive rights of copyright. The anti-  
+bot provisions at issue in this case, ToU § 4(B)(ii) and (iii),  
+are similarly covenants rather than conditions. A Glider user  
+violates the covenants with Blizzard, but does not thereby  
+commit copyright infringement because Glider does not  
+infringe any of Blizzard’s exclusive rights. For instance, the  
+use does not alter or copy WoW software.
+Were we to hold otherwise, Blizzard — or any software  
+copyright holder — could designate any disfavored conduct  
+during software use as copyright infringement, by purporting  
+to condition the license on the player’s abstention from the  
+disfavored conduct. The rationale would be that because the  
+conduct occurs while the player’s computer is copying the  
+software code into RAM in order for it to run, the violation  
+is copyright infringement. This would allow software copy-  
+right owners far greater rights than Congress has generally  
+conferred on copyright owners.3  
+ 3  
+ A copyright holder may wish to enforce violations of license agree-  
+ments as copyright infringements for several reasons. First, breach of con-  
+tract damages are generally limited to the value of the actual loss caused  
+by the breach. See 24 Richard A. Lord, Williston on Contracts § 65:1 (4th  
+ed. 2007). In contrast, copyright damages include the copyright owner’s  
+actual damages and the infringer’s actual profits, or statutory damages of  
+up to $150,000 per work.
+
+17 U.S.C. § 504
+
+; see Frank Music Corp. v.  
+MGM, Inc., 
+[772 F.2d 505](https://www.courtlistener.com/opinion/8943812/frank-music-corp-v-metro-goldwyn-mayer-inc/)
+
+, 512 n.5 (9th Cir. 1985). Second, copyright law  
+            MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                   2677  
+   [12] We conclude that for a licensee’s violation of a con-  
+tract to constitute copyright infringement, there must be a  
+nexus between the condition and the licensor’s exclusive  
+rights of copyright.4 Here, WoW players do not commit copy-  
+right infringement by using Glider in violation of the ToU.  
+MDY is thus not liable for secondary copyright infringement,  
+which requires the existence of direct copyright infringement.  
+Grokster, 
+[545 U.S. at 930](https://www.courtlistener.com/opinion/799994/metro-goldwyn-mayer-studios-inc-v-grokster-ltd/#930)
+
+.
+It follows that because MDY does not infringe Blizzard’s  
+copyrights, we need not resolve MDY’s contention that Bliz-  
+zard commits copyright misuse. Copyright misuse is an equi-  
+table defense to copyright infringement, the contours of which  
+are still being defined. See Practice Mgmt. Info. Corp. v. Am.  
+Med. Ass’n,
+
+[121 F.3d 516, 520](https://www.courtlistener.com/opinion/744681/practice-management-information-corporation-a-california-corporation-v/#520)
+
+ (9th Cir. 1997). The remedy  
+for copyright misuse is to deny the copyright holder the right  
+to enforce its copyright during the period of misuse. Since  
+MDY does not infringe, we do not consider whether Blizzard  
+committed copyright misuse.
+We thus reverse the district court’s grant of summary judg-  
+ment to Blizzard on its secondary copyright infringement  
+claims. Accordingly, we must also vacate the portion of the  
+district court’s permanent injunction that barred MDY and  
+Donnelly from “infringing, or contributing to the infringement  
+of, Blizzard’s copyrights in WoW software.”
+
+offers injunctive relief, seizure of infringing articles, and awards of costs  
+and attorneys’ fees.
+
+17 U.S.C. §§ 502-03
+
+, 505. Third, as amicus Software  
+& Information Industry Association highlights, copyright law allows  
+copyright owners a remedy against “downstream” infringers with whom  
+they are not in privity of contract. See ProCD, Inc., 
+[86 F.3d at 1454](https://www.courtlistener.com/opinion/720542/procd-inc-v-zeidenberg/#1454)
+
+.  
+   4  
+     A licensee arguably may commit copyright infringement by continuing  
+to use the licensed work while failing to make required payments, even  
+though a failure to make payments otherwise lacks a nexus to the licen-  
+sor’s exclusive statutory rights. We view payment as sui generis, however,  
+because of the distinct nexus between payment and all commercial copy-  
+right licenses, not just those concerning software.  
+2678       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+                               V.
+After MDY began selling Glider, Blizzard launched War-  
+den, its technology designed to prevent players who used bots  
+from connecting to the WoW servers. Blizzard used Warden  
+to ban most Glider users in September 2005. Blizzard claims  
+that MDY is liable under DMCA §§ 1201(a)(2) and (b)(1)  
+because it thereafter programmed Glider to avoid detection by  
+Warden.
+
+A. The Warden technology
+
+Warden has two components. The first is a software mod-  
+ule called “scan.dll,” which scans a computer’s RAM prior to  
+allowing the player to connect to WoW’s servers. If scan.dll  
+detects that a bot is running, such as Glider, it will not allow  
+the player to connect and play. After Blizzard launched War-  
+den, MDY reconfigured Glider to circumvent scan.dll by not  
+loading itself until after scan.dll completed its check. War-  
+den’s second component is a “resident” component that runs  
+periodically in the background on a player’s computer when  
+it is connected to WoW’s servers. It asks the computer to  
+report portions of the WoW code running in RAM, and it  
+looks for patterns of code associated with known bots or  
+cheats. If it detects a bot or cheat, it boots the player from the  
+game, which halts the computer’s copying of copyrighted  
+code into RAM.
+
+B. The Digital Millennium Copyright Act
+
+Congress enacted the DMCA in 1998 to conform United  
+States copyright law to its obligations under two World Intel-  
+lectual Property Organization (“WIPO”) treaties, which  
+require contracting parties to provide effective legal remedies  
+against the circumvention of protective technological mea-  
+sures used by copyright owners. See Universal City Studios,  
+Inc. v. Corley,
+
+[273 F.3d 429, 440](https://www.courtlistener.com/opinion/775783/universal-city-studios-inc-v-corley/#440)
+
+ (2d Cir. 2001). In enacting  
+the DMCA, Congress sought to mitigate the problems pre-  
+          MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT          2679  
+sented by copyright enforcement in the digital age. 
+[Id.](https://www.courtlistener.com/opinion/775783/universal-city-studios-inc-v-corley/)
+
+ The  
+DMCA contains three provisions directed at the circumven-  
+tion of copyright owners’ technological measures. The  
+Supreme Court has yet to construe these provisions, and they  
+raise questions of first impression in this circuit.
+The first provision,
+
+17 U.S.C. § 1201
+
+(a)(1)(A), is a general  
+prohibition against “circumventing a technological measure  
+that effectively controls access to a work protected under [the  
+Copyright Act].” The second prohibits trafficking in technol-  
+ogy that circumvents a technological measure that “effec-  
+tively controls access” to a copyrighted work. 
+17 U.S.C.  
+§ 1201
+
+(a)(2). The third prohibits trafficking in technology that  
+circumvents a technological measure that “effectively pro-  
+tects” a copyright owner’s right. 
+17 U.S.C. § 1201
+
+(b)(1).
+C. The district court’s decision
+
+The district court assessed whether MDY violated DMCA  
+§§ 1201(a)(2) and (b)(1) with respect to three WoW compo-  
+nents. First, the district court considered the game client soft-  
+ware’s literal elements: the source code stored on players’  
+hard drives. Second, the district court considered the game  
+client software’s individual non-literal elements: the  
+400,000+ discrete visual and audible components of the  
+game, such as a visual image of a monster or its audible roar.  
+Finally, it considered the game’s dynamic non-literal ele-  
+ments: that is, the “real-time experience of traveling through  
+different worlds, hearing their sounds, viewing their struc-  
+tures, encountering their inhabitants and monsters, and  
+encountering other players.”
+
+The district court granted MDY partial summary judgment  
+as to Blizzard’s § 1201(a)(2) claim with respect to WoW’s lit-  
+eral elements. The district court reasoned that Warden does  
+not effectively control access to the literal elements because  
+WoW players can access the literal elements without connect-  
+ing to a game server and encountering Warden; they need  
+ 2680 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+only install the game client software on their computers. The  
+district court also ruled for MDY following trial as to Bliz-  
+zard’s § 1201(a)(2) claim with respect to WoW’s individual  
+non-literal elements, reasoning that these elements could also  
+be accessed on a player’s hard drive without encountering  
+Warden.
+
+The district court, however, ruled for Blizzard following  
+trial as to its §§ 1201(a)(2) and (b)(1) claims with respect to  
+WoW’s dynamic non-literal elements, or the “real-time expe-  
+rience” of playing WoW. It reasoned that Warden effectively  
+controlled access to these elements, which could not be  
+accessed without connecting to Blizzard’s servers. It also  
+found that Glider allowed its users to circumvent Warden by  
+avoiding or bypassing its detection features, and that MDY  
+marketed Glider for use in circumventing Warden.
+
+We turn to consider whether Glider violates DMCA  
+§§ 1201(a)(2) and (b)(1) by allowing users to circumvent  
+Warden to access WoW’s various elements. MDY contends  
+that Warden’s scan.dll and resident components are separate,  
+and only scan.dll should be considered as a potential access  
+control measure under § 1201(a)(2). However, in our view, an  
+access control measure can both (1) attempt to block initial  
+access and (2) revoke access if a secondary check determines  
+that access was unauthorized. Our analysis considers War-  
+den’s scan.dll and resident components together because the  
+two components have the same purpose: to prevent players  
+using detectable bots from continuing to access WoW soft-  
+ware.
+
+D. Construction of § 1201
+
+One of the issues raised by this appeal is whether certain  
+provisions of § 1201 prohibit circumvention of access con-  
+trols when access does not constitute copyright infringement.  
+To answer this question and others presented by this appeal,  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2681  
+we address the nature and interrelationship of the various pro-  
+visions of § 1201 in the overall context of the Copyright Act.
+
+We begin by considering the scope of DMCA § 1201’s  
+three operative provisions, §§ 1201(a)(1), 1201(a)(2), and  
+1201(b)(1). We consider them side-by-side, because “[w]e do  
+not . . . construe statutory phrases in isolation; we read stat-  
+utes as a whole. Thus, the [term to be construed] must be read  
+in light of the immediately following phrase . . . .” United  
+States v. Morton,
+
+[467 U.S. 822, 828](https://www.courtlistener.com/opinion/111220/united-states-v-morton/#828)
+
+ (1984); see also Padash  
+v. I.N.S., 
+[358 F.3d 1161, 1170](https://www.courtlistener.com/opinion/785174/ali-padash-v-immigration-and-naturalization-service/#1170)
+
+ (9th Cir. 2004) (we analyze the  
+statutory provision to be construed “in the context of the gov-  
+erning statute as a whole, presuming congressional intent to  
+create a coherent regulatory scheme”).
+1. Text of the operative provisions
+
+“We begin, as always, with the text of the statute.” Hawaii  
+v. Office of Hawaiian Affairs,
+
+[129 S. Ct. 1436, 1443](https://www.courtlistener.com/opinion/145894/hawaii-v-office-of-hawaiian-affairs/#1443)
+
+ (2009)  
+(quoting Permanent Mission of India to United Nations v.  
+City of New York, 
+[551 U.S. 193, 197](https://www.courtlistener.com/opinion/145715/permanent-mission-of-india-to-the-united-nations-v-city-of-new-york/#197)
+
+ (2007)). Section  
+1201(a)(1)(A) prohibits “circumvent[ing] a technological  
+measure that effectively controls access to a work protected  
+under this title.” Sections 1201(a)(2) and (b)(1) provide that  
+“[n]o person shall manufacture, import, offer to the public,  
+provide, or otherwise traffic in any technology, product, ser-  
+vice, device, component, or part thereof, that —  
+2682     MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT
+(emphasis added).
+
+2. Our harmonization of the DMCA’s operative  
+ provisions
+
+[13] For the reasons set forth below, we believe that  
+§ 1201 is best understood to create two distinct types of  
+claims. First, § 1201(a) prohibits the circumvention of any  
+technological measure that effectively controls access to a  
+protected work and grants copyright owners the right to  
+enforce that prohibition. Cf. Corley,
+
+[273 F.3d at 441](https://www.courtlistener.com/opinion/775783/universal-city-studios-inc-v-corley/#441)
+
+ (“[T]he  
+focus of subsection 1201(a)(2) is circumvention of technolo-  
+gies designed to prevent access to a work”). Second, and in  
+contrast to § 1201(a), § 1201(b)(1) prohibits trafficking in  
+technologies that circumvent technological measures that  
+effectively protect “a right of a copyright owner.” Section  
+1201(b)(1)’s prohibition is thus aimed at circumventions of  
+            MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                     2683  
+measures that protect the copyright itself: it entitles copyright  
+owners to protect their existing exclusive rights under the  
+Copyright Act. Those exclusive rights are reproduction, distri-  
+bution, public performance, public display, and creation of  
+derivative works. 
+17 U.S.C. § 106
+
+. Historically speaking, pre-  
+venting “access” to a protected work in itself has not been a  
+right of a copyright owner arising from the Copyright Act.5
+[14] Our construction of § 1201 is compelled by the four  
+significant textual differences between §§ 1201(a) and (b).  
+First, § 1201(a)(2) prohibits the circumvention of a measure  
+that “effectively controls access to a work protected under  
+this title,” whereas § 1201(b)(1) concerns a measure that “ef-  
+fectively protects a right of a copyright owner under this title  
+in a work or portion thereof.” (emphasis added). We read  
+§ 1201(b)(1)’s language — “right of a copyright owner under  
+this title” — to reinforce copyright owners’ traditional exclu-  
+sive rights under § 106 by granting them an additional cause  
+of action against those who traffic in circumventing devices  
+that facilitate infringement. Sections 1201(a)(1) and (a)(2),  
+however, use the term “work protected under this title.” Nei-  
+ther of these two subsections explicitly refers to traditional  
+copyright infringement under § 106. Accordingly, we read  
+this term as extending a new form of protection, i.e., the right  
+to prevent circumvention of access controls, broadly to works  
+protected under Title 17, i.e., copyrighted works.
+
+Second, as used in § 1201(a), to “circumvent a technologi-  
+cal measure” means “to descramble a scrambled work, to  
+decrypt an encrypted work, or otherwise to avoid, bypass,  
+remove, deactivate, or impair a technological measure, with-  
+out the authority of the copyright owner.” 17 U.S.C.  
+ 5
+
+17 U.S.C. § 106
+
+; see also Jay Dratler, Cyberlaw: Intellectual Prop. in  
+the Digital Millennium, § 1.02 (2009) (stating that the DMCA’s “protec-  
+tion is also quite different from the traditional exclusive rights of the copy-  
+right holder . . . [where the] exclusive rights never implicated access to the  
+work, as such”).  
+2684       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+§ 1201(a)(3)(A). These two specific examples of unlawful cir-  
+cumvention under § 1201(a) — descrambling a scrambled  
+work and decrypting an encrypted work — are acts that do  
+not necessarily infringe or facilitate infringement of a copy-  
+right.6 Descrambling or decrypting only enables someone to  
+watch or listen to a work without authorization, which is not  
+necessarily an infringement of a copyright owner’s traditional  
+exclusive rights under § 106. Put differently, descrambling  
+and decrypting do not necessarily result in someone’s repro-  
+ducing, distributing, publicly performing, or publicly display-  
+ing the copyrighted work, or creating derivative works based  
+on the copyrighted work.
+The third significant difference between the subsections is  
+that § 1201(a)(1)(A) prohibits circumventing an effective  
+access control measure, whereas § 1201(b) prohibits traffick-  
+ing in circumventing devices, but does not prohibit circum-  
+vention itself because such conduct was already outlawed as  
+copyright infringement. The Senate Judiciary Committee  
+explained:
+
+This . . . is the reason there is no prohibition on con-  
+ duct in 1201(b) akin to the prohibition on circum-  
+ vention conduct in 1201(a)(1). The prohibition in  
+ 1201(a)(1) is necessary because prior to this Act, the  
+ conduct of circumvention was never before made  
+ unlawful. The device limitation on 1201(a)(2)  
+ enforces this new prohibition on conduct. The copy-  
+ right law has long forbidden copyright infringe-  
+ ments, so no new prohibition was necessary.
+
+S. Rep. No. 105-90, at 11 (1998). This difference reinforces  
+our reading of § 1201(b) as strengthening copyright owners’  
+traditional rights against copyright infringement and of  
+ 6  
+ Perhaps for this reason, Congress did not list descrambling and decryp-  
+ting as circumventing acts that would violate § 1201(b)(1). See
+
+17 U.S.C.  
+§ 1201
+
+(b)(2)(A).  
+            MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                   2685  
+§ 1201(a) as granting copyright owners a new anti-  
+circumvention right.
+Fourth, in § 1201(a)(1)(B)-(D), Congress directs the  
+Library of Congress (“Library”) to identify classes of copy-  
+righted works for which “noninfringing uses by persons who  
+are users of a copyrighted work are, or are likely to be,  
+adversely affected, and the [anti-circumvention] prohibition  
+contained in [§ 1201(a)(1)(A)] shall not apply to such users  
+with respect to such classes of works for the ensuing 3-year  
+period.” There is no analogous provision in § 1201(b). We  
+impute this lack of symmetry to Congress’ need to balance  
+copyright owners’ new anti-circumvention right with the pub-  
+lic’s right to access the work. Cf. H.R. Rep. No. 105-551, pt.  
+2, at 26 (1998) (specifying that the House Commerce Com-  
+mittee “endeavored to specify, with as much clarity as possi-  
+ble, how the right against anti-circumvention (sic) would be  
+qualified to maintain balance between the interests of content  
+creators and information users.”). Sections 1201(a)(1)(B)-(D)  
+thus promote the public’s right to access by allowing the  
+Library to exempt circumvention of effective access control  
+measures in particular situations where it concludes that the  
+public’s right to access outweighs the owner’s interest in  
+restricting access.7 In limiting the owner’s right to control  
+access, the Library does not, and is not permitted to, authorize  
+infringement of a copyright owner’s traditional exclusive  
+rights under the copyright. Rather, the Library is only entitled  
+to moderate the new anti-circumvention right created by, and  
+hence subject to the limitations in, DMCA § 1201(a)(1).8  
+ 7  
+ For instance, pursuant to § 1201(a), the Library of Congress recently  
+approved circumvention of the technological measures contained on the  
+iPhone and similar wireless phone handsets known as “smartphones,” in  
+order to allow users to install and run third-party software applications on  
+these phones. See http://www.copyright.gov/fedreg/2010/75fr43825.pdf.  
+ 8  
+ In addition to these four textual differences, we note that § 1201(a)(2)  
+prohibits the circumvention of “a technological measure,” and  
+§ 1201(b)(1) prohibits the circumvention “of protection afforded by a  
+ 2686 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+ Our reading of §§ 1201(a) and (b) ensures that neither sec-  
+tion is rendered superfluous. A violation of § 1201(a)(1)(A),  
+which prohibits circumvention itself, will not be a violation of  
+§ 1201(b), which does not contain an analogous prohibition  
+on circumvention. A violation of § 1201(a)(2), which prohib-  
+its trafficking in devices that facilitate circumvention of  
+access control measures, will not always be a violation of  
+§ 1201(b)(1), which prohibits trafficking in devices that facili-  
+tate circumvention of measures that protect against copyright  
+infringement. Of course, if a copyright owner puts in place an  
+effective measure that both (1) controls access and (2) pro-  
+tects against copyright infringement, a defendant who traffics  
+in a device that circumvents that measure could be liable  
+under both §§ 1201(a) and (b). Nonetheless, we read the dif-  
+ferences in structure between §§ 1201(a) and (b) as reflecting  
+Congress’s intent to address distinct concerns by creating dif-  
+ferent rights with different elements.
+
+3. Our construction of the DMCA is consistent with the  
+ legislative history
+
+Although the text suffices to resolve the issues before us,  
+we also consider the legislative history in order to address the  
+parties’ arguments concerning it. Our review of that history  
+supports the view that Congress created a new anti-  
+circumvention right in § 1201(a)(2) independent of traditional  
+copyright infringement and granted copyright owners a new  
+weapon against copyright infringement in § 1201(b)(1). For  
+instance, the Senate Judiciary Committee report explains that  
+§§ 1201(a)(2) and (b)(1) are “not interchangeable”: they were  
+“designed to protect two distinct rights and to target two dis-
+
+technological measure.” In our view, these terms have the same meaning,  
+given the presumption that a “legislative body generally uses a particular  
+word with a consistent meaning in a given context.” Graham County Soil  
+& Water Conservation Dist. v. United States ex rel. Wilson,
+
+[130 S. Ct. 1396](https://www.courtlistener.com/opinion/1726/graham-county-soil-water-conservation-district-v-united-states-ex-rel/)
+
+, (2010) (quoting Erlenbaugh v. United States, 
+[409 U.S. 239, 243](https://www.courtlistener.com/opinion/108645/erlenbaugh-v-united-states/#243)
+
+  
+(1972)) (internal quotation marks omitted).  
+          MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT            2687  
+tinct classes of devices,” and “many devices will be subject  
+to challenge only under one of the subsections.” S. Rep. No.  
+105-190, at 12 (1998). That is, § 1201(a)(2) “is designed to  
+protect access to a copyrighted work,” while § 1201(b)(1) “is  
+designed to protect the traditional copyright rights of the  
+copyright owner.” Id. Thus, the Senate Judiciary Committee  
+understood § 1201 to create the following regime:
+[I]f an effective technological protection measure  
+ does nothing to prevent access to the plain text of the  
+ work, but is designed to prevent that work from  
+ being copied, then a potential cause of action against  
+ the manufacturer of a device designed to circumvent  
+ the measure lies under § 1201(b)(1), but not under  
+ § 1201(a)(2). Conversely, if an effective technologi-  
+ cal protection measure limits access to the plain text  
+ of a work only to those with authorized access, but  
+ provides no additional protection against copying,  
+ displaying, performing or distributing the work, then  
+ a potential cause of action against the manufacturer  
+ of a device designed to circumvent the measure lies  
+ under § 1201(a)(2), but not under § 1201(b).
+
+Id. The Senate Judiciary Committee proffered an example of  
+§ 1201(a) liability with no nexus to infringement, stating that  
+if an owner effectively protected access to a copyrighted work  
+by use of a password, it would violate § 1201(a)(2)(A)
+
+[T]o defeat or bypass the password and to make the  
+ means to do so, as long as the primary purpose of the  
+ means was to perform this kind of act. This is  
+ roughly analogous to making it illegal to break into  
+ a house using a tool, the primary purpose of which  
+ is to break into houses.
+
+Id. at 12. The House Judiciary Committee similarly states of  
+§ 1201(a)(2), “The act of circumventing a technological pro-  
+tection measure put in place by a copyright owner to control  
+ 2688 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+access to a copyrighted work is the electronic equivalent of  
+breaking into a locked room in order to obtain a copy of a  
+book.” See H.R. Rep. No. 105-551, pt. 1, at 17 (1998). We  
+note that bypassing a password and breaking into a locked  
+room in order to read or view a copyrighted work would not  
+infringe on any of the copyright owner’s exclusive rights  
+under § 106.
+
+We read this legislative history as confirming Congress’s  
+intent, in light of the current digital age, to grant copyright  
+owners an independent right to enforce the prohibition against  
+circumvention of effective technological access controls.9 In  
+§ 1201(a), Congress was particularly concerned with encour-  
+aging copyright owners to make their works available in digi-  
+tal formats such as “on-demand” or “pay-per-view,” which  
+allow consumers effectively to “borrow” a copy of the work  
+for a limited time or a limited number of uses. As the House  
+Commerce Committee explained:
+
+[A]n increasing number of intellectual property  
+ works are being distributed using a “client-server”  
+ model, where the work is effectively “borrowed” by  
+ the user (e.g., infrequent users of expensive software  
+ purchase a certain number of uses, or viewers watch  
+ a movie on a pay-per-view basis). To operate in this  
+ environment, content providers will need both the  
+ technology to make new uses possible and the legal  
+ framework to ensure they can protect their work  
+ from piracy.  
+ 9  
+ Indeed, the House Commerce Committee proposed, albeit unsuccess-  
+fully, to move § 1201 out of Title 17 altogether “because these regulatory  
+provisions have little, if anything, to do with copyright law. The anti-  
+circumvention provisions (and the accompanying penalty provisions for  
+violations of them) would be separate from, and cumulative to, the exist-  
+ing claims available to copyright owners.” H.R. Rep. No. 105-551 (1998),  
+pt. 2, at 23-24.  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2689  
+See H.R. Rep. No. 105-551 pt. 2, at 23 (1998).
+
+[15] Our review of the legislative history supports our  
+reading of § 1201: that section (a) creates a new anti-  
+circumvention right distinct from copyright infringement,  
+while section (b) strengthens the traditional prohibition  
+against copyright infringement.10 We now review the deci-  
+sions of the Federal Circuit that have interpreted § 1201 dif-  
+ferently.
+
+4. The Federal Circuit’s decisions
+
+The Federal Circuit has adopted a different approach to the  
+DMCA. In essence, it requires § 1201(a) plaintiffs to demon-  
+strate that the circumventing technology infringes or facili-  
+tates infringement of the plaintiff’s copyright (an  
+“infringement nexus requirement”). See Chamberlain Group,  
+Inc. v. Skylink Techs., Inc.,
+
+[381 F.3d 1178, 1203](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1203)
+
+ (Fed. Cir.  
+2004); Storage Tech. Corp. v. Custom Hardware Eng’g Con-  
+sulting, Inc., 
+[421 F.3d 1307](https://www.courtlistener.com/opinion/791767/storage-technology-corporation-doing-business-as-storagetek-v-custom/)
+
+ (Fed. Cir. 2005).11
+The seminal decision is Chamberlain,
+
+[381 F.3d 1178](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/)
+
+ (Fed.  
+Cir. 2004). In Chamberlain, the plaintiff sold garage door  
+  10  
+      The Copyright Office has also suggested that § 1201(a) creates a new  
+access control right independent from copyright infringement, by express-  
+ing its view that the fair use defense to traditional copyright infringement  
+does not apply to violations of § 1201(a)(1). U.S. Copyright Office, The  
+Digital Millennium Copyright Act of 1998: U.S. Copyright Office Sum-  
+mary 4 (1998), available at http://www.copyright.gov/legislation/dmca.pdf  
+(“Since the fair use doctrine is not a defense to the act of gaining unautho-  
+rized access to a work, the act of circumventing a technological measure  
+in order to gain access is prohibited.”).  
+   11  
+      The Fifth Circuit in its subsequently withdrawn opinion in MGE UPS  
+Systems, Inc. v. GE Consumer and Industrial, Inc., 
+95 U.S.P.Q.2d 1632
+
+,  
+1635 (5th Cir. 2010), embraced the Federal Circuit’s approach in Cham-  
+berlain. However, its revised opinion, 622 F.3d (5th Cir. Sept. 20, 2010),  
+avoids the issue by determining that MGE had not shown circumvention  
+of its software protections. Notably, the revised opinion does not cite  
+Chamberlain.  
+2690      MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+openers (“GDOs”) with a “rolling code” security system that  
+purportedly reduced the risk of crime by constantly changing  
+the transmitter signal necessary to open the door. 
+Id. at 1183
+
+.  
+Customers used the GDOs’ transmitters to send the changing  
+signal, which in turn opened or closed their garage doors. 
+Id.
+
+Plaintiff sued the defendant, who sold “universal” GDO  
+transmitters for use with plaintiff’s GDOs, under  
+§ 1201(a)(2). Id. at 1185. The plaintiff alleged that its GDOs  
+and transmitters both contained copyrighted computer pro-  
+grams and that its rolling code security system was a techno-  
+logical measure that controlled access to those programs. Id.  
+at 1183. Accordingly, plaintiff alleged that the defendant —  
+by selling GDO transmitters that were compatible with plain-  
+tiff’s GDOs — had trafficked in a technology that was pri-  
+marily used for the circumvention of a technological measure  
+(the rolling code security system) that effectively controlled  
+access to plaintiff’s copyrighted works. Id.
+
+The Federal Circuit rejected the plaintiff’s claim, holding  
+that the defendant did not violate § 1201(a)(2) because, inter  
+alia, the defendant’s universal GDO transmitters did not  
+infringe or facilitate infringement of the plaintiff’s copy-  
+righted computer programs. Id. at 1202-03. The linchpin of  
+the Chamberlain court’s analysis is its conclusion that DMCA  
+coverage is limited to a copyright owner’s rights under the  
+Copyright Act as set forth in § 106 of the Copyright Act. Id.  
+at 1192-93. Thus, it held that § 1201(a) did not grant copy-  
+right owners a new anti-circumvention right, but instead,  
+established new causes of action for a defendant’s unautho-  
+rized access of copyrighted material when it infringes upon a  
+copyright owner’s rights under § 106. Id. at 1192, 1194.  
+Accordingly, a § 1201(a)(2) plaintiff was required to demon-  
+strate a nexus to infringement — i.e., that the defendant’s traf-  
+ficking in circumventing technology had a “reasonable  
+relationship” to the protections that the Copyright Act affords  
+copyright owners. Id. at 1202-03. The Federal Circuit  
+explained:  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2691  
+ Defendants who traffic in devices that circumvent  
+ access controls in ways that facilitate infringement  
+ may be subject to liability under § 1201(a)(2).  
+ Defendants who use such devices may be subject to  
+ liability under § 1201(a)(1) whether they infringe or  
+ not. Because all defendants who traffic in devices  
+ that circumvent rights controls necessarily facilitate  
+ infringement, they may be subject to liability under  
+ § 1201(b). Defendants who use such devices may be  
+ subject to liability for copyright infringement. And  
+ finally, defendants whose circumvention devices do  
+ not facilitate infringement are not subject to § 1201  
+ liability.
+
+Id. at 1195 (emphasis added). Chamberlain concluded that  
+§ 1201(a) created a new cause of action linked to copyright  
+infringement, rather than a new anti-circumvention right sepa-  
+rate from copyright infringement, for six reasons.
+
+First, Chamberlain reasoned that Congress enacted the  
+DMCA to balance the interests of copyright owners and infor-  
+mation users, and an infringement nexus requirement was  
+necessary to create an anti-circumvention right that truly  
+achieved that balance. Id. at 1196 (citing H.R. Rep. No. 105-  
+551, at 26 (1998)). Second, Chamberlain feared that copy-  
+right owners could use an access control right to prohibit  
+exclusively fair uses of their material even absent feared foul  
+use. Id. at 1201. Third, Chamberlain feared that § 1201(a)  
+would allow companies to leverage their sales into aftermar-  
+ket monopolies, in potential violation of antitrust law and the  
+doctrine of copyright misuse. Id. (citing Eastman Kodak Co.  
+v. Image Tech. Servs.,
+
+[504 U.S. 451, 455](https://www.courtlistener.com/opinion/112744/eastman-kodak-co-v-image-technical-services-inc/#455)
+
+ (1992) (antitrust);  
+Assessment Techs. of WI, LLC v. WIREdata, Inc., 
+[350 F.3d 640, 647](https://www.courtlistener.com/opinion/784280/assessment-technologies-of-wi-llc-v-wiredata-inc/#647)
+
+ (7th Cir. 2003) (copyright misuse)). Fourth, Cham-  
+berlain viewed an infringement nexus requirement as neces-  
+sary to prevent “absurd and disastrous results,” such as the  
+existence of DMCA liability for disabling a burglary alarm to  
+gain access to a home containing copyrighted materials. 
+[Id.](https://www.courtlistener.com/opinion/784280/assessment-technologies-of-wi-llc-v-wiredata-inc/)
+
+  
+2692      MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+   Fifth, Chamberlain stated that an infringement nexus  
+requirement might be necessary to render Congress’s exercise  
+of its Copyright Clause authority rational. Id. at 1200. The  
+Copyright Clause gives Congress “the task of defining the  
+scope of the limited monopoly that should be granted to  
+authors . . . in order to give the public appropriate access to  
+their work product.” Id. (citing Eldred v. Ashcroft, 
+[537 U.S. 186, 204-05](https://www.courtlistener.com/opinion/122254/eldred-v-ashcroft/#204)
+
+ (2003) (internal citation omitted)). Without an  
+infringement nexus requirement, Congress arguably would  
+have allowed copyright owners in § 1201(a) to deny all access  
+to the public by putting an effective access control measure in  
+place that the public was not allowed to circumvent.
+Finally, the Chamberlain court viewed an infringement  
+nexus requirement as necessary for the Copyright Act to be  
+internally consistent. It reasoned that § 1201(c)(1), enacted  
+simultaneously, provides that “nothing in this section shall  
+affect rights, remedies, limitations, or defenses to copyright  
+infringement, including fair use, under this title.” The Cham-  
+berlain court opined that if § 1201(a) creates liability for  
+access without regard to the remainder of the Copyright Act,  
+it “would clearly affect rights and limitations, if not remedies  
+and defenses.” Id.
+
+Accordingly, the Federal Circuit held that a DMCA  
+§ 1201(a)(2) action was foreclosed to the extent that the  
+defendant trafficked in a device that did not facilitate copy-  
+right infringement. Id.; see also Storage Tech.,
+
+[421 F.3d 1307](https://www.courtlistener.com/opinion/791767/storage-technology-corporation-doing-business-as-storagetek-v-custom/)
+
+  
+(same).
+5. We decline to adopt an infringement nexus requirement
+
+[16] While we appreciate the policy considerations  
+expressed by the Federal Circuit in Chamberlain, we are  
+unable to follow its approach because it is contrary to the  
+plain language of the statute. In addition, the Federal Circuit  
+failed to recognize the rationale for the statutory construction  
+that we have proffered. Also, its approach is based on policy  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2693  
+concerns that are best directed to Congress in the first  
+instance, or for which there appear to be other reasons that do  
+not require such a convoluted construction of the statute’s lan-  
+guage.
+
+i. Statutory inconsistencies
+
+Were we to follow Chamberlain in imposing an infringe-  
+ment nexus requirement, we would have to disregard the plain  
+language of the statute. Moreover, there is significant textual  
+evidence showing Congress’s intent to create a new anti-  
+circumvention right in § 1201(a) distinct from infringement.  
+As set forth supra, this evidence includes: (1) Congress’s  
+choice to link only § 1201(b)(1) explicitly to infringement; (2)  
+Congress’s provision in § 1201(a)(3)(A) that descrambling  
+and decrypting devices can lead to § 1201(a) liability, even  
+though descrambling and decrypting devices may only enable  
+non-infringing access to a copyrighted work; and (3) Con-  
+gress’s creation of a mechanism in § 1201(a)(1)(B)-(D) to  
+exempt certain non-infringing behavior from § 1201(a)(1) lia-  
+bility, a mechanism that would be unnecessary if an infringe-  
+ment nexus requirement existed.
+
+Though unnecessary to our conclusion because of the clar-  
+ity of the statute’s text, see United States v. Gallegos,
+
+[613 F.3d 1211, 1214](https://www.courtlistener.com/opinion/151924/united-states-v-gallegos/#1214)
+
+ (9th Cir. 2010), we also note that the legisla-  
+tive history supports the conclusion that Congress intended to  
+prohibit even non-infringing circumvention and trafficking in  
+circumventing devices. Moreover, in mandating a § 1201(a)  
+nexus to infringement, we would deprive copyright owners of  
+the important enforcement tool that Congress granted them to  
+make sure that they are compensated for valuable non-  
+infringing access — for instance, copyright owners who make  
+movies or music available online, protected by an access con-  
+trol measure, in exchange for direct or indirect payment.
+The Chamberlain court reasoned that if § 1201(a) creates  
+liability for access without regard to the remainder of the  
+ 2694 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+Copyright Act, it “would clearly affect rights and limitations,  
+if not remedies and defenses.”
+
+[381 F.3d at 1200](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1200)
+
+. This per-  
+ceived tension is relieved by our recognition that § 1201(a)  
+creates a new anti-circumvention right distinct from the tradi-  
+tional exclusive rights of a copyright owner. It follows that  
+§ 1201(a) does not limit the traditional framework of exclu-  
+sive rights created by § 106, or defenses to those rights such  
+as fair use.12 We are thus unpersuaded by Chamberlain’s read-  
+ing of the DMCA’s text and structure.
+ii. Additional interpretive considerations
+
+Though we need no further evidence of Congress’s intent,  
+the parties, citing Chamberlain, proffer several other argu-  
+ments, which we review briefly in order to address the par-  
+ties’ contentions. Chamberlain relied heavily on policy  
+considerations to support its reading of § 1201(a). As a  
+threshold matter, we stress that such considerations cannot  
+trump the statute’s plain text and structure. Gallegos,
+
+[613 F.3d at 1214](https://www.courtlistener.com/opinion/151924/united-states-v-gallegos/#1214)
+
+. Even were they permissible considerations in  
+this case, however, they would not persuade us to adopt an  
+infringement nexus requirement. Chamberlain feared that  
+§ 1201(a) would allow companies to leverage their sales into  
+aftermarket monopolies, in tension with antitrust law and the  
+doctrine of copyright misuse.13 Id. (citing Eastman, 
+[504 U.S. at 455](https://www.courtlistener.com/opinion/112744/eastman-kodak-co-v-image-technical-services-inc/#455)
+
+ (antitrust); Assessment Techs., 
+[350 F.3d at 647](https://www.courtlistener.com/opinion/784280/assessment-technologies-of-wi-llc-v-wiredata-inc/#647)
+
+ (copy-  
+  12  
+      Like the Chamberlain court, we need not and do not reach the rela-  
+tionship between fair use under § 107 of the Copyright Act and violations  
+of § 1201. Chamberlain, 
+[381 F.3d at 1199](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/)
+
+ n.14. MDY has not claimed that  
+Glider use is a “fair use” of WoW’s dynamic non-literal elements. Accord-  
+ingly, we too leave open the question whether fair use might serve as an  
+affirmative defense to a prima facie violation of § 1201. Id.  
+   13  
+      Copyright misuse is an equitable defense to copyright infringement  
+that denies the copyright holder the right to enforce its copyright during  
+the period of misuse. Practice Mgmt. Info. Corp v. Am. Med. Ass’n, 
+[121 F.3d 516, 520](https://www.courtlistener.com/opinion/744681/practice-management-information-corporation-a-california-corporation-v/#520)
+
+ (9th Cir. 1997). Since we have held that § 1201(a) creates  
+a right distinct from copyright infringement, we conclude that we need not  
+address copyright misuse in this case.  
+           MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                  2695  
+right misuse)). Concerning antitrust law, we note that there is  
+no clear issue of anti-competitive behavior in this case  
+because Blizzard does not seek to put a direct competitor who  
+offers a competing role-playing game out of business and the  
+parties have not argued this issue. If a § 1201(a)(2) defendant  
+in a future case claims that a plaintiff is attempting to enforce  
+its DMCA anti-circumvention right in a manner that violates  
+antitrust law, we will then consider the interplay between this  
+new anti-circumvention right and antitrust law.
+Chamberlain also viewed an infringement nexus require-  
+ment as necessary to prevent “absurd and disastrous results,”  
+such as the existence of DMCA liability for disabling a bur-  
+glary alarm to gain access to a home containing copyrighted  
+materials.
+
+[381 F.3d at 1201](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1201)
+
+. In addition, the Federal Circuit  
+was concerned that, without an infringement nexus require-  
+ment, § 1201(a) would allow copyright owners to deny all  
+access to the public by putting an effective access control  
+measure in place that the public is not allowed to circumvent.  
+
+[381 F.3d at 1200](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1200)
+
+. Both concerns appear to be overstated,14 but  
+even accepting them, arguendo, as legitimate concerns, they  
+do not permit reading the statute as requiring the imposition  
+of an infringement nexus. As § 1201(a) creates a distinct  
+right, it does not disturb the balance between public rights and  
+the traditional rights of owners of copyright under the Copy-  
+right Act. Moreover, § 1201(a)(1)(B)-(D) allows the Library  
+of Congress to create exceptions to the § 1201(a) anti-  
+circumvention right in the public’s interest. If greater protec-  
+  14  
+    The Chamberlain court’s assertion that the public has a constitutional  
+right to appropriately access copyright works during the copyright term,  
+
+[381 F.3d at 1200](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1200)
+
+, cited Eldred v. Ashcroft, 
+[537 U.S. 186, 204-05](https://www.courtlistener.com/opinion/122254/eldred-v-ashcroft/#204)
+
+ (2003).  
+The Eldred decision, however, was quoting the Supreme Court’s previous  
+decision in Sony Corp. of America v. Universal City Studios, Inc., which  
+discussed the public’s right of access after the copyright term. 
+[464 U.S. 417, 429](https://www.courtlistener.com/opinion/111062/sony-corp-of-america-v-universal-city-studios-inc/#429)
+
+ (1984) (“[T]he limited grant [of copyright] . . . is intended to  
+motivate the creative activity of authors and inventors by the provision of  
+a special reward, and to allow the public access to the products of their  
+genius after the limited period of exclusive control has expired.”).  
+2696       MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+tion of the public’s ability to access copyrighted works is  
+required, Congress can provide such protection by amending  
+the statute.
+In sum, we conclude that a fair reading of the statute (sup-  
+ported by legislative history) indicates that Congress created  
+a distinct anti-circumvention right under § 1201(a) without an  
+infringement nexus requirement. Thus, even accepting the  
+validity of the concerns expressed in Chamberlain, those con-  
+cerns do not authorize us to override congressional intent and  
+add a non-textual element to the statute. See In Re Dumont,
+
+[581 F.3d 1104](https://www.courtlistener.com/c/F.3d/581/1104/)
+
+, 1111 (9th Cir. 2009) (“[W]here the language  
+of an enactment is clear or, in modern parlance, plain, and  
+construction according to its terms does not lead to absurd or  
+impracticable consequences, the words employed are to be  
+taken as the final expression of the meaning intended.”).  
+Accordingly, we reject the imposition of an infringement  
+nexus requirement. We now consider whether MDY has vio-  
+lated §§ 1201(a)(2) and (b)(1).
+E. Blizzard’s § 1201(a)(2) claim
+
+1. WoW’s literal elements and individual non-literal  
+ elements
+
+[17] We agree with the district court that MDY’s Glider  
+does not violate DMCA § 1201(a)(2) with respect to WoW’s  
+literal elements15 and individual non-literal elements, because  
+Warden does not effectively control access to these WoW ele-  
+ments. First, Warden does not control access to WoW’s literal  
+elements because these elements — the game client’s soft-  
+ware code — are available on a player’s hard drive once the  
+game client software is installed. Second, as the district court  
+found:  
+ 15  
+ We also agree with the district court that there are no genuine issues  
+of material fact on Blizzard’s § 1201(a)(2) claim regarding WoW’s literal  
+elements.  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2697  
+ [WoW’s] individual nonliteral components may be  
+ accessed by a user without signing on to the server.  
+ As was demonstrated during trial, an owner of the  
+ game client software may use independently pur-  
+ chased computer programs to call up the visual  
+ images or the recorded sounds within the game client  
+ software. For instance, a user may call up and listen  
+ to the roar a particular monster makes within the  
+ game. Or the user may call up a virtual image of that  
+ monster.
+
+Since a player need not encounter Warden to access WoW’s  
+individual non-literal elements, Warden does not effectively  
+control access to those elements.
+
+Our conclusion is in accord with the Sixth Circuit’s deci-  
+sion in Lexmark International v. Static Control Components,
+
+[387 F.3d 522](https://www.courtlistener.com/opinion/788158/lexmark-international-inc-v-static-control-components-inc/)
+
+ (6th Cir. 2004). In Lexmark, the plaintiff sold  
+laser printers equipped with an authentication sequence, veri-  
+fied by the printer’s copyrighted software, that ensured that  
+only plaintiff’s own toner cartridges could be inserted into the  
+printers. 
+[Id. at 530](https://www.courtlistener.com/opinion/788158/lexmark-international-inc-v-static-control-components-inc/#530)
+
+. The defendant sold microchips capable of  
+generating an authentication sequence that rendered other  
+manufacturers’ cartridges compatible with plaintiff’s printers.  
+
+[Id.](https://www.courtlistener.com/opinion/788158/lexmark-international-inc-v-static-control-components-inc/)
+
+The Sixth Circuit held that plaintiff’s § 1201(a)(2) claim  
+failed because its authentication sequence did not effectively  
+control access to its copyrighted computer program. Id. at  
+546. Rather, the mere purchase of one of plaintiff’s printers  
+allowed “access” to the copyrighted program. Any purchaser  
+could read the program code directly from the printer memory  
+without encountering the authentication sequence. Id. The  
+authentication sequence thus blocked only one form of access:  
+the ability to make use of the printer. However, it left intact  
+another form of access: the review and use of the computer  
+program’s literal code. Id. The Sixth Circuit explained:  
+ 2698 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+ Just as one would not say that a lock on the back  
+ door of a house “controls access” to a house whose  
+ front door does not contain a lock and just as one  
+ would not say that a lock on any door of a house  
+ “controls access” to the house after its purchaser  
+ receives the key to the lock, it does not make sense  
+ to say that this provision of the DMCA applies to  
+ otherwise-readily-accessible copyrighted works. Add  
+ to this the fact that the DMCA not only requires the  
+ technological measure to “control access” but  
+ requires the measure to control that access “effec-  
+ tively,”
+
+17 U.S.C. § 1201
+
+(a)(2), and it seems clear  
+       that this provision does not naturally extend to a  
+       technological measure that restricts one form of  
+       access but leaves another route wide open.
+Id. at 547
+
+.
+[18] Here, a player’s purchase of the WoW game client  
+allows access to the game’s literal elements and individual  
+non-literal elements. Warden blocks one form of access to  
+these elements: the ability to access them while connected to  
+a WoW server. However, analogously to the situation in Lex-  
+mark, Warden leaves open the ability to access these elements  
+directly via the user’s computer. We conclude that Warden is  
+not an effective access control measure with respect to  
+WoW’s literal elements and individual non-literal elements,  
+and therefore, that MDY does not violate § 1201(a)(2) with  
+respect to these elements.
+
+2. WoW’s dynamic non-literal elements
+
+[19] We conclude that MDY meets each of the six textual  
+elements for violating § 1201(a)(2) with respect to WoW’s  
+dynamic non-literal elements. That is, MDY (1) traffics in (2)  
+a technology or part thereof (3) that is primarily designed,  
+produced, or marketed for, or has limited commercially sig-  
+nificant use other than (4) circumventing a technological mea-  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2699  
+sure (5) that effectively controls access (6) to a copyrighted  
+work. See 17 US.C. § 1201(a)(2).
+
+The first two elements are met because MDY “traffics in a  
+technology or part thereof” — that is, it sells Glider. The third  
+and fourth elements are met because Blizzard has established  
+that MDY markets Glider for use in circumventing Warden,  
+thus satisfying the requirement of § 1201(a)(2)(C).16 Indeed,  
+Glider has no function other than to facilitate the playing of  
+WoW. The sixth element is met because, as the district court  
+held, WoW’s dynamic non-literal elements constitute a copy-  
+righted work. See, e.g., Atari Games Corp. v. Oman,
+
+[888 F.2d 878, 884-85](https://www.courtlistener.com/opinion/531315/atari-games-corporation-v-ralph-oman-register-of-copyrights/#884)
+
+ (D.C. Cir. 1989) (the audiovisual display of a  
+computer game is copyrightable independently from the soft-  
+ware program code, even though the audiovisual display gen-  
+erated is partially dependent on user input).  
+  16  
+    To “circumvent a technological measure” under § 1201(a) means to  
+“descramble a scrambled work, to decrypt an encrypted work, or other-  
+wise to avoid, bypass, remove, deactivate, or impair a technological mea-  
+sure, without the authority of the copyright owner.” 
+17 U.S.C.  
+§ 1201
+
+(a)(3)(A) (emphasis added). A circuit split exists with respect to the  
+meaning of the phrase “without the authority of the copyright owner.” The  
+Federal Circuit has concluded that this definition imposes an additional  
+requirement on a § 1201(a)(2) plaintiff: to show that the defendant’s cir-  
+cumventing device enables third parties to access the copyrighted work  
+without the copyright owner’s authorization. See Chamberlain, 
+[381 F.3d at 1193](https://www.courtlistener.com/opinion/787580/the-chamberlain-group-inc-v-skylink-technologies-inc/#1193)
+
+.The Second Circuit has adopted a different view, explaining that  
+§ 1201(a)(3)(A) plainly exempts from § 1201(a) liability those whom a  
+copyright owner authorizes to circumvent an access control measure, not  
+those whom a copyright owner authorizes to access the work. Corley, 
+[273 F.3d at 444](https://www.courtlistener.com/opinion/775783/universal-city-studios-inc-v-corley/)
+
+ & n.15; see also 321 Studios v. MGM Studios, Inc., 
+[307 F. Supp. 2d 1085, 1096](https://www.courtlistener.com/opinion/2439170/321-studios-v-metro-goldwyn-mayer-studios-inc/#1096)
+
+ (N.D. Cal. 2004) (same).  
+   We find the Second Circuit’s view to be the sounder construction of the  
+statute’s language, and conclude that § 1201(a)(2) does not require a plain-  
+tiff to show that the accused device enables third parties to access the  
+work without the copyright owner’s authorization. Thus, Blizzard has sat-  
+isfied the “circumvention” element of a § 1201(a)(2) claim, because Bliz-  
+zard has demonstrated that it did not authorize MDY to circumvent  
+Warden.  
+2700        MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+   [20] The fifth element is met because Warden is an effec-  
+tive access control measure. To “effectively control access to  
+a work,” a technological measure must “in the ordinary course  
+of its operation, require[ ] the application of information, or  
+a process or a treatment, with the authority of the copyright  
+owner, to gain access to the work.” 
+17 U.S.C.  
+§ 1201
+
+(a)(3)(B). Both of Warden’s two components “re-  
+quire[ ] the application of information, or a process or a treat-  
+ment . . . to gain access to the work.” For a player to connect  
+to Blizzard’s servers which provide access to WoW’s  
+dynamic non-literal elements, scan.dll must scan the player’s  
+computer RAM and confirm the absence of any bots or  
+cheats. The resident component also requires a “process” in  
+order for the user to continue accessing the work: the user’s  
+computer must report portions of WoW code running in RAM  
+to the server. Moreover, Warden’s provisions were put into  
+place by Blizzard, and thus, function “with the authority of  
+the copyright owner.” Accordingly, Warden effectively con-  
+trols access to WoW’s dynamic non-literal elements.17 We  
+hold that MDY is liable under § 1201(a)(2) with respect to  
+WoW’s dynamic non-literal elements.18 Accordingly, we  
+  17  
+      The statutory definition of the phrase “effectively control access to a  
+work” does not require that an access control measure be strong or  
+circumvention-proof. Rather, it requires an access control measure to pro-  
+vide some degree of control over access to a copyrighted work. As one  
+district court has observed, if the word “effectively” were read to mean  
+that the statute protects “only successful or efficacious technological  
+means of controlling access,” it would “gut” DMCA § 1201(a)(2), because  
+it would “limit the application of the statute to access control measures  
+that thwart circumvention, but withhold protection for those measures that  
+can be circumvented.” See Universal City Studios v. Reimerdes, 
+[111 F. Supp. 2d 294, 318](https://www.courtlistener.com/opinion/2562166/universal-city-studios-inc-v-reimerdes/#318)
+
+ (S.D.N.Y. 2000) (“Defendants would have the Court  
+construe the statute to offer protection where none is needed but to with-  
+hold protection precisely where protection is essential.”).  
+   18  
+      We note that the DMCA allows innocent violators to seek reduction  
+or remittance of damages. See 
+17 U.S.C. § 1203
+
+(c)(5).  
+            MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                     2701  
+affirm the district court’s entry of a permanent injunction  
+against MDY to prevent future § 1201(a)(2) violations.19
+F. Blizzard’s § 1201(b)(1) claim
+
+[21] Blizzard may prevail under § 1201(b)(1) only if War-  
+den “effectively protect[s] a right” of Blizzard under the  
+Copyright Act. Blizzard contends that Warden protects its  
+reproduction right against unauthorized copying. We disagree.
+
+First, although WoW players copy the software code into  
+RAM while playing the game, Blizzard’s EULA and ToU  
+authorize all licensed WoW players to do so. We have  
+explained that ToU § 4(B)’s bot prohibition is a license cove-  
+nant rather than a condition. Thus, a Glider user who violates  
+this covenant does not infringe by continuing to copy code  
+into RAM. Accordingly, MDY does not violate § 1201(b)(1)  
+by enabling Glider users to avoid Warden’s interruption of  
+their authorized copying into RAM.
+
+[22] Second, although WoW players can theoretically  
+record game play by taking screen shots, there is no evidence  
+that Warden detects or prevents such allegedly infringing copy-  
+ing.20 This is logical, because Warden was designed to reduce  
+the presence of cheats and bots, not to protect WoW’s  
+dynamic non-literal elements against copying. We conclude  
+that Warden does not effectively protect any of Blizzard’s  
+ 19  
+ For the first time in its petition for rehearing, MDY raises the applica-  
+bility of Section 1201(f) and the question whether Glider is an “indepen-  
+dently created computer program” under that subsection and thus exempt  
+from the coverage of Section 1201(a). Because this argument was not  
+raised to the district court or presented in the parties’ briefs on appeal, we  
+decline to reach it.  
+ 20  
+ No evidence establishes that Glider users engage in this practice, and  
+Glider itself does not provide a software mechanism for taking screenshots  
+or otherwise reproducing copyrighted WoW material.  
+ 2702 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+rights under the Copyright Act, and MDY is not liable under  
+§ 1201(b)(1) for Glider’s circumvention of Warden.21
+
+VI.
+
+The district court granted Blizzard summary judgment on  
+its claim against MDY for tortious interference with contract  
+(“tortious interference”) under Arizona law and held that  
+Donnelly was personally liable for MDY’s tortious interfer-  
+ence. We review the district court’s grant of summary judg-  
+ment de novo. See Canyon Ferry Rd. Baptist Church of East  
+Helena, Inc. v. Unsworth,
+
+[556 F.3d 1021, 1027](https://www.courtlistener.com/opinion/1465122/canyon-ferry-road-baptist-church-of-east-helena-inc-v-unsworth/#1027)
+
+ (9th Cir.  
+2009). We view the evidence in the light most favorable to  
+non-movant MDY in determining whether there are any genu-  
+ine issues of material fact. 
+[Id.](https://www.courtlistener.com/opinion/1465122/canyon-ferry-road-baptist-church-of-east-helena-inc-v-unsworth/)
+
+ Because we conclude that there  
+are triable issues of material fact, we vacate and remand for  
+trial.
+A. Elements of Blizzard’s tortious interference claim
+
+To recover for tortious interference under Arizona law,  
+Blizzard must prove: (1) the existence of a valid contractual  
+relationship; (2) MDY’s knowledge of the relationship; (3)  
+MDY’s intentional interference in inducing or causing the  
+breach; (4) the impropriety of MDY’s interference; and (5)  
+resulting damages. See Safeway Ins. Co. v. Guerrero,
+
+106  
+P.3d 102
+
+, 1025 (Ariz. 2005); see also Antwerp Diamond  
+Exch. of Am., Inc. v. Better Bus. Bur. of Maricopa County,  
+Inc., 
+[637 P.2d 733, 740](https://www.courtlistener.com/opinion/1168534/antwerp-diamond-exchange-of-america-inc-v-better-business-bureau-of/#740)
+
+ (Ariz. 1981).
+Blizzard satisfies four of these five elements based on  
+ 21  
+ The district court permanently enjoined “MDY and Michael Donnelly  
+from engaging in contributory or vicarious copyright infringement and  
+from violating the DMCA with respect to Blizzard’s copyrights in and  
+rights to” WoW. Because we conclude that MDY is not liable under  
+§ 1201(b)(1), we vacate the aspect of the permanent injunction dealing  
+with MDY’s and Donnelly’s § 1201(b)(1) liability.  
+ MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT 2703  
+undisputed facts. First, a valid contractual relationship exists  
+between Blizzard and its customers based on the operative  
+EULA and ToU. Second, MDY was aware of this relation-  
+ship: it does not contend that it was unaware of the operative  
+EULA and ToU, or unaware that using Glider breached their  
+terms. In fact, after Blizzard first attempted to ban Glider  
+users, MDY modified its website to notify customers that  
+using Glider violated the ToU. Third, MDY intentionally  
+interfered with Blizzard’s contracts. After Blizzard used War-  
+den to ban a majority of Glider users in September 2005,  
+MDY programmed Glider to be undetectable by Warden.  
+Finally, Blizzard has proffered evidence that it was damaged  
+by MDY’s conduct.
+
+Thus, Blizzard is entitled to summary judgment if there are  
+no triable issues of material fact as to the fourth element of  
+its tortious interference claim: whether MDY’s actions were  
+improper. To determine whether a defendant’s conduct was  
+improper, Arizona employs the seven-factor test of Restate-  
+ment (Second) of Torts § 767. See Safeway, 106 P.3d at 1027;  
+see also Wagonseller v. Scottsdale Mem’l Hosp.,
+
+[710 P.2d 1025, 1042-43](https://www.courtlistener.com/opinion/1206853/wagenseller-v-scottsdale-memorial-hospital/#1042)
+
+ (Ariz. 1985), superseded in other respects by  
+A.R.S. § 23-1501. The seven factors are (1) the nature of  
+MDY’s conduct, (2) MDY’s motive, (3) Blizzard’s interests  
+with which MDY interfered, (4) the interests MDY sought to  
+advance, (5) the social interests in protecting MDY’s freedom  
+of action and Blizzard’s contractual interests, (6) the proxim-  
+ity or remoteness of MDY’s conduct to the interference, and  
+(7) the relations between MDY and Blizzard. Id. A court  
+should give greatest weight to the first two factors. Id. We  
+conclude that summary judgment was inappropriate here,  
+because on the current record, taking the facts in the light  
+most favorable to MDY, the first five factors do not clearly  
+weigh in either side’s favor, thus creating a genuine issue of  
+material fact.
+1. Nature of MDY’s conduct and MDY’s motive
+
+The parties have presented conflicting evidence with  
+respect to these two most important factors. Blizzard’s evi-  
+ 2704 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+dence tends to demonstrate that MDY helped Glider users  
+gain an advantage over other WoW players by advancing  
+automatically to a higher level of the game. Thus, MDY  
+knowingly assisted Glider users to breach their contracts, and  
+then helped to conceal those breaches from Blizzard. Bliz-  
+zard’s evidence also supports the conclusion that Blizzard was  
+negatively affected by MDY’s Glider sales, because Glider  
+use: (1) distorts WoW’s virtual economy by flooding it with  
+excess resources; (2) interferes with WoW players’ ability to  
+interact with other human players in the virtual world; and (3)  
+strains Blizzard’s servers because bots spend more continuous  
+time in-game than do human players. Finally, Blizzard intro-  
+duced evidence that MDY’s motive was its three and a half  
+to four million dollar profit.
+
+On the other hand, MDY proffered evidence that it created  
+Glider in 2005, when Blizzard’s ToU did not explicitly pro-  
+hibit bots.22 Glider initially had no anti-detection features.  
+MDY added these features only after Blizzard added Warden  
+to WoW. Blizzard did not change the EULA or ToU to pro-  
+scribe bots such as Glider explicitly until after MDY began  
+selling Glider. Finally, MDY has introduced evidence that  
+Glider enhances some players’ experience of the game,  
+including players who might otherwise not play WoW at all.  
+Taking this evidence in the light most favorable to MDY,  
+there is a genuine issue of material fact as to these factors.  
+ 22  
+ When MDY created Glider in 2005, Blizzard’s ToU prohibited the use  
+of “cheats” and “unauthorized third-party software” in connection with  
+WoW. The meaning of these contractual terms, including whether they  
+prohibit bots such as Glider, is ambiguous. In Arizona, the construction of  
+ambiguous contract provisions is a jury question. See Clark v. Compania  
+Ganadera de Cananea, S.A.,
+
+[385 P.2d 691, 697-98](https://www.courtlistener.com/opinion/1183134/clark-v-compania-ganadera-de-cananea-s-a/#697)
+
+ (Ariz. 1963).  
+          MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT         2705  
+  2.   Blizzard’s interests with which MDY interferes; the  
+       interest that MDY seeks to advance; the social interest  
+       in protecting MDY’s and Blizzard’s respective interests
+Blizzard argues that it seeks to provide its millions of WoW  
+players with a particular role-playing game experience that  
+excludes bots. It contends, as the district court determined,  
+that MDY’s interest depends on inducing Blizzard’s custom-  
+ers to breach their contracts. In contrast, MDY argues that  
+Glider is an innovative, profitable software program that has  
+positively affected its users’ lives by advancing them to  
+WoW’s more interesting levels. MDY has introduced evi-  
+dence that Glider allows players with limited motor skills to  
+continue to play WoW, improves some users’ romantic rela-  
+tionships by reducing the time that they spend playing WoW,  
+and allows users who work long hours to play WoW. We fur-  
+ther note that, if the fact-finder decides that Blizzard did not  
+ban bots at the time that MDY created Glider, the fact-finder  
+might conclude that MDY had a legitimate interest in continu-  
+ing to sell Glider. Again, the parties’ differing evidence  
+creates a genuine issue of material fact that precludes an  
+award of summary judgment.
+
+3. Proximity of MDY’s conduct to the interference;  
+ relationship between MDY and Blizzard
+
+[23] MDY’s Glider sales are the but-for cause of Glider  
+users’ breach of the operative ToU. Moreover, Blizzard and  
+MDY are not competitors in the online role-playing game  
+market; rather, MDY’s profits appear to depend on the contin-  
+ued popularity of WoW. Blizzard, however, chose not to  
+authorize MDY to sell Glider to its users. Even accepting that  
+these factors favor Blizzard, we do not think that they inde-  
+pendently warrant a grant of summary judgment to Blizzard.  
+As noted, we cannot hold that five of the seven “impropriety”  
+factors compel a finding in Blizzard’s favor at this stage,  
+including the two (nature of MDY’s conduct and MDY’s  
+motive) that the Arizona courts deem most important.  
+ 2706 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+Accordingly, we vacate the district court’s grant of summary  
+judgment to Blizzard.23
+
+B. Copyright Act preemption
+
+MDY contends that Blizzard’s tortious interference claim  
+is preempted by the Copyright Act. The Copyright Act pre-  
+empts state laws that confer rights equivalent to the exclusive  
+rights of copyright under
+
+17 U.S.C. § 106
+
+ (i.e., reproduction,  
+distribution, public display, public performance, and creation  
+of derivative works). 
+17 U.S.C. § 301
+
+(a). However, the Copy-  
+right Act does not preempt state law remedies with respect to  
+“activities violating legal or equitable rights that are not  
+equivalent to any of the exclusive rights [of copyright].” 
+17  
+U.S.C. § 301
+
+(b)(3).
+[24] Whether, in these circumstances, tortious interference  
+with contract is preempted by the Copyright Act is a question  
+of first impression in this circuit. However, we have previ-  
+ously addressed a similar tortious interference cause of action  
+under California law and found it not preempted. See Altera  
+Corp. v. Clear Logic, Inc.,
+
+[424 F.3d 1079, 1089-90](https://www.courtlistener.com/opinion/792065/altera-corp-v-clear-logic-inc/#1089)
+
+ (9th Cir.  
+2005). In so holding, we relied on the Seventh Circuit’s analy-  
+sis in ProCD, 
+[86 F.3d 1447](https://www.courtlistener.com/opinion/720542/procd-inc-v-zeidenberg/)
+
+, which explained that because  
+contractual rights are not equivalent to the exclusive rights of  
+copyright, the Copyright Act’s preemption clause usually  
+does not affect private contracts. Altera, 
+[424 F.3d at 1089](https://www.courtlistener.com/opinion/792065/altera-corp-v-clear-logic-inc/#1089)
+
+; see  
+ProCD, 
+[86 F.3d at 1454](https://www.courtlistener.com/opinion/720542/procd-inc-v-zeidenberg/#1454)
+
+ (“A copyright is a right against the  
+world. Contracts, by contrast, generally affect only their par-  
+ties; strangers may do as they please, so contracts do not  
+create ‘exclusive rights.’ ”). The Fourth, Fifth, and Eighth  
+Circuits have also held that the Copyright Act does not pre-  
+empt a party’s enforcement of its contractual rights. See Nat’l  
+Car Rental Sys., Inc. v. Comp. Assoc. Int’l, Inc., 
+[991 F.2d 426](https://www.courtlistener.com/opinion/604886/national-car-rental-system-inc-v-computer-associates-international-inc/)
+
+,  
+  23  
+    Because the district court entered a permanent injunction based on  
+MDY’s liability for tortious interference, we also vacate that permanent  
+injunction.  
+            MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT                  2707  
+433 (8th Cir. 1993); Taquino v. Teledyne Monarch Rubber,  
+
+[893 F.2d 1488, 1501](https://www.courtlistener.com/opinion/8984586/taquino-v-teledyne-monarch-rubber/#1501)
+
+ (5th Cir. 1990); Acorn Structures, Inc.  
+v. Swantz, 
+[846 F.2d 923, 926](https://www.courtlistener.com/opinion/8968533/acorn-structures-inc-v-swantz/#926)
+
+ (4th Cir. 1988).
+[25] This action concerns the anti-bot provisions of ToU  
+§ 4(b)(ii) and (iii), which we have held are contract-  
+enforceable covenants rather than copyright-enforceable con-  
+ditions. We conclude that since Blizzard seeks to enforce con-  
+tractual rights that are not equivalent to any of its exclusive  
+rights of copyright, the Copyright Act does not preempt its  
+tortious interference claim. Cf. Altera, 424 F0.3d at 1089-90.  
+Accordingly, we hold that Blizzard’s tortious interference  
+claim under Arizona law is not preempted by the Copyright  
+Act, but we vacate the grant of summary judgment because  
+there are outstanding issues of material fact.24
+
+VII.
+
+The district court found that Donnelly was personally liable  
+for MDY’s tortious interference with contract, secondary  
+copyright infringement, and DMCA violations. We vacate the  
+district court’s decision because we determine that MDY is  
+not liable for secondary copyright infringement and is liable  
+under the DMCA only for violation of § 1201(a)(2) with  
+respect to WoW’s dynamic non-literal elements. In addition,  
+we conclude that summary judgment is inappropriate as to  
+Blizzard’s claim for tortious interference with contract under  
+Arizona law. Accordingly, on remand, the district court shall  
+ 24  
+ Because we determine that there are triable issues of fact, we need not,  
+and do not, address MDY’s further contentions: that (1) Blizzard has  
+unclean hands because it changed the ToU to ban bots after this litigation  
+began; and (2) MDY is not liable for tortious interference because it only  
+“honestly persuaded” people to buy Glider.  
+ 2708 MDY INDUSTRIES v. BLIZZARD ENTERTAINMENT  
+reconsider the issue of Donnelly’s personal liability.25 The  
+district court’s decision is VACATED and the case is  
+REMANDED to the district court for further proceedings  
+consistent with this opinion.
+
+Each side shall bear its own costs.
+
+25  
+ If MDY is found liable at trial for tortious interference with contract,  
+the district court may consider Donnelly’s personal liability for that tor-  
+tious interference. Moreover, the district court may determine whether  
+Donnelly is personally liable for MDY’s violation of DMCA § 1201(a)(2).  
+In light of the foregoing disposition regarding Donnelly’s personal liabil-  
+ity, we also vacate in toto the district court’s permanent injunction against  
+Donnelly, though the district court may consider the propriety of an  
+injunction against Donnelly if it finds him liable for MDY’s § 1201(a)(2)  
+violations or for tortious interference with contract.

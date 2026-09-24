@@ -1,0 +1,1430 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-24T00:34:46.739064+00:00",
+  "dump_count": 31,
+  "source_kind": "archived third-party GitHub mirror of generated API documentation",
+  "source_base_url": "https://raw.githubusercontent.com/Ketho/wow-ui-source-forever/forever/Interface/AddOns/Blizzard_APIDocumentationGenerated/",
+  "downloaded": [],
+  "calls": [
+    {
+      "group": "G1",
+      "api": "GetBuildInfo",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetBuildInfo",
+      "canonicalized": false,
+      "note": "client build/version",
+      "signature": {
+        "source": "BuildDocumentation.lua",
+        "line": 9,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G1",
+      "api": "C_AddOns.GetAddOnSecurity",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_AddOns.GetAddOnSecurity",
+      "canonicalized": false,
+      "note": "addon name",
+      "signature": {
+        "source": "AddOnsDocumentation.lua",
+        "line": 225,
+        "arguments": [
+          {
+            "name": "name",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G1",
+      "api": "C_AddOns.GetScriptsDisallowedForBeta",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetScriptsDisallowedForBeta",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "AddOnsDocumentation.lua",
+        "line": 264,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G1",
+      "api": "C_RestrictedActions.GetAddOnRestrictionState",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "GetAddOnRestrictionState",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "RestrictedActionsDocumentation.lua",
+        "line": 28,
+        "arguments": [
+          {
+            "name": "type",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G1",
+      "api": "C_RestrictedActions.IsAddOnRestrictionActive",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "IsAddOnRestrictionActive",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "RestrictedActionsDocumentation.lua",
+        "line": 54,
+        "arguments": [
+          {
+            "name": "type",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G1",
+      "api": "InCombatLockdown",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "InCombatLockdown",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "RestrictedActionsDocumentation.lua",
+        "line": 44,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G2",
+      "api": "GetTime",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetTime",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "SystemTimeDocumentation.lua",
+        "line": 56,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G2",
+      "api": "GetServerTime",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetServerTime",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "SystemTimeDocumentation.lua",
+        "line": 29,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G2",
+      "api": "GetSessionTime",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetSessionTime",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "SystemTimeDocumentation.lua",
+        "line": 38,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G2",
+      "api": "GetTickTime",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetTickTime",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "SystemTimeDocumentation.lua",
+        "line": 47,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G2",
+      "api": "IsUsingFixedTimeStep",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "IsUsingFixedTimeStep",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "SystemTimeDocumentation.lua",
+        "line": 65,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G3",
+      "api": "C_Map.GetBestMapForUnit",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_Map.GetBestMapForUnit",
+      "canonicalized": false,
+      "note": "player",
+      "signature": {
+        "source": "MapDocumentation.lua",
+        "line": 48,
+        "arguments": [
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G3",
+      "api": "C_Map.GetPlayerMapPosition",
+      "argc": 2,
+      "status": "OK",
+      "written_as": "GetPlayerMapPosition",
+      "canonicalized": true,
+      "note": "old design omitted namespace on second call",
+      "signature": {
+        "source": "MapDocumentation.lua",
+        "line": 436,
+        "arguments": [
+          {
+            "name": "uiMapID",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 2,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitHealth",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitHealth",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1525,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "usePredicted",
+            "nilable": false,
+            "has_default": true,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitHealthMax",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitHealthMax",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1471,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitPower",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitPower",
+      "canonicalized": false,
+      "note": "optional power type omitted",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 2731,
+        "arguments": [
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "powerType",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "unmodified",
+            "nilable": false,
+            "has_default": true,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 3,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitPowerMax",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitPowerMax",
+      "canonicalized": false,
+      "note": "optional power type omitted",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 2800,
+        "arguments": [
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "powerType",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "unmodified",
+            "nilable": false,
+            "has_default": true,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 3,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitCastingInfo",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitCastingInfo",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 827,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitChannelInfo",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitChannelInfo",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 869,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitExists",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitExists",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1191,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 0,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitIsDeadOrGhost",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitIsDeadOrGhost",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1930,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitDistanceSquared",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitDistanceSquared",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1107,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitAffectingCombat",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitAffectingCombat",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 613,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitLevel",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "UnitLevel",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 2473,
+        "arguments": [
+          {
+            "name": "name",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "UnitIsEnemy",
+      "argc": 2,
+      "status": "OK",
+      "written_as": "UnitIsEnemy",
+      "canonicalized": false,
+      "note": "player and observed unit",
+      "signature": {
+        "source": "UnitDocumentation.lua",
+        "line": 1945,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "target",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 2,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "C_Secrets.ShouldUnitHealthMaxBeSecret",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_Secrets.Should*BeSecret",
+      "canonicalized": true,
+      "note": "expanded from non-callable wildcard",
+      "signature": {
+        "source": "dump_SecretPredicateAPIDocumentation.lua",
+        "line": 288,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "C_Secrets.ShouldUnitPowerBeSecret",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_Secrets.Should*BeSecret",
+      "canonicalized": true,
+      "note": "expanded from non-callable wildcard",
+      "signature": {
+        "source": "dump_SecretPredicateAPIDocumentation.lua",
+        "line": 320,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "powerType",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "C_Secrets.ShouldUnitPowerMaxBeSecret",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_Secrets.Should*BeSecret",
+      "canonicalized": true,
+      "note": "expanded from non-callable wildcard",
+      "signature": {
+        "source": "dump_SecretPredicateAPIDocumentation.lua",
+        "line": 337,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "powerType",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G4",
+      "api": "C_Secrets.ShouldUnitSpellCastingBeSecret",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_Secrets.Should*BeSecret",
+      "canonicalized": true,
+      "note": "expanded from non-callable wildcard",
+      "signature": {
+        "source": "dump_SecretPredicateAPIDocumentation.lua",
+        "line": 371,
+        "arguments": [
+          {
+            "name": "unit",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G5",
+      "api": "TargetNearestEnemy",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "TargetNearestEnemy",
+      "canonicalized": false,
+      "note": "optional reverse omitted",
+      "signature": {
+        "source": "TargetScriptDocumentation.lua",
+        "line": 117,
+        "arguments": [
+          {
+            "name": "reverse",
+            "nilable": false,
+            "has_default": true,
+            "stride": false
+          }
+        ],
+        "min_args": 0,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G5",
+      "api": "AttackTarget",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "AttackTarget",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "TargetScriptDocumentation.lua",
+        "line": 21,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G5",
+      "api": "IsTargetLoose",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "IsTargetLoose",
+      "canonicalized": false,
+      "note": "global API",
+      "signature": {
+        "source": "TargetScriptDocumentation.lua",
+        "line": 49,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G6",
+      "api": "C_WorldLootObject.GetWorldLootObjectDistanceSquared",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "C_WorldLootObject.GetWorldLootObjectDistanceSquared",
+      "canonicalized": false,
+      "note": "unit token",
+      "signature": {
+        "source": "WorldLootObjectDocumentation.lua",
+        "line": 26,
+        "arguments": [
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G6",
+      "api": "C_WorldLootObject.IsWorldLootObjectInRange",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "IsWorldLootObjectInRange",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "WorldLootObjectDocumentation.lua",
+        "line": 103,
+        "arguments": [
+          {
+            "name": "unitToken",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G6",
+      "api": "C_Container.CalculateTotalNumberOfFreeBagSlots",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "C_Container.CalculateTotalNumberOfFreeBagSlots",
+      "canonicalized": false,
+      "note": "no arguments",
+      "signature": {
+        "source": "ContainerDocumentation.lua",
+        "line": 10,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G6",
+      "api": "C_Container.GetContainerItemDurability",
+      "argc": 2,
+      "status": "OK",
+      "written_as": "GetContainerItemDurability",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "ContainerDocumentation.lua",
+        "line": 139,
+        "arguments": [
+          {
+            "name": "containerIndex",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "slotIndex",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 2,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": true
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G7",
+      "api": "C_AssistedCombat.IsAvailable",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "C_AssistedCombat.IsAvailable",
+      "canonicalized": false,
+      "note": "no arguments",
+      "signature": {
+        "source": "AssistedCombatDocumentation.lua",
+        "line": 43,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G7",
+      "api": "C_AssistedCombat.GetRotationSpells",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetRotationSpells",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "AssistedCombatDocumentation.lua",
+        "line": 34,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G7",
+      "api": "C_AssistedCombat.GetNextCastSpell",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetNextCastSpell",
+      "canonicalized": true,
+      "note": "optional checkForVisibleButton omitted",
+      "signature": {
+        "source": "AssistedCombatDocumentation.lua",
+        "line": 19,
+        "arguments": [
+          {
+            "name": "checkForVisibleButton",
+            "nilable": false,
+            "has_default": true,
+            "stride": false
+          }
+        ],
+        "min_args": 0,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G8",
+      "api": "C_ChatInfo.SendChatMessage",
+      "argc": 4,
+      "status": "OK",
+      "written_as": "SendChatMessage",
+      "canonicalized": true,
+      "note": "channel form; old design omitted namespace",
+      "signature": {
+        "source": "ChatInfoDocumentation.lua",
+        "line": 563,
+        "arguments": [
+          {
+            "name": "message",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "chatType",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "languageID",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "target",
+            "nilable": true,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 4,
+        "secret_arguments": true,
+        "has_restrictions": true,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G9",
+      "api": "C_Minimap.GetViewRadius",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "C_Minimap.GetViewRadius",
+      "canonicalized": false,
+      "note": "returns yards in the static documentation",
+      "signature": {
+        "source": "MinimapDocumentation.lua",
+        "line": 126,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G9",
+      "api": "C_Minimap.GetUiMapID",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetUiMapID",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "MinimapDocumentation.lua",
+        "line": 117,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G9",
+      "api": "C_Minimap.GetNumTrackingTypes",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "GetNumTrackingTypes",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "MinimapDocumentation.lua",
+        "line": 60,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G9",
+      "api": "C_Minimap.GetTrackingInfo",
+      "argc": 1,
+      "status": "OK",
+      "written_as": "GetTrackingInfo",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "MinimapDocumentation.lua",
+        "line": 102,
+        "arguments": [
+          {
+            "name": "spellIndex",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 1,
+        "max_args": 1,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G9",
+      "api": "C_Minimap.SetTracking",
+      "argc": 2,
+      "status": "OK",
+      "written_as": "SetTracking",
+      "canonicalized": true,
+      "note": "old design omitted namespace",
+      "signature": {
+        "source": "MinimapDocumentation.lua",
+        "line": 233,
+        "arguments": [
+          {
+            "name": "index",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "on",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 2,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G10",
+      "api": "C_AddOnProfiler.IsEnabled",
+      "argc": 0,
+      "status": "OK",
+      "written_as": "AddOnProfiler related API",
+      "canonicalized": true,
+      "note": "concrete replacement for vague reference",
+      "signature": {
+        "source": "AddOnProfilerDocumentation.lua",
+        "line": 120,
+        "arguments": [],
+        "min_args": 0,
+        "max_args": 0,
+        "secret_arguments": false,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    },
+    {
+      "group": "G10",
+      "api": "C_AddOnProfiler.GetAddOnMetric",
+      "argc": 2,
+      "status": "OK",
+      "written_as": "AddOnProfiler related API",
+      "canonicalized": true,
+      "note": "addon name and metric enum",
+      "signature": {
+        "source": "AddOnProfilerDocumentation.lua",
+        "line": 44,
+        "arguments": [
+          {
+            "name": "name",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          },
+          {
+            "name": "metric",
+            "nilable": false,
+            "has_default": false,
+            "stride": false
+          }
+        ],
+        "min_args": 2,
+        "max_args": 2,
+        "secret_arguments": true,
+        "has_restrictions": false,
+        "may_return_nothing": false
+      },
+      "duplicate_definitions": 1
+    }
+  ],
+  "events": [
+    {
+      "group": "G1",
+      "event": "ADDON_ACTION_BLOCKED",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "RestrictedActionsDocumentation.lua",
+          "line": 74,
+          "member": "AddonActionBlocked"
+        }
+      ]
+    },
+    {
+      "group": "G1",
+      "event": "ADDON_ACTION_FORBIDDEN",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "RestrictedActionsDocumentation.lua",
+          "line": 85,
+          "member": "AddonActionForbidden"
+        }
+      ]
+    },
+    {
+      "group": "G1",
+      "event": "ADDON_RESTRICTION_STATE_CHANGED",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "RestrictedActionsDocumentation.lua",
+          "line": 96,
+          "member": "AddonRestrictionStateChanged"
+        }
+      ]
+    },
+    {
+      "group": "G1",
+      "event": "MACRO_ACTION_BLOCKED",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "RestrictedActionsDocumentation.lua",
+          "line": 108,
+          "member": "MacroActionBlocked"
+        }
+      ]
+    },
+    {
+      "group": "G1",
+      "event": "MACRO_ACTION_FORBIDDEN",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "RestrictedActionsDocumentation.lua",
+          "line": 118,
+          "member": "MacroActionForbidden"
+        }
+      ]
+    },
+    {
+      "group": "G6",
+      "event": "LOOT_OPENED",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "LootDocumentation.lua",
+          "line": 217,
+          "member": "LootOpened"
+        }
+      ]
+    },
+    {
+      "group": "G6",
+      "event": "LOOT_CLOSED",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "LootDocumentation.lua",
+          "line": 186,
+          "member": "LootClosed"
+        }
+      ]
+    },
+    {
+      "group": "G9",
+      "event": "MINIMAP_UPDATE_TRACKING",
+      "status": "OK",
+      "definitions": [
+        {
+          "source": "MinimapDocumentation.lua",
+          "line": 271,
+          "member": "MinimapUpdateTracking"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "group": "G1",
+      "enum": "Enum.AddOnRestrictionType",
+      "status": "OK",
+      "expected_fields": [
+        "Combat",
+        "Encounter",
+        "ChallengeMode",
+        "PvPMatch",
+        "Map",
+        "Chat"
+      ],
+      "missing_fields": [],
+      "documented_field_count": 6,
+      "source": "RestrictedActionsConstantsDocumentation.lua"
+    },
+    {
+      "group": "G6",
+      "enum": "Enum.PlayerInteractionType",
+      "status": "MISSING_EXPECTED_FIELDS",
+      "expected_fields": [
+        "Herbalism",
+        "Mining",
+        "Skinning",
+        "GameObjectLoot"
+      ],
+      "missing_fields": [
+        "Herbalism",
+        "Mining",
+        "Skinning",
+        "GameObjectLoot"
+      ],
+      "documented_field_count": 81,
+      "source": "PlayerInteractionManagerConstantsDocumentation.lua"
+    },
+    {
+      "group": "G10",
+      "enum": "Enum.AddOnProfilerMetric",
+      "status": "OK",
+      "expected_fields": [
+        "RecentAverageTime",
+        "PeakTime",
+        "CountTimeOver1Ms"
+      ],
+      "missing_fields": [],
+      "documented_field_count": 12,
+      "source": "AddOnProfilerConstantsDocumentation.lua"
+    }
+  ],
+  "non_api_items": [
+    {
+      "group": "G2",
+      "item": "OnUpdate",
+      "reason": "frame script callback; runtime measurement required"
+    },
+    {
+      "group": "G5",
+      "item": "SendInput",
+      "reason": "Windows input API, not a WoW Lua API"
+    },
+    {
+      "group": "G5",
+      "item": "hwevent",
+      "reason": "runtime execution-context property, not a callable API"
+    },
+    {
+      "group": "G8",
+      "item": "SavedVariables",
+      "reason": "persistence mechanism, not a callable API"
+    },
+    {
+      "group": "G8",
+      "item": "Logs/WoWChatLog.txt",
+      "reason": "client file output, requires runtime measurement"
+    },
+    {
+      "group": "G9",
+      "item": "minimap icon coordinates",
+      "reason": "no named API is specified in the probe design"
+    }
+  ]
+}

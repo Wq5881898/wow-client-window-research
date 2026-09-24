@@ -1,0 +1,39 @@
+Title: C_AssistedCombat.GetNextCastSpell
+
+URL Source: https://warcraft.wiki.gg/wiki/API:C_AssistedCombat.GetNextCastSpell
+
+Published Time: 2025-07-14T15:13:13Z
+
+Markdown Content:
+[](https://warcraft.wiki.gg/wiki/API:C_AssistedCombat.GetNextCastSpell)
+
+From Warcraft Wiki
+
+[Jump to navigation](https://warcraft.wiki.gg/wiki/API:C_AssistedCombat.GetNextCastSpell#mw-head)[Jump to search](https://warcraft.wiki.gg/wiki/API:C_AssistedCombat.GetNextCastSpell#searchInput)
+
+| Game Types |
+| --- |
+| [![Image 1: 12.1.5 (69594)](https://warcraft.wiki.gg/images/thumb/Midnight-Petopia-Logo.png/36px-Midnight-Petopia-Logo.png?28a8f3)](https://github.com/search?q=repo:Ketho/wow-ui-source-standard-ptr+C_AssistedCombat.GetNextCastSpell&type=code "12.1.5 (69594)")[standard](https://github.com/search?q=repo:Ketho/wow-ui-source-standard-ptr+C_AssistedCombat.GetNextCastSpell&type=code)+[11.1.7](https://warcraft.wiki.gg/wiki/Patch_11.1.7/API_changes "Patch 11.1.7/API changes") [![Image 2: 1.60.1 (69913)](https://warcraft.wiki.gg/images/thumb/WoWForever-Icon.png/22px-WoWForever-Icon.png?3aa161)](https://github.com/search?q=repo:Ketho/wow-ui-source-forever+C_AssistedCombat.GetNextCastSpell&type=code "1.60.1 (69913)")[forever](https://github.com/search?q=repo:Ketho/wow-ui-source-forever+C_AssistedCombat.GetNextCastSpell&type=code)+[1.60.1](https://warcraft.wiki.gg/wiki/Patch_1.60.1/API_changes "Patch 1.60.1/API changes") [![Image 3: 5.5.4 (68077)](https://warcraft.wiki.gg/images/thumb/Mists-Logo-Small.png/36px-Mists-Logo-Small.png?f96b23)](https://github.com/search?q=repo:Ketho/wow-ui-source-mists+C_AssistedCombat.GetNextCastSpell&type=code "5.5.4 (68077)")[mists](https://github.com/search?q=repo:Ketho/wow-ui-source-mists+C_AssistedCombat.GetNextCastSpell&type=code)+[5.5.0](https://warcraft.wiki.gg/wiki/Patch_5.5.0/API_changes "Patch 5.5.0/API changes") [![Image 4: 2.5.6 (68184)](https://warcraft.wiki.gg/images/Bc_icon.gif?6fe702)](https://github.com/search?q=repo:Ketho/wow-ui-source-tbc+C_AssistedCombat.GetNextCastSpell&type=code "2.5.6 (68184)")[tbc](https://github.com/search?q=repo:Ketho/wow-ui-source-tbc+C_AssistedCombat.GetNextCastSpell&type=code)+[2.5.5](https://warcraft.wiki.gg/wiki/Patch_2.5.5/API_changes "Patch 2.5.5/API changes") [![Image 5: 1.15.9 (69109)](https://warcraft.wiki.gg/images/WoW_Icon_update.png?d4be1e)](https://github.com/search?q=repo:Ketho/wow-ui-source-vanilla+C_AssistedCombat.GetNextCastSpell&type=code "1.15.9 (69109)")[vanilla](https://github.com/search?q=repo:Ketho/wow-ui-source-vanilla+C_AssistedCombat.GetNextCastSpell&type=code)+[1.15.8](https://warcraft.wiki.gg/wiki/Patch_1.15.8/API_changes "Patch 1.15.8/API changes") |
+| Links |
+| [![Image 6: GitHub Octocat.png](https://warcraft.wiki.gg/images/thumb/GitHub_Octocat.png/16px-GitHub_Octocat.png?e90c6c)](https://github.com/search?type=code&q=/(?-i)C_AssistedCombat\.GetNextCastSpell/+language:Lua+NOT+is:fork+NOT+(path:Blizzard+OR+path:Interface+OR+path:AddOns+OR+path:Documentation+OR+path:FrameXML+OR+path:GlueXML+OR+path:SharedXML+OR+path:.luacheckrc+OR+path:api.lua+OR+path:luaserver.lua+OR+path:textentry.lua+OR+path:DataStore+OR+path:ElvUI+OR+path:Questie+OR+path:WeakAuras)+NOT+(owner:ChrisKader+OR+owner:CucFlavius+OR+owner:Ellypse+OR+owner:Ketho+OR+owner:ketho-wow+OR+owner:Logonz+OR+owner:mrbuds+OR+owner:nebularg+OR+owner:QartemisT+OR+owner:Resike+OR+owner:wowless+OR+owner:92Garfield+OR+owner:arkanoid1+OR+owner:Bhahlou+OR+owner:BreakBB+OR+owner:clicketz+OR+owner:Falkicon+OR+owner:MrMartin92+OR+owner:nwpark+OR+owner:papa-smurf+OR+owner:refaim+OR+owner:torresdrew+OR+owner:ZenonWow+OR+owner:Zetaprime82+OR+owner:zol-wow))[GitHub search](https://github.com/search?type=code&q=/(?-i)C_AssistedCombat\.GetNextCastSpell/+language:Lua+NOT+is:fork+NOT+(path:Blizzard+OR+path:Interface+OR+path:AddOns+OR+path:Documentation+OR+path:FrameXML+OR+path:GlueXML+OR+path:SharedXML+OR+path:.luacheckrc+OR+path:api.lua+OR+path:luaserver.lua+OR+path:textentry.lua+OR+path:DataStore+OR+path:ElvUI+OR+path:Questie+OR+path:WeakAuras)+NOT+(owner:ChrisKader+OR+owner:CucFlavius+OR+owner:Ellypse+OR+owner:Ketho+OR+owner:ketho-wow+OR+owner:Logonz+OR+owner:mrbuds+OR+owner:nebularg+OR+owner:QartemisT+OR+owner:Resike+OR+owner:wowless+OR+owner:92Garfield+OR+owner:arkanoid1+OR+owner:Bhahlou+OR+owner:BreakBB+OR+owner:clicketz+OR+owner:Falkicon+OR+owner:MrMartin92+OR+owner:nwpark+OR+owner:papa-smurf+OR+owner:refaim+OR+owner:torresdrew+OR+owner:ZenonWow+OR+owner:Zetaprime82+OR+owner:zol-wow)) [![Image 7: Townlong-Yak Globe.png](https://warcraft.wiki.gg/images/thumb/Townlong-Yak_Globe.png/16px-Townlong-Yak_Globe.png?680b35)](https://www.townlong-yak.com/globe/wut/#q:C_AssistedCombat.GetNextCastSpell)[Globe](https://www.townlong-yak.com/globe/wut/#q:C_AssistedCombat.GetNextCastSpell) [![Image 8: Townlong-Yak BAD.png](https://warcraft.wiki.gg/images/thumb/Townlong-Yak_BAD.png/16px-Townlong-Yak_BAD.png?ca02cf)](https://www.townlong-yak.com/framexml/ptr/Blizzard_APIDocumentation#C_AssistedCombat.GetNextCastSpell)[Townlong Yak](https://www.townlong-yak.com/framexml/ptr/Blizzard_APIDocumentation#C_AssistedCombat.GetNextCastSpell) [![Image 9: Blizz.gif](https://warcraft.wiki.gg/images/Blizz.gif?984542)](https://github.com/search?type=code&q=/(?-i)%22GetNextCastSpell%22/+repo:Ketho/wow-ui-source-standard-ptr+path:/^Interface\/AddOns\/Blizzard_APIDocumentationGenerated\/AssistedCombatDocumentation.lua/)[Blizzard Docs](https://github.com/search?type=code&q=/(?-i)%22GetNextCastSpell%22/+repo:Ketho/wow-ui-source-standard-ptr+path:/^Interface\/AddOns\/Blizzard_APIDocumentationGenerated\/AssistedCombatDocumentation.lua/) |
+| System: [AssistedCombat](https://warcraft.wiki.gg/wiki/Category:API_systems/AssistedCombat "Category:API systems/AssistedCombat") |
+| Predicates |
+| [AllowedWhenUntainted](https://warcraft.wiki.gg/wiki/Secret_Values#Secret_arguments "Secret Values") |
+
+| [Main Menu](https://warcraft.wiki.gg/wiki/Warcraft_Wiki:Interface_customization "Warcraft Wiki:Interface customization") |
+| --- |
+| * [WoW API](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API "World of Warcraft API") * [Lua API](https://warcraft.wiki.gg/wiki/Lua_functions "Lua functions") * [Widget API](https://warcraft.wiki.gg/wiki/Widget_API "Widget API") * [ScriptObject API](https://warcraft.wiki.gg/wiki/ScriptObject_API "ScriptObject API") * [XML schema](https://warcraft.wiki.gg/wiki/XML "XML") * [FrameXML](https://warcraft.wiki.gg/wiki/FrameXML_functions "FrameXML functions") * [Events](https://warcraft.wiki.gg/wiki/Events "Events") * [CVars](https://warcraft.wiki.gg/wiki/Console_variables "Console variables") * * * * [Combat Log](https://warcraft.wiki.gg/wiki/COMBAT_LOG_EVENT "COMBAT LOG EVENT") * [Escape sequences](https://warcraft.wiki.gg/wiki/UI_escape_sequences "UI escape sequences") * [API changes](https://warcraft.wiki.gg/wiki/API_change_summaries "API change summaries") * [HOWTOs](https://warcraft.wiki.gg/wiki/HOWTOs "HOWTOs") * ![Image 10: Warcraft Wiki icon stamp.svg](https://warcraft.wiki.gg/images/Warcraft_Wiki_icon_stamp.svg?c7645a)[Redirect](https://www.wiki.gg/redirect), [Google](https://www.google.com/preferences/source?q=warcraft.wiki.gg) * ![Image 11: Discord logo.png](https://warcraft.wiki.gg/images/thumb/Discord_logo.png/14px-Discord_logo.png?4d7bc2)[WoWUIDev](https://discord.gg/txUg39Vhc6) |
+
+spellID = C_AssistedCombat.GetNextCastSpell([checkForVisibleButton])
+
+## Arguments
+
+checkForVisibleButton boolean?`= false`
+## Returns
+
+spellID number?
+## Details
+
+*   Custom action buttons can be included in the visibility check if they have been associated with an action ID by [SetActionUIButton](https://warcraft.wiki.gg/wiki/API:SetActionUIButton "API:SetActionUIButton").
+
+Cookies help us deliver our services. By using our services, you agree to our use of cookies.
