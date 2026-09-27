@@ -1,0 +1,7 @@
+## Interface: 160001
+## Title: WowProbeReadOnly
+## Notes: Read-only Forever capability probe. No cast, move, target, interact, or chat send.
+## SavedVariables: WowProbe_Report
+## DefaultState: disabled
+## Version: 0.1.0-research
+WowProbeReadOnly.lua

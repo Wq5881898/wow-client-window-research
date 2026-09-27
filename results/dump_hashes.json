@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-09-27T23:57:45Z",
+  "dump_dir": "sources/forever_dumps",
+  "count": 31,
+  "files": [
+    {
+      "file": "AddOnProfilerConstantsDocumentation.lua",
+      "bytes": 2779,
+      "sha256": "a37d879661864dcc6035c131271208177b5f2758610194b2b1c12f6fc813a211"
+    },
+    {
+      "file": "AddOnProfilerDocumentation.lua",
+      "bytes": 6778,
+      "sha256": "127bdfdcdc812ecceba26a6eb25cbcbe40e933424f9d7df34a17c63a4619c790"
+    },
+    {
+      "file": "AddOnsDocumentation.lua",
+      "bytes": 9837,
+      "sha256": "9173f4a5a846d9bc2d260a85cadce92255543cb5f7e13c31abb2afd343109bd7"
+    },
+    {
+      "file": "AssistedCombatDocumentation.lua",
+      "bytes": 1315,
+      "sha256": "b89929e62b680074e8137d8d534f4cc372652464321ef2c23524806566d6f54f"
+    },
+    {
+      "file": "AutoLootDocumentation.lua",
+      "bytes": 477,
+      "sha256": "61b07a3ea5efd972eb72f1e25d4b849ad52440f0be0e31cd4750200a01af41a3"
+    },
+    {
+      "file": "BuildDocumentation.lua",
+      "bytes": 2628,
+      "sha256": "3dbc4f527b5b5952095007bf3ce75f3a39dcb751332a88a177d77f71f6562985"
+    },
+    {
+      "file": "ChatInfoDocumentation.lua",
+      "bytes": 135913,
+      "sha256": "05942abec7c235d3d42b26713073863ba4637ed1860ca2489ebbf56f63a37543"
+    },
+    {
+      "file": "CombatLogDocumentation.lua",
+      "bytes": 3067,
+      "sha256": "5fe6c6f0036356c8ccbd2485fd00cba90d1caa14f22265f4294b90ad3a797099"
+    },
+    {
+      "file": "CombatLogSecureDocumentation.lua",
+      "bytes": 3464,
+      "sha256": "502a1fd52324cebc8555c1f5ac49d3a0664eaea105417363c6510d9ec394e738"
+    },
+    {
+      "file": "ContainerDocumentation.lua",
+      "bytes": 19917,
+      "sha256": "81ed0e8e33b7871e0021192124836e16502af060970dc334abe74239c40d6958"
+    },
+    {
+      "file": "dump_SecretPredicateAPIDocumentation.lua",
+      "bytes": 12137,
+      "sha256": "3b400421dcfacb9e14901452705b6159a229d84464c83fa058f12759f610f4bd"
+    },
+    {
+      "file": "FrameAPICooldownDocumentation.lua",
+      "bytes": 13704,
+      "sha256": "58afa89eabb8a835d6b6af96b13ee9c322dd884870c3dddce60c7c8587dc1d5c"
+    },
+    {
+      "file": "LootDocumentation.lua",
+      "bytes": 11970,
+      "sha256": "5085aca770e41bffdcc618f47d992ab152d15614e6aeb7a8a70f891ba11555e4"
+    },
+    {
+      "file": "MapDocumentation.lua",
+      "bytes": 18222,
+      "sha256": "6a164b7b1db9dcece947ceef8f7be6eeab812e390399d495ba097221c3be5cc3"
+    },
+    {
+      "file": "MinimapDocumentation.lua",
+      "bytes": 6936,
+      "sha256": "be0e3102f435008c81f998acdaaa8861377e6e17a2fef84b798fccb7aa815234"
+    },
+    {
+      "file": "PlayerInteractionManagerConstantsDocumentation.lua",
+      "bytes": 6926,
+      "sha256": "abbdec6c2dc19e974ae88a614c12debc164ba5cb8a2309ed41c5bd3e1571c6e0"
+    },
+    {
+      "file": "PlayerInteractionManagerDocumentation.lua",
+      "bytes": 2721,
+      "sha256": "43e32efe49f904264fa2e916c43edb40da7400954c60b941749bf0853eac9daa"
+    },
+    {
+      "file": "PlayerLocationDocumentation.lua",
+      "bytes": 2691,
+      "sha256": "cbe978479038a27031427a314ded065b6b050d93d47f408fe2dded1a8e9cb4a7"
+    },
+    {
+      "file": "RestrictedActionsConstantsDocumentation.lua",
+      "bytes": 2012,
+      "sha256": "43968956cc74fee2604c0d65f9ad995d161946afc1b900b80cb83298fd682554"
+    },
+    {
+      "file": "RestrictedActionsDocumentation.lua",
+      "bytes": 3624,
+      "sha256": "c99f760a2a3d1ba8994a1a84b5dd03fa6f38bb983db71d23369d035014f515e1"
+    },
+    {
+      "file": "SecretPredicatesDocumentation.lua",
+      "bytes": 7942,
+      "sha256": "2617c733dc151302bceec4054547f5dec3f482735233c834d99836dfcc2b4a82"
+    },
+    {
+      "file": "SoftTargetConstantsDocumentation.lua",
+      "bytes": 583,
+      "sha256": "a8ea70e9fc0beb4443277975f891bc3a1b6debe6f7e4a266261e8edb7b6f4a0d"
+    },
+    {
+      "file": "SpellBookDocumentation.lua",
+      "bytes": 34824,
+      "sha256": "8a126bf323394bc22a290472784ce28f71be027719013f61cd39a1d7498b507c"
+    },
+    {
+      "file": "SpellDocumentation.lua",
+      "bytes": 33665,
+      "sha256": "a17a5ae90410cda610679b9342351263af3ff9cd6d77a63eb31a6b625bb51f6d"
+    },
+    {
+      "file": "SystemTimeDocumentation.lua",
+      "bytes": 1418,
+      "sha256": "0b3b158423bdd2ca43508cdd2d486830c0e94ca4b8e5dc1ec1bdfd2ee0fe08ff"
+    },
+    {
+      "file": "TargetScriptDocumentation.lua",
+      "bytes": 4555,
+      "sha256": "6bd357633db5f67b4b4332b77f8eb5607d0ef9c7395493ce82f335babfcf6b22"
+    },
+    {
+      "file": "TimeDocumentation.lua",
+      "bytes": 566,
+      "sha256": "cd221f9498fd50dd898f1772b9a6921262f41916108b4230c8032db9c1800855"
+    },
+    {
+      "file": "UnitAuraDocumentation.lua",
+      "bytes": 18415,
+      "sha256": "f93f5161385e2ff2b778c7950dc7f61f52c6aca5d3a4ae1d1dbcd93cab0e3f41"
+    },
+    {
+      "file": "UnitAuraSharedDocumentation.lua",
+      "bytes": 2239,
+      "sha256": "9a846900018e852d5aa9364cd37649201699af84b4cd769c482bd410e0724cac"
+    },
+    {
+      "file": "UnitDocumentation.lua",
+      "bytes": 125804,
+      "sha256": "ec7da352b72b33c4a73b7716faa9ada6b5d94035160849a9dec7704214e76ad8"
+    },
+    {
+      "file": "WorldLootObjectDocumentation.lua",
+      "bytes": 3419,
+      "sha256": "04a91cbc2343897331654614c6608ffc6762eec0473f554cc2d2a24974913f33"
+    }
+  ]
+}
