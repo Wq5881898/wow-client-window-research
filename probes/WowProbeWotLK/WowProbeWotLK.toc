@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: WowProbeWotLK
+## Notes: Read-only 3.3.5a baseline probe. No cast, move, target, interact, or chat send.
+## SavedVariablesPerCharacter: WowProbeWotLK_Report
+## Version: 0.1.0-research
+WowProbeWotLK.xml
+WowProbeWotLK.lua
