@@ -458,6 +458,10 @@ frame:SetScript("OnEvent", function(_, event, arg1)
       WowProbeWotLK_Report.schema = WowProbeWotLK_Report.schema or "wowprobe-wotlk-v1"
       WowProbeWotLK_Report.runs = WowProbeWotLK_Report.runs or {}
       WowProbeWotLK_Report.load_count = (WowProbeWotLK_Report.load_count or 0) + 1
+      if WowProbeWotLK_Report.auto_once_on_load and #WowProbeWotLK_Report.runs == 0 then
+        new_run("auto_enter_world")
+      end
+      DEFAULT_CHAT_FRAME:AddMessage("WowProbeWotLK loaded. /wowprobe once [scene]")
     end
     return
   end
