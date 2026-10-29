@@ -1,0 +1,67 @@
+{
+  "runs": [
+    {
+      "source": "framemotion_1793165607701264100_trace.json",
+      "host_seconds": 0.09694130008574575,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11799999990034848,
+      "positive_speed_values": [
+        2.5
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.00010928500000001451,
+      "snapshot_dy": -0.00010928511619573422
+    },
+    {
+      "source": "framemotion_1793169990334700100_trace.json",
+      "host_seconds": 0.09699929994530976,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        2.5
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.00010803300000000737,
+      "snapshot_dy": -0.00010803341865539551
+    },
+    {
+      "source": "framemotion_1793170325831435300_trace.json",
+      "host_seconds": 0.09715990000404418,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        2.5
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.00010800399999999488,
+      "snapshot_dy": -0.00010800361633300781
+    }
+  ],
+  "mean_dy": -0.00010844071706137919,
+  "range_dy": 1.2814998627264096e-06,
+  "sample_stdev_dy": 7.314229065182347e-07,
+  "recovery_source": "framemotion_1793170669162135700_trace.json",
+  "recovery_summary": {
+    "frame_count": 360,
+    "moving_frame_count": 5,
+    "first_to_last_positive_speed_seconds": 0.0659999999916181,
+    "stationary_bracket_seconds": 0.09999999997671694,
+    "positive_speed_values": [
+      7.0
+    ],
+    "min_frame_elapsed": 0.016,
+    "max_frame_elapsed": 0.018,
+    "trace_dy": -0.0002510250000000158,
+    "snapshot_dy": -0.0002510249614714466
+  },
+  "scope": "three walking samples at different starting positions; displacement spread, not return error"
+}

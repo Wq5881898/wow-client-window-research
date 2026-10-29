@@ -1,0 +1,344 @@
+{
+  "source_sha256": "016cc4eb7f7bf6946e6f15a213922fc43949cbdb96b4850d434e2af3180c9b8d",
+  "runs": {
+    "flat_setup": {
+      "meta": {
+        "scene": "flat_setup",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 496307.867,
+        "motion_y": 0.6519389152526855,
+        "motion_speed": 0,
+        "sv_memory_assigned": true,
+        "logout_seen": true,
+        "motion_x": 0.4227171242237091,
+        "motion_facing": 2.111500024795532
+      },
+      "observations": {
+        "G3.zone": {
+          "sequence": 30,
+          "api": "GetZoneText",
+          "value_type": "string",
+          "monotonic_time": 496307.867,
+          "probe_id": "G3.zone",
+          "scene": "flat_setup",
+          "call_status": "RETURNED",
+          "value": "Elwynn Forest",
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "value_type": "string",
+          "monotonic_time": 496307.867,
+          "probe_id": "G3.subzone",
+          "scene": "flat_setup",
+          "call_status": "RETURNED",
+          "value": "Goldshire",
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "value_type": "nil",
+          "probe_id": "G4.combat.player",
+          "effect": "NOT_APPLICABLE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496307.867,
+          "scene": "flat_setup",
+          "value_status": "NIL",
+          "event_status": "NONE"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "value_type": "number",
+          "monotonic_time": 496307.867,
+          "probe_id": "G4.health.player",
+          "scene": "flat_setup",
+          "call_status": "RETURNED",
+          "value": 142,
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "value_type": "nil",
+          "probe_id": "G4.name.target",
+          "effect": "NOT_APPLICABLE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496307.867,
+          "scene": "flat_setup",
+          "value_status": "NIL",
+          "event_status": "NONE"
+        }
+      }
+    },
+    "flat_forward": {
+      "meta": {
+        "scene": "flat_forward",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 496590.917,
+        "motion_y": 0.6527169346809387,
+        "motion_speed": 0,
+        "motion_facing": 2.111500024795532,
+        "motion_x": 0.4218530058860779,
+        "logout_seen": true,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.zone": {
+          "sequence": 30,
+          "api": "GetZoneText",
+          "event_status": "NONE",
+          "probe_id": "G3.zone",
+          "scene": "flat_forward",
+          "call_status": "RETURNED",
+          "value_status": "OK",
+          "effect": "NOT_APPLICABLE",
+          "value": "Elwynn Forest",
+          "monotonic_time": 496590.917,
+          "value_type": "string"
+        },
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "scene": "flat_forward",
+          "call_status": "RETURNED",
+          "value_status": "OK",
+          "effect": "NOT_APPLICABLE",
+          "value": "Goldshire",
+          "monotonic_time": 496590.917,
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496590.918,
+          "scene": "flat_forward",
+          "value_status": "NIL",
+          "effect": "NOT_APPLICABLE",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "scene": "flat_forward",
+          "call_status": "RETURNED",
+          "value_status": "OK",
+          "effect": "NOT_APPLICABLE",
+          "value": 142,
+          "monotonic_time": 496590.918,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496590.918,
+          "scene": "flat_forward",
+          "value_status": "NIL",
+          "effect": "NOT_APPLICABLE",
+          "value_type": "nil"
+        }
+      }
+    },
+    "flat_back": {
+      "meta": {
+        "scene": "flat_back",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 496769.817,
+        "motion_y": 0.6522165536880493,
+        "motion_speed": 0,
+        "sv_memory_assigned": true,
+        "logout_seen": true,
+        "motion_x": 0.422408789396286,
+        "motion_facing": 2.111500024795532
+      },
+      "observations": {
+        "G3.zone": {
+          "sequence": 30,
+          "api": "GetZoneText",
+          "value_type": "string",
+          "value": "Elwynn Forest",
+          "probe_id": "G3.zone",
+          "monotonic_time": 496769.817,
+          "call_status": "RETURNED",
+          "scene": "flat_back",
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "value_type": "string",
+          "value": "Goldshire",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 496769.817,
+          "call_status": "RETURNED",
+          "scene": "flat_back",
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "value_type": "nil",
+          "probe_id": "G4.combat.player",
+          "effect": "NOT_APPLICABLE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496769.818,
+          "scene": "flat_back",
+          "value_status": "NIL",
+          "event_status": "NONE"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "value_type": "number",
+          "value": 142,
+          "probe_id": "G4.health.player",
+          "monotonic_time": 496769.818,
+          "call_status": "RETURNED",
+          "scene": "flat_back",
+          "effect": "NOT_APPLICABLE",
+          "value_status": "OK",
+          "event_status": "NONE"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "value_type": "nil",
+          "probe_id": "G4.name.target",
+          "effect": "NOT_APPLICABLE",
+          "call_status": "RETURNED",
+          "monotonic_time": 496769.818,
+          "scene": "flat_back",
+          "value_status": "NIL",
+          "event_status": "NONE"
+        }
+      }
+    },
+    "flat_stationary": {
+      "meta": {
+        "scene": "flat_stationary",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 497032.801,
+        "motion_y": 0.6522165536880493,
+        "motion_speed": 0,
+        "motion_facing": 2.111500024795532,
+        "motion_x": 0.422408789396286,
+        "logout_seen": true,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.zone": {
+          "sequence": 30,
+          "api": "GetZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.zone",
+          "monotonic_time": 497032.801,
+          "call_status": "RETURNED",
+          "scene": "flat_stationary",
+          "value_status": "OK",
+          "value": "Elwynn Forest",
+          "value_type": "string"
+        },
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 497032.801,
+          "call_status": "RETURNED",
+          "scene": "flat_stationary",
+          "value_status": "OK",
+          "value": "Goldshire",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 497032.801,
+          "scene": "flat_stationary",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 497032.801,
+          "call_status": "RETURNED",
+          "scene": "flat_stationary",
+          "value_status": "OK",
+          "value": 142,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 497032.801,
+          "scene": "flat_stationary",
+          "value_status": "NIL",
+          "value_type": "nil"
+        }
+      }
+    }
+  },
+  "normalized_map_deltas": {
+    "forward": [
+      -0.0008641183376312256,
+      0.0007780194282531738
+    ],
+    "back": [
+      0.0005557835102081299,
+      -0.0005003809928894043
+    ],
+    "residual": [
+      -0.0003083348274230957,
+      0.00027763843536376953
+    ],
+    "stationary": [
+      0.0,
+      0.0
+    ]
+  },
+  "limitations": [
+    "normalized map units are not yards",
+    "motion metadata captured after snapshot via external /run",
+    "GM mode remains on; one sample per direction"
+  ]
+}

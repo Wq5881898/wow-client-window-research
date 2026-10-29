@@ -1,0 +1,270 @@
+{
+  "source_sha256": "75f8fb2e25d88a83713cfabf1edadd8b2d1dcaa12b8267776bf18fe7f9840bd0",
+  "runs": {
+    "newbie_continuous_1": {
+      "meta": {
+        "sample_time": 198580.65,
+        "scene": "newbie_continuous_1",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 198563.9,
+        "y": 0.436311811208725,
+        "x": 0.4805493056774139,
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": false,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 198563.901,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_1",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 198563.901,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_1",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198563.901,
+          "scene": "newbie_continuous_1",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 198563.901,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_1",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198563.901,
+          "scene": "newbie_continuous_1",
+          "value_status": "NIL",
+          "value_type": "nil"
+        }
+      }
+    },
+    "newbie_continuous_2": {
+      "meta": {
+        "sample_time": 198612.434,
+        "scene": "newbie_continuous_2",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 198595.65,
+        "y": 0.436311811208725,
+        "x": 0.4805493056774139,
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": false,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 198595.65,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_2",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 198595.65,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_2",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198595.65,
+          "scene": "newbie_continuous_2",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 198595.65,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_2",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198595.651,
+          "scene": "newbie_continuous_2",
+          "value_status": "NIL",
+          "value_type": "nil"
+        }
+      }
+    },
+    "newbie_continuous_3": {
+      "meta": {
+        "sample_time": 198644.167,
+        "scene": "newbie_continuous_3",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 198627.417,
+        "y": 0.436311811208725,
+        "x": 0.4805493056774139,
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": true,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 198627.417,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_3",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 198627.417,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_3",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198627.417,
+          "scene": "newbie_continuous_3",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 198627.417,
+          "call_status": "RETURNED",
+          "scene": "newbie_continuous_3",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 198627.417,
+          "scene": "newbie_continuous_3",
+          "value_status": "NIL",
+          "value_type": "nil"
+        }
+      }
+    }
+  },
+  "baseline_deltas": [
+    {
+      "scene": "newbie_continuous_1",
+      "elapsed": 0.0,
+      "x": 0.0,
+      "y": 0.0,
+      "facing": 0.0
+    },
+    {
+      "scene": "newbie_continuous_2",
+      "elapsed": 31.784000000014203,
+      "x": 0.0,
+      "y": 0.0,
+      "facing": 0.0
+    },
+    {
+      "scene": "newbie_continuous_3",
+      "elapsed": 63.51699999999255,
+      "x": 0.0,
+      "y": 0.0,
+      "facing": 0.0
+    }
+  ],
+  "checks_passed": true,
+  "scope": "three same-script stationary snapshots; reload only after final sample; not continuous telemetry"
+}

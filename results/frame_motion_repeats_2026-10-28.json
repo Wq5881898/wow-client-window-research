@@ -1,0 +1,57 @@
+{
+  "runs": [
+    {
+      "source": "framemotion_1793160660040551800_trace.json",
+      "sha256": "e345fd8ac573113b4ed1395198fccd9b0c0bd098052e1796e25f3016a937e7e0",
+      "host_seconds": 0.09695450006984174,
+      "frame_count": 361,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08199999993667006,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.0003024930000000148,
+      "snapshot_dy": -0.0003024935722351074
+    },
+    {
+      "source": "framemotion_1793162694384670000_trace.json",
+      "sha256": "16a66910450b63980a09a43ec773137a3c623a39ea7780c92227fef2b55b5ea1",
+      "host_seconds": 0.09691720001865178,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08199999993667006,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.0003025239999999707,
+      "snapshot_dy": -0.0003025233745574951
+    },
+    {
+      "source": "framemotion_1793163000287441400_trace.json",
+      "sha256": "0e2eb4184074476f271404119d8ab107f2c0f21566efbb1884216b6eaa50746e",
+      "host_seconds": 0.09726409998256713,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.000302522999999999,
+      "snapshot_dy": -0.0003025233745574951
+    }
+  ],
+  "snapshot_dy_range": 2.9802322387695312e-08,
+  "moving_frame_counts": [
+    6
+  ],
+  "scope": "three selected traces; no causal attribution from unchanged frame counts"
+}

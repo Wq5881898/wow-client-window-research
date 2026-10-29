@@ -1,0 +1,106 @@
+{
+  "source_sha256": "51b5be4b04c74117d257b7baf9e28e8ff60415e532ff3c00e36e276f58fa654f",
+  "target_source": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\results\\newbie_compensated_trial1_2026-10-28.json",
+  "target": {
+    "sample_time": 539791.633,
+    "scene": "newbie_compensated_trial1_baseline",
+    "last_sequence": 84,
+    "addon": "WowProbeWotLK",
+    "started_monotonic": 539774.851,
+    "y": 0.4361493587493897,
+    "x": 0.4805493056774139,
+    "facing": 1.107696334656794e-08,
+    "speed": 0,
+    "logout_seen": false,
+    "sv_memory_assigned": true
+  },
+  "current": {
+    "meta": {
+      "sample_time": 540788.334,
+      "scene": "newbie_feedback_current",
+      "last_sequence": 84,
+      "addon": "WowProbeWotLK",
+      "started_monotonic": 540771.567,
+      "y": 0.4361531734466553,
+      "x": 0.4805493056774139,
+      "facing": 1.107696334656794e-08,
+      "speed": 0,
+      "logout_seen": true,
+      "sv_memory_assigned": true
+    },
+    "observations": {
+      "G3.subzone": {
+        "sequence": 31,
+        "api": "GetSubZoneText",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G3.subzone",
+        "monotonic_time": 540771.567,
+        "call_status": "RETURNED",
+        "scene": "newbie_feedback_current",
+        "value_status": "OK",
+        "value": "Northshire Valley",
+        "value_type": "string"
+      },
+      "G4.name.player": {
+        "sequence": 40,
+        "api": "UnitName",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.name.player",
+        "monotonic_time": 540771.567,
+        "call_status": "RETURNED",
+        "scene": "newbie_feedback_current",
+        "value_status": "OK",
+        "value": "Probehuman",
+        "value_type": "string"
+      },
+      "G4.combat.player": {
+        "sequence": 42,
+        "api": "UnitAffectingCombat",
+        "effect": "NOT_APPLICABLE",
+        "probe_id": "G4.combat.player",
+        "event_status": "NONE",
+        "call_status": "RETURNED",
+        "monotonic_time": 540771.567,
+        "scene": "newbie_feedback_current",
+        "value_status": "NIL",
+        "value_type": "nil"
+      },
+      "G4.health.player": {
+        "sequence": 43,
+        "api": "UnitHealth",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.health.player",
+        "monotonic_time": 540771.567,
+        "call_status": "RETURNED",
+        "scene": "newbie_feedback_current",
+        "value_status": "OK",
+        "value": 52,
+        "value_type": "number"
+      },
+      "G4.name.target": {
+        "sequence": 53,
+        "api": "UnitName",
+        "effect": "NOT_APPLICABLE",
+        "probe_id": "G4.name.target",
+        "event_status": "NONE",
+        "call_status": "RETURNED",
+        "monotonic_time": 540771.567,
+        "scene": "newbie_feedback_current",
+        "value_status": "NIL",
+        "value_type": "nil"
+      }
+    }
+  },
+  "decision": {
+    "status": "ARRIVED",
+    "dx": 0.0,
+    "dy": 3.814697265569489e-06,
+    "facing_error": 0.0,
+    "axis_tolerance": 5e-06,
+    "movement_issued": false
+  },
+  "scope": "offline decision after reload; normalized axis tolerance; no movement controller"
+}

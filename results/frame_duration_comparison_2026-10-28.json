@@ -1,0 +1,57 @@
+{
+  "runs": [
+    {
+      "source": "framemotion_1793164241132578100_trace.json",
+      "requested_seconds": 0.08,
+      "host_seconds": 0.08048700005747378,
+      "frame_count": 360,
+      "moving_frame_count": 5,
+      "first_to_last_positive_speed_seconds": 0.0659999999916181,
+      "stationary_bracket_seconds": 0.10100000002421439,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.0002510250000000158,
+      "snapshot_dy": -0.0002510249614715021
+    },
+    {
+      "source": "framemotion_1793163000287441400_trace.json",
+      "requested_seconds": 0.09642223536365996,
+      "host_seconds": 0.09726409998256713,
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.000302522999999999,
+      "snapshot_dy": -0.0003025233745574951
+    },
+    {
+      "source": "framemotion_1793164554469934200_trace.json",
+      "requested_seconds": 0.115,
+      "host_seconds": 0.11552589992061257,
+      "frame_count": 360,
+      "moving_frame_count": 7,
+      "first_to_last_positive_speed_seconds": 0.09999999997671694,
+      "stationary_bracket_seconds": 0.1340000000782311,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.017,
+      "trace_dy": -0.0003506239999999661,
+      "snapshot_dy": -0.00035062432289129086
+    }
+  ],
+  "scope": "one selected trace per duration; normalized map coordinates",
+  "adjacent_abs_dy_increases": [
+    5.149841308599301e-05,
+    4.8100948333795746e-05
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "trials": [
+    {
+      "trial": 1,
+      "residual": {
+        "dx": 0.0,
+        "dy": 1.6987323760986328e-06,
+        "facing": 0.0
+      },
+      "between_trial_delta": null,
+      "reduction_fraction": 0.9895162773588376
+    },
+    {
+      "trial": 2,
+      "residual": {
+        "dx": 0.0,
+        "dy": -4.172325134832455e-07,
+        "facing": 0.0
+      },
+      "between_trial_delta": {
+        "x": 0.0,
+        "y": 0.0,
+        "facing": 0.0
+      },
+      "reduction_fraction": 0.997425050579021
+    },
+    {
+      "trial": 3,
+      "residual": {
+        "dx": 0.0,
+        "dy": 2.5331974029541016e-06,
+        "facing": 0.0
+      },
+      "between_trial_delta": {
+        "x": 0.0,
+        "y": 0.0,
+        "facing": 0.0
+      },
+      "reduction_fraction": 0.9843663785175648
+    }
+  ],
+  "mean_abs_dy": 1.54972076417866e-06,
+  "max_abs_dy": 2.5331974029541016e-06,
+  "cumulative_delta": {
+    "x": 0.0,
+    "y": 3.814697265569489e-06,
+    "facing": 0.0
+  },
+  "elapsed_seconds": 410.01699999999255,
+  "scope": "three trials, reload between trials, normalized map coordinates"
+}

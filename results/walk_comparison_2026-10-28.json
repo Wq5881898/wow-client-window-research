@@ -1,0 +1,54 @@
+{
+  "runs": [
+    {
+      "label": "run_control",
+      "source": "framemotion_1793163000287441400_trace.json",
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11699999996926636,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.000302522999999999,
+      "snapshot_dy": -0.0003025233745574951
+    },
+    {
+      "label": "walk",
+      "source": "framemotion_1793165607701264100_trace.json",
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11799999990034848,
+      "positive_speed_values": [
+        2.5
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.00010928500000001451,
+      "snapshot_dy": -0.00010928511619573422
+    },
+    {
+      "label": "restored_run",
+      "source": "framemotion_1793166009480494200_trace.json",
+      "frame_count": 360,
+      "moving_frame_count": 6,
+      "first_to_last_positive_speed_seconds": 0.08299999998416752,
+      "stationary_bracket_seconds": 0.11799999990034848,
+      "positive_speed_values": [
+        7.0
+      ],
+      "min_frame_elapsed": 0.016,
+      "max_frame_elapsed": 0.018,
+      "trace_dy": -0.0003024939999999865,
+      "snapshot_dy": -0.0003024935722351074
+    }
+  ],
+  "walk_run_displacement_ratio": 0.3612451975176695,
+  "displacement_reduction_fraction": 0.6387548024823305,
+  "base_speed_ratio": 0.35714285714285715,
+  "restored_run_speed_verified": true,
+  "scope": "single walking sample; normalized map coordinates; not minimum-step calibration"
+}

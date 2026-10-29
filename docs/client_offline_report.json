@@ -1,0 +1,60 @@
+{
+  "python_files": 89,
+  "syntax_errors": [],
+  "json_files": 41,
+  "invalid_json": [
+    {
+      "file": "api_lint.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "distance_scenarios_2026-10-21.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "newbie_compensated_2026-10-28.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "newbie_compensated_trial1_2026-10-28.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "newbie_compensated_trial2_2026-10-28.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "newbie_compensated_trial3_2026-10-28.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "newbie_motion_2026-10-21.json",
+      "error": "Invalid control character at: line 126 column 20 (char 4096)"
+    },
+    {
+      "file": "newbie_roundtrip_2026-10-24.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "shortinput_1793146919965631400_calibration.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "shortinput_1793147865465805500_calibration.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "file": "t2_input_probe_dry_run.json",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "scope": "offline syntax; no game imports; evidence errors reported, not repaired",
+  "probe_static_checks": "both PASS (0 forbidden, 0 missing)",
+  "history_audit": {
+    "commits": 14,
+    "unique_blobs": 153,
+    "test_game_credentials": "explicitly authorized by user; original history retained",
+    "other_confirmed_secrets": 0
+  },
+  "conflict_hashes_unchanged": true
+}

@@ -1,0 +1,989 @@
+{
+  "scope": "presence and UTF-8/JSON syntax only; not original hash or semantic verification",
+  "groups": {
+    "current_p3": {
+      "agent_wow_batch_p3_batch01.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_p3_batch01_unit1.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_p3_batch01_unit1.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_p3_batch01_unit1.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_p3_batch01_unit1.packets.json": {
+        "status": "MISSING"
+      },
+      "p3_batch01_position_audit.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_p3_position_reconcile01.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_p3_position_reconcile01.packets.json": {
+        "status": "MISSING"
+      }
+    },
+    "task_evidence_audit": {
+      "task_unit_evidence_audit_2026-10-28.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run99_task_unit.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run99_task_unit.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run99_task_unit.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run100_task_unit.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run100_task_unit.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run100_task_unit.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run102_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run102_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run102_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run103_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run103_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run103_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run104_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run104_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run104_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run105_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run105_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run105_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run106_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run106_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run106_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run107_task_unit_repeat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run107_task_unit_repeat.actions.jsonl": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run107_task_unit_repeat.checkpoint.json": {
+        "status": "MISSING"
+      }
+    },
+    "login_boundary": {
+      "agent_wow_bridge_run100_task_unit.packets.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_run101_collection_verify.packets.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run111_movement_boundary.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_run112_movement_verify.packets.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_task_run113_confirmed_combat.json": {
+        "status": "MISSING"
+      },
+      "agent_wow_bridge_run114_postcombat_verify.packets.json": {
+        "status": "MISSING"
+      }
+    },
+    "newbie": {
+      "newbie_baseline_2026-10-21.json": {
+        "status": "PARSEABLE",
+        "bytes": 3775
+      },
+      "newbie_motion_2026-10-21.json": {
+        "status": "CORRUPT",
+        "bytes": 18782,
+        "error": "Invalid control character at: line 126 column 20 (char 4096)"
+      },
+      "newbie_continuous_2026-10-24.json": {
+        "status": "PARSEABLE",
+        "bytes": 8503
+      },
+      "newbie_roundtrip_2026-10-24.json": {
+        "status": "CORRUPT",
+        "bytes": 12208,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "newbie_compensated_2026-10-28.json": {
+        "status": "CORRUPT",
+        "bytes": 12469,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "newbie_compensated_repeats_2026-10-28.json": {
+        "status": "PARSEABLE",
+        "bytes": 1151
+      },
+      "newbie_feedback_2026-10-28.json": {
+        "status": "PARSEABLE",
+        "bytes": 3340
+      },
+      "newbie_compensated_trial1_2026-10-28.json": {
+        "status": "CORRUPT",
+        "bytes": 12684,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "newbie_compensated_trial2_2026-10-28.json": {
+        "status": "CORRUPT",
+        "bytes": 12745,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "newbie_compensated_trial3_2026-10-28.json": {
+        "status": "CORRUPT",
+        "bytes": 12684,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    "correction_and_timing": {
+      "feedback_1793144509847049200_correction.json": {
+        "status": "PARSEABLE",
+        "bytes": 8555
+      },
+      "feedback_1793145428516415500_correction.json": {
+        "status": "PARSEABLE",
+        "bytes": 11480
+      },
+      "shortinput_1793146919965631400_calibration.json": {
+        "status": "CORRUPT",
+        "bytes": 15882,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "shortinput_1793147865465805500_calibration.json": {
+        "status": "CORRUPT",
+        "bytes": 16381,
+        "error": "Expecting value: line 1 column 1 (char 0)"
+      }
+    },
+    "frame_motion": {
+      "framemotion_1793160660040551800_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793162694384670000_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793163000287441400_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793164241132578100_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793164554469934200_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793165607701264100_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793166009480494200_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793169990334700100_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793170325831435300_trace.json": {
+        "status": "MISSING"
+      },
+      "framemotion_1793170669162135700_trace.json": {
+        "status": "MISSING"
+      },
+      "frame_motion_repeats_2026-10-28.json": {
+        "status": "MISSING"
+      },
+      "frame_duration_comparison_2026-10-28.json": {
+        "status": "MISSING"
+      },
+      "walk_comparison_2026-10-28.json": {
+        "status": "MISSING"
+      },
+      "walk_repeats_2026-10-28.json": {
+        "status": "MISSING"
+      }
+    }
+  },
+  "results_json_inventory": {
+    "agent_wow_attack_audit.json": {
+      "status": "CORRUPT",
+      "bytes": 14873,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_batch_stage2_batch2.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch3.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch4.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch5.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch6.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch7.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_batch_stage2_batch8.json": {
+      "status": "PARSEABLE",
+      "bytes": 466
+    },
+    "agent_wow_bridge_run01.json": {
+      "status": "PARSEABLE",
+      "bytes": 2018
+    },
+    "agent_wow_bridge_run01.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 6052
+    },
+    "agent_wow_bridge_run02.json": {
+      "status": "PARSEABLE",
+      "bytes": 6566
+    },
+    "agent_wow_bridge_run02.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 6839,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run03_step.json": {
+      "status": "PARSEABLE",
+      "bytes": 7820
+    },
+    "agent_wow_bridge_run03_step.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 7914
+    },
+    "agent_wow_bridge_run04_verify.json": {
+      "status": "PARSEABLE",
+      "bytes": 6720
+    },
+    "agent_wow_bridge_run04_verify.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 6977,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run05_motion.json": {
+      "status": "PARSEABLE",
+      "bytes": 6720
+    },
+    "agent_wow_bridge_run05_motion.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 8074,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run06_straight.json": {
+      "status": "CORRUPT",
+      "bytes": 118925,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run06_straight.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 9431,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run07_straight_verify.json": {
+      "status": "PARSEABLE",
+      "bytes": 6727
+    },
+    "agent_wow_bridge_run07_straight_verify.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 7196
+    },
+    "agent_wow_bridge_run08_bend.json": {
+      "status": "CORRUPT",
+      "bytes": 117279,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run08_bend.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 8862
+    },
+    "agent_wow_bridge_run09_bend_verify.json": {
+      "status": "CORRUPT",
+      "bytes": 6757,
+      "error": "Expecting value: line 214 column 15 (char 4096)"
+    },
+    "agent_wow_bridge_run09_bend_verify.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 8938
+    },
+    "agent_wow_bridge_run10_obstacle.json": {
+      "status": "CORRUPT",
+      "bytes": 151235,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run10_obstacle.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 15831,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run11_obstacle_verify.json": {
+      "status": "PARSEABLE",
+      "bytes": 6761
+    },
+    "agent_wow_bridge_run11_obstacle_verify.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 7680
+    },
+    "agent_wow_bridge_run12_approach.json": {
+      "status": "CORRUPT",
+      "bytes": 152303,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run12_approach.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 15498,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run13_approach.json": {
+      "status": "CORRUPT",
+      "bytes": 168558,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run13_approach.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 18246,
+      "error": "Invalid control character at: line 42 column 840 (char 4096)"
+    },
+    "agent_wow_bridge_run14_approach.json": {
+      "status": "CORRUPT",
+      "bytes": 166353,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run14_approach.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 17796,
+      "error": "Invalid control character at: line 42 column 861 (char 4096)"
+    },
+    "agent_wow_bridge_run15_attack.json": {
+      "status": "CORRUPT",
+      "bytes": 122217,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run15_attack.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 10046,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run16_stop_attack.json": {
+      "status": "PARSEABLE",
+      "bytes": 6865
+    },
+    "agent_wow_bridge_run16_stop_attack.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 9392,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run17_attack_stop.json": {
+      "status": "CORRUPT",
+      "bytes": 149249,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run17_attack_stop.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 15559,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run18_attack_stop.json": {
+      "status": "CORRUPT",
+      "bytes": 141901,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run18_attack_stop.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 13471,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run19_face_attack.json": {
+      "status": "PARSEABLE",
+      "bytes": 6925
+    },
+    "agent_wow_bridge_run19_face_attack.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 9050,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run20_face_attack.json": {
+      "status": "CORRUPT",
+      "bytes": 128872,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run20_face_attack.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 11501,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run21_face_attack.json": {
+      "status": "CORRUPT",
+      "bytes": 143078,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run21_face_attack.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 13235,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run22_face_attack_stop.json": {
+      "status": "CORRUPT",
+      "bytes": 122149,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run22_face_attack_stop.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 10604
+    },
+    "agent_wow_bridge_run23_combat_phases.json": {
+      "status": "CORRUPT",
+      "bytes": 197061,
+      "error": "Invalid control character at: line 214 column 22 (char 4096)"
+    },
+    "agent_wow_bridge_run23_combat_phases.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 27231,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run24_loot.json": {
+      "status": "CORRUPT",
+      "bytes": 196427,
+      "error": "Expecting ',' delimiter: line 640 column 24 (char 12288)"
+    },
+    "agent_wow_bridge_run24_loot.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 26791,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run25_quest_query.json": {
+      "status": "CORRUPT",
+      "bytes": 6718,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run25_quest_query.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 9976
+    },
+    "agent_wow_bridge_run26_return_questgiver.json": {
+      "status": "CORRUPT",
+      "bytes": 171109,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run26_return_questgiver.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 17287,
+      "error": "Invalid control character at: line 42 column 1224 (char 4096)"
+    },
+    "agent_wow_bridge_run27_return_questgiver.json": {
+      "status": "CORRUPT",
+      "bytes": 170761,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run27_return_questgiver.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 18395,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run28_return_questgiver.json": {
+      "status": "CORRUPT",
+      "bytes": 142398,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run28_return_questgiver.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 13557,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run29_quest_details.json": {
+      "status": "CORRUPT",
+      "bytes": 185002,
+      "error": "Invalid control character at: line 452 column 16 (char 8192)"
+    },
+    "agent_wow_bridge_run29_quest_details.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 20402,
+      "error": "Invalid control character at: line 42 column 750 (char 4096)"
+    },
+    "agent_wow_bridge_run30_quest_list.json": {
+      "status": "CORRUPT",
+      "bytes": 164225,
+      "error": "Invalid control character at: line 439 column 14 (char 8192)"
+    },
+    "agent_wow_bridge_run30_quest_list.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 12783,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run31_quest_turnin.json": {
+      "status": "CORRUPT",
+      "bytes": 167792,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run31_quest_turnin.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 13379,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run32_quest788_state.json": {
+      "status": "CORRUPT",
+      "bytes": 160563,
+      "error": "Expecting ',' delimiter: line 446 column 2 (char 8192)"
+    },
+    "agent_wow_bridge_run32_quest788_state.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 11577
+    },
+    "agent_wow_bridge_run33_quest788_travel.json": {
+      "status": "CORRUPT",
+      "bytes": 169338,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run33_quest788_travel.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 16786,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run34_quest788_travel.json": {
+      "status": "CORRUPT",
+      "bytes": 149686,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run34_quest788_travel.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 15262,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run35_quest788_travel.json": {
+      "status": "CORRUPT",
+      "bytes": 158763,
+      "error": "Expecting property name enclosed in double quotes: line 215 column 2 (char 4096)"
+    },
+    "agent_wow_bridge_run35_quest788_travel.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 14081,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run36_quest788_travel.json": {
+      "status": "PARSEABLE",
+      "bytes": 8514
+    },
+    "agent_wow_bridge_run36_quest788_travel.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 10180
+    },
+    "agent_wow_bridge_run37_quest788_travel.json": {
+      "status": "CORRUPT",
+      "bytes": 159446,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run37_quest788_travel.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 15178,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run38_quest788_travel.json": {
+      "status": "CORRUPT",
+      "bytes": 147973,
+      "error": "Invalid control character at: line 214 column 12 (char 4096)"
+    },
+    "agent_wow_bridge_run38_quest788_travel.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 13764,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run39_quest788_kill1.json": {
+      "status": "CORRUPT",
+      "bytes": 211567,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run39_quest788_kill1.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 28997,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run40_quest788_kill1.json": {
+      "status": "CORRUPT",
+      "bytes": 161150,
+      "error": "Expecting ',' delimiter: line 636 column 15 (char 12288)"
+    },
+    "agent_wow_bridge_run40_quest788_kill1.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 14185,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run41_release.json": {
+      "status": "PARSEABLE",
+      "bytes": 9615
+    },
+    "agent_wow_bridge_run41_release.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 10652
+    },
+    "agent_wow_bridge_run42_reclaim.json": {
+      "status": "CORRUPT",
+      "bytes": 169892,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run42_reclaim.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 19738,
+      "error": "Invalid control character at: line 48 column 814 (char 4096)"
+    },
+    "agent_wow_bridge_run43_controlled_quest.json": {
+      "status": "CORRUPT",
+      "bytes": 233535,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run43_controlled_quest.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 29613,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run44_quest788_controlled.json": {
+      "status": "CORRUPT",
+      "bytes": 161327,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run44_quest788_controlled.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 19296,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run45_quest788_controlled.json": {
+      "status": "CORRUPT",
+      "bytes": 230164,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run45_quest788_controlled.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 30646,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run46_postcombat_state.json": {
+      "status": "PARSEABLE",
+      "bytes": 9612
+    },
+    "agent_wow_bridge_run46_postcombat_state.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 10494
+    },
+    "agent_wow_bridge_run47_recovery_walk.json": {
+      "status": "CORRUPT",
+      "bytes": 174669,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run47_recovery_walk.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 19550,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_run48_recovery_reclaim.json": {
+      "status": "CORRUPT",
+      "bytes": 163152,
+      "error": "Expecting property name enclosed in double quotes: line 218 column 5 (char 4096)"
+    },
+    "agent_wow_bridge_run48_recovery_reclaim.packets.json": {
+      "status": "CORRUPT",
+      "bytes": 19855,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_stage2_batch8_unit1.checkpoint.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 19810
+    },
+    "agent_wow_bridge_stage2_batch8_unit1.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 22848
+    },
+    "agent_wow_bridge_stage2_batch8_unit1_verify.checkpoint.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 25460
+    },
+    "agent_wow_bridge_stage2_batch8_unit1_verify.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 29960
+    },
+    "agent_wow_bridge_worldstate_run01.json": {
+      "status": "CORRUPT",
+      "bytes": 88987,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_bridge_worldstate_run02.json": {
+      "status": "CORRUPT",
+      "bytes": 89120,
+      "error": "Expecting property name enclosed in double quotes: line 386 column 4 (char 8192)"
+    },
+    "agent_wow_bridge_worldstate_run05_motion.json": {
+      "status": "CORRUPT",
+      "bytes": 98975,
+      "error": "Expecting ',' delimiter: line 187 column 18 (char 4096)"
+    },
+    "agent_wow_bridge_worldstate_run18_attack_stop.json": {
+      "status": "CORRUPT",
+      "bytes": 128962,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_capture_20261021_run01.json": {
+      "status": "PARSEABLE",
+      "bytes": 1126
+    },
+    "agent_wow_capture_20261021_run01.json.packets.json": {
+      "status": "PARSEABLE",
+      "bytes": 7900
+    },
+    "agent_wow_go_toolchain.json": {
+      "status": "PARSEABLE",
+      "bytes": 313
+    },
+    "agent_wow_lab_registration.json": {
+      "status": "PARSEABLE",
+      "bytes": 233
+    },
+    "agent_wow_lab_registration_password24.json": {
+      "status": "PARSEABLE",
+      "bytes": 348
+    },
+    "agent_wow_linux_build.json": {
+      "status": "PARSEABLE",
+      "bytes": 1869
+    },
+    "agent_wow_linux_connection.json": {
+      "status": "PARSEABLE",
+      "bytes": 973
+    },
+    "agent_wow_linux_module.json": {
+      "status": "CORRUPT",
+      "bytes": 768,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_navigation.json": {
+      "status": "CORRUPT",
+      "bytes": 680,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_route_bend.json": {
+      "status": "PARSEABLE",
+      "bytes": 1065
+    },
+    "agent_wow_route_corpse.json": {
+      "status": "PARSEABLE",
+      "bytes": 1784
+    },
+    "agent_wow_route_hunt.json": {
+      "status": "PARSEABLE",
+      "bytes": 984
+    },
+    "agent_wow_route_obstacle.json": {
+      "status": "PARSEABLE",
+      "bytes": 2644
+    },
+    "agent_wow_route_questgiver.json": {
+      "status": "PARSEABLE",
+      "bytes": 702
+    },
+    "agent_wow_route_straight.json": {
+      "status": "CORRUPT",
+      "bytes": 723,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "agent_wow_sdk_query.json": {
+      "status": "PARSEABLE",
+      "bytes": 1077
+    },
+    "agent_wow_task_stage2_batch8_unit1.checkpoint.json": {
+      "status": "PARSEABLE",
+      "bytes": 18819
+    },
+    "agent_wow_task_stage2_batch8_unit1.consumed.json": {
+      "status": "PARSEABLE",
+      "bytes": 311
+    },
+    "agent_wow_task_stage2_batch8_unit1.json": {
+      "status": "PARSEABLE",
+      "bytes": 25849
+    },
+    "agent_wow_task_stage2_batch8_unit1_unified.json": {
+      "status": "PARSEABLE",
+      "bytes": 125916
+    },
+    "agent_wow_task_stage2_batch8_unit1_verify.checkpoint.json": {
+      "status": "PARSEABLE",
+      "bytes": 67796
+    },
+    "agent_wow_task_stage2_batch8_unit1_verify.json": {
+      "status": "PARSEABLE",
+      "bytes": 125916
+    },
+    "agent_wow_verification.json": {
+      "status": "PARSEABLE",
+      "bytes": 6804
+    },
+    "agent_wow_world_session.json": {
+      "status": "PARSEABLE",
+      "bytes": 393
+    },
+    "agent_wow_worldstate_20261021_run01.json": {
+      "status": "PARSEABLE",
+      "bytes": 88099
+    },
+    "api_lint.json": {
+      "status": "CORRUPT",
+      "bytes": 37908,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "distance_scenarios_2026-10-21.json": {
+      "status": "CORRUPT",
+      "bytes": 14652,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "dump_hashes.json": {
+      "status": "PARSEABLE",
+      "bytes": 5391
+    },
+    "feedback_1793144509847049200_correction.json": {
+      "status": "PARSEABLE",
+      "bytes": 8555
+    },
+    "feedback_1793145428516415500_correction.json": {
+      "status": "PARSEABLE",
+      "bytes": 11480
+    },
+    "flat_motion_2026-10-21.json": {
+      "status": "PARSEABLE",
+      "bytes": 10734
+    },
+    "lat_result.json": {
+      "status": "PARSEABLE",
+      "bytes": 224
+    },
+    "lat_result2.json": {
+      "status": "PARSEABLE",
+      "bytes": 430
+    },
+    "lat_stream.json": {
+      "status": "PARSEABLE",
+      "bytes": 753
+    },
+    "network_world_challenge_2026-10-20.json": {
+      "status": "PARSEABLE",
+      "bytes": 537
+    },
+    "newbie_baseline_2026-10-21.json": {
+      "status": "PARSEABLE",
+      "bytes": 3775
+    },
+    "newbie_compensated_2026-10-28.json": {
+      "status": "CORRUPT",
+      "bytes": 12469,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "newbie_compensated_repeats_2026-10-28.json": {
+      "status": "PARSEABLE",
+      "bytes": 1151
+    },
+    "newbie_compensated_trial1_2026-10-28.json": {
+      "status": "CORRUPT",
+      "bytes": 12684,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "newbie_compensated_trial2_2026-10-28.json": {
+      "status": "CORRUPT",
+      "bytes": 12745,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "newbie_compensated_trial3_2026-10-28.json": {
+      "status": "CORRUPT",
+      "bytes": 12684,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "newbie_continuous_2026-10-24.json": {
+      "status": "PARSEABLE",
+      "bytes": 8503
+    },
+    "newbie_feedback_2026-10-28.json": {
+      "status": "PARSEABLE",
+      "bytes": 3340
+    },
+    "newbie_motion_2026-10-21.json": {
+      "status": "CORRUPT",
+      "bytes": 18782,
+      "error": "Invalid control character at: line 126 column 20 (char 4096)"
+    },
+    "newbie_roundtrip_2026-10-24.json": {
+      "status": "CORRUPT",
+      "bytes": 12208,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "shortinput_1793146919965631400_calibration.json": {
+      "status": "CORRUPT",
+      "bytes": 15882,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "shortinput_1793147865465805500_calibration.json": {
+      "status": "CORRUPT",
+      "bytes": 16381,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "sim_result.json": {
+      "status": "PARSEABLE",
+      "bytes": 8957
+    },
+    "t2_input_probe_dry_run.json": {
+      "status": "CORRUPT",
+      "bytes": 505,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    "target_scenarios_2026-10-20.json": {
+      "status": "PARSEABLE",
+      "bytes": 30458
+    },
+    "wsl_lab_runtime.json": {
+      "status": "PARSEABLE",
+      "bytes": 610
+    },
+    "wsl_ubuntu_image.json": {
+      "status": "PARSEABLE",
+      "bytes": 426
+    }
+  }
+}

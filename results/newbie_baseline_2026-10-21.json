@@ -1,0 +1,122 @@
+{
+  "source": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\WTF\\Account\\GM01\\AzerothCore\\Probehuman\\SavedVariables\\WowProbeWotLK.lua",
+  "source_sha256": "43ba04937c2f71b1299899462fa7742d493a13163c56ceea8bd64152687dacc7",
+  "meta": {
+    "scene": "newbie_baseline",
+    "last_sequence": 84,
+    "addon": "WowProbeWotLK",
+    "class": "Mage",
+    "started_monotonic": 500624.767,
+    "race": "Human",
+    "map_y": 0.4365223348140717,
+    "map_x": 0.4805501997470856,
+    "logout_seen": true,
+    "sv_memory_assigned": true
+  },
+  "observations": {
+    "G3.zone": {
+      "sequence": 30,
+      "api": "GetZoneText",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G3.zone",
+      "monotonic_time": 500624.767,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": "Elwynn Forest",
+      "value_type": "string"
+    },
+    "G3.subzone": {
+      "sequence": 31,
+      "api": "GetSubZoneText",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G3.subzone",
+      "monotonic_time": 500624.767,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": "Northshire Valley",
+      "value_type": "string"
+    },
+    "G4.name.player": {
+      "sequence": 40,
+      "api": "UnitName",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G4.name.player",
+      "monotonic_time": 500624.768,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": "Probehuman",
+      "value_type": "string"
+    },
+    "G4.combat.player": {
+      "sequence": 42,
+      "api": "UnitAffectingCombat",
+      "effect": "NOT_APPLICABLE",
+      "probe_id": "G4.combat.player",
+      "event_status": "NONE",
+      "call_status": "RETURNED",
+      "monotonic_time": 500624.768,
+      "scene": "newbie_baseline",
+      "value_status": "NIL",
+      "value_type": "nil"
+    },
+    "G4.health.player": {
+      "sequence": 43,
+      "api": "UnitHealth",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G4.health.player",
+      "monotonic_time": 500624.768,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": 52,
+      "value_type": "number"
+    },
+    "G4.healthmax.player": {
+      "sequence": 44,
+      "api": "UnitHealthMax",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G4.healthmax.player",
+      "monotonic_time": 500624.768,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": 52,
+      "value_type": "number"
+    },
+    "G4.level.player": {
+      "sequence": 49,
+      "api": "UnitLevel",
+      "effect": "NOT_APPLICABLE",
+      "event_status": "NONE",
+      "probe_id": "G4.level.player",
+      "monotonic_time": 500624.768,
+      "call_status": "RETURNED",
+      "scene": "newbie_baseline",
+      "value_status": "OK",
+      "value": 1,
+      "value_type": "number"
+    },
+    "G4.name.target": {
+      "sequence": 53,
+      "api": "UnitName",
+      "effect": "NOT_APPLICABLE",
+      "probe_id": "G4.name.target",
+      "event_status": "NONE",
+      "call_status": "RETURNED",
+      "monotonic_time": 500624.768,
+      "scene": "newbie_baseline",
+      "value_status": "NIL",
+      "value_type": "nil"
+    }
+  },
+  "gm_mode": "OFF, confirmed by screenshot newbie-gm-state.png; account retains GM permission",
+  "test_site": "Northshire Abbey spawn lawn; visually gentle ground near friendly Deputy Willem; not a surveyed flat plane"
+}

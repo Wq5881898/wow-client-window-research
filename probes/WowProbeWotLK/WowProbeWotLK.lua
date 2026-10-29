@@ -5,9 +5,10 @@
 -- Not a bot. Does not cast, move, target, attack, interact, or send chat.
 --
 -- Slash:
---   /wowprobe once [scene]   one snapshot
---   /wowprobe status         record counts
---   /wowprobe stop           halt this session
+--   /wp once [scene]         one snapshot (short alias, /wowprobe also works)
+--   /wp status               record counts
+--   /wp stop                 halt this session
+-- Console (no chat needed): WowProbeWotLK_AutoOnce = true  -> snapshot on load
 
 local ADDON_NAME = "WowProbeWotLK"
 local MAX_RECORDS = 4000
@@ -458,10 +459,10 @@ frame:SetScript("OnEvent", function(_, event, arg1)
       WowProbeWotLK_Report.schema = WowProbeWotLK_Report.schema or "wowprobe-wotlk-v1"
       WowProbeWotLK_Report.runs = WowProbeWotLK_Report.runs or {}
       WowProbeWotLK_Report.load_count = (WowProbeWotLK_Report.load_count or 0) + 1
-      if WowProbeWotLK_Report.auto_once_on_load and #WowProbeWotLK_Report.runs == 0 then
+      if WowProbeWotLK_Report.auto_once_on_load or WowProbeWotLK_AutoOnce then
         new_run("auto_enter_world")
       end
-      DEFAULT_CHAT_FRAME:AddMessage("WowProbeWotLK loaded. /wowprobe once [scene]")
+      DEFAULT_CHAT_FRAME:AddMessage("WowProbeWotLK loaded. /wp once [scene]")
     end
     return
   end
@@ -493,6 +494,7 @@ frame:SetScript("OnEvent", function(_, event, arg1)
 end)
 
 SLASH_WOWPROBE1 = "/wowprobe"
+SLASH_WOWPROBE2 = "/wp"
 SlashCmdList["WOWPROBE"] = function(msg)
   msg = string.lower(string.gsub(msg or "", "^%s+", ""))
   if msg == "stop" then

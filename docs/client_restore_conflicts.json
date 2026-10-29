@@ -1,0 +1,218 @@
+[
+  {
+    "file": "results/api_lint.json",
+    "sha256": "de2fa5019bbcd307bdd83e51022af33243c1eaf32c5fd357e3165633557c4671",
+    "bytes": 37908,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\api_lint.json"
+  },
+  {
+    "file": "results/api_lint_report.md",
+    "sha256": "6ede343e09dbb1b347361a11ec7f07a9e5325a8faa8befcb63fcb96d4bf8c7bf",
+    "bytes": 9367,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\api_lint_report.md"
+  },
+  {
+    "file": "results/distance_scenarios_2026-10-21.json",
+    "sha256": "302de76cda2b9123af2214a8c772fac9c745a8ffd2d0baca4188add79ed6d9a8",
+    "bytes": 14652,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\distance_scenarios_2026-10-21.json"
+  },
+  {
+    "file": "results/dump_hashes.json",
+    "sha256": "5e771bf43c87ca6ce4051a69e01cf872a0dd6c994d485cc25b7621217981865d",
+    "bytes": 5391,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\dump_hashes.json"
+  },
+  {
+    "file": "results/feedback_1793144509847049200_correction.json",
+    "sha256": "77c9fabd7590a3c6d1d3e2d4f0689e2fd36e98db47d6278c43d0793e6758db67",
+    "bytes": 8555,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\feedback_1793144509847049200_correction.json"
+  },
+  {
+    "file": "results/feedback_1793145428516415500_correction.json",
+    "sha256": "f1f535cad6028209f035962d91acc88744116eb88dac078bd27dea71126ad48b",
+    "bytes": 11480,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\feedback_1793145428516415500_correction.json"
+  },
+  {
+    "file": "results/flat_motion_2026-10-21.json",
+    "sha256": "a2aaed782eab9cf985bb9e0f60e3aa82e05ca5f86b8232f926cfda448a94a6a1",
+    "bytes": 10734,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\flat_motion_2026-10-21.json"
+  },
+  {
+    "file": "results/interviews/I01.md",
+    "sha256": "bd50613706216c648572af5c541c6860e33298e3aa466bf98da25e71ddd00445",
+    "bytes": 1667,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\interviews\\I01.md"
+  },
+  {
+    "file": "results/lat_result.json",
+    "sha256": "8baf3600f614af42af9979b8b36df4f9745640c5613af7a6f8fc8715b969042e",
+    "bytes": 224,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\lat_result.json"
+  },
+  {
+    "file": "results/lat_result2.json",
+    "sha256": "06021bfe6e6059da188aa6d5f4715f6a2a577c5f0e94d5f15276c726497d989f",
+    "bytes": 430,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\lat_result2.json"
+  },
+  {
+    "file": "results/lat_stream.json",
+    "sha256": "b33999c21ac1b9c9fefee631ffd9dd38197b10f207307ba13b0fecbb3cff42b5",
+    "bytes": 753,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\lat_stream.json"
+  },
+  {
+    "file": "results/newbie_baseline_2026-10-21.json",
+    "sha256": "e97f7580f03107c2368b518e9570cf143b4107ce6e23826cb709c60722975285",
+    "bytes": 3775,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_baseline_2026-10-21.json"
+  },
+  {
+    "file": "results/newbie_compensated_2026-10-28.json",
+    "sha256": "0d6d805cf1ced6b232b00cca257bf2a943e55f11c0ba493f1c2e8a0d0b90eb44",
+    "bytes": 12469,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_compensated_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_compensated_repeats_2026-10-28.json",
+    "sha256": "419295744e6465aefdde147668b32fb949a5ac0d1e7165fa0a97a527c44138ca",
+    "bytes": 1151,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_compensated_repeats_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_compensated_trial1_2026-10-28.json",
+    "sha256": "274a202be6b53cad9a969b90bb77a671032c489642fa6f4d44513af141f1593f",
+    "bytes": 12684,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_compensated_trial1_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_compensated_trial2_2026-10-28.json",
+    "sha256": "4490763458ecad6fc83bcbeb8509b4b2a3acb6f19566c2feaf077bc1c5259c35",
+    "bytes": 12745,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_compensated_trial2_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_compensated_trial3_2026-10-28.json",
+    "sha256": "274a202be6b53cad9a969b90bb77a671032c489642fa6f4d44513af141f1593f",
+    "bytes": 12684,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_compensated_trial3_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_continuous_2026-10-24.json",
+    "sha256": "23f864295fa709ce09ba5d7ddd955589c7e24f629a1d32f972bf9af29d198f07",
+    "bytes": 8503,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_continuous_2026-10-24.json"
+  },
+  {
+    "file": "results/newbie_feedback_2026-10-28.json",
+    "sha256": "0ec259d6f9f85338191b9b3046f066f423baf9a89a253560f815d8e8bde746ba",
+    "bytes": 3340,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_feedback_2026-10-28.json"
+  },
+  {
+    "file": "results/newbie_motion_2026-10-21.json",
+    "sha256": "fe7600f2245b6624d8d5976429ad23cda4149c7b00ca7c8d087192435172e1a6",
+    "bytes": 18782,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_motion_2026-10-21.json"
+  },
+  {
+    "file": "results/newbie_roundtrip_2026-10-24.json",
+    "sha256": "30c334f85fa032635afa6584bb475435a16ef927cfa182b1cc9fa9d169b9e8f5",
+    "bytes": 12208,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\newbie_roundtrip_2026-10-24.json"
+  },
+  {
+    "file": "results/shortinput_1793146919965631400_calibration.json",
+    "sha256": "3181281b5f6854b113a0c51ec3dc2fab1290c126d92060f219e83d385adeaa27",
+    "bytes": 15882,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\shortinput_1793146919965631400_calibration.json"
+  },
+  {
+    "file": "results/shortinput_1793147865465805500_calibration.json",
+    "sha256": "82a11b16958fad6c93b28a9c7b09447de74438d290bbeae4636459b77a7ccb70",
+    "bytes": 16381,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\shortinput_1793147865465805500_calibration.json"
+  },
+  {
+    "file": "results/sim_result.json",
+    "sha256": "92f00693f3c25ae38219e60b89458dcfd9e7bdde478ccf23c4f24fe0e977e3d2",
+    "bytes": 8957,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\sim_result.json"
+  },
+  {
+    "file": "results/t2_input_probe_dry_run.json",
+    "sha256": "11982067548b495ef1cfdc73abf137051e80f65d5fc7e67b2339c434882bf9df",
+    "bytes": 505,
+    "syntax": "invalid",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\t2_input_probe_dry_run.json"
+  },
+  {
+    "file": "results/target_scenarios_2026-10-20.json",
+    "sha256": "225bdc49192c9fdc7ed7c91b69524a376983631a8ec94f007580f3e6c89f2ef8",
+    "bytes": 30458,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\target_scenarios_2026-10-20.json"
+  },
+  {
+    "file": "results/wsl_ubuntu_image.json",
+    "sha256": "ce6d76161693ac318a8a640f94fe923784c315fea8c4215e3e5be17b5142c7f7",
+    "bytes": 426,
+    "syntax": "parseable",
+    "decision": "preserved byte-for-byte; no overwrite",
+    "backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-publication\\conflicts\\results\\wsl_ubuntu_image.json"
+  }
+]
