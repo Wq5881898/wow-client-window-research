@@ -1,0 +1,12 @@
+{
+  "run": "client_controller_1793508753088187900",
+  "status": "FAILED",
+  "samples": [],
+  "decisions": [],
+  "self_guid": "0x0000000000000008",
+  "binding": {
+    "decision": "RECOVER",
+    "reason": "target_not_attackable"
+  },
+  "error": "ValueError('self binding rejected: target_not_attackable')"
+}

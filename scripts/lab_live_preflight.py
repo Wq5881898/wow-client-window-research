@@ -3,6 +3,7 @@ import time
 import sys
 import subprocess
 import lab_driver5 as d
+import win32gui
 from lab_distance_scenarios import command
 
 if __name__ == '__main__':
@@ -81,6 +82,13 @@ if __name__ == '__main__':
     if '--quit' in sys.argv:
         command(hwnd, '/quit')
         sys.exit(0)
+    if '--maximize' in sys.argv:
+        import win32con
+        win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
+        time.sleep(1.5)
+        d.log('maximized', win32gui.GetWindowRect(hwnd))
+        d.screenshot('maximized.png')
+        sys.exit(0)
     if '--mode' in sys.argv:
         import win32gui
         hwnd = d.find_game_window()
@@ -96,6 +104,7 @@ if __name__ == '__main__':
     if '--grab' in sys.argv:
         from PIL import ImageGrab
         import lab_driver5 as d
+import win32gui
         image = ImageGrab.grab()
         colors = image.convert('RGB').getcolors(maxcolors=100000)
         d.log('imagegrab distinct', len(colors) if colors else 'many')
