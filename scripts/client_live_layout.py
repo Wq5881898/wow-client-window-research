@@ -4,6 +4,9 @@ The Lua encoder writes fields in a fixed order; the Python decoder reads them
 at fixed offsets. `parse_lua_layout` extracts the encoder order from the
 probe source so a mismatch fails the test suite instead of silently decoding
 garbage.
+
+Protocol v3 and v4 keep separate layouts: v4 adds fields in the middle of
+the packet, so sharing one offset table would break v3 screenshots.
 """
 import re
 from pathlib import Path
@@ -11,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PROBE = ROOT / 'probes' / 'WowProbeWotLK' / 'WowProbeLive.lua'
 
-# (name, byte count) in encoder order.
+# Protocol v3: 103 bytes total. Frozen so historical screenshots stay readable.
 V3_LAYOUT = [
     ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
     ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
@@ -25,9 +28,27 @@ V3_LAYOUT = [
     ('checksum', 1), ('weighted', 1),
 ]
 
+# Protocol v4: adds chat_open and target_distance before the event queue.
+V4_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40),
+    ('checksum', 1), ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V4_LAYOUT
+
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
     '103': 'length',
+    '106': 'length',
     'sequence': 'sequence',
     'math.floor(GetTime() * 1000) % 4294967296': 'game_ms',
     'UnitHealth("player")': 'health',
@@ -57,6 +78,8 @@ EXPRESSION_NAMES = {
     'last.at': 'last_at',
     'last.reason': 'last_reason',
     'UnitBuff("player", GetSpellInfo(168)) and 1 or 0': 'frost_armor',
+    'chat_open()': 'chat_open',
+    'math.floor(target_distance() * 10)': 'target_distance',
     'checksum': 'checksum',
     'weighted % 256': 'weighted',
 }
@@ -92,7 +115,7 @@ def parse_lua_layout(source=None):
 
 def offsets(layout=None):
     """Return {name: (offset, size)} and the total byte count."""
-    layout = layout or V3_LAYOUT
+    layout = layout or CURRENT_LAYOUT
     result = {}
     position = 0
     for name, size in layout:

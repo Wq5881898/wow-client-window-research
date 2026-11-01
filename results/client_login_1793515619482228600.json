@@ -1,0 +1,36 @@
+{
+  "run": "client_login_1793515619482228600",
+  "status": "FAILED",
+  "steps": [],
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_login_1793515619482228600",
+    "frames": [
+      {
+        "label": "01-login-screen",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793515619482228600_01-login-screen.png",
+        "source": "desktop",
+        "host_monotonic": 912469.0610649
+      },
+      {
+        "label": "02-credentials-entered",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793515619482228600_02-credentials-entered.png",
+        "source": "desktop",
+        "host_monotonic": 912472.9972828
+      },
+      {
+        "label": "03-character-select",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793515619482228600_03-character-select.png",
+        "source": "desktop",
+        "host_monotonic": 912481.3992211
+      },
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793515619482228600_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 912498.2242156
+      }
+    ],
+    "states": []
+  }
+}

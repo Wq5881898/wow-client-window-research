@@ -8,9 +8,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 3
+local PROTOCOL = 4
 local QUEUE = 4
-local DATA_BYTES = 103
+local DATA_BYTES = 106
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -51,6 +51,22 @@ local function reason_code(message)
   if string.find(lowered, "facing", 1, true) then return 5 end
   if string.find(lowered, "line of sight", 1, true) then return 6 end
   return 0
+end
+
+-- The chat edit box being open proves the typed text reached the client.
+local function chat_open()
+  if ChatEdit_GetActiveWindow and ChatEdit_GetActiveWindow() then return 1 end
+  if ChatFrame1InputFrame and ChatFrame1InputFrame:IsShown() then return 1 end
+  return 0
+end
+
+-- Distance to the current target in yards; 0 when unknown.
+local function target_distance()
+  if not UnitExists("target") then return 0 end
+  if not UnitDistance then return 65535 end
+  local ok, value = pcall(UnitDistance, "player", "target")
+  if not ok or not value then return 65535 end
+  return value
 end
 
 local function push(kind, id, reason)
@@ -107,7 +123,7 @@ local function update()
     end
   end
   number(PROTOCOL, 1)
-  number(103, 1)
+  number(106, 1)
   number(sequence, 2)
   number(math.floor(GetTime() * 1000) % 4294967296, 4)
   number(UnitHealth("player"), 2)
@@ -142,6 +158,8 @@ local function update()
   number(last.at, 4)
   number(last.reason, 1)
   number(UnitBuff("player", GetSpellInfo(168)) and 1 or 0, 1)
+  number(chat_open(), 1)
+  number(math.floor(target_distance() * 10), 2)
   for index = 1, QUEUE do
     local slot = queue[index]
     number(slot.serial, 2)
@@ -170,13 +188,14 @@ local function update()
   cells[#cells]:SetTexture(1, 0, 1, 1)
   text:SetText(string.format("LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
-    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d",
+    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d chat=%d dist=%.1f",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
     guid, UnitHealth("target"), tostring(range), learned, tostring(casting),
     x or 0, y or 0, facing, events.serial, events.started,
-    events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason))
+    events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
+    chat_open(), target_distance()))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)

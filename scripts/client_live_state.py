@@ -1,26 +1,30 @@
 """Decode read-only pixel telemetry; reject damaged, absent and frozen frames."""
 import time
 from PIL import Image
-from client_live_layout import V3_LAYOUT, offsets
+from client_live_layout import V3_LAYOUT, V4_LAYOUT, offsets
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
 V3_CELL_UNITS = 8
 V3_DATA_BYTES = 103
+V4_DATA_BYTES = 106
 V3_CELLS = 107            # 3 markers + payload + end marker
+V4_CELLS = 110
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
+V4_TRAILER_OFFSET = 109
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
+V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
 
 
 def _marker(pixel, index):
     r, g, b = pixel
     if index == 0:
-        return r > 235 and g < 25 and b < 25
+        return r > 190 and g < 60 and b < 60
     if index == 1:
-        return g > 235 and r < 25 and b < 25
+        return g > 190 and r < 60 and b < 60
     if index == 2:
-        return b > 235 and r < 25 and g < 25
-    return r > 235 and b > 235 and g < 25
+        return b > 190 and r < 60 and g < 60
+    return r > 190 and b > 190 and g < 60
 
 
 def _row_strips(pixels, image):
@@ -45,7 +49,7 @@ def _row_strips(pixels, image):
 
 
 def _yellow_runs(pixels, y, start, image_width):
-    """Left edges of pure yellow runs to the right of the marker triple."""
+    """Left edges of pure magenta runs to the right of the marker triple."""
     runs = []
     index = start
     while index < image_width:
@@ -101,22 +105,22 @@ def _decode_v2(data):
     return result
 
 
-def _decode_v3(data):
+def _base_state(data, table):
     def n(name):
-        offset, size = V3_OFFSETS[name]
+        offset, size = table[name]
         return int.from_bytes(data[offset:offset + size], 'little')
     def flag(name):
-        return bool(data[V3_OFFSETS[name][0]])
+        return bool(data[table[name][0]])
     result = dict(sequence=n('sequence'), game_ms=n('game_ms'),
                   health=n('health'), max_health=n('max_health'),
                   power=n('power'), combat=flag('combat'), dead=flag('dead'),
                   target_health=n('target_health'),
                   target_max_health=n('target_max_health'),
-                  spell_range=data[V3_OFFSETS['spell_range'][0]],
+                  spell_range=data[table['spell_range'][0]],
                   spell_learned=flag('spell_learned'), casting=flag('casting'),
                   speed=n('speed') / 100,
-                  target_guid='0x' + data[V3_OFFSETS['target_guid'][0]:
-                                          V3_OFFSETS['target_guid'][0] + 8].hex().upper(),
+                  target_guid='0x' + data[table['target_guid'][0]:
+                                          table['target_guid'][0] + 8].hex().upper(),
                   target_exists=flag('target_exists'),
                   target_attackable=flag('target_attackable'),
                   target_dead=flag('target_dead'),
@@ -125,12 +129,12 @@ def _decode_v3(data):
                   event_serial=n('event_serial'), cast_started=n('cast_started'),
                   cast_succeeded=n('cast_succeeded'), cast_failed=n('cast_failed'),
                   ui_errors=n('ui_errors'),
-                  event_kind=data[V3_OFFSETS['last_kind'][0]],
+                  event_kind=data[table['last_kind'][0]],
                   event_spell=n('last_spell'), event_ms=n('last_at'),
-                  last_reason=data[V3_OFFSETS['last_reason'][0]],
+                  last_reason=data[table['last_reason'][0]],
                   frost_armor=flag('frost_armor'))
+    queue_base, queue_size = table['event_queue']
     events = []
-    queue_base, queue_size = V3_OFFSETS['event_queue']
     for index in range(queue_size // 10):
         base = queue_base + index * 10
         events.append(dict(serial=int.from_bytes(data[base:base + 2], 'little'),
@@ -140,6 +144,26 @@ def _decode_v3(data):
                            reason=data[base + 9]))
     result['events'] = events
     return result
+
+
+def _decode_v3(data):
+    return _base_state(data, V3_OFFSETS)
+
+
+def _decode_v4(data):
+    result = _base_state(data, V4_OFFSETS)
+    result['chat_open'] = bool(data[V4_OFFSETS['chat_open'][0]])
+    offset, size = V4_OFFSETS['target_distance']
+    result['target_distance'] = int.from_bytes(data[offset:offset + size], 'little') / 10
+    return result
+
+
+def _checksum_ok(data, length):
+    if sum(data[:length - 2]) % 256 != data[length - 2]:
+        return False
+    weighted = sum((index + 1) * value for index, value
+                   in enumerate(data[:length - 2])) % 65521
+    return weighted % 256 == data[length - 1]
 
 
 def _attempt(pixels, image, y, x, pitch):
@@ -163,16 +187,44 @@ def _attempt(pixels, image, y, x, pitch):
         if header[1] != V3_DATA_BYTES:
             return None
         data = _read_cells(pixels, y, x, pitch, V3_DATA_BYTES, image.width)
-        if data is None:
-            return None
-        if sum(data[:V3_DATA_BYTES - 2]) % 256 != data[V3_DATA_BYTES - 2]:
-            return None
-        weighted = sum((index + 1) * value for index, value
-                       in enumerate(data[:V3_DATA_BYTES - 2])) % 65521
-        if weighted % 256 != data[V3_DATA_BYTES - 1]:
+        if data is None or not _checksum_ok(data, V3_DATA_BYTES):
             return None
         return version, _decode_v3(data)
+    if version == 4:
+        if header[1] != V4_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V4_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V4_DATA_BYTES):
+            return None
+        return version, _decode_v4(data)
     return None
+
+
+def decode(image):
+    image = image.convert('RGB')
+    pixels = image.load()
+    for y, x, blue in _row_strips(pixels, image):
+        trio_pitch = (blue - x) / 2
+        # The trailing marker fixes the exact cell pitch for the whole strip.
+        for trailer_left in _yellow_runs(pixels, y, blue, image.width):
+            for offset in (V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
+                measured = (trailer_left - x) / offset
+                if abs(measured - trio_pitch) > 1.0:
+                    continue
+                attempt = _attempt(pixels, image, y, x, measured)
+                if attempt is not None:
+                    version, result = attempt
+                    result['protocol'] = version
+                    return result
+        # Without a usable trailer, fall back to the scale-derived pitch.
+        scale = image.height / UI_BASE_HEIGHT
+        for pitch in (V3_CELL_UNITS * scale, LEGACY_CELL_UNITS * scale):
+            attempt = _attempt(pixels, image, y, x, pitch)
+            if attempt is not None:
+                version, result = attempt
+                result['protocol'] = version
+                return result
+    raise ValueError('live telemetry absent or invalid')
 
 
 class SessionUnavailable(RuntimeError):
@@ -189,28 +241,6 @@ def assert_real_frame(image):
     if len(set(corners)) == 1 and corners[0] == (0, 0, 0):
         raise SessionUnavailable('desktop capture is blank; interactive session is not rendering')
     return image
-
-
-def decode(image):
-    image = image.convert('RGB')
-    pixels = image.load()
-    scale = image.height / UI_BASE_HEIGHT
-    fallback_pitches = [V3_CELL_UNITS * scale, LEGACY_CELL_UNITS * scale]
-    for y, x, blue in _row_strips(pixels, image):
-        trio_pitch = (blue - x) / 2
-        pitches = []
-        for left in _yellow_runs(pixels, y, blue, image.width):
-            measured = (left - x) / V3_TRAILER_OFFSET
-            if abs(measured - trio_pitch) < 0.75:
-                pitches.append(measured)
-        pitches.extend(fallback_pitches)
-        for pitch in pitches:
-            attempt = _attempt(pixels, image, y, x, pitch)
-            if attempt is not None:
-                version, result = attempt
-                result['protocol'] = version
-                return result
-    raise ValueError('live telemetry absent or invalid')
 
 
 class Freshness:

@@ -1,0 +1,233 @@
+{
+  "run": "client_cast_action_1793510238285456400",
+  "status": "FAILED",
+  "samples": [],
+  "inputs": [
+    {
+      "host_monotonic": 907092.4814086,
+      "kind": "key",
+      "value": 13
+    },
+    {
+      "host_monotonic": 907093.3301821,
+      "kind": "char",
+      "value": "/"
+    },
+    {
+      "host_monotonic": 907093.6198122,
+      "kind": "char",
+      "value": "c"
+    },
+    {
+      "host_monotonic": 907093.897826,
+      "kind": "char",
+      "value": "a"
+    },
+    {
+      "host_monotonic": 907094.1877293,
+      "kind": "char",
+      "value": "s"
+    },
+    {
+      "host_monotonic": 907094.4628349,
+      "kind": "char",
+      "value": "t"
+    },
+    {
+      "host_monotonic": 907094.7362231,
+      "kind": "char",
+      "value": " "
+    },
+    {
+      "host_monotonic": 907095.0042375,
+      "kind": "char",
+      "value": "F"
+    },
+    {
+      "host_monotonic": 907095.2784834,
+      "kind": "char",
+      "value": "r"
+    },
+    {
+      "host_monotonic": 907095.5644256,
+      "kind": "char",
+      "value": "o"
+    },
+    {
+      "host_monotonic": 907095.8404059,
+      "kind": "char",
+      "value": "s"
+    },
+    {
+      "host_monotonic": 907096.1202823,
+      "kind": "char",
+      "value": "t"
+    },
+    {
+      "host_monotonic": 907096.3940691,
+      "kind": "char",
+      "value": " "
+    },
+    {
+      "host_monotonic": 907096.684164,
+      "kind": "char",
+      "value": "A"
+    },
+    {
+      "host_monotonic": 907096.9556557,
+      "kind": "char",
+      "value": "r"
+    },
+    {
+      "host_monotonic": 907097.2352942,
+      "kind": "char",
+      "value": "m"
+    },
+    {
+      "host_monotonic": 907097.520432,
+      "kind": "char",
+      "value": "o"
+    },
+    {
+      "host_monotonic": 907097.7993645,
+      "kind": "char",
+      "value": "r"
+    },
+    {
+      "host_monotonic": 907098.3641329,
+      "kind": "key",
+      "value": 13
+    }
+  ],
+  "binding": {
+    "decision": "RECOVER",
+    "reason": "target_not_attackable"
+  },
+  "before": {
+    "sequence": 17573,
+    "game_ms": 907085536,
+    "health": 52,
+    "max_health": 52,
+    "power": 165,
+    "combat": false,
+    "dead": false,
+    "target_health": 52,
+    "target_max_health": 52,
+    "spell_range": 2,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0x0000000000000008",
+    "target_exists": true,
+    "target_attackable": false,
+    "target_dead": false,
+    "pos_x": 0.4907148851758602,
+    "pos_y": 0.42691691462577247,
+    "facing": 0.0,
+    "event_serial": 0,
+    "cast_started": 0,
+    "cast_succeeded": 0,
+    "cast_failed": 0,
+    "ui_errors": 0,
+    "event_kind": 0,
+    "event_spell": 0,
+    "event_ms": 0,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      }
+    ],
+    "protocol": 3
+  },
+  "after": {
+    "sequence": 17573,
+    "game_ms": 907085536,
+    "health": 52,
+    "max_health": 52,
+    "power": 165,
+    "combat": false,
+    "dead": false,
+    "target_health": 52,
+    "target_max_health": 52,
+    "spell_range": 2,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0x0000000000000008",
+    "target_exists": true,
+    "target_attackable": false,
+    "target_dead": false,
+    "pos_x": 0.4907148851758602,
+    "pos_y": 0.42691691462577247,
+    "facing": 0.0,
+    "event_serial": 0,
+    "cast_started": 0,
+    "cast_succeeded": 0,
+    "cast_failed": 0,
+    "ui_errors": 0,
+    "event_kind": 0,
+    "event_spell": 0,
+    "event_ms": 0,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      }
+    ],
+    "protocol": 3
+  },
+  "error": "ValueError('expected exactly one success event')"
+}

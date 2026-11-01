@@ -23,6 +23,12 @@ REASON_LINE_OF_SIGHT = 6
 # Reasons a cast may be retried rather than treated as a hard failure.
 RETRYABLE_REASONS = (REASON_RANGE, REASON_FACING, REASON_LINE_OF_SIGHT)
 
+# Target health at or below which a vanishing target counts as a kill.
+KILL_HEALTH_THRESHOLD = 5
+
+# Reasons a vanishing target can still be treated as a kill.
+KILL_REASONS = ('target_gone_after_hit', 'target_dead', 'target_dead_out_of_combat')
+
 
 class CombatController:
     def __init__(self, target_guid, spell_id, timeout=1.0,
@@ -36,6 +42,8 @@ class CombatController:
         self.last_event_serial = None
         self.finished = False
         self.recovery = None
+        self.last_target_health = None
+        self.successful_casts = 0
 
     def _recover(self, reason):
         self.recovery = {'decision': 'RECOVER', 'reason': reason}
@@ -73,11 +81,22 @@ class CombatController:
         if state['health'] / state['max_health'] <= self.low_health:
             return self._recover('low_health')
 
+        # Count confirmed hits first: the kill check below needs this evidence.
+        self._count_successful_casts(state)
+
         # The bound target must still be the same entity for the whole fight.
         if not state['target_exists']:
+            # A target that vanishes right after our hits is a kill, not a loss.
+            if self.successful_casts > 0 and self.last_target_health is not None:
+                self.finished = True
+                return {'decision': 'VERIFY_SURVIVAL',
+                        'reason': 'target_gone_after_hit',
+                        'last_target_health': self.last_target_health,
+                        'successful_casts': self.successful_casts}
             return self._recover('target_lost')
         if state['target_guid'] != self.target_guid:
             return self._recover('target_identity_changed')
+        self.last_target_health = state['target_health']
 
         if state['target_dead'] or state['target_health'] <= 0:
             # Death of the target does not end the run: the player must be
@@ -85,7 +104,6 @@ class CombatController:
             self.finished = True
             return {'decision': 'VERIFY_SURVIVAL',
                     'reason': 'target_dead' if state['combat'] else 'target_dead_out_of_combat'}
-
         if state['casting']:
             return {'decision': 'WAIT', 'reason': 'casting'}
         if not fresh:
@@ -118,6 +136,18 @@ class CombatController:
     def record_attempt(self):
         self.attempts += 1
 
+    def heartbeat(self, state, now):
+        """Keep the freshness tracker alive without making a decision.
+
+        Used while a cast is in flight: the observation stream must continue
+        or a long cast looks like a dead link.
+        """
+        try:
+            self.freshness.observe(state, now)
+        except ValueError:
+            return False
+        return True
+
     def _latest_failure(self, state):
         """Return the newest failed cast event for the bound spell, if any."""
         events = state.get('events') or []
@@ -130,3 +160,10 @@ class CombatController:
                 self.last_event_serial = event['serial']
                 return event
         return None
+
+    def _count_successful_casts(self, state):
+        """Track confirmed successful casts on the bound spell."""
+        for event in state.get('events') or []:
+            if event.get('kind') == 2 and event.get('spell') == self.spell_id:
+                self.successful_casts = max(self.successful_casts, event.get('serial', 0))
+        return self.successful_casts

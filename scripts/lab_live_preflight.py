@@ -103,8 +103,6 @@ if __name__ == '__main__':
         sys.exit(0)
     if '--grab' in sys.argv:
         from PIL import ImageGrab
-        import lab_driver5 as d
-import win32gui
         image = ImageGrab.grab()
         colors = image.convert('RGB').getcolors(maxcolors=100000)
         d.log('imagegrab distinct', len(colors) if colors else 'many')
