@@ -1,0 +1,23 @@
+{
+  "run": "client_char_select_1793531934953869700",
+  "status": "SELECTED_OTHER",
+  "steps": [],
+  "evidence": {
+    "run": "client_char_select_1793531934953869700",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_char_select_1793531934953869700_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 928785.4746152
+      },
+      {
+        "label": "04-other-character",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_char_select_1793531934953869700_04-other-character.png",
+        "source": "desktop",
+        "host_monotonic": 928789.1335053
+      }
+    ],
+    "states": []
+  }
+}

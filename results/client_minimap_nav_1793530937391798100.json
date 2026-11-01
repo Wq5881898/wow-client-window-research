@@ -1,0 +1,83 @@
+{
+  "run": "client_minimap_nav_1793530937391798100",
+  "status": "FAILED",
+  "attempts": [
+    {
+      "dead": true,
+      "health": 1
+    },
+    {
+      "dead": true,
+      "health": 1
+    },
+    {
+      "dead": true,
+      "health": 1
+    },
+    {
+      "dead": true,
+      "health": 1
+    },
+    {
+      "mark": "graveyard",
+      "dead": true,
+      "health": 1
+    },
+    {
+      "mark": "graveyard",
+      "dead": true,
+      "health": 1
+    },
+    {
+      "mark": "graveyard",
+      "dead": true,
+      "health": 1
+    },
+    {
+      "mark": "graveyard",
+      "dead": true,
+      "health": 1
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true
+  },
+  "error": "ValueError('the release point did not revive the character')",
+  "evidence": {
+    "run": "client_minimap_nav_1793530937391798100",
+    "frames": [
+      {
+        "label": "01-camera-turned",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_nav_1793530937391798100_01-camera-turned.png",
+        "source": "desktop",
+        "host_monotonic": 927788.2844761
+      },
+      {
+        "label": "01-camera-turned-02",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_nav_1793530937391798100_01-camera-turned-02.png",
+        "source": "desktop",
+        "host_monotonic": 927793.3663974
+      },
+      {
+        "label": "01-camera-turned-03",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_nav_1793530937391798100_01-camera-turned-03.png",
+        "source": "desktop",
+        "host_monotonic": 927798.4664793
+      },
+      {
+        "label": "01-camera-turned-04",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_nav_1793530937391798100_01-camera-turned-04.png",
+        "source": "desktop",
+        "host_monotonic": 927803.5470218
+      },
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_nav_1793530937391798100_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 927825.2412163
+      }
+    ],
+    "states": []
+  }
+}

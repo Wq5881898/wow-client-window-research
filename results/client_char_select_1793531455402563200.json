@@ -1,0 +1,17 @@
+{
+  "run": "client_char_select_1793531455402563200",
+  "status": "FAILED",
+  "steps": [],
+  "evidence": {
+    "run": "client_char_select_1793531455402563200",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_char_select_1793531455402563200_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 928305.0927941
+      }
+    ],
+    "states": []
+  }
+}

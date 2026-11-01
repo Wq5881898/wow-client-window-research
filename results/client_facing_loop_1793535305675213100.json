@@ -1,0 +1,19 @@
+{
+  "run": "client_facing_loop_1793535305675213100",
+  "status": "FAILED",
+  "attempts": [],
+  "error": "TypeError(\"'function' object cannot be interpreted as an integer\")",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\scripts\\lab_client_facing_loop.py\", line 72, in main\n    state = send(hwnd, '/target ' + TARGET, reader)\n  File \"C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\scripts\\lab_client_facing_loop.py\", line 51, in send\n    time.sleep(settle)\n    ~~~~~~~~~~^^^^^^^^\nTypeError: 'function' object cannot be interpreted as an integer\n",
+  "evidence": {
+    "run": "client_facing_loop_1793535305675213100",
+    "frames": [
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_facing_loop_1793535305675213100_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 932155.2174545
+      }
+    ],
+    "states": []
+  }
+}

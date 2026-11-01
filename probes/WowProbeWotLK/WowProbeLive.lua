@@ -51,15 +51,17 @@ end
 local function reason_code(message)
   if type(message) ~= "string" then return 0 end
   local lowered = string.lower(message)
-  -- Observed in 3.3.5a: "Target needs to be in front of you."
+  -- Observed in 3.3.5a: "Target needs to be in front of you." and
+  -- "You have no target."
   if string.find(lowered, "in front of you", 1, true)
      or string.find(lowered, "facing", 1, true) then return 5 end
+  if string.find(lowered, "no target", 1, true)
+     or string.find(lowered, "invalid target", 1, true)
+     or string.find(lowered, "dead", 1, true) then return 4 end
   if string.find(lowered, "line of sight", 1, true) then return 6 end
   if string.find(lowered, "range", 1, true) then return 1 end
   if string.find(lowered, "mana", 1, true) then return 2 end
   if string.find(lowered, "not ready", 1, true) or string.find(lowered, "cooldown", 1, true) then return 3 end
-  if string.find(lowered, "invalid target", 1, true) then return 4 end
-  if string.find(lowered, "dead", 1, true) then return 4 end
   return 0
 end
 

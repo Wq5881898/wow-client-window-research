@@ -1,0 +1,46 @@
+{
+  "run": "client_error_text_1793534765888832300",
+  "status": "CAPTURED",
+  "attempts": [
+    {
+      "attempt": 0,
+      "ui_errors_before": 3,
+      "ui_errors_after": 4,
+      "cast_failed_before": 2,
+      "cast_failed_after": 3,
+      "last_error_reason": 0,
+      "last_reason": 0,
+      "target_exists": false,
+      "target_health": 0
+    },
+    {
+      "attempt": 1,
+      "ui_errors_before": 4,
+      "ui_errors_after": 5,
+      "cast_failed_before": 3,
+      "cast_failed_after": 4,
+      "last_error_reason": 0,
+      "last_reason": 0,
+      "target_exists": false,
+      "target_health": 0
+    }
+  ],
+  "evidence": {
+    "run": "client_error_text_1793534765888832300",
+    "frames": [
+      {
+        "label": "error-0",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_error_text_1793534765888832300_error-0.png",
+        "source": "desktop",
+        "host_monotonic": 931616.7034624
+      },
+      {
+        "label": "error-1",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_error_text_1793534765888832300_error-1.png",
+        "source": "desktop",
+        "host_monotonic": 931619.6831542
+      }
+    ],
+    "states": []
+  }
+}

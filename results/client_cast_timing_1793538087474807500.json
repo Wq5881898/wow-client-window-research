@@ -1,0 +1,28 @@
+{
+  "run": "client_cast_timing_1793538087474807500",
+  "status": "MEASURED",
+  "samples": [
+    {
+      "elapsed": 0.45,
+      "cast_started": 1,
+      "cast_succeeded": 1,
+      "cast_failed": 57,
+      "casting": false
+    }
+  ],
+  "target_health": 1,
+  "resolved_after_seconds": 0.45,
+  "outcome": "failure",
+  "evidence": {
+    "run": "client_cast_timing_1793538087474807500",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cast_timing_1793538087474807500_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 934940.1573914
+      }
+    ],
+    "states": []
+  }
+}

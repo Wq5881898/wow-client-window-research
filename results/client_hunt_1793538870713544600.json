@@ -1,0 +1,113 @@
+{
+  "run": "client_hunt_1793538870713544600",
+  "status": "TARGET_FOUND",
+  "scans": [
+    {
+      "round": 0,
+      "position": [
+        0.3999847409781033,
+        0.722240024414435
+      ],
+      "found": {
+        "name": "tab",
+        "health": 2,
+        "guid": "0xF13000037304BA32",
+        "range": 0
+      }
+    }
+  ],
+  "target": {
+    "name": "tab",
+    "health": 2,
+    "guid": "0xF13000037304BA32",
+    "range": 0
+  },
+  "evidence": {
+    "run": "client_hunt_1793538870713544600",
+    "frames": [
+      {
+        "label": "01-found",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793538870713544600_01-found.png",
+        "source": "desktop",
+        "host_monotonic": 935734.9959665
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793538870713544600_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 935735.3272256
+      }
+    ],
+    "states": [
+      {
+        "label": "01-found",
+        "state": {
+          "sequence": 38715,
+          "game_ms": 935734354,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 2,
+          "target_max_health": 2,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000037304BA32",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.3999847409781033,
+          "pos_y": 0.722240024414435,
+          "facing": 0.0,
+          "event_serial": 156,
+          "cast_started": 1,
+          "cast_succeeded": 1,
+          "cast_failed": 77,
+          "ui_errors": 77,
+          "event_kind": 3,
+          "event_spell": 133,
+          "event_ms": 935193936,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 156,
+              "kind": 3,
+              "spell": 133,
+              "at": 935193936,
+              "reason": 0
+            },
+            {
+              "serial": 153,
+              "kind": 5,
+              "spell": 0,
+              "at": 935189502,
+              "reason": 1
+            },
+            {
+              "serial": 154,
+              "kind": 3,
+              "spell": 133,
+              "at": 935189502,
+              "reason": 0
+            },
+            {
+              "serial": 155,
+              "kind": 5,
+              "spell": 0,
+              "at": 935193936,
+              "reason": 1
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 1,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

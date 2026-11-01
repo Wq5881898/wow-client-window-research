@@ -35,14 +35,18 @@ def main():
     d.ensure_foreground(hwnd)
     hide_consoles()
     d.post_key(hwnd, win32con.VK_ESCAPE)
-    time.sleep(0.5)
-    d.click_si(*GRAVEYARD_NPC)
-    time.sleep(0.5)
-    d.right_click(*GRAVEYARD_NPC)
-    time.sleep(1.0)
+    time.sleep(0.8)
+    d.post_key(hwnd, win32con.VK_ESCAPE)
+    time.sleep(0.8)
+    # Select the resurrection NPC first so the nameplate turns interactive.
+    d.click_si(200, 142)
+    time.sleep(0.6)
+    # Then right click its body to open the interaction menu.
+    d.right_click(230, 280)
+    time.sleep(1.2)
     image = grab_desktop()
     image.save('.cache/desktop-check/npc-menu.png')
-    image.crop((0, 100, 400, 300)).resize((1200, 600)).save(
+    image.crop((0, 100, 400, 350)).resize((1200, 750)).save(
         '.cache/desktop-check/npc-menu-zoom.png')
     print('saved')
     return 0

@@ -1,0 +1,159 @@
+{
+  "run": "client_approach_1793539428187683300",
+  "status": "FAILED",
+  "steps": [
+    {
+      "step": 0,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.40157167925535975,
+        0.7217822537575341
+      ]
+    },
+    {
+      "step": 1,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4031433585107195,
+        0.7213092240787365
+      ]
+    },
+    {
+      "step": 2,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209582665751125
+      ]
+    },
+    {
+      "step": 3,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.40405889982452126,
+        0.7209430075532158
+      ]
+    },
+    {
+      "step": 4,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209735255970092
+      ]
+    },
+    {
+      "step": 5,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209735255970092
+      ]
+    },
+    {
+      "step": 6,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209735255970092
+      ]
+    },
+    {
+      "step": 7,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209735255970092
+      ]
+    },
+    {
+      "step": 8,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.40402838178072786,
+        0.7209582665751125
+      ]
+    },
+    {
+      "step": 9,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209735255970092
+      ]
+    },
+    {
+      "step": 10,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209582665751125
+      ]
+    },
+    {
+      "step": 11,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209887846189059
+      ]
+    },
+    {
+      "step": 12,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.40407415884641795,
+        0.7209277485313191
+      ]
+    },
+    {
+      "step": 13,
+      "health": 2,
+      "range": 0,
+      "distance": 6552.6,
+      "position": [
+        0.4039520866712444,
+        0.7209887846189059
+      ]
+    }
+  ],
+  "error": "ValueError('the target could not be reached')",
+  "evidence": {
+    "run": "client_approach_1793539428187683300",
+    "frames": [
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_approach_1793539428187683300_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 936305.3161101
+      }
+    ],
+    "states": []
+  }
+}

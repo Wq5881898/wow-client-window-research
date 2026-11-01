@@ -1,5 +1,6 @@
 """Log the character into the world and confirm the telemetry panel is up."""
 import json
+import sys
 import time
 from pathlib import Path
 import win32con
@@ -43,6 +44,11 @@ def focus(hwnd):
 def main():
     run = 'client_login_' + str(time.time_ns())
     result = dict(run=run, status='FAILED', steps=[])
+    character = None
+    if '--character' in sys.argv:
+        index = sys.argv.index('--character')
+        character = sys.argv[index + 1]
+        result['character'] = character
     evidence = Evidence(run)
     hwnd = d.find_game_window()
     if not hwnd:
@@ -69,6 +75,17 @@ def main():
         time.sleep(8.0)
         evidence.capture('03-character-select')
 
+        # A character may be requested by name: the probe character can be
+        # stuck in the ghost state, and another character of the account
+        # takes over the role of the test subject.
+        wanted = result.get('character')
+        if wanted:
+            for character in wanted:
+                win32gui.PostMessage(hwnd, win32con.WM_CHAR, ord(character), 0)
+                time.sleep(0.05)
+            time.sleep(1.5)
+            evidence.capture('04-character-picked')
+
         # The Enter World button is at the bottom centre of the client window.
         left, top, right, bottom = win32gui.GetWindowRect(hwnd)
         d.click_raw(int((left + right) / 2), int(bottom - 95))
@@ -80,8 +97,8 @@ def main():
         result['protocol'] = state['protocol']
         result['health'] = state['health']
         result['position'] = [state['pos_x'], state['pos_y']]
-        evidence.capture('04-in-world', state)
-        if state['protocol'] not in (3, 4):
+        evidence.capture('05-in-world', state)
+        if state['protocol'] not in (3, 4, 5):
             raise ValueError('telemetry panel missing, protocol ' + str(state['protocol']))
         if state['dead'] or state['combat']:
             raise ValueError('unexpected state on login')
@@ -89,7 +106,7 @@ def main():
     except Exception as exc:
         result['error'] = repr(exc)
     finally:
-        evidence.capture('05-end')
+        evidence.capture('06-end')
         path = evidence.write(result)
         d.log('login run', path, result['status'])
     return 0 if result['status'] == 'IN_WORLD' else 1

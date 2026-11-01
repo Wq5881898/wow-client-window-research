@@ -1,0 +1,18 @@
+{
+  "run": "client_facing_loop_1793535208412220000",
+  "status": "FAILED",
+  "attempts": [],
+  "error": "ValueError('no game window')",
+  "evidence": {
+    "run": "client_facing_loop_1793535208412220000",
+    "frames": [
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_facing_loop_1793535208412220000_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 932055.6321259
+      }
+    ],
+    "states": []
+  }
+}

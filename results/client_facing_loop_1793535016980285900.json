@@ -1,0 +1,18 @@
+{
+  "run": "client_facing_loop_1793535016980285900",
+  "status": "FAILED",
+  "attempts": [],
+  "error": "TypeError(\"'function' object cannot be interpreted as an integer\")",
+  "evidence": {
+    "run": "client_facing_loop_1793535016980285900",
+    "frames": [
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_facing_loop_1793535016980285900_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 931866.5064115
+      }
+    ],
+    "states": []
+  }
+}

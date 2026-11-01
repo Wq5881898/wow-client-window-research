@@ -1,0 +1,23 @@
+{
+  "run": "client_char_select_1793531585095247300",
+  "status": "LOGGED_OUT",
+  "steps": [],
+  "evidence": {
+    "run": "client_char_select_1793531585095247300",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_char_select_1793531585095247300_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 928434.7701683
+      },
+      {
+        "label": "02-character-select",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_char_select_1793531585095247300_02-character-select.png",
+        "source": "desktop",
+        "host_monotonic": 928444.1976714
+      }
+    ],
+    "states": []
+  }
+}

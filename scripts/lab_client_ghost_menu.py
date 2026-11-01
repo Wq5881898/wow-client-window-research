@@ -32,11 +32,15 @@ def main():
     hide_consoles()
     d.post_key(hwnd, win32con.VK_ESCAPE)
     time.sleep(0.5)
-    # The ghost stands in the lower middle of the screen.
-    d.right_click(960, 700)
-    time.sleep(1.0)
-    image = grab_desktop()
-    image.save('.cache/desktop-check/ghost-menu.png')
+    # The ghost stands in the lower middle of the screen. Several points are
+    # tried because the ghost is small and its exact pixel position drifts.
+    for point in ((960, 630), (960, 600), (960, 660), (900, 620), (1000, 640)):
+        d.right_click(*point)
+        time.sleep(0.8)
+        image = grab_desktop()
+        if image.crop((800, 500, 1200, 800)).getbbox() is not None:
+            pass
+        image.save('.cache/desktop-check/ghost-menu-%d.png' % point[1])
     print('saved')
     return 0
 

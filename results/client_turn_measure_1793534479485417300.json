@@ -1,0 +1,63 @@
+{
+  "run": "client_turn_measure_1793534479485417300",
+  "status": "TURN_MEASURED",
+  "legs": [
+    {
+      "label": "before-turn",
+      "dx": 0.001037613488975353,
+      "dy": 0.0025940337224383825,
+      "distance": 0.0027938598221190583,
+      "angle": 68.19859051364818
+    },
+    {
+      "label": "after-left-0.3",
+      "dx": 0.0020141908903639205,
+      "dy": 0.00025940337224383825,
+      "distance": 0.0020308261994460477,
+      "angle": 7.338606336236236,
+      "turn_seconds": 0.3
+    },
+    {
+      "label": "after-left-0.8",
+      "dx": -0.0015259021896696368,
+      "dy": -0.0019836728465705278,
+      "distance": 0.002502665669772895,
+      "angle": -127.56859202882748,
+      "turn_seconds": 0.8
+    },
+    {
+      "label": "after-left-1.5",
+      "dx": 0.001327534905012584,
+      "dy": -0.0022735942626077588,
+      "distance": 0.002632789356365163,
+      "angle": -59.719659717493236,
+      "turn_seconds": 1.5
+    }
+  ],
+  "heading_change_degrees": 127.91825023114143,
+  "turn_worked": true,
+  "evidence": {
+    "run": "client_turn_measure_1793534479485417300",
+    "frames": [
+      {
+        "label": "01-before",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_turn_measure_1793534479485417300_01-before.png",
+        "source": "desktop",
+        "host_monotonic": 931329.6543806
+      },
+      {
+        "label": "02-after-left",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_turn_measure_1793534479485417300_02-after-left.png",
+        "source": "desktop",
+        "host_monotonic": 931339.1749158
+      },
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_turn_measure_1793534479485417300_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 931339.5333062
+      }
+    ],
+    "states": []
+  }
+}

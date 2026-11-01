@@ -18,6 +18,7 @@ from client_facing import sweep_toward, facing_failed, REASON_FACING
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
+TARGET = 'Chicken'
 
 
 def hide_consoles():
@@ -67,18 +68,19 @@ def main():
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
 
-        state = send_command(hwnd, '/target Diseased Young Wolf', reader)
+        state = send_command(hwnd, '/target ' + TARGET, reader)
         if not state['target_exists']:
             raise ValueError('no target acquired')
         result['target_guid'] = state['target_guid']
         result['target_health'] = state['target_health']
 
-        # Turn the character away from the target: the client has no facing
-        # readout, so a fixed number of turn steps is used to make the
-        # target end up behind the character.
+        # Turn the character away from the target. The turn rate was measured
+        # at roughly 170 degrees per second, so about one second turns the
+        # character around. A longer hold would rotate through several full
+        # circles and end up facing the target again.
         from client_facing import turn_step
-        for _ in range(10):
-            turn_step('left', 0.45)
+        for _ in range(2):
+            turn_step('left', 0.5)
             time.sleep(0.05)
         time.sleep(0.3)
         turned_away = reader()

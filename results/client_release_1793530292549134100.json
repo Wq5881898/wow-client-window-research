@@ -1,0 +1,263 @@
+{
+  "run": "client_release_1793530292549134100",
+  "status": "FAILED",
+  "attempts": [
+    {
+      "step": 0,
+      "moved": true,
+      "position": [
+        0.4985427634088655,
+        0.4271763179980163
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 1,
+      "moved": true,
+      "position": [
+        0.49756618600747693,
+        0.4233615625238422
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 2,
+      "moved": true,
+      "position": [
+        0.49529259174486917,
+        0.42317845426108186
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 3,
+      "moved": true,
+      "position": [
+        0.4939040207522698,
+        0.42665751125352863
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 4,
+      "moved": true,
+      "position": [
+        0.4952773327229725,
+        0.43018234531166555
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 5,
+      "moved": true,
+      "position": [
+        0.4979934386205844,
+        0.4299229419394217
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 6,
+      "moved": true,
+      "position": [
+        0.49907682917524987,
+        0.42618448157473104
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 7,
+      "moved": true,
+      "position": [
+        0.4973525597009232,
+        0.4230258640421149
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 8,
+      "moved": true,
+      "position": [
+        0.4947280079346914,
+        0.4238956282902266
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 9,
+      "moved": true,
+      "position": [
+        0.49404135194934007,
+        0.42784771496147095
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 10,
+      "moved": true,
+      "position": [
+        0.4960860608834974,
+        0.43054856183718626
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 11,
+      "moved": true,
+      "position": [
+        0.498619058518349,
+        0.42903791866941327
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 12,
+      "moved": true,
+      "position": [
+        0.4988632028686961,
+        0.42497901884489203
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 13,
+      "moved": true,
+      "position": [
+        0.49655909056229497,
+        0.42281223773556115
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 14,
+      "moved": true,
+      "position": [
+        0.4942244602121004,
+        0.42490272373540855
+      ],
+      "dead": true,
+      "health": 1
+    },
+    {
+      "step": 15,
+      "moved": true,
+      "position": [
+        0.4944075684748608,
+        0.4289921416037232
+      ],
+      "dead": true,
+      "health": 1
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true,
+    "position": [
+      0.49672693980315863,
+      0.43019760433356224
+    ]
+  },
+  "error": "ValueError('the ghost did not reach a release point')",
+  "evidence": {
+    "run": "client_release_1793530292549134100",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_release_1793530292549134100_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 927141.1801421
+      },
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_release_1793530292549134100_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 927204.1739595
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 3003,
+          "game_ms": 927140503,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.49672693980315863,
+          "pos_y": 0.43019760433356224,
+          "facing": 0.0,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

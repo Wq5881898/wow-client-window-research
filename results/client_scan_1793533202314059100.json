@@ -1,0 +1,171 @@
+{
+  "run": "client_scan_1793533202314059100",
+  "status": "SCANNED",
+  "scans": [
+    {
+      "name": "Wolf",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Brown Wolf",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Black Wolf",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Young Wolf",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Defias Bandit",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Defias Trapper",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Kobold Laborer",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Koboid Vermin",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Stormwind Rat",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Sheep",
+      "exists": false,
+      "attackable": false,
+      "health": 0,
+      "guid": "0x0000000000000000"
+    },
+    {
+      "name": "Chicken",
+      "exists": true,
+      "attackable": true,
+      "health": 1,
+      "guid": "0xF13000026C000D33"
+    }
+  ],
+  "evidence": {
+    "run": "client_scan_1793533202314059100",
+    "frames": [
+      {
+        "label": "01-scan",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_scan_1793533202314059100_01-scan.png",
+        "source": "desktop",
+        "host_monotonic": 930081.2518208
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_scan_1793533202314059100_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 930081.6232403
+      }
+    ],
+    "states": [
+      {
+        "label": "01-scan",
+        "state": {
+          "sequence": 1996,
+          "game_ms": 930080669,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 1,
+          "target_max_health": 1,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000026C000D33",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.42240024414435035,
+          "pos_y": 0.6522163729304952,
+          "facing": 0.0,
+          "event_serial": 1,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 5,
+          "event_spell": 0,
+          "event_ms": 929875960,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 5,
+              "spell": 0,
+              "at": 929875960,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

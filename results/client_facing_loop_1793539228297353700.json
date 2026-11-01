@@ -1,0 +1,23 @@
+{
+  "run": "client_facing_loop_1793539228297353700",
+  "status": "FAILED",
+  "attempts": [],
+  "target_source": "current",
+  "target_guid": "0xF13000037304BA32",
+  "target_health": 2,
+  "target_range": 0,
+  "error": "ValueError('the target is not in spell range')",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\scripts\\lab_client_facing_loop.py\", line 91, in main\n    raise ValueError('the target is not in spell range')\nValueError: the target is not in spell range\n",
+  "evidence": {
+    "run": "client_facing_loop_1793539228297353700",
+    "frames": [
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_facing_loop_1793539228297353700_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 936076.8160647
+      }
+    ],
+    "states": []
+  }
+}
