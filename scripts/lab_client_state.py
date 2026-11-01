@@ -33,7 +33,8 @@ def main():
         'target_health', 'target_guid', 'pos_x', 'pos_y', 'facing',
         'cast_started', 'cast_succeeded', 'cast_failed', 'ui_errors',
         'event_kind', 'event_spell', 'last_reason', 'last_error_reason',
-        'spell_bits', 'known_spells', 'frost_armor')}
+        'spell_bits', 'known_spells', 'frost_armor',
+        'target_class', 'target_class_name')}
     report['events'] = state['events']
     out.write_text(json.dumps(report, indent=2), encoding='utf-8')
     d.log('state report', str(out), 'ok')

@@ -1,0 +1,51 @@
+{
+  "run": "client_marker_1793570802816690400",
+  "status": "FAILED",
+  "attempts": [
+    {
+      "attempt": 0,
+      "markers": 2
+    },
+    {
+      "attempt": 1,
+      "markers": 2
+    },
+    {
+      "attempt": 2,
+      "markers": 2
+    },
+    {
+      "attempt": 3,
+      "markers": 2
+    },
+    {
+      "attempt": 4,
+      "markers": 2
+    },
+    {
+      "attempt": 5,
+      "markers": 3
+    },
+    {
+      "attempt": 6,
+      "markers": 3
+    },
+    {
+      "attempt": 7,
+      "markers": 3
+    }
+  ],
+  "error": "ValueError('no hostile was reached through the minimap')",
+  "evidence": {
+    "run": "client_marker_1793570802816690400",
+    "frames": [
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_marker_1793570802816690400_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 968072.0640916
+      }
+    ],
+    "states": []
+  }
+}

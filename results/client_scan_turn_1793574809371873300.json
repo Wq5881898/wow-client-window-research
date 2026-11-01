@@ -1,0 +1,235 @@
+{
+  "run": "client_scan_turn_1793574809371873300",
+  "status": "NOTHING_FOUND",
+  "picks": [
+    {
+      "step": 0,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 1,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 2,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 3,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 4,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 5,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 6,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 7,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 8,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 9,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 10,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 11,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 12,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 13,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 14,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 15,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 16,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 17,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 18,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 19,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 20,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 21,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 22,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    },
+    {
+      "step": 23,
+      "guid": "0x0000000000000000",
+      "health": 0,
+      "class_id": 0,
+      "class": "no target",
+      "range": 2,
+      "exists": false
+    }
+  ],
+  "target": null,
+  "evidence": {
+    "run": "client_scan_turn_1793574809371873300",
+    "frames": [
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_scan_turn_1793574809371873300_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 971691.2240099
+      }
+    ],
+    "states": []
+  }
+}

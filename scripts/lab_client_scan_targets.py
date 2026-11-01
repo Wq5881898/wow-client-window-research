@@ -42,9 +42,10 @@ def main():
         def reader():
             return decode(assert_real_frame(grab_desktop()))
 
-        names = ['Wolf', 'Brown Wolf', 'Black Wolf', 'Young Wolf',
-                 'Defias Bandit', 'Defias Trapper', 'Kobold Laborer',
-                 'Koboid Vermin', 'Stormwind Rat', 'Sheep', 'Chicken']
+        names = ['Diseased Young Wolf', 'Crumbling Cadaver', 'Fetid Ghoul',
+                 'Distorted Cadaver', 'Diseased Flayer', 'Undead Fetid Ghoul',
+                 'Scavenger', 'Diseased Slicer', 'Rabid Dog', 'Wolf',
+                 'Chicken', 'Sheep', 'Kobold Vermin']
         for name in names:
             if '在本' in name:
                 continue
