@@ -16,10 +16,13 @@
 python -X utf8 scripts/client_offline_check.py
 python -X utf8 scripts/probe_static_check.py
 python -X utf8 scripts/probe_wotlk_static_check.py
+python -X utf8 -m unittest discover -s scripts -p test_client_snapshot_task.py -v
 git diff --check
 ```
 
 上述命令不会运行游戏。`lab_*.py` 多数是会发送输入的实验脚本，不要作为测试批量执行；路径及交互会话须按本机核实。
+
+下一阶段入口与历史缺口处理见 [观测任务说明](docs/客户端下一阶段_观测任务与历史缺口.md)。`client_snapshot_task.py` 可验收指定场景，不依赖损坏的历史速度标定；尚未替代正式实时观测通道。
 
 ## 恢复与备份
 

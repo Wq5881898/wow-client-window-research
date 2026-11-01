@@ -1,0 +1,12 @@
+{
+  "run_id": "client_observe_1793249930524875700",
+  "status": "FAILED",
+  "movement_issued": false,
+  "stages": [
+    "WINDOW_READY",
+    "SAMPLE_REQUESTED"
+  ],
+  "source": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\WTF\\Account\\GM01\\AzerothCore\\Probehuman\\SavedVariables\\WowProbeWotLK.lua",
+  "before_sha256": "b4a9a9ae2c66e6f1474573817b6c588e61be8de2cbb9ecd7ebf412b78609688a",
+  "error": "PermissionError: [Errno 13] Permission denied: 'C:\\\\Azerothcore\\\\wowclient\\\\WOW_3.3.5a\\\\WTF\\\\Account\\\\GM01\\\\AzerothCore\\\\Probehuman\\\\SavedVariables\\\\WowProbeWotLK.lua'"
+}

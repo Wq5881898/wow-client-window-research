@@ -1,0 +1,8 @@
+{
+  "run": "client_live_v3_1793504157975068800",
+  "status": "FAILED",
+  "samples": [],
+  "inputs": [],
+  "error": "ValueError('foreground_lost')",
+  "max_capture_gap_seconds": 0
+}

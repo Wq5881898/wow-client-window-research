@@ -1,0 +1,8 @@
+{
+  "run_id": "client_combat_1793257929895289600",
+  "status": "FAILED",
+  "cast_requested": true,
+  "local_raw_backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-observations\\client_combat_1793257929895289600.lua",
+  "screenshot": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\desktop-check\\client_combat_1793257929895289600_snapshot.png",
+  "error": "ValueError: combat or unknown combat state"
+}

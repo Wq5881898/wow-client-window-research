@@ -1,0 +1,170 @@
+{
+  "schema": "client-combat-death-evidence-v1",
+  "run_id": "client_combat_1793257929895289600",
+  "scope": "historical extraction, not a new experiment or success acceptance",
+  "scene": {
+    "meta": {
+      "fireball": "Fireball",
+      "facing": 3.141593933105469,
+      "speed": 0,
+      "logout_seen": true,
+      "sample_time": 654877.983,
+      "scene": "client_combat_1793257929895289600_snapshot",
+      "last_sequence": 84,
+      "sv_memory_assigned": true,
+      "target_level": 1,
+      "started_monotonic": 654861.184,
+      "cast_success": 0,
+      "y": 0.4419300556182861,
+      "x": 0.4785337746143341,
+      "spell_damage": 35,
+      "cast_error": "Out of range.",
+      "target_health": 3,
+      "spell_range": 1,
+      "target_guid": "0xF13000012B000A2B",
+      "addon": "WowProbeWotLK"
+    },
+    "player_observations": [
+      {
+        "sequence": 40,
+        "api": "UnitName",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.name.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": "Probehuman",
+        "value_type": "string"
+      },
+      {
+        "sequence": 41,
+        "api": "UnitIsDeadOrGhost",
+        "effect": "NOT_APPLICABLE",
+        "probe_id": "G4.dead.player",
+        "event_status": "NONE",
+        "call_status": "RETURNED",
+        "monotonic_time": 654861.184,
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "NIL",
+        "value_type": "nil"
+      },
+      {
+        "sequence": 42,
+        "api": "UnitAffectingCombat",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.combat.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": 1,
+        "value_type": "number"
+      },
+      {
+        "sequence": 43,
+        "api": "UnitHealth",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.health.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": 44,
+        "value_type": "number"
+      },
+      {
+        "sequence": 44,
+        "api": "UnitHealthMax",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.healthmax.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": 52,
+        "value_type": "number"
+      },
+      {
+        "sequence": 45,
+        "api": "UnitPower",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.power.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": 165,
+        "value_type": "number"
+      },
+      {
+        "sequence": 46,
+        "api": "UnitPowerMax",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.powermax.player",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": 165,
+        "value_type": "number"
+      },
+      {
+        "sequence": 53,
+        "api": "UnitName",
+        "effect": "NOT_APPLICABLE",
+        "event_status": "NONE",
+        "probe_id": "G4.name.target",
+        "monotonic_time": 654861.184,
+        "call_status": "RETURNED",
+        "scene": "client_combat_1793257929895289600_snapshot",
+        "value_status": "OK",
+        "value": "Diseased Young Wolf",
+        "value_type": "string"
+      }
+    ]
+  },
+  "evidence_files": [
+    {
+      "path": ".cache\\client-observations\\client_combat_1793257929895289600.lua",
+      "bytes": 4704528,
+      "sha256": "1489a25eeb9185669ae0a4dfc71598509a57816a87b6af4dfbfa4a801386e71c"
+    },
+    {
+      "path": "results\\client_combat_1793257929895289600.json",
+      "bytes": 442,
+      "sha256": "61d6d7932cab12ec1314b25350ff742ca334343e78e71db8290d3e31bac0eb3d"
+    },
+    {
+      "path": ".cache\\desktop-check\\client_combat_1793257929895289600_cast-request.png",
+      "bytes": 3015521,
+      "sha256": "097fcd39a99c0633a191e70cb7a81b37da1378bd803f9b476e9865d0748d152a"
+    },
+    {
+      "path": ".cache\\desktop-check\\client_combat_1793257929895289600_after-cast.png",
+      "bytes": 3056208,
+      "sha256": "a9ff1a474ac02034b3e38d8cf64ac6d0149df2cdc143020be6417262dd089d5b"
+    },
+    {
+      "path": ".cache\\desktop-check\\client_combat_1793257929895289600_snapshot.png",
+      "bytes": 3061890,
+      "sha256": "1e86988dcb2e52078f4ce13845c7d8ef7016a0882c9a41af21c3f195cc9e4d93"
+    },
+    {
+      "path": ".cache\\desktop-check\\combat-final-check.png",
+      "bytes": 3005377,
+      "sha256": "717b853c4704618c461737241ba611cd3c4a2686082e5c05e6e825e28313a7b2"
+    },
+    {
+      "path": ".cache\\desktop-check\\recovery-confirmed.png",
+      "bytes": 2256731,
+      "sha256": "cf532d3b0b2de153c3b06affb86a3f761e175d07eaf89142263f6182d8791233"
+    }
+  ]
+}

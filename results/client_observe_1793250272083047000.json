@@ -1,0 +1,101 @@
+{
+  "run_id": "client_observe_1793250272083047000",
+  "status": "COMPLETED",
+  "movement_issued": false,
+  "stages": [
+    "WINDOW_READY",
+    "SAMPLE_REQUESTED",
+    "FRESH_PERSISTED_SCENE",
+    "ACCEPTED"
+  ],
+  "source": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\WTF\\Account\\GM01\\AzerothCore\\Probehuman\\SavedVariables\\WowProbeWotLK.lua",
+  "before_sha256": "08f958a8702220342197be03fe7cc62a837af93d9698321a96c247c8addd6d57",
+  "transient_read_errors": 1,
+  "local_raw_backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-observations\\client_observe_1793250272083047000.lua",
+  "acceptance": {
+    "status": "SNAPSHOT_ACCEPTED",
+    "sample": {
+      "meta": {
+        "sample_time": 647145.85,
+        "scene": "client_observe_1793250272083047000_snapshot",
+        "last_sequence": 84,
+        "addon": "WowProbeWotLK",
+        "started_monotonic": 647129.084,
+        "y": 0.4320386350154877,
+        "x": 0.4805493056774139,
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": true,
+        "sv_memory_assigned": true
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 647129.084,
+          "call_status": "RETURNED",
+          "scene": "client_observe_1793250272083047000_snapshot",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 647129.084,
+          "call_status": "RETURNED",
+          "scene": "client_observe_1793250272083047000_snapshot",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 647129.084,
+          "scene": "client_observe_1793250272083047000_snapshot",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 647129.084,
+          "call_status": "RETURNED",
+          "scene": "client_observe_1793250272083047000_snapshot",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.name.target",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 647129.084,
+          "scene": "client_observe_1793250272083047000_snapshot",
+          "value_status": "NIL",
+          "value_type": "nil"
+        }
+      }
+    },
+    "source_sha256": "91d610fabe86d54dee57d07f3616a1d4ed30d02d1076fff60796f27eb46107d1",
+    "movement_issued": false,
+    "scope": "persisted snapshot only; scene matching does not prove current live state"
+  }
+}

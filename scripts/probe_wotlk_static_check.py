@@ -55,7 +55,8 @@ REQUIRED = [
 
 def main() -> int:
     text = PROBE.read_text(encoding="utf-8")
-    hits = [pat for pat in FORBIDDEN if re.search(pat, text)]
+    live_text = (PROBE.parent / 'WowProbeLive.lua').read_text(encoding='utf-8')
+    hits = [pat for pat in FORBIDDEN if re.search(pat, text + '\n' + live_text)]
     missing = [name for name in REQUIRED if name not in text]
     print(f"probe: {PROBE}")
     print(f"forbidden_hits: {len(hits)}")

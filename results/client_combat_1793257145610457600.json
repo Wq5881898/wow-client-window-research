@@ -1,0 +1,100 @@
+{
+  "run_id": "client_combat_1793257145610457600",
+  "status": "PREFLIGHT_ACCEPTED",
+  "cast_requested": false,
+  "movement_requested": "S_2_SECONDS",
+  "local_raw_backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-observations\\client_combat_1793257145610457600.lua",
+  "screenshot": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\desktop-check\\client_combat_1793257145610457600_snapshot.png",
+  "acceptance": {
+    "status": "SNAPSHOT_ACCEPTED",
+    "sample": {
+      "meta": {
+        "fireball": "Fireball",
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": true,
+        "sample_time": 654026.884,
+        "scene": "client_combat_1793257145610457600_snapshot",
+        "last_sequence": 84,
+        "sv_memory_assigned": true,
+        "started_monotonic": 654010.1,
+        "y": 0.4419300556182861,
+        "x": 0.4805493056774139,
+        "target_level": 1,
+        "target_health": 42,
+        "spell_range": 1,
+        "target_guid": "0xF13000012B000A34",
+        "addon": "WowProbeWotLK"
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 654010.1,
+          "call_status": "RETURNED",
+          "scene": "client_combat_1793257145610457600_snapshot",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 654010.1,
+          "call_status": "RETURNED",
+          "scene": "client_combat_1793257145610457600_snapshot",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 654010.1,
+          "scene": "client_combat_1793257145610457600_snapshot",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 654010.1,
+          "call_status": "RETURNED",
+          "scene": "client_combat_1793257145610457600_snapshot",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.target",
+          "monotonic_time": 654010.101,
+          "call_status": "RETURNED",
+          "scene": "client_combat_1793257145610457600_snapshot",
+          "value_status": "OK",
+          "value": "Diseased Young Wolf",
+          "value_type": "string"
+        }
+      }
+    },
+    "source_sha256": "047fc9e3ad110c137762faba33b13ec7a9e21ee31f4f5de5e97e14fd35e3bad6",
+    "movement_issued": false,
+    "scope": "persisted snapshot only; scene matching does not prove current live state"
+  }
+}

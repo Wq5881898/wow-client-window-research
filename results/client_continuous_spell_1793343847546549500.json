@@ -1,0 +1,8 @@
+{
+  "run": "client_continuous_spell_1793343847546549500",
+  "status": "FAILED",
+  "samples": [],
+  "inputs": [],
+  "error": "ValueError('live telemetry absent or invalid')",
+  "max_capture_gap_seconds": 0
+}

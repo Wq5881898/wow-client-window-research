@@ -1,0 +1,143 @@
+{
+  "run": "client_move_1793505795100622100",
+  "status": "FAILED",
+  "samples": [
+    {
+      "host_monotonic": 902643.5524055,
+      "control": {
+        "decision": "WAIT",
+        "reason": "heartbeat_warmup"
+      },
+      "sequence": 18496,
+      "game_ms": 902643454,
+      "health": 52,
+      "max_health": 52,
+      "power": 165,
+      "combat": false,
+      "dead": false,
+      "target_health": 0,
+      "target_max_health": 0,
+      "spell_range": 2,
+      "spell_learned": true,
+      "casting": false,
+      "speed": 0.0,
+      "target_guid": "0x0000000000000000",
+      "target_exists": false,
+      "target_attackable": false,
+      "target_dead": false,
+      "pos_x": 0.4925459678034638,
+      "pos_y": 0.4299534599832151,
+      "facing": 0.0,
+      "event_serial": 3,
+      "cast_started": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "ui_errors": 1,
+      "event_kind": 2,
+      "event_spell": 168,
+      "event_ms": 902457353,
+      "last_reason": 0,
+      "frost_armor": true,
+      "events": [
+        {
+          "serial": 0,
+          "kind": 0,
+          "spell": 0,
+          "at": 0,
+          "reason": 0
+        },
+        {
+          "serial": 1,
+          "kind": 5,
+          "spell": 0,
+          "at": 900850020,
+          "reason": 0
+        },
+        {
+          "serial": 2,
+          "kind": 3,
+          "spell": 133,
+          "at": 900850020,
+          "reason": 0
+        },
+        {
+          "serial": 3,
+          "kind": 2,
+          "spell": 168,
+          "at": 902457353,
+          "reason": 0
+        }
+      ],
+      "protocol": 3
+    },
+    {
+      "host_monotonic": 902646.6305578,
+      "control": {
+        "decision": "RECOVERY_REQUIRED",
+        "reason": "live telemetry stale or host time reversed"
+      },
+      "sequence": 18526,
+      "game_ms": 902646503,
+      "health": 52,
+      "max_health": 52,
+      "power": 165,
+      "combat": false,
+      "dead": false,
+      "target_health": 0,
+      "target_max_health": 0,
+      "spell_range": 2,
+      "spell_learned": true,
+      "casting": false,
+      "speed": 0.0,
+      "target_guid": "0x0000000000000000",
+      "target_exists": false,
+      "target_attackable": false,
+      "target_dead": false,
+      "pos_x": 0.49248493171587704,
+      "pos_y": 0.42821393148699166,
+      "facing": 0.0,
+      "event_serial": 3,
+      "cast_started": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "ui_errors": 1,
+      "event_kind": 2,
+      "event_spell": 168,
+      "event_ms": 902457353,
+      "last_reason": 0,
+      "frost_armor": true,
+      "events": [
+        {
+          "serial": 0,
+          "kind": 0,
+          "spell": 0,
+          "at": 0,
+          "reason": 0
+        },
+        {
+          "serial": 1,
+          "kind": 5,
+          "spell": 0,
+          "at": 900850020,
+          "reason": 0
+        },
+        {
+          "serial": 2,
+          "kind": 3,
+          "spell": 133,
+          "at": 900850020,
+          "reason": 0
+        },
+        {
+          "serial": 3,
+          "kind": 2,
+          "spell": 168,
+          "at": 902457353,
+          "reason": 0
+        }
+      ],
+      "protocol": 3
+    }
+  ],
+  "error": "ValueError('live telemetry stale or host time reversed')"
+}

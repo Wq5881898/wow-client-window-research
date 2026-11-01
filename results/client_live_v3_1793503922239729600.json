@@ -1,0 +1,6 @@
+{
+  "run": "client_live_v3_1793503922239729600",
+  "status": "FAILED",
+  "samples": [],
+  "error": "SessionUnavailable('desktop capture is blank; interactive session is not rendering')"
+}

@@ -1,0 +1,100 @@
+{
+  "run_id": "northshire_dialog_1793253992473534800",
+  "status": "DIALOG_VERIFIED",
+  "movement_issued": false,
+  "dialog_screenshot": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\desktop-check\\northshire_dialog_1793253992473534800_dialog.png",
+  "acceptance": {
+    "status": "SNAPSHOT_ACCEPTED",
+    "sample": {
+      "meta": {
+        "facing": 1.107696334656794e-08,
+        "speed": 0,
+        "logout_seen": true,
+        "sample_time": 650873.517,
+        "interact_range": 1,
+        "scene": "northshire_dialog_1793253992473534800_npc",
+        "quest_visible": 0,
+        "sv_memory_assigned": true,
+        "started_monotonic": 650856.7000000001,
+        "gossip_visible": 1,
+        "y": 0.4341549575328827,
+        "x": 0.4805493056774139,
+        "quest_title": "",
+        "last_sequence": 84,
+        "target_guid": "0xF130000337000A31",
+        "addon": "WowProbeWotLK"
+      },
+      "observations": {
+        "G3.subzone": {
+          "sequence": 31,
+          "api": "GetSubZoneText",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G3.subzone",
+          "monotonic_time": 650856.701,
+          "call_status": "RETURNED",
+          "scene": "northshire_dialog_1793253992473534800_npc",
+          "value_status": "OK",
+          "value": "Northshire Valley",
+          "value_type": "string"
+        },
+        "G4.name.player": {
+          "sequence": 40,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.player",
+          "monotonic_time": 650856.701,
+          "call_status": "RETURNED",
+          "scene": "northshire_dialog_1793253992473534800_npc",
+          "value_status": "OK",
+          "value": "Probehuman",
+          "value_type": "string"
+        },
+        "G4.combat.player": {
+          "sequence": 42,
+          "api": "UnitAffectingCombat",
+          "effect": "NOT_APPLICABLE",
+          "probe_id": "G4.combat.player",
+          "event_status": "NONE",
+          "call_status": "RETURNED",
+          "monotonic_time": 650856.701,
+          "scene": "northshire_dialog_1793253992473534800_npc",
+          "value_status": "NIL",
+          "value_type": "nil"
+        },
+        "G4.health.player": {
+          "sequence": 43,
+          "api": "UnitHealth",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.health.player",
+          "monotonic_time": 650856.701,
+          "call_status": "RETURNED",
+          "scene": "northshire_dialog_1793253992473534800_npc",
+          "value_status": "OK",
+          "value": 52,
+          "value_type": "number"
+        },
+        "G4.name.target": {
+          "sequence": 53,
+          "api": "UnitName",
+          "effect": "NOT_APPLICABLE",
+          "event_status": "NONE",
+          "probe_id": "G4.name.target",
+          "monotonic_time": 650856.701,
+          "call_status": "RETURNED",
+          "scene": "northshire_dialog_1793253992473534800_npc",
+          "value_status": "OK",
+          "value": "Deputy Willem",
+          "value_type": "string"
+        }
+      }
+    },
+    "source_sha256": "d98e3d46a9d88858daff39930df227c676e9439b25f0b90cffbe7b93515e69fa",
+    "movement_issued": false,
+    "scope": "persisted snapshot only; scene matching does not prove current live state"
+  },
+  "local_raw_backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-observations\\northshire_dialog_1793253992473534800.lua",
+  "screenshot": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\desktop-check\\northshire_dialog_1793253992473534800_selected.png"
+}

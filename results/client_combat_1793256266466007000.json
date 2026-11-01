@@ -1,0 +1,8 @@
+{
+  "run_id": "client_combat_1793256266466007000",
+  "status": "FAILED",
+  "cast_requested": false,
+  "local_raw_backup": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\client-observations\\client_combat_1793256266466007000.lua",
+  "screenshot": "C:\\APP\\opencode\\project\\WoW自动化预研\\.cache\\desktop-check\\client_combat_1793256266466007000_snapshot.png",
+  "error": "ValueError: target mismatch"
+}

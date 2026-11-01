@@ -1,0 +1,6 @@
+{
+  "run": "client_live_1793292588619120300",
+  "status": "FAILED",
+  "samples": [],
+  "error": "ValueError('live telemetry absent or invalid')"
+}
