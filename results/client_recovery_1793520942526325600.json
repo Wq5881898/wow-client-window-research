@@ -1,0 +1,19 @@
+{
+  "run": "client_recovery_1793520942526325600",
+  "status": "FAILED",
+  "timeline": [],
+  "damage_events": [],
+  "error": "ValueError('must start alive and out of combat')",
+  "evidence": {
+    "run": "client_recovery_1793520942526325600",
+    "frames": [
+      {
+        "label": "08-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_recovery_1793520942526325600_08-end.png",
+        "source": "desktop",
+        "host_monotonic": 917791.2032817
+      }
+    ],
+    "states": []
+  }
+}

@@ -11,7 +11,8 @@ def state(**changes):
                   target_guid='0xF130000337000A31', target_dead=False,
                   target_health=30, target_attackable=True, casting=False,
                   spell_learned=True, spell_range=1, speed=0.0,
-                  pos_x=0.5, pos_y=0.5, facing=0.0, events=[])
+                  pos_x=0.5, pos_y=0.5, facing=0.0, events=[],
+                  last_error_reason=0)
     result.update(changes)
     return result
 
@@ -112,14 +113,31 @@ class CombatControllerTests(unittest.TestCase):
             decision = driver.frame(events=[event(1, 3, reason=reason)])
             self.assertEqual(decision['decision'], 'WAIT')
 
-    def test_range_and_facing_failures_close_distance(self):
-        for reason in (REASON_RANGE, REASON_FACING, REASON_LINE_OF_SIGHT):
+    def test_range_and_line_of_sight_failures_close_distance(self):
+        for reason in (REASON_RANGE, REASON_LINE_OF_SIGHT):
             driver = Driver()
             driver.controller.bind_target(state())
             driver.warm()
             decision = driver.frame(events=[event(1, 3, reason=reason)])
             self.assertEqual(decision['decision'], 'CLOSE_DISTANCE')
             self.assertIn(reason, RETRYABLE_REASONS)
+
+    def test_facing_failure_turns_instead_of_closing_distance(self):
+        """The target is not in front: walking closer would not fix that."""
+        driver = Driver()
+        driver.controller.bind_target(state())
+        driver.warm()
+        decision = driver.frame(events=[event(1, 3, reason=REASON_FACING)])
+        self.assertEqual(decision['decision'], 'TURN')
+        self.assertIn(REASON_FACING, RETRYABLE_REASONS)
+
+    def test_ui_facing_error_turns(self):
+        """The dedicated error field also drives the turn decision."""
+        driver = Driver()
+        driver.controller.bind_target(state())
+        driver.warm()
+        decision = driver.frame(last_error_reason=REASON_FACING)
+        self.assertEqual(decision['decision'], 'TURN')
 
     def test_invalid_target_failure_recovers(self):
         driver = Driver()

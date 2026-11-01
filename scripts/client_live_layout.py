@@ -43,12 +43,32 @@ V4_LAYOUT = [
     ('checksum', 1), ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V4_LAYOUT
+# Protocol v5: adds last_error_reason, the reason code of the newest UI
+# error. The v4 field last_reason is overwritten by every event, so a cast
+# failure that is explained by a later UI message loses its cause. The new
+# field only changes when a UI error arrives, which makes it usable as the
+# feedback signal for a turn-and-retry loop.
+V5_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('frost_armor', 1),
+    ('chat_open', 1), ('target_distance', 2), ('event_queue', 40),
+    ('checksum', 1), ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V5_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
     '103': 'length',
     '106': 'length',
+    '107': 'length',
     'sequence': 'sequence',
     'math.floor(GetTime() * 1000) % 4294967296': 'game_ms',
     'UnitHealth("player")': 'health',
@@ -77,6 +97,7 @@ EXPRESSION_NAMES = {
     'last.spell': 'last_spell',
     'last.at': 'last_at',
     'last.reason': 'last_reason',
+    'last.error_reason': 'last_error_reason',
     'UnitBuff("player", GetSpellInfo(168)) and 1 or 0': 'frost_armor',
     'chat_open()': 'chat_open',
     'math.floor(target_distance() * 10)': 'target_distance',

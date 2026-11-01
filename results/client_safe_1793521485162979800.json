@@ -1,0 +1,101 @@
+{
+  "run": "client_safe_1793521485162979800",
+  "status": "FAILED",
+  "steps": [],
+  "start": {
+    "health": 1,
+    "combat": false,
+    "position": [
+      0.49672693980315863,
+      0.43019760433356224
+    ]
+  },
+  "error": "ValueError('character is dead; manual recovery needed')",
+  "evidence": {
+    "run": "client_safe_1793521485162979800",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_safe_1793521485162979800_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 918333.7907396
+      },
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_safe_1793521485162979800_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 918334.1500533
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 58808,
+          "game_ms": 918333303,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.49672693980315863,
+          "pos_y": 0.43019760433356224,
+          "facing": 0.0,
+          "event_serial": 26,
+          "cast_started": 11,
+          "cast_succeeded": 13,
+          "cast_failed": 1,
+          "ui_errors": 1,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 917424469,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 24,
+              "kind": 2,
+              "spell": 168,
+              "at": 917415786,
+              "reason": 0
+            },
+            {
+              "serial": 25,
+              "kind": 1,
+              "spell": 133,
+              "at": 917423136,
+              "reason": 0
+            },
+            {
+              "serial": 26,
+              "kind": 2,
+              "spell": 133,
+              "at": 917424469,
+              "reason": 0
+            },
+            {
+              "serial": 23,
+              "kind": 2,
+              "spell": 168,
+              "at": 917051419,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "protocol": 4
+        }
+      }
+    ]
+  }
+}

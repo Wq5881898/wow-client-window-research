@@ -1,6 +1,8 @@
 -- Read-only live telemetry. No targeting, casting, movement or interaction.
+-- The panel sits at the bottom right: the top left corner is used by the
+-- target frame, by unit nameplates and by the resurrection NPC menu.
 local frame = CreateFrame("Frame", "WowProbeLiveFrame", UIParent)
-frame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 20, -110)
+frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 20, 260)
 frame:SetWidth(600)
 frame:SetHeight(65)
 local text = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -8,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 4
+local PROTOCOL = 5
 local QUEUE = 4
-local DATA_BYTES = 106
+local DATA_BYTES = 107
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -24,6 +26,9 @@ end
 local sequence, elapsed = 0, 0
 local events = {serial = 0, started = 0, succeeded = 0, failed = 0, errors = 0}
 local last = {kind = 0, spell = 0, at = 0, reason = 0}
+-- The reason of the newest UI error. It survives the spell events that
+-- would otherwise overwrite last.reason with zero.
+local last = {kind = 0, spell = 0, at = 0, reason = 0, error_reason = 0}
 local queue = {}
 for i = 1, QUEUE do queue[i] = {serial = 0, kind = 0, spell = 0, at = 0, reason = 0} end
 
@@ -41,15 +46,20 @@ local function spell_id(name)
 end
 
 -- Map localized UI error text to a stable code; unknown text keeps 0.
+-- The order matters: the first match wins, so the more specific texts are
+-- tested before the generic ones.
 local function reason_code(message)
   if type(message) ~= "string" then return 0 end
   local lowered = string.lower(message)
+  -- Observed in 3.3.5a: "Target needs to be in front of you."
+  if string.find(lowered, "in front of you", 1, true)
+     or string.find(lowered, "facing", 1, true) then return 5 end
+  if string.find(lowered, "line of sight", 1, true) then return 6 end
   if string.find(lowered, "range", 1, true) then return 1 end
   if string.find(lowered, "mana", 1, true) then return 2 end
   if string.find(lowered, "not ready", 1, true) or string.find(lowered, "cooldown", 1, true) then return 3 end
-  if string.find(lowered, "invalid target", 1, true) or string.find(lowered, "dead", 1, true) then return 4 end
-  if string.find(lowered, "facing", 1, true) then return 5 end
-  if string.find(lowered, "line of sight", 1, true) then return 6 end
+  if string.find(lowered, "invalid target", 1, true) then return 4 end
+  if string.find(lowered, "dead", 1, true) then return 4 end
   return 0
 end
 
@@ -81,8 +91,12 @@ end
 frame:SetScript("OnEvent", function(_, event, ...)
   if event == "UI_ERROR_MESSAGE" then
     local message = ...
+    local reason = reason_code(message)
     events.errors = (events.errors + 1) % 65536
-    push(5, 0, reason_code(message))
+    -- The error reason is kept separately: the spell events that follow would
+    -- otherwise clear it before the driver can read it.
+    last.error_reason = reason
+    push(5, 0, reason)
     return
   end
   local unit, name = ...
@@ -123,7 +137,7 @@ local function update()
     end
   end
   number(PROTOCOL, 1)
-  number(106, 1)
+  number(107, 1)
   number(sequence, 2)
   number(math.floor(GetTime() * 1000) % 4294967296, 4)
   number(UnitHealth("player"), 2)
@@ -157,6 +171,7 @@ local function update()
   number(last.spell, 2)
   number(last.at, 4)
   number(last.reason, 1)
+  number(last.error_reason, 1)
   number(UnitBuff("player", GetSpellInfo(168)) and 1 or 0, 1)
   number(chat_open(), 1)
   number(math.floor(target_distance() * 10), 2)
@@ -188,14 +203,14 @@ local function update()
   cells[#cells]:SetTexture(1, 0, 1, 1)
   text:SetText(string.format("LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
-    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d chat=%d dist=%.1f",
+    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
     guid, UnitHealth("target"), tostring(range), learned, tostring(casting),
     x or 0, y or 0, facing, events.serial, events.started,
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
-    chat_open(), target_distance()))
+    last.error_reason, chat_open(), target_distance()))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)

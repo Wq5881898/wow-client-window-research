@@ -125,8 +125,15 @@ class CombatController:
                 return {'decision': 'WAIT', 'reason': 'spell_' + str(reason)}
             if reason == REASON_INVALID_TARGET:
                 return self._recover('cast_invalid_target')
+            if reason == REASON_FACING:
+                # The target is not in front. The client has no facing
+                # readout, so the driver turns blindly and lets the error
+                # code decide when the target came into view.
+                return {'decision': 'TURN', 'reason': 'cast_' + str(reason)}
             if reason in RETRYABLE_REASONS:
                 return {'decision': 'CLOSE_DISTANCE', 'reason': 'cast_' + str(reason)}
+        if state.get('last_error_reason') == REASON_FACING:
+            return {'decision': 'TURN', 'reason': 'cast_' + str(REASON_FACING)}
 
         if self.attempts >= self.max_attempts:
             return self._recover('attempt_budget_exhausted')

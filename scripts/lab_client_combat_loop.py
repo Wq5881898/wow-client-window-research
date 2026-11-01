@@ -14,8 +14,10 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_window_state import window_observable
-from client_combat_controller import CombatController
+from client_combat_controller import CombatController, LOW_HEALTH_RATIO
 from client_evidence import Evidence
+from client_retreat import break_engagement
+from client_facing import turn_step
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
@@ -192,9 +194,14 @@ def main():
                 if time.monotonic() - last_evidence > 12:
                     evidence.capture('03-mid-fight', state)
                     last_evidence = time.monotonic()
-                if after['health'] < after['max_health'] * 0.7:
-                    raise ValueError('health floor reached, aborting before further casts')
-                continue
+                if after['health'] < after['max_health'] * LOW_HEALTH_RATIO:
+                    # Aborting the run here would leave the character in
+                    # combat. Low health is a recovery trigger, not an exit.
+                    note('health_floor', {'health': after['health'],
+                                          'ratio': round(after['health'] / after['max_health'], 3)})
+                    decision = {'decision': 'RECOVER', 'reason': 'low_health'}
+                else:
+                    continue
 
             if decision['decision'] == 'CLOSE_DISTANCE':
                 # The target is out of range. Fireball reaches 30 yards, so
@@ -210,6 +217,14 @@ def main():
                 })
                 continue
 
+            if decision['decision'] == 'TURN':
+                # The client says the target is not in front. There is no
+                # facing readout, so the turn is blind and the error code
+                # decides when the target came into view.
+                turn_step('left')
+                note('turn', decision)
+                continue
+
             if decision['decision'] == 'WAIT':
                 time.sleep(0.2)
                 continue
@@ -219,21 +234,19 @@ def main():
                 break
 
             # RECOVER: retreat and confirm the character survives.
+            # Backing straight up fails against a pursuer: it runs along the
+            # pursuit line and never opens a gap. Turn away and run instead.
             evidence.capture('04-recover-trigger', state)
             note('recover', decision)
-            retreated = False
-            for attempt in range(4):
-                moved = move_while_watching(hwnd, VK_BACK, MAX_HOLD, reader)
-                state = moved[-1] if moved else reader()
-                note('retreat_step', {'attempt': attempt,
-                                      'health': state['health'],
-                                      'combat': state['combat'],
-                                      'position': [state['pos_x'], state['pos_y']]})
-                if not state['combat']:
-                    retreated = True
-                    break
-            if not retreated:
+            try:
+                steps = break_engagement(hwnd, reader, steps=8,
+                                         hold_seconds=MAX_HOLD)
+            except ValueError as exc:
+                note('retreat_failed', {'error': str(exc)})
                 raise ValueError('retreat did not clear combat; recovery unproven')
+            for step in steps:
+                note('retreat_step', step)
+            state = reader()
             note('recover_result', {'health': state['health'],
                                     'combat': state['combat'],
                                     'dead': state['dead']})

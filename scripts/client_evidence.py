@@ -20,8 +20,20 @@ class Evidence:
         self.run = run
         self.frames = []
         self.states = []
+        self._counts = {}
+
+    def _unique_label(self, label):
+        """Never write two frames onto the same file.
+
+        A label repeated inside one run would silently overwrite the earlier
+        screenshot, so the second use gets an index suffix.
+        """
+        count = self._counts.get(label, 0) + 1
+        self._counts[label] = count
+        return label if count == 1 else '%s-%02d' % (label, count)
 
     def capture(self, label, state=None):
+        label = self._unique_label(label)
         path = OUT / ('%s_%s.png' % (self.run, label))
         try:
             d.screenshot(path.name)

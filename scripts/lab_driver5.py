@@ -111,6 +111,20 @@ def click_raw(x, y, hold=0.4):
     log('raw clicked', x, y, 'hold', hold, 'cursor', win32gui.GetCursorPos())
 
 
+def right_click(x, y, hold=0.2):
+    """Right click with SendInput, used for world interactions."""
+    u.SetCursorPos(int(x), int(y))
+    time.sleep(0.15)
+    i = INPUT()
+    i.type = 0
+    i.union.mi = MOUSEINPUT(0, 0, 0, win32con.MOUSEEVENTF_RIGHTDOWN, 0, None)
+    SendInput(1, ctypes.byref(i), ctypes.sizeof(INPUT))
+    time.sleep(hold)
+    i.union.mi.dwFlags = win32con.MOUSEEVENTF_RIGHTUP
+    SendInput(1, ctypes.byref(i), ctypes.sizeof(INPUT))
+    log('right clicked', x, y, 'cursor', win32gui.GetCursorPos())
+
+
 def post_key(hwnd, vk, sc=0x1C):
     lp = (sc << 16) | 1
     win32gui.PostMessage(hwnd, win32con.WM_KEYDOWN, vk, lp)

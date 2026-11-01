@@ -1,7 +1,7 @@
 """The Lua encoder and the Python decoder must agree on field order."""
 import unittest
 from client_live_layout import (
-    CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, parse_lua_layout, offsets)
+    CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, parse_lua_layout, offsets)
 import client_live_state
 
 
@@ -11,10 +11,12 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V4_DATA_BYTES)
-        self.assertEqual(client_live_state.V4_TOTAL, total)
+        self.assertEqual(total, client_live_state.V5_DATA_BYTES)
+        self.assertEqual(client_live_state.V5_TOTAL, total)
         _, v3_total = offsets(V3_LAYOUT)
         self.assertEqual(v3_total, client_live_state.V3_DATA_BYTES)
+        _, v4_total = offsets(V4_LAYOUT)
+        self.assertEqual(v4_total, client_live_state.V4_DATA_BYTES)
 
     def test_decoder_uses_shared_offsets(self):
         self.assertEqual(client_live_state.V3_OFFSETS['health'][0], 8)
@@ -24,6 +26,9 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual(client_live_state.V4_OFFSETS['target_distance'][0], 62)
         self.assertEqual(client_live_state.V4_OFFSETS['event_queue'][0], 64)
         self.assertEqual(client_live_state.V4_OFFSETS['checksum'][0], 104)
+        self.assertEqual(client_live_state.V5_OFFSETS['last_error_reason'][0], 60)
+        self.assertEqual(client_live_state.V5_OFFSETS['event_queue'][0], 65)
+        self.assertEqual(client_live_state.V5_OFFSETS['checksum'][0], 105)
 
     def test_trailer_offset_matches_cell_count(self):
         self.assertEqual(client_live_state.V3_TRAILER_OFFSET,
@@ -32,6 +37,20 @@ class LayoutTests(unittest.TestCase):
                          3 + client_live_state.V3_DATA_BYTES + 1)
         self.assertEqual(client_live_state.V4_CELLS,
                          3 + client_live_state.V4_DATA_BYTES + 1)
+        self.assertEqual(client_live_state.V5_CELLS,
+                         3 + client_live_state.V5_DATA_BYTES + 1)
+        self.assertEqual(client_live_state.V5_TRAILER_OFFSET,
+                         client_live_state.V5_CELLS - 1)
+
+    def test_v5_only_inserts_after_the_v4_fields(self):
+        """The v5 packet must keep every v4 field at the same offset."""
+        v4_names = [name for name, _ in V4_LAYOUT]
+        v5_names = [name for name, _ in V5_LAYOUT]
+        for name in v4_names:
+            if name in ('frost_armor', 'chat_open', 'target_distance',
+                        'event_queue', 'checksum', 'weighted'):
+                continue
+            self.assertEqual(v5_names.index(name), v4_names.index(name), name)
 
     def test_unknown_lua_expression_is_rejected(self):
         source = ('local function update()\n'

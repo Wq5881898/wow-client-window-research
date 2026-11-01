@@ -1,0 +1,95 @@
+{
+  "run": "client_loop_recover_1793523750603042800",
+  "status": "FAILED",
+  "timeline": [],
+  "target_guid": "0xF13000012B000AF3",
+  "range_before_cast": 1,
+  "error": "ValueError('could not pull the first target')",
+  "evidence": {
+    "run": "client_loop_recover_1793523750603042800",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_loop_recover_1793523750603042800_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 920599.2140828
+      },
+      {
+        "label": "06-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_loop_recover_1793523750603042800_06-end.png",
+        "source": "desktop",
+        "host_monotonic": 920606.2340165
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 15291,
+          "game_ms": 920598653,
+          "health": 52,
+          "max_health": 52,
+          "power": 165,
+          "combat": false,
+          "dead": false,
+          "target_health": 42,
+          "target_max_health": 42,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000012B000A34",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.5104905775539788,
+          "pos_y": 0.4456549935149157,
+          "facing": 0.0,
+          "event_serial": 40,
+          "cast_started": 15,
+          "cast_succeeded": 19,
+          "cast_failed": 3,
+          "ui_errors": 3,
+          "event_kind": 3,
+          "event_spell": 133,
+          "event_ms": 920401303,
+          "last_reason": 0,
+          "frost_armor": true,
+          "events": [
+            {
+              "serial": 40,
+              "kind": 3,
+              "spell": 133,
+              "at": 920401303,
+              "reason": 0
+            },
+            {
+              "serial": 37,
+              "kind": 1,
+              "spell": 133,
+              "at": 919947887,
+              "reason": 0
+            },
+            {
+              "serial": 38,
+              "kind": 2,
+              "spell": 133,
+              "at": 919949319,
+              "reason": 0
+            },
+            {
+              "serial": 39,
+              "kind": 5,
+              "spell": 0,
+              "at": 920401303,
+              "reason": 1
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "protocol": 4
+        }
+      }
+    ]
+  }
+}

@@ -1,19 +1,23 @@
 """Decode read-only pixel telemetry; reject damaged, absent and frozen frames."""
 import time
 from PIL import Image
-from client_live_layout import V3_LAYOUT, V4_LAYOUT, offsets
+from client_live_layout import V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, offsets
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
 V3_CELL_UNITS = 8
 V3_DATA_BYTES = 103
 V4_DATA_BYTES = 106
+V5_DATA_BYTES = 107
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
+V5_CELLS = 111
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
 V4_TRAILER_OFFSET = 109
+V5_TRAILER_OFFSET = 110
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
 V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
+V5_OFFSETS, V5_TOTAL = offsets(V5_LAYOUT)
 
 
 def _marker(pixel, index):
@@ -28,11 +32,16 @@ def _marker(pixel, index):
 
 
 def _row_strips(pixels, image):
-    """Yield (y, x, blue_x) for red/green/blue marker triples on a row."""
+    """Yield (y, x, blue_x) for red/green/blue marker triples on a row.
+
+    The probe panel was moved to the bottom left so that it no longer covers
+    the target frame, the unit nameplates or the resurrection NPC menu, so
+    the whole screen height is searched.
+    """
     width, height = image.width, image.height
-    for y in range(30, min(height, 340)):
+    for y in range(10, height - 10):
         x = 0
-        while x < min(width, 600):
+        while x < min(width, 700):
             if not _marker(pixels[x, y], 0):
                 x += 1
                 continue
@@ -158,6 +167,15 @@ def _decode_v4(data):
     return result
 
 
+def _decode_v5(data):
+    result = _base_state(data, V5_OFFSETS)
+    result['chat_open'] = bool(data[V5_OFFSETS['chat_open'][0]])
+    offset, size = V5_OFFSETS['target_distance']
+    result['target_distance'] = int.from_bytes(data[offset:offset + size], 'little') / 10
+    result['last_error_reason'] = data[V5_OFFSETS['last_error_reason'][0]]
+    return result
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -197,6 +215,13 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V4_DATA_BYTES):
             return None
         return version, _decode_v4(data)
+    if version == 5:
+        if header[1] != V5_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V5_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V5_DATA_BYTES):
+            return None
+        return version, _decode_v5(data)
     return None
 
 
@@ -207,7 +232,7 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
+            for offset in (V5_TRAILER_OFFSET, V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
                 measured = (trailer_left - x) / offset
                 if abs(measured - trio_pitch) > 1.0:
                     continue
