@@ -1,0 +1,82 @@
+{
+  "run": "client_target_identity_1793549174526013400",
+  "status": "SAMPLED",
+  "samples": [
+    {
+      "step": 0,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 1,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 2,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 3,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 4,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 5,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 6,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 7,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    }
+  ],
+  "evidence": {
+    "run": "client_target_identity_1793549174526013400",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_target_identity_1793549174526013400_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 946030.3627565
+      }
+    ],
+    "states": []
+  }
+}

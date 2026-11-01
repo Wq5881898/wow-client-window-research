@@ -1,0 +1,325 @@
+{
+  "run": "client_combat_1793553275673023700",
+  "status": "FAILED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 950124.0392692,
+      "detail": {
+        "health": 142,
+        "position": [
+          0.37421225299458305,
+          0.6944686045624475
+        ]
+      }
+    },
+    {
+      "phase": "target_acquired",
+      "host_monotonic": 950125.1973087,
+      "detail": {
+        "guid": "0xF130000373000D4F",
+        "health": 2,
+        "distance": 6552.6,
+        "range": 0
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950126.4107322,
+      "detail": {
+        "attempt": 0,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.3736781872281987,
+          0.695551995117113
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950127.606837,
+      "detail": {
+        "attempt": 1,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.37288471808957047,
+          0.6971847104600595
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950128.8065164,
+      "detail": {
+        "attempt": 2,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.37204547188525217,
+          0.6988784618905928
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950130.0218552,
+      "detail": {
+        "attempt": 3,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.37119096665903717,
+          0.7006332494087129
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950131.2253024,
+      "detail": {
+        "attempt": 4,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.3703212024109255,
+          0.7023727779049362
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950132.4232801,
+      "detail": {
+        "attempt": 5,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.3694514381628138,
+          0.7041580834668498
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950133.6228998,
+      "detail": {
+        "attempt": 6,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.3685969329365988,
+          0.7058976119630732
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950134.8220957,
+      "detail": {
+        "attempt": 7,
+        "range": 0,
+        "distance": 6552.6,
+        "position": [
+          0.3677576867322805,
+          0.7075913633936065
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950136.0555208,
+      "detail": {
+        "attempt": 8,
+        "range": 2,
+        "distance": 0.0,
+        "position": [
+          0.36690318150606543,
+          0.7093461509117266
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 950137.2782481,
+      "detail": {
+        "attempt": 9,
+        "range": 2,
+        "distance": 0.0,
+        "position": [
+          0.3661402304112306,
+          0.7108720531013962
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "target_guid": "0xF130000373000D4F",
+  "target_name": "tab-selected",
+  "target_health_at_start": 2,
+  "error": "ValueError('the target could not be reached')",
+  "evidence": {
+    "run": "client_combat_1793553275673023700",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793553275673023700_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 950124.0392598
+      },
+      {
+        "label": "02-target-acquired",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793553275673023700_02-target-acquired.png",
+        "source": "desktop",
+        "host_monotonic": 950125.1972988
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793553275673023700_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 950137.663761
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 2848,
+          "game_ms": 950123369,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 2,
+          "target_max_health": 2,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000373000D4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.37421225299458305,
+          "pos_y": 0.6944686045624475,
+          "facing": 0.0,
+          "event_serial": 1,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 5,
+          "event_spell": 0,
+          "event_ms": 949831876,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 5,
+              "spell": 0,
+              "at": 949831876,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      },
+      {
+        "label": "02-target-acquired",
+        "state": {
+          "sequence": 2859,
+          "game_ms": 950124552,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 2,
+          "target_max_health": 2,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000373000D4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.37421225299458305,
+          "pos_y": 0.6944686045624475,
+          "facing": 0.0,
+          "event_serial": 1,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 5,
+          "event_spell": 0,
+          "event_ms": 949831876,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 5,
+              "spell": 0,
+              "at": 949831876,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

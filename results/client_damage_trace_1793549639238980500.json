@@ -1,0 +1,396 @@
+{
+  "run": "client_damage_trace_1793549639238980500",
+  "status": "TRACED",
+  "samples": [
+    {
+      "elapsed": 0.21,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 4,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 0.65,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 4,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 1.1,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 4,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 1.55,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 4,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 2.0,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 2.46,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 2.91,
+      "guid": "0xF130000071000D49",
+      "health": 99,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 3.35,
+      "guid": "0xF130000071000D49",
+      "health": 99,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 3.82,
+      "guid": "0xF130000071000D49",
+      "health": 99,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 4.27,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 4.72,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 5.17,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 5.63,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 6.08,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 6.52,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 7.0,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 7.46,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 7.91,
+      "guid": "0xF130000071000D49",
+      "health": 119,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 8.35,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 8.81,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 9.26,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 9.71,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 10.18,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 10.64,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 11.09,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 11.54,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    },
+    {
+      "elapsed": 11.99,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "max_health": 120,
+      "dead": false,
+      "exists": true,
+      "combat": false,
+      "cast_succeeded": 5,
+      "cast_failed": 0
+    }
+  ],
+  "target": {
+    "guid": "0xF130000071000D49",
+    "health": 120,
+    "range": 1
+  },
+  "evidence": {
+    "run": "client_damage_trace_1793549639238980500",
+    "frames": [
+      {
+        "label": "01-target",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_damage_trace_1793549639238980500_01-target.png",
+        "source": "desktop",
+        "host_monotonic": 946488.2972071
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_damage_trace_1793549639238980500_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 946502.3203409
+      }
+    ],
+    "states": [
+      {
+        "label": "01-target",
+        "state": {
+          "sequence": 15068,
+          "game_ms": 946487604,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 120,
+          "target_max_health": 120,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000071000D49",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4131837949187457,
+          "pos_y": 0.7022049286640726,
+          "facing": 0.0,
+          "event_serial": 9,
+          "cast_started": 4,
+          "cast_succeeded": 4,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 945706503,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 8,
+              "kind": 1,
+              "spell": 133,
+              "at": 945705069,
+              "reason": 0
+            },
+            {
+              "serial": 9,
+              "kind": 2,
+              "spell": 133,
+              "at": 945706503,
+              "reason": 0
+            },
+            {
+              "serial": 6,
+              "kind": 1,
+              "spell": 133,
+              "at": 945700886,
+              "reason": 0
+            },
+            {
+              "serial": 7,
+              "kind": 2,
+              "spell": 133,
+              "at": 945702252,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

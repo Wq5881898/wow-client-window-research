@@ -1,0 +1,138 @@
+{
+  "run": "client_regen_1793549317253949200",
+  "status": "SAMPLED",
+  "samples": [
+    {
+      "elapsed": 0.21,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 0.81,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 1.4,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 2.0,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 2.63,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 3.22,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 3.82,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 4.42,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 5.02,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 5.62,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 6.22,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 6.82,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 7.42,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 8.02,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 8.64,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 9.24,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 9.84,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 10.44,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 11.04,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    },
+    {
+      "elapsed": 11.66,
+      "guid": "0xF130000071000D49",
+      "health": 120,
+      "combat": false
+    }
+  ],
+  "evidence": {
+    "run": "client_regen_1793549317253949200",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_regen_1793549317253949200_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 946177.5198088
+      }
+    ],
+    "states": []
+  }
+}

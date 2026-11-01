@@ -1,0 +1,114 @@
+{
+  "run": "client_enter_1793552963503868700",
+  "status": "IN_WORLD",
+  "steps": [],
+  "character": "Syra",
+  "protocol": 5,
+  "health": 142,
+  "dead": false,
+  "power": 360,
+  "position": [
+    0.4131837949187457,
+    0.7022049286640726
+  ],
+  "evidence": {
+    "run": "client_enter_1793552963503868700",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793552963503868700_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 949825.8059156
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793552963503868700_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 949828.7011509
+      },
+      {
+        "label": "03-in-world",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793552963503868700_03-in-world.png",
+        "source": "desktop",
+        "host_monotonic": 949848.1450962
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793552963503868700_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 949848.5269684
+      }
+    ],
+    "states": [
+      {
+        "label": "03-in-world",
+        "state": {
+          "sequence": 154,
+          "game_ms": 949847507,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4131837949187457,
+          "pos_y": 0.7022049286640726,
+          "facing": 0.0,
+          "event_serial": 1,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 5,
+          "event_spell": 0,
+          "event_ms": 949831876,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 5,
+              "spell": 0,
+              "at": 949831876,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

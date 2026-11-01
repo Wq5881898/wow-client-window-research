@@ -17,10 +17,14 @@ from client_window_state import window_observable
 from client_combat_controller import CombatController, LOW_HEALTH_RATIO
 from client_evidence import Evidence
 from client_retreat import break_engagement
-from client_facing import turn_step
+from client_facing import CastProbe, sweep_toward
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
+# A creature that leaves combat regenerates quickly in this client version.
+# A slow spell cannot outpace that, so the target has to be weak enough to
+# kill before it recovers.
+MAX_TARGET_HEALTH = 70
 VK_FORWARD = 0x57
 VK_BACK = 0x53
 MAX_HOLD = 2.0
@@ -140,30 +144,65 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] != 4:
-            raise ValueError('protocol 4 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5):
+            raise ValueError('protocol 4 or 5 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
         note('baseline', {'health': start['health'], 'position': [start['pos_x'], start['pos_y']]})
 
-        # Acquire a hostile target and bind its identity.
-        target_name = result.get('target', 'Diseased Young Wolf')
-        state = send_command(hwnd, '/target ' + target_name, reader)
-        if not state['target_exists'] or not state['target_attackable']:
+        # Acquire a hostile target and bind its identity. The tab key selects
+        # the nearest hostile unit in view, which works even when the name of
+        # the creature is not known to the caller.
+        target_name = result.get('target')
+        state = None
+        if target_name:
+            state = send_command(hwnd, '/target ' + target_name, reader)
+        else:
+            for _ in range(6):
+                d.post_key(hwnd, win32con.VK_TAB)
+                time.sleep(0.5)
+                candidate = reader()
+                if (candidate['target_exists']
+                        and candidate['target_attackable']
+                        and candidate['target_health'] > 1):
+                    state = candidate
+                    break
+        if not state or not state['target_exists'] or not state['target_attackable']:
             raise ValueError('could not acquire a hostile target')
+        if state['target_health'] > MAX_TARGET_HEALTH:
+            raise ValueError('the target has too much health: '
+                             + str(state['target_health']))
         target_guid = state['target_guid']
         result['target_guid'] = target_guid
-        result['target_name'] = target_name
+        result['target_name'] = target_name or 'tab-selected'
         result['target_health_at_start'] = state['target_health']
         evidence.capture('02-target-acquired', state)
         note('target_acquired', {'guid': target_guid, 'health': state['target_health'],
-                                 'distance': state['target_distance']})
+                                 'distance': state['target_distance'],
+                                 'range': state['spell_range']})
 
         controller = CombatController(target_guid, FIREBALL, max_attempts=4, timeout=2.5)
         binding = controller.bind_target(state)
         if binding['decision'] != 'BOUND':
             raise ValueError('target binding failed: ' + str(binding))
+
+        # Close the distance before the first cast. The tab key turns the
+        # character towards the selected creature, so a short walk brings it
+        # into spell range without a facing readout.
+        for approach in range(10):
+            if state['spell_range'] == 1:
+                break
+            d.post_key(hwnd, win32con.VK_TAB)
+            time.sleep(0.4)
+            moved = move_while_watching(hwnd, VK_FORWARD, 0.7, reader)
+            state = moved[-1] if moved else reader()
+            note('approach', {'attempt': approach, 'range': state['spell_range'],
+                              'distance': state['target_distance'],
+                              'position': [state['pos_x'], state['pos_y']]})
+        if state['spell_range'] != 1:
+            raise ValueError('the target could not be reached')
+        evidence.capture('03-in-range', state)
 
         deadline = time.monotonic() + 90
         last_evidence = time.monotonic()
@@ -220,9 +259,19 @@ def main():
             if decision['decision'] == 'TURN':
                 # The client says the target is not in front. There is no
                 # facing readout, so the turn is blind and the error code
-                # decides when the target came into view.
-                turn_step('left')
-                note('turn', decision)
+                # decides when the target came into view. The sweep turns a
+                # small step and casts again until the cast succeeds.
+                probe = CastProbe(
+                    lambda: cast(hwnd, '/cast Fireball', reader),
+                    reader, settle=0)
+                steps, after_state = sweep_toward(probe, max_steps=18)
+                note('turn', {'reason': decision['reason'], 'steps': steps,
+                              'cast_failed': after_state['cast_failed'],
+                              'cast_succeeded': after_state['cast_succeeded'],
+                              'target_health': after_state['target_health'],
+                              'error_reason': after_state['last_error_reason']})
+                state = after_state
+                controller.record_attempt()
                 continue
 
             if decision['decision'] == 'WAIT':

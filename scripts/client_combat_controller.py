@@ -44,6 +44,8 @@ class CombatController:
         self.recovery = None
         self.last_target_health = None
         self.successful_casts = 0
+        self.target_recovered = False
+        self.recoveries = 0
 
     def _recover(self, reason):
         self.recovery = {'decision': 'RECOVER', 'reason': reason}
@@ -59,6 +61,9 @@ class CombatController:
             return self._recover('target_not_attackable')
         if state['target_dead'] or state['target_health'] <= 0:
             return self._recover('target_already_dead')
+        # The baseline of the health is taken at the binding, so the first
+        # observation is not mistaken for a recovery.
+        self.last_target_health = state['target_health']
         return {'decision': 'BOUND', 'reason': 'target_confirmed'}
 
     def observe(self, state, now, window_visible=True):
@@ -96,6 +101,19 @@ class CombatController:
             return self._recover('target_lost')
         if state['target_guid'] != self.target_guid:
             return self._recover('target_identity_changed')
+        # A creature that leaves combat regenerates. When the health of the
+        # bound target rises, the fight was lost and has to start over
+        # instead of waiting for spells that can never outpace the recovery.
+        if (self.last_target_health is not None
+                and state['target_health'] > self.last_target_health):
+            # The target recovered its health, so the fight starts over
+            # instead of running out of attempts.
+            self.target_recovered = True
+            self.recoveries += 1
+            self.last_target_health = state['target_health']
+            self.attempts = 0
+            return {'decision': 'CAST_ALLOWED', 'reason': 'target_recovered',
+                    'attempt': 1}
         self.last_target_health = state['target_health']
 
         if state['target_dead'] or state['target_health'] <= 0:

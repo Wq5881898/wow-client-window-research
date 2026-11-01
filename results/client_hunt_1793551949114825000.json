@@ -1,0 +1,18 @@
+{
+  "run": "client_hunt_1793551949114825000",
+  "status": "FAILED",
+  "scans": [],
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_hunt_1793551949114825000",
+    "frames": [
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793551949114825000_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 948812.3953537
+      }
+    ],
+    "states": []
+  }
+}

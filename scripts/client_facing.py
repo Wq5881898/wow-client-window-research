@@ -82,9 +82,12 @@ class CastProbe:
     def attempt(self):
         state = self.cast()
         # The cast is asynchronous, so the outcome of the attempt may only
-        # be visible a moment later.
-        time.sleep(self.settle)
-        return self.reader()
+        # be visible a moment later. A caller that already waited for the
+        # result sets the settle time to zero.
+        if self.settle:
+            time.sleep(self.settle)
+            state = self.reader()
+        return state
 
 
 def sweep_toward(cast, max_steps=40, direction='left'):

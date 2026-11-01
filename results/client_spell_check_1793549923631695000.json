@@ -1,0 +1,63 @@
+{
+  "run": "client_spell_check_1793549923631695000",
+  "status": "CHECKED",
+  "checks": [
+    {
+      "spell": "Fireball",
+      "id": 133,
+      "cast_started_before": 5,
+      "cast_started_after": 6,
+      "cast_succeeded": 6,
+      "cast_failed": 0,
+      "error_reason": 0
+    },
+    {
+      "spell": "Frost Armor",
+      "id": 168,
+      "cast_started_before": 6,
+      "cast_started_after": 6,
+      "cast_succeeded": 7,
+      "cast_failed": 0,
+      "error_reason": 0
+    },
+    {
+      "spell": "Frostbolt",
+      "id": 123,
+      "cast_started_before": 6,
+      "cast_started_after": 6,
+      "cast_succeeded": 7,
+      "cast_failed": 0,
+      "error_reason": 0
+    },
+    {
+      "spell": "Frost Nova",
+      "id": 116,
+      "cast_started_before": 6,
+      "cast_started_after": 6,
+      "cast_succeeded": 7,
+      "cast_failed": 0,
+      "error_reason": 0
+    },
+    {
+      "spell": "Fireball rank 2",
+      "id": 213,
+      "cast_started_before": 6,
+      "cast_started_after": 6,
+      "cast_succeeded": 7,
+      "cast_failed": 0,
+      "error_reason": 0
+    }
+  ],
+  "evidence": {
+    "run": "client_spell_check_1793549923631695000",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_spell_check_1793549923631695000_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 946792.6298403
+      }
+    ],
+    "states": []
+  }
+}

@@ -42,6 +42,10 @@ local function spell_id(name)
   if not name then return 0 end
   if name == GetSpellInfo(133) then return 133 end
   if name == GetSpellInfo(168) then return 168 end
+  if name == GetSpellInfo(123) then return 123 end
+  if name == GetSpellInfo(116) then return 116 end
+  if name == GetSpellInfo(213) then return 213 end
+  if name == GetSpellInfo(122) then return 122 end
   return 0
 end
 

@@ -1,0 +1,50 @@
+{
+  "run": "client_cast_gap_1793550077423343400",
+  "status": "MEASURED",
+  "casts": [
+    {
+      "index": 0,
+      "command_to_start": 0.448,
+      "cast_started": 7,
+      "cast_succeeded": 7,
+      "target_health": 120
+    },
+    {
+      "index": 1,
+      "command_to_start": 8.089,
+      "cast_started": 7,
+      "cast_succeeded": 8,
+      "target_health": 120
+    },
+    {
+      "index": 2,
+      "command_to_start": 0.447,
+      "cast_started": 8,
+      "cast_succeeded": 8,
+      "target_health": 120
+    },
+    {
+      "index": 3,
+      "command_to_start": 8.117,
+      "cast_started": 8,
+      "cast_succeeded": 9,
+      "target_health": 120
+    }
+  ],
+  "target": {
+    "guid": "0xF130000071000D49",
+    "health": 120
+  },
+  "evidence": {
+    "run": "client_cast_gap_1793550077423343400",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cast_gap_1793550077423343400_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 946947.3574194
+      }
+    ],
+    "states": []
+  }
+}

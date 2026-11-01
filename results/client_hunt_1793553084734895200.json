@@ -1,0 +1,121 @@
+{
+  "run": "client_hunt_1793553084734895200",
+  "status": "TARGET_FOUND",
+  "scans": [
+    {
+      "round": 0,
+      "position": [
+        0.39171435111009384,
+        0.6823682001983673
+      ],
+      "found": null
+    },
+    {
+      "round": 1,
+      "position": [
+        0.37421225299458305,
+        0.6944686045624475
+      ],
+      "found": {
+        "name": "tab",
+        "health": 2,
+        "guid": "0xF130000373000D4F",
+        "range": 0
+      }
+    }
+  ],
+  "target": {
+    "name": "tab",
+    "health": 2,
+    "guid": "0xF130000373000D4F",
+    "range": 0
+  },
+  "evidence": {
+    "run": "client_hunt_1793553084734895200",
+    "frames": [
+      {
+        "label": "01-found",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793553084734895200_01-found.png",
+        "source": "desktop",
+        "host_monotonic": 949980.0954761
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793553084734895200_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 949980.4891991
+      }
+    ],
+    "states": [
+      {
+        "label": "01-found",
+        "state": {
+          "sequence": 1440,
+          "game_ms": 949979387,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 2,
+          "target_max_health": 2,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000373000D4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.37421225299458305,
+          "pos_y": 0.6944686045624475,
+          "facing": 0.0,
+          "event_serial": 1,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 1,
+          "event_kind": 5,
+          "event_spell": 0,
+          "event_ms": 949831876,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 5,
+              "spell": 0,
+              "at": 949831876,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "protocol": 5
+        }
+      }
+    ]
+  }
+}

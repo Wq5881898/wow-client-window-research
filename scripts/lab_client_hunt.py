@@ -19,6 +19,9 @@ VK_FORWARD = 0x57
 VK_TURN_LEFT = 0x25
 NAMES = ['Wolf', 'Defias Bandit', 'Kobold Laborer', 'Cougar',
          'Deer', 'Koboid Vermin']
+# A creature that leaves combat regenerates quickly in this client version,
+# so a target with a lot of health cannot be worn down with slow spells.
+MAX_TARGET_HEALTH = 70
 
 
 def hide_consoles():
@@ -92,7 +95,8 @@ def main():
                 d.post_key(hwnd, win32con.VK_TAB)
                 time.sleep(0.6)
                 state = reader()
-                if state['target_exists'] and state['target_attackable']:
+                if state['target_exists'] and state['target_attackable'] \
+                        and state['target_health'] <= MAX_TARGET_HEALTH:
                     found = {'name': 'tab', 'health': state['target_health'],
                              'guid': state['target_guid'],
                              'range': state['spell_range']}
