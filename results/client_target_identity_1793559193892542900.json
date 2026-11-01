@@ -1,0 +1,133 @@
+{
+  "run": "client_target_identity_1793559193892542900",
+  "status": "SAMPLED",
+  "samples": [
+    {
+      "step": 0,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 1,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 2,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 3,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 4,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 5,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 6,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 7,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 8,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 9,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 10,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 11,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 12,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    },
+    {
+      "step": 13,
+      "guid": "0xF13000001E04BA30",
+      "health": 120,
+      "exists": true,
+      "attackable": true,
+      "range": 1
+    }
+  ],
+  "distinct_targets": {
+    "0xF13000001E04BA30": 120
+  },
+  "evidence": {
+    "run": "client_target_identity_1793559193892542900",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_target_identity_1793559193892542900_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 956055.3159349
+      }
+    ],
+    "states": []
+  }
+}

@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 5
+local PROTOCOL = 7
 local QUEUE = 4
-local DATA_BYTES = 107
+local DATA_BYTES = 110
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -120,6 +120,20 @@ frame:SetScript("OnEvent", function(_, event, ...)
   end
 end)
 
+-- Spells the driver cares about. The bits of this list build the
+-- spell_bits field, so the driver can see which spells the character has
+-- without asking the client with a cast.
+local KNOWN_SPELLS = {
+  [123] = 0,   -- Frostbolt
+  [116] = 1,   -- Frost Nova
+  [120] = 2,   -- Frost Ward
+  [122] = 3,   -- Frost Shock
+  [133] = 4,   -- Fireball
+  [168] = 5,   -- Frost Armor
+  [213] = 6,   -- Fireball, second rank
+  [212] = 7,   -- Fireball, higher rank
+}
+
 local function update()
   sequence = (sequence + 1) % 65536
   local guid = UnitGUID("target") or "0x0000000000000000"
@@ -127,11 +141,24 @@ local function update()
   local range = spell and IsSpellInRange(spell, "target")
   local casting = UnitCastingInfo("player")
   local learned = 0
+  local spell_bits = 0
+  -- The classification of the target tells the driver whether it is an
+  -- ordinary creature, which one spell of the character can finish.
+  local classification = 0
+  if UnitExists("target") and UnitClassification then
+    local ok, value = pcall(UnitClassification, "target")
+    if ok and value then classification = value end
+  end
   local i = 1
   while true do
     local name = GetSpellName(i, BOOKTYPE_SPELL)
     if not name then break end
     if name == spell then learned = 1 end
+    for id, bit in pairs(KNOWN_SPELLS) do
+      if name == GetSpellInfo(id) then
+        spell_bits = spell_bits + 2 ^ bit
+      end
+    end
     i = i + 1
   end
   local bytes = {}
@@ -143,7 +170,7 @@ local function update()
     end
   end
   number(PROTOCOL, 1)
-  number(107, 1)
+  number(110, 1)
   number(sequence, 2)
   number(math.floor(GetTime() * 1000) % 4294967296, 4)
   number(UnitHealth("player"), 2)
@@ -178,6 +205,8 @@ local function update()
   number(last.at, 4)
   number(last.reason, 1)
   number(last.error_reason, 1)
+  number(math.floor(spell_bits), 2)
+  number(classification, 1)
   number(UnitBuff("player", GetSpellInfo(168)) and 1 or 0, 1)
   number(chat_open(), 1)
   number(math.floor(target_distance() * 10), 2)

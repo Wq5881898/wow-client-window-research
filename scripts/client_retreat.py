@@ -20,6 +20,7 @@ from PIL import ImageGrab
 import lab_driver5 as d
 from client_live_state import decode, assert_real_frame
 from client_window_state import window_observable
+from client_chat_guard import ensure_focus
 
 VK_BACK = 0x53
 VK_FORWARD = 0x57
@@ -29,9 +30,12 @@ MAX_HOLD_SECONDS = 2
 TURN_SECONDS = 0.5
 
 
-def hold(vk, seconds):
+def hold(vk, seconds, hwnd=None):
+    """Hold a key. The client has to be in front for the key to arrive."""
     if not 0 < seconds <= MAX_HOLD_SECONDS:
         raise ValueError('hold duration must be in (0, %d]' % MAX_HOLD_SECONDS)
+    if hwnd is not None:
+        ensure_focus(hwnd)
     key = d.INPUT()
     key.type = 1
     key.union.ki = d.KEYBDINPUT(vk, 0, 0, 0, None)
@@ -112,8 +116,9 @@ def break_engagement(hwnd, sampler, steps=8, hold_seconds=2.0,
     steps_done = []
     previous = None
     for attempt in range(steps):
-        hold(VK_TURN_LEFT, turn_seconds)
-        hold(VK_FORWARD, hold_seconds)
+        ensure_focus(hwnd)
+        hold(VK_TURN_LEFT, turn_seconds, hwnd)
+        hold(VK_FORWARD, hold_seconds, hwnd)
         time.sleep(0.2)
         state = sampler()
         position = (state['pos_x'], state['pos_y'])

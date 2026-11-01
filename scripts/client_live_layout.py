@@ -62,13 +62,51 @@ V5_LAYOUT = [
     ('checksum', 1), ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V5_LAYOUT
+# Protocol v6: adds spell_bits, a bit per known spell, so the driver can see
+# which spells the character has without asking the client with a cast.
+V6_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('frost_armor', 1), ('chat_open', 1), ('target_distance', 2),
+    ('event_queue', 40), ('checksum', 1), ('weighted', 1),
+]
+
+
+# Protocol v7: adds target_class, the classification of the selected
+# creature. One is an ordinary creature, two an elite, three a rare elite
+# and four a world boss. An elite creature resists the spells of a low
+# character, so the driver has to know the difference.
+V7_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('checksum', 1),
+    ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V7_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
     '103': 'length',
     '106': 'length',
     '107': 'length',
+    '109': 'length',
+    '110': 'length',
     'sequence': 'sequence',
     'math.floor(GetTime() * 1000) % 4294967296': 'game_ms',
     'UnitHealth("player")': 'health',
@@ -98,6 +136,8 @@ EXPRESSION_NAMES = {
     'last.at': 'last_at',
     'last.reason': 'last_reason',
     'last.error_reason': 'last_error_reason',
+    'math.floor(spell_bits)': 'spell_bits',
+    'classification': 'target_class',
     'UnitBuff("player", GetSpellInfo(168)) and 1 or 0': 'frost_armor',
     'chat_open()': 'chat_open',
     'math.floor(target_distance() * 10)': 'target_distance',

@@ -106,8 +106,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5):
-            raise ValueError('protocol 4 or 5 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6):
+            raise ValueError('protocol 4, 5 or 6 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         result['max_health'] = start['max_health']

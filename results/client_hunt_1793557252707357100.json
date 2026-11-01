@@ -1,0 +1,118 @@
+{
+  "run": "client_hunt_1793557252707357100",
+  "status": "TARGET_FOUND",
+  "scans": [
+    {
+      "round": 0,
+      "position": [
+        0.3965362020294499,
+        0.7349355306324865
+      ],
+      "found": {
+        "name": "Deer",
+        "health": 2,
+        "guid": "0xF13000037304BA32",
+        "range": 0
+      }
+    }
+  ],
+  "target": {
+    "name": "Deer",
+    "health": 2,
+    "guid": "0xF13000037304BA32",
+    "range": 0
+  },
+  "evidence": {
+    "run": "client_hunt_1793557252707357100",
+    "frames": [
+      {
+        "label": "01-found",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793557252707357100_01-found.png",
+        "source": "desktop",
+        "host_monotonic": 954129.8475349
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793557252707357100_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 954130.2278309
+      }
+    ],
+    "states": [
+      {
+        "label": "01-found",
+        "state": {
+          "sequence": 4042,
+          "game_ms": 954129136,
+          "health": 142,
+          "max_health": 142,
+          "power": 360,
+          "combat": false,
+          "dead": false,
+          "target_health": 2,
+          "target_max_health": 2,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000037304BA32",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.3965362020294499,
+          "pos_y": 0.7349355306324865,
+          "facing": 0.0,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "protocol": 6
+        }
+      }
+    ]
+  }
+}

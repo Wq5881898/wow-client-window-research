@@ -1,0 +1,31 @@
+{
+  "run": "client_enter_1793566183763395200",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Syra",
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_enter_1793566183763395200",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793566183763395200_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 963045.8809337
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793566183763395200_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 963048.7040903
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793566183763395200_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 963068.1064134
+      }
+    ],
+    "states": []
+  }
+}

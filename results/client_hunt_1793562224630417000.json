@@ -1,0 +1,99 @@
+{
+  "run": "client_hunt_1793562224630417000",
+  "status": "FAILED",
+  "scans": [
+    {
+      "round": 0,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 1,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 2,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 3,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 4,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 5,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 6,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 7,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 8,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    },
+    {
+      "round": 9,
+      "position": [
+        0.41213092240787363,
+        0.7305104142824445
+      ],
+      "found": null
+    }
+  ],
+  "error": "ValueError('no hostile creature was found')",
+  "evidence": {
+    "run": "client_hunt_1793562224630417000",
+    "frames": [
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_hunt_1793562224630417000_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 959530.2805451
+      }
+    ],
+    "states": []
+  }
+}

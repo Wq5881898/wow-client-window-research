@@ -1,0 +1,25 @@
+{
+  "run": "client_enter_1793567649438304000",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Syra",
+  "error": "ValueError('the client is still inside the world')",
+  "evidence": {
+    "run": "client_enter_1793567649438304000",
+    "frames": [
+      {
+        "label": "00-after-logout",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793567649438304000_00-after-logout.png",
+        "source": "desktop",
+        "host_monotonic": 964516.0010175
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793567649438304000_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 964516.5812883
+      }
+    ],
+    "states": []
+  }
+}

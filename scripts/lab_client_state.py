@@ -27,13 +27,13 @@ def main():
         out.write_text(json.dumps({'error': repr(exc), 'hwnd': hwnd}),
                        encoding='utf-8')
         raise
-    report = {k: state[k] for k in (
+    report = {k: state.get(k) for k in (
         'protocol', 'health', 'max_health', 'power', 'combat', 'dead',
         'spell_learned', 'spell_range', 'target_exists', 'target_attackable',
         'target_health', 'target_guid', 'pos_x', 'pos_y', 'facing',
         'cast_started', 'cast_succeeded', 'cast_failed', 'ui_errors',
         'event_kind', 'event_spell', 'last_reason', 'last_error_reason',
-        'frost_armor')}
+        'spell_bits', 'known_spells', 'frost_armor')}
     report['events'] = state['events']
     out.write_text(json.dumps(report, indent=2), encoding='utf-8')
     d.log('state report', str(out), 'ok')

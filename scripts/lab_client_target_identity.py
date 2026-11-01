@@ -46,7 +46,8 @@ def main():
         def reader():
             return decode(assert_real_frame(grab_desktop()))
 
-        for step in range(8):
+        seen = {}
+        for step in range(14):
             d.post_key(hwnd, win32con.VK_TAB)
             time.sleep(0.7)
             state = reader()
@@ -56,7 +57,9 @@ def main():
                       'attackable': state['target_attackable'],
                       'range': state['spell_range']}
             result['samples'].append(sample)
-            print(sample, flush=True)
+            if state['target_exists']:
+                seen[state['target_guid']] = state['target_health']
+        result['distinct_targets'] = seen
         result['status'] = 'SAMPLED'
     except Exception as exc:
         result['error'] = repr(exc)

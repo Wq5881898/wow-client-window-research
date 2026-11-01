@@ -1,0 +1,111 @@
+{
+  "run": "client_spell_check_1793558543456629400",
+  "status": "CHECKED",
+  "checks": [
+    {
+      "spell": "Fireball",
+      "id": 133,
+      "turn_steps": 0,
+      "cast_started_before": 0,
+      "cast_started_after": 1,
+      "cast_succeeded": 3,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": true
+    },
+    {
+      "spell": "Frost Armor",
+      "id": 168,
+      "turn_steps": 0,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frostbolt",
+      "id": 123,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "123",
+      "id": 123,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Nova",
+      "id": 116,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "116",
+      "id": 116,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Ward",
+      "id": 120,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Shock",
+      "id": 122,
+      "turn_steps": 16,
+      "cast_started_before": 1,
+      "cast_started_after": 1,
+      "cast_succeeded": 4,
+      "cast_failed": 2,
+      "error_reason": 1,
+      "castable": false
+    }
+  ],
+  "target": {
+    "guid": "0xF13000001E04BA30",
+    "health": 120,
+    "range": 1
+  },
+  "evidence": {
+    "run": "client_spell_check_1793558543456629400",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_spell_check_1793558543456629400_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 955762.0900027
+      }
+    ],
+    "states": []
+  }
+}

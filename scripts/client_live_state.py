@@ -1,7 +1,8 @@
 """Decode read-only pixel telemetry; reject damaged, absent and frozen frames."""
 import time
 from PIL import Image
-from client_live_layout import V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, offsets
+from client_live_layout import (V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT,
+                                 V7_LAYOUT, offsets)
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
@@ -9,15 +10,44 @@ V3_CELL_UNITS = 8
 V3_DATA_BYTES = 103
 V4_DATA_BYTES = 106
 V5_DATA_BYTES = 107
+V6_DATA_BYTES = 109
+V7_DATA_BYTES = 110
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
 V5_CELLS = 111
+V6_CELLS = 113
+V7_CELLS = 114
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
 V4_TRAILER_OFFSET = 109
 V5_TRAILER_OFFSET = 110
+V6_TRAILER_OFFSET = 112
+V7_TRAILER_OFFSET = 113
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
 V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
 V5_OFFSETS, V5_TOTAL = offsets(V5_LAYOUT)
+V6_OFFSETS, V6_TOTAL = offsets(V6_LAYOUT)
+V7_OFFSETS, V7_TOTAL = offsets(V7_LAYOUT)
+
+# The spells the probe reports in the spell_bits field.
+SPELL_BITS = {
+    123: 'Frostbolt',
+    116: 'Frost Nova',
+    120: 'Frost Ward',
+    122: 'Frost Shock',
+    133: 'Fireball',
+    168: 'Frost Armor',
+    213: 'Fireball rank 2',
+    212: 'Fireball rank 3',
+}
+
+# The classification of the target as reported by the client.
+TARGET_CLASSES = {
+    0: 'no target',
+    1: 'ordinary',
+    2: 'elite',
+    3: 'rare elite',
+    4: 'world boss',
+}
 
 
 def _marker(pixel, index):
@@ -176,6 +206,42 @@ def _decode_v5(data):
     return result
 
 
+def _decode_v6(data):
+    result = _base_state(data, V6_OFFSETS)
+    result['chat_open'] = bool(data[V6_OFFSETS['chat_open'][0]])
+    offset, size = V6_OFFSETS['target_distance']
+    result['target_distance'] = int.from_bytes(data[offset:offset + size], 'little') / 10
+    result['last_error_reason'] = data[V6_OFFSETS['last_error_reason'][0]]
+    offset, size = V6_OFFSETS['spell_bits']
+    bits = int.from_bytes(data[offset:offset + size], 'little')
+    result['spell_bits'] = bits
+    result['known_spells'] = sorted(
+        spell_id for spell_id in SPELL_BITS if bits & (1 << _spell_bit(spell_id)))
+    return result
+
+
+def _decode_v7(data):
+    result = _base_state(data, V7_OFFSETS)
+    result['chat_open'] = bool(data[V7_OFFSETS['chat_open'][0]])
+    offset, size = V7_OFFSETS['target_distance']
+    result['target_distance'] = int.from_bytes(data[offset:offset + size], 'little') / 10
+    result['last_error_reason'] = data[V7_OFFSETS['last_error_reason'][0]]
+    offset, size = V7_OFFSETS['spell_bits']
+    bits = int.from_bytes(data[offset:offset + size], 'little')
+    result['spell_bits'] = bits
+    result['known_spells'] = sorted(
+        spell_id for spell_id in SPELL_BITS if bits & (1 << _spell_bit(spell_id)))
+    result['target_class'] = data[V7_OFFSETS['target_class'][0]]
+    result['target_class_name'] = TARGET_CLASSES.get(result['target_class'], 'unknown')
+    return result
+
+
+def _spell_bit(spell_id):
+    """The bit position of a spell inside the spell_bits field."""
+    order = [123, 116, 120, 122, 133, 168, 213, 212]
+    return order.index(spell_id)
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -222,6 +288,20 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V5_DATA_BYTES):
             return None
         return version, _decode_v5(data)
+    if version == 6:
+        if header[1] != V6_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V6_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V6_DATA_BYTES):
+            return None
+        return version, _decode_v6(data)
+    if version == 7:
+        if header[1] != V7_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V7_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V7_DATA_BYTES):
+            return None
+        return version, _decode_v7(data)
     return None
 
 
@@ -232,7 +312,9 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V5_TRAILER_OFFSET, V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
+            for offset in (V7_TRAILER_OFFSET, V6_TRAILER_OFFSET,
+                           V5_TRAILER_OFFSET, V4_TRAILER_OFFSET,
+                           V3_TRAILER_OFFSET):
                 measured = (trailer_left - x) / offset
                 if abs(measured - trio_pitch) > 1.0:
                     continue

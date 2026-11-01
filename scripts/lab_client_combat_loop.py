@@ -18,13 +18,15 @@ from client_combat_controller import CombatController, LOW_HEALTH_RATIO
 from client_evidence import Evidence
 from client_retreat import break_engagement
 from client_facing import CastProbe, sweep_toward
+from client_chat_guard import ensure_chat_closed
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
-# A creature that leaves combat regenerates quickly in this client version.
-# A slow spell cannot outpace that, so the target has to be weak enough to
-# kill before it recovers.
-MAX_TARGET_HEALTH = 70
+# A creature that leaves combat regenerates quickly in this client version,
+# so the target has to be weak enough to kill before it recovers. An ordinary
+# creature of level six has about a hundred and twenty health, and the
+# character deals about twenty one points per cast.
+MAX_TARGET_HEALTH = 130
 VK_FORWARD = 0x57
 VK_BACK = 0x53
 MAX_HOLD = 2.0
@@ -65,7 +67,12 @@ def hold(vk, seconds):
 
 
 def send_command(hwnd, text, reader, settle=1.2):
-    """Type a chat command and return the state after it had time to act."""
+    """Type a chat command and return the state after it had time to act.
+
+    The chat input of the client steals every key press while it is open,
+    so it is closed before the command is typed.
+    """
+    ensure_chat_closed(hwnd, reader)
     d.post_key(hwnd, win32con.VK_RETURN)
     time.sleep(0.5)
     for character in text:
@@ -144,8 +151,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5):
-            raise ValueError('protocol 4 or 5 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6):
+            raise ValueError('protocol 4, 5 or 6 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
@@ -170,6 +177,9 @@ def main():
                     break
         if not state or not state['target_exists'] or not state['target_attackable']:
             raise ValueError('could not acquire a hostile target')
+        if state.get('target_class', 1) > 1:
+            raise ValueError('the target is an elite creature: '
+                             + str(state.get('target_class_name')))
         if state['target_health'] > MAX_TARGET_HEALTH:
             raise ValueError('the target has too much health: '
                              + str(state['target_health']))
@@ -193,6 +203,7 @@ def main():
         for approach in range(10):
             if state['spell_range'] == 1:
                 break
+            ensure_chat_closed(hwnd, reader)
             d.post_key(hwnd, win32con.VK_TAB)
             time.sleep(0.4)
             moved = move_while_watching(hwnd, VK_FORWARD, 0.7, reader)
@@ -215,8 +226,12 @@ def main():
             note('observe', decision)
 
             if decision['decision'] == 'CAST_ALLOWED':
-                controller.record_attempt()
+                controller.record_attempt(state['target_health'])
                 result['casts'] = result.get('casts', 0) + 1
+                # A command only reaches the client when the chat input is
+                # closed, and an open chat input would swallow the key
+                # presses of the next movement.
+                ensure_chat_closed(hwnd, reader)
                 # The cast runs in a worker thread; keep reading telemetry so
                 # the heartbeat stays alive while the spell is in flight.
                 after = cast(hwnd, '/cast Fireball', reader,

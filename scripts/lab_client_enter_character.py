@@ -14,6 +14,7 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_chat_guard import close_world_map
 
 ROOT = Path(__file__).resolve().parents[1]
 ENTER_WORLD = (957, 984)
@@ -109,13 +110,12 @@ def main():
             raise ValueError('unknown character ' + wanted)
 
         # The client may be inside the world, at the selection or at the
-        # login. The telemetry tells the world and the selection apart.
-        try:
-            reader()
-            in_world = True
-        except ValueError:
-            in_world = False
-        if in_world:
+        # login. The world map covers the screen and hides the telemetry, so
+        # it is closed before the state of the client is looked at.
+        close_world_map(hwnd, reader)
+        # The probe panel stays on the screen at the character selection, so
+        # the telemetry cannot tell the two apart. The screen itself can.
+        if not at_character_selection(grab_desktop()):
             d.post_key(hwnd, win32con.VK_ESCAPE)
             time.sleep(1.5)
             d.u.SetCursorPos(*LOGOUT)
@@ -124,14 +124,7 @@ def main():
             time.sleep(12.0)
             evidence.capture('00-after-logout')
 
-        # The logout lands on the login screen or on the character
-        # selection, and neither of them shows the telemetry.
-        try:
-            reader()
-        except ValueError:
-            pass
-        else:
-            raise ValueError('the client is still inside the world')
+        # The logout lands on the login screen when the session was fresh.
         if not at_character_selection(grab_desktop()):
             login(hwnd)
             evidence.capture('01-after-login')

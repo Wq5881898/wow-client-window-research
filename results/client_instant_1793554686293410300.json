@@ -1,0 +1,18 @@
+{
+  "run": "client_instant_1793554686293410300",
+  "status": "FAILED",
+  "samples": [],
+  "error": "ValueError('no hostile in view')",
+  "evidence": {
+    "run": "client_instant_1793554686293410300",
+    "frames": [
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_instant_1793554686293410300_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 951579.3493047
+      }
+    ],
+    "states": []
+  }
+}

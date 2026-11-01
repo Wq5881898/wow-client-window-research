@@ -13,6 +13,8 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_chat_guard import ensure_chat_closed, ensure_focus, close_world_map
+from lab_client_minimap_hunt import (grey_blue_pixels, cluster, on_minimap)
 
 ROOT = Path(__file__).resolve().parents[1]
 VK_FORWARD = 0x57
@@ -20,8 +22,10 @@ VK_TURN_LEFT = 0x25
 NAMES = ['Wolf', 'Defias Bandit', 'Kobold Laborer', 'Cougar',
          'Deer', 'Koboid Vermin']
 # A creature that leaves combat regenerates quickly in this client version,
-# so a target with a lot of health cannot be worn down with slow spells.
-MAX_TARGET_HEALTH = 70
+# and an elite creature resists the spells of a low character, so the driver
+# looks for an ordinary creature that a few casts can finish.
+MAX_TARGET_HEALTH = 130
+MAX_TARGET_CLASS = 1
 
 
 def hide_consoles():
@@ -40,8 +44,10 @@ def hide_consoles():
     win32gui.EnumWindows(cb, None)
 
 
-def hold(vk, seconds):
+def hold(vk, seconds, hwnd=None):
     import ctypes
+    if hwnd is not None:
+        ensure_focus(hwnd)
     key = d.INPUT()
     key.type = 1
     key.union.ki = d.KEYBDINPUT(vk, 0, 0, 0, None)
@@ -55,7 +61,10 @@ def hold(vk, seconds):
             raise RuntimeError('key up failed')
 
 
-def send(hwnd, text, settle=1.2):
+def send(hwnd, text, settle=1.2, reader=None):
+    """Type a slash command, after the chat input was closed."""
+    if reader is not None:
+        ensure_chat_closed(hwnd, reader)
     d.post_key(hwnd, win32con.VK_RETURN)
     time.sleep(0.4)
     for character in text:
@@ -80,35 +89,77 @@ def main():
         def reader():
             return decode(assert_real_frame(grab_desktop()))
 
-        for round_index in range(6):
-            # Walk in a straight line with a small turn between the legs, so
-            # the path leaves the village instead of circling in place.
-            hold(VK_FORWARD, 8.0)
-            time.sleep(0.3)
-            hold(VK_TURN_LEFT, 0.3)
-            hold(VK_FORWARD, 6.0)
-            time.sleep(0.3)
-            state = reader()
+        # A stray click can leave the world map open, and it hides the
+        # telemetry of the probe.
+        close_world_map(hwnd, reader)
+
+        for round_index in range(10):
+            # The chat input steals the key presses, so it is closed before
+            # the character is moved.
+            ensure_chat_closed(hwnd, reader)
             found = None
-            # The tab key selects the nearest hostile unit in view.
-            for _ in range(4):
-                d.post_key(hwnd, win32con.VK_TAB)
-                time.sleep(0.6)
-                state = reader()
-                if state['target_exists'] and state['target_attackable'] \
-                        and state['target_health'] <= MAX_TARGET_HEALTH:
-                    found = {'name': 'tab', 'health': state['target_health'],
-                             'guid': state['target_guid'],
-                             'range': state['spell_range']}
+            # The minimap shows the portrait of every hostile creature in the
+            # area. Clicking one turns the camera onto it, which is a far
+            # better search than walking blind.
+            image = grab_desktop()
+            groups = [group for group in cluster(grey_blue_pixels(image))
+                       if len(group) > 40]
+            for marker in groups:
+                point = (sum(p[0] for p in marker) // len(marker),
+                         sum(p[1] for p in marker) // len(marker))
+                if not on_minimap(point):
+                    continue
+                # A click that misses the round map opens the world map,
+                # which hides the screen from the probe.
+                close_world_map(hwnd)
+                d.click_si(*point)
+                time.sleep(1.0)
+                for _ in range(6):
+                    hold(VK_FORWARD, 1.2, hwnd)
+                    d.post_key(hwnd, win32con.VK_TAB)
+                    time.sleep(0.6)
+                    state = reader()
+                    if (state['target_exists'] and state['target_attackable']
+                            and state.get('target_class', 1) <= MAX_TARGET_CLASS):
+                        found = {'name': 'minimap', 'health': state['target_health'],
+                                 'guid': state['target_guid'],
+                                 'class': state.get('target_class_name'),
+                                 'range': state['spell_range']}
+                        break
+                if found:
                     break
             if not found:
-                for name in NAMES:
-                    send(hwnd, '/target ' + name, settle=0.7)
+                # Walk in a straight line with a small turn between the legs,
+                # so the path leaves the village instead of circling.
+                hold(VK_FORWARD, 8.0, hwnd)
+                time.sleep(0.3)
+                hold(VK_TURN_LEFT, 0.3, hwnd)
+                hold(VK_FORWARD, 6.0, hwnd)
+                time.sleep(0.3)
+                state = reader()
+                # The tab key selects the nearest hostile unit in view.
+                for _ in range(4):
+                    d.post_key(hwnd, win32con.VK_TAB)
+                    time.sleep(0.6)
                     state = reader()
-                    if state['target_exists'] and state['target_attackable'] \
-                            and state['target_health'] > 20:
+                    if (state['target_exists'] and state['target_attackable']
+                            and state['target_health'] <= MAX_TARGET_HEALTH
+                            and state.get('target_class', 1) <= MAX_TARGET_CLASS):
+                        found = {'name': 'tab', 'health': state['target_health'],
+                                 'guid': state['target_guid'],
+                                 'class': state.get('target_class_name'),
+                                 'range': state['spell_range']}
+                        break
+            if not found:
+                for name in NAMES:
+                    send(hwnd, '/target ' + name, settle=0.7, reader=reader)
+                    state = reader()
+                    if (state['target_exists'] and state['target_attackable']
+                            and state['target_health'] <= MAX_TARGET_HEALTH
+                            and state.get('target_class', 1) <= MAX_TARGET_CLASS):
                         found = {'name': name, 'health': state['target_health'],
                                  'guid': state['target_guid'],
+                                 'class': state.get('target_class_name'),
                                  'range': state['spell_range']}
                         break
             result['scans'].append({'round': round_index,

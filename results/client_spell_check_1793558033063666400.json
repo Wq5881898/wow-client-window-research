@@ -1,0 +1,102 @@
+{
+  "run": "client_spell_check_1793558033063666400",
+  "status": "CHECKED",
+  "checks": [
+    {
+      "spell": "Fireball",
+      "id": 133,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 0,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Armor",
+      "id": 168,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frostbolt",
+      "id": 123,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "123",
+      "id": 123,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Nova",
+      "id": 116,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "116",
+      "id": 116,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Ward",
+      "id": 120,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    },
+    {
+      "spell": "Frost Shock",
+      "id": 122,
+      "cast_started_before": 0,
+      "cast_started_after": 0,
+      "cast_succeeded": 1,
+      "cast_failed": 1,
+      "error_reason": 1,
+      "castable": false
+    }
+  ],
+  "target": {
+    "guid": "0xF13000037304BA32",
+    "health": 2
+  },
+  "evidence": {
+    "run": "client_spell_check_1793558033063666400",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_spell_check_1793558033063666400_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 954913.0507677
+      }
+    ],
+    "states": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run": "client_combat_1793557462011109100",
+  "status": "FAILED",
+  "timeline": [],
+  "errors": [],
+  "error": "ValueError('protocol 4 or 5 required, got 6')",
+  "evidence": {
+    "run": "client_combat_1793557462011109100",
+    "frames": [
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793557462011109100_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 954310.329098
+      }
+    ],
+    "states": []
+  }
+}

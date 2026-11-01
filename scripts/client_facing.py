@@ -16,6 +16,7 @@ import time
 import win32con
 import win32gui
 import lab_driver5 as d
+from client_chat_guard import ensure_focus
 
 VK_LEFT = 0x25
 VK_RIGHT = 0x27
@@ -41,9 +42,15 @@ def hold(vk, seconds):
             raise RuntimeError('key up failed')
 
 
-def turn_step(direction='left', seconds=TURN_STEP_SECONDS):
-    """Turn the character by one small step."""
+def turn_step(direction='left', seconds=TURN_STEP_SECONDS, hwnd=None):
+    """Turn the character by one small step.
+
+    The keyboard input of the system goes to the foreground window, so the
+    client has to be in front before the key is pressed.
+    """
     vk = VK_LEFT if direction == 'left' else VK_RIGHT
+    if hwnd is not None:
+        ensure_focus(hwnd)
     hold(vk, seconds)
 
 
@@ -90,7 +97,7 @@ class CastProbe:
         return state
 
 
-def sweep_toward(cast, max_steps=40, direction='left'):
+def sweep_toward(cast, max_steps=40, direction='left', hwnd=None):
     """Turn in small steps until a cast succeeds.
 
     `cast` is a CastProbe. The loop stops at the first attempt that produced
@@ -105,7 +112,7 @@ def sweep_toward(cast, max_steps=40, direction='left'):
             break
         if state.get('last_error_reason') in NON_TURNABLE_REASONS:
             break
-        turn_step(direction)
+        turn_step(direction, hwnd=hwnd)
         steps += 1
         before = cast.counters()
         state = cast.attempt()

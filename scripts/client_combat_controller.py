@@ -26,6 +26,10 @@ RETRYABLE_REASONS = (REASON_RANGE, REASON_FACING, REASON_LINE_OF_SIGHT)
 # Target health at or below which a vanishing target counts as a kill.
 KILL_HEALTH_THRESHOLD = 5
 
+# The smallest drop of the target health that counts as progress. A creature
+# with a high resistance takes less than that, so the fight can never end.
+MIN_TARGET_PROGRESS = 5
+
 # Reasons a vanishing target can still be treated as a kill.
 KILL_REASONS = ('target_gone_after_hit', 'target_dead', 'target_dead_out_of_combat')
 
@@ -46,6 +50,9 @@ class CombatController:
         self.successful_casts = 0
         self.target_recovered = False
         self.recoveries = 0
+        # The health of the target before the last cast, so the drop that the
+        # cast caused can be judged.
+        self.cast_health_before = None
 
     def _recover(self, reason):
         self.recovery = {'decision': 'RECOVER', 'reason': reason}
@@ -122,6 +129,14 @@ class CombatController:
             self.finished = True
             return {'decision': 'VERIFY_SURVIVAL',
                     'reason': 'target_dead' if state['combat'] else 'target_dead_out_of_combat'}
+        # A creature with a high resistance takes almost no damage, so the
+        # fight would never end. The check runs on the drop that was
+        # actually observed after a cast, never between two quiet frames.
+        if self.cast_health_before is not None:
+            drop = self.cast_health_before - state['target_health']
+            self.cast_health_before = None
+            if 0 < drop < MIN_TARGET_PROGRESS:
+                return self._recover('target_resists')
         if state['casting']:
             return {'decision': 'WAIT', 'reason': 'casting'}
         if not fresh:
@@ -158,8 +173,10 @@ class CombatController:
         return {'decision': 'CAST_ALLOWED', 'reason': 'ready',
                 'attempt': self.attempts + 1}
 
-    def record_attempt(self):
+    def record_attempt(self, target_health=None):
         self.attempts += 1
+        if target_health is not None:
+            self.cast_health_before = target_health
 
     def heartbeat(self, state, now):
         """Keep the freshness tracker alive without making a decision.

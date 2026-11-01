@@ -14,7 +14,7 @@ class BreakEngagementTest(unittest.TestCase):
         calls = []
         steps = []
 
-        def fake_hold(vk, seconds):
+        def fake_hold(vk, seconds, hwnd=None):
             calls.append(('hold', vk, seconds))
 
         def fake_sampler():
@@ -31,11 +31,14 @@ class BreakEngagementTest(unittest.TestCase):
         self.original_hold = client_retreat.hold
         self.original_ensure = client_retreat.d.ensure_foreground
         self.original_window = client_retreat.window_observable
+        self.original_focus = client_retreat.ensure_focus
+        client_retreat.ensure_focus = lambda hwnd: True
 
     def tearDown(self):
         client_retreat.hold = self.original_hold
         client_retreat.d.ensure_foreground = self.original_ensure
         client_retreat.window_observable = self.original_window
+        client_retreat.ensure_focus = self.original_focus
 
     def test_turns_before_running(self):
         calls, steps, sampler = self._patch([

@@ -12,18 +12,18 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_facing import CastProbe, sweep_toward
 
 ROOT = Path(__file__).resolve().parents[1]
 SPELLS = [
     (133, 'Fireball'),
     (168, 'Frost Armor'),
     (123, 'Frostbolt'),
-    (123, 'Frost Bolt'),
+    (123, '123'),
     (116, 'Frost Nova'),
+    (116, '116'),
     (120, 'Frost Ward'),
     (122, 'Frost Shock'),
-    (113, 'Frost Armor Rank 2'),
-    (212, 'Fireball Rank 2'),
 ]
 
 
@@ -99,11 +99,29 @@ def main():
         result['target'] = {'guid': state['target_guid'],
                             'health': state['target_health']}
 
+        # A spell can only be tested with the target in range, so the
+        # character walks towards it first.
+        for _ in range(12):
+            if state['spell_range'] == 1:
+                break
+            d.post_key(hwnd, win32con.VK_TAB)
+            time.sleep(0.4)
+            hold_key(0x57, 0.8)
+            state = reader()
+        result['target']['range'] = state['spell_range']
+        if state['spell_range'] != 1:
+            raise ValueError('the target could not be reached')
+
         for spell_id, name in SPELLS:
             before = reader()
-            send(hwnd, '/cast ' + name, settle=2.2)
-            after = reader()
-            check = {'spell': name, 'id': spell_id,
+            # The target may be behind the character, so the sweep turns
+            # until the spell can be cast at all.
+            def attempt():
+                send(hwnd, '/cast ' + name, settle=1.2)
+                return reader()
+            probe = CastProbe(attempt, reader, spell_id, settle=0.4)
+            steps, after = sweep_toward(probe, max_steps=16)
+            check = {'spell': name, 'id': spell_id, 'turn_steps': steps,
                      'cast_started_before': before['cast_started'],
                      'cast_started_after': after['cast_started'],
                      'cast_succeeded': after['cast_succeeded'],
