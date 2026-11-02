@@ -51,6 +51,9 @@ TARGET_CLASSES = {
     2: 'elite',
     3: 'rare elite',
     4: 'world boss',
+    5: 'rare',
+    6: 'trivial',
+    7: 'quest',
 }
 
 
@@ -345,9 +348,9 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V8_TRAILER_OFFSET, V7_TRAILER_OFFSET,
-                           V6_TRAILER_OFFSET, V5_TRAILER_OFFSET,
-                           V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
+            for offset in (V8_TRAILER_OFFSET, V7_TRAILER_OFFSET, V6_TRAILER_OFFSET,
+                           V5_TRAILER_OFFSET, V4_TRAILER_OFFSET,
+                           V3_TRAILER_OFFSET):
                 measured = (trailer_left - x) / offset
                 if abs(measured - trio_pitch) > 1.0:
                     continue

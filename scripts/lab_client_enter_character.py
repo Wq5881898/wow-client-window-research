@@ -16,11 +16,16 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_chat_guard import close_world_map
 from client_geometry import picture_to_screen
+from client_read_fresh import (game_menu_open, find_logout_button,
+                             read_or_dismiss)
 
 ROOT = Path(__file__).resolve().parents[1]
-LOGOUT = (955, 585)
+LOGOUT = (959, 574)
 ACCOUNT = 'GM01'
 PASSWORD = '123321'
+# The account field of the login screen, in the coordinates of the picture
+# of the client. It was measured on the login screen of 1920x1080.
+ACCOUNT_FIELD = (960, 565)
 # The names of the characters on the selection screen, in the coordinates of
 # the 1920 wide picture of the client. The list sits on the right edge of the
 # window and every entry shows its name on the first of three lines.
@@ -70,7 +75,9 @@ def send(hwnd, text, settle=0.6):
 
 def login(hwnd):
     """Fill the account form of the login screen."""
-    d.click_ui(hwnd, 512, 417)
+    # The account field of the login screen, in the coordinates of the
+    # picture of the client.
+    d.click_si(*picture_to_screen(hwnd, *ACCOUNT_FIELD))
     time.sleep(0.4)
     d.clear_field()
     d.type_text(ACCOUNT)
@@ -139,29 +146,22 @@ def at_character_selection(image):
     return find_enter_world(image) is not None
 
 
-def inside_the_world(image, hwnd=None):
+def inside_the_world(image, reader):
     """True when the client shows the game world.
 
-    The player frame with the golden portrait border sits in the top left
-    corner of the screen while the character is in the world. The character
-    selection shows the logo of the game there instead, so the corner tells
-    the two apart. The corner is looked for where the client draws it, so the
-    size of the window does not matter.
+    The three screens are told apart by what is on the screen. The
+    character selection shows a red Enter World button and the login screen
+    shows the logo of the game. Only in the world the probe panel of the
+    telemetry is on the screen, because the add-on is loaded when the
+    character enters the world.
     """
-    box = (30, 30, 110, 110)
-    if hwnd is not None:
-        left, top = picture_to_screen(hwnd, box[0], box[1])
-        right, bottom = picture_to_screen(hwnd, box[2], box[3])
-        box = (left, top, right, bottom)
-    region = image.crop(box).convert('RGB')
-    colours = region.getcolors(maxcolors=100000)
-    if not colours:
+    if find_enter_world(image) is not None:
         return False
-    golden = 0
-    for count, (r, g, b) in colours:
-        if r > 110 and g > 80 and b < 70 and r > b + 40:
-            golden += count
-    return golden > 300
+    try:
+        reader()
+    except Exception:
+        return False
+    return True
 
 
 def main():
@@ -172,15 +172,18 @@ def main():
         wanted = sys.argv[sys.argv.index('--character') + 1]
     result['character'] = wanted
     evidence = Evidence(run)
-    hwnd = d.find_game_window()
     try:
-        if not hwnd:
-            raise ValueError('no game window')
+        hwnd = d.game_window()
         d.ensure_foreground(hwnd)
         hide_consoles()
 
-        def reader():
+        def raw_reader():
             return decode(assert_real_frame(grab_desktop()))
+
+        def reader():
+            # A window of the client that is modal freezes the panel of the
+            # probe, so it is closed before the reading.
+            return read_or_dismiss(raw_reader, d.game_window())
 
         point = CHARACTERS.get(wanted)
         if point is None:
@@ -192,10 +195,20 @@ def main():
         close_world_map(hwnd, reader)
         # The three screens are told apart by the picture, not by the
         # telemetry: the probe panel stays alive at the character selection.
-        if inside_the_world(grab_desktop(), hwnd):
-            d.post_key(hwnd, win32con.VK_ESCAPE)
-            time.sleep(1.5)
-            logout = picture_to_screen(hwnd, *LOGOUT)
+        if inside_the_world(grab_desktop(), reader):
+            # The menu of the client has to be open before the logout can
+            # be clicked, so it is opened and checked.
+            logout = None
+            for _ in range(4):
+                image = grab_desktop()
+                logout = find_logout_button(image)
+                if logout is not None:
+                    break
+                d.post_key(hwnd, win32con.VK_ESCAPE)
+                time.sleep(1.2)
+            if logout is None:
+                raise ValueError('the logout button of the client was not found')
+            result['logout_button'] = logout
             d.u.SetCursorPos(*logout)
             time.sleep(0.8)
             d.click_si(*logout)
@@ -204,9 +217,11 @@ def main():
 
         # The logout lands on the login screen when the session was fresh.
         if not at_character_selection(grab_desktop()):
+            hwnd = d.game_window()
             login(hwnd)
             evidence.capture('01-after-login')
 
+        hwnd = d.game_window()
         d.click_si(*picture_to_screen(hwnd, *point))
         time.sleep(1.5)
         evidence.capture('02-picked')
@@ -226,6 +241,7 @@ def main():
         d.click_si(*enter)
         time.sleep(15.0)
         hide_consoles()
+        hwnd = d.game_window()
         d.ensure_foreground(hwnd)
         time.sleep(2.0)
         state = reader()

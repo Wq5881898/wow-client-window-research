@@ -126,10 +126,21 @@ def right_click(x, y, hold=0.2):
 
 
 def post_key(hwnd, vk, sc=0x1C):
-    lp = (sc << 16) | 1
-    win32gui.PostMessage(hwnd, win32con.WM_KEYDOWN, vk, lp)
+    """Send a key to the client.
+
+    The key is sent as real input and not as a message to the window: in
+    the fullscreen mode the client keeps a small window at the top left of
+    the virtual desktop and a message to it never reaches the game.
+    """
+    i = INPUT()
+    i.type = 1
+    i.union.ki = KEYBDINPUT(vk, 0, 0, 0, None)
+    if SendInput(1, ctypes.byref(i), ctypes.sizeof(INPUT)) != 1:
+        log('key down failed', vk)
     time.sleep(0.05)
-    win32gui.PostMessage(hwnd, win32con.WM_KEYUP, vk, lp | 0xC0000000)
+    i.union.ki.dwFlags = 2
+    if SendInput(1, ctypes.byref(i), ctypes.sizeof(INPUT)) != 1:
+        log('key up failed', vk)
 
 
 def type_text3(hwnd, text, delay=0.05):
@@ -164,8 +175,21 @@ def find_game_window():
         if win32gui.GetClassName(hwnd) == 'GxWindowClassD3d':
             found.append(hwnd)
         return True
+
     win32gui.EnumWindows(cb, None)
     return found[0] if found else 0
+
+
+def game_window():
+    """The window of the client, looked up again every time.
+
+    In the fullscreen mode the client recreates its window when the scene
+    changes, so a handle that was kept from earlier is invalid then.
+    """
+    hwnd = find_game_window()
+    if not hwnd:
+        raise ValueError('no game window')
+    return hwnd
 
 
 def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):

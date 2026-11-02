@@ -12,7 +12,8 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
-from client_chat_guard import ensure_chat_closed, close_world_map
+from client_chat_guard import (ensure_chat_closed, close_world_map,
+                             ensure_no_modal)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -48,6 +49,7 @@ def main():
             return decode(assert_real_frame(grab_desktop()))
 
         close_world_map(hwnd, reader)
+        ensure_no_modal(hwnd, reader)
         seen = {}
         for step in range(20):
             ensure_chat_closed(hwnd, reader)

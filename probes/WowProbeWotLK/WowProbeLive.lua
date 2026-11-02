@@ -70,9 +70,11 @@ local function reason_code(message)
 end
 
 -- The chat edit box being open proves the typed text reached the client.
+-- Only the edit box that has the focus counts: the frame of the chat
+-- input stays "shown" after it was closed, and a wrong answer here would
+-- keep the driver from sending any key.
 local function chat_open()
   if ChatEdit_GetActiveWindow and ChatEdit_GetActiveWindow() then return 1 end
-  if ChatFrame1InputFrame and ChatFrame1InputFrame:IsShown() then return 1 end
   return 0
 end
 
@@ -144,10 +146,15 @@ local function update()
   local spell_bits = 0
   -- The classification of the target tells the driver whether it is an
   -- ordinary creature, which one spell of the character can finish.
+  -- The client of 3.3.5a answers with a word, not with a number.
+  local CLASS_CODES = {
+    normal = 1, elite = 2, rareelite = 3, worldboss = 4,
+    rare = 5, trivial = 6, quest = 7,
+  }
   local classification = 0
   if UnitExists("target") and UnitClassification then
     local ok, value = pcall(UnitClassification, "target")
-    if ok and value then classification = value end
+    if ok and value then classification = CLASS_CODES[value] or 0 end
   end
   -- The spot where the corpse lies. It is empty while the character lives
   -- or after the corpse was recovered.
@@ -173,7 +180,10 @@ local function update()
   end
   local bytes = {}
   local function number(value, count)
-    value = math.floor(value or 0)
+    -- A string would break the whole panel, so nothing but a number is
+    -- written into the payload.
+    value = tonumber(value) or 0
+    value = math.floor(value)
     for _ = 1, count do
       bytes[#bytes + 1] = value % 256
       value = math.floor(value / 256)

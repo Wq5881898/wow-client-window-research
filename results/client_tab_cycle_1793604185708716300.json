@@ -1,0 +1,18 @@
+{
+  "run": "client_tab_cycle_1793604185708716300",
+  "status": "FAILED",
+  "samples": [],
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_tab_cycle_1793604185708716300",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_tab_cycle_1793604185708716300_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 1001043.636595
+      }
+    ],
+    "states": []
+  }
+}

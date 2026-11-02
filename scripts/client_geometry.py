@@ -16,13 +16,28 @@ BASE_WIDTH = 1920
 BASE_HEIGHT = 1080
 
 
+def is_fullscreen(hwnd):
+    """True when the client draws on the whole screen.
+
+    In the fullscreen mode the client keeps a small window at the top left
+    of the virtual desktop and draws on the screen itself, so the picture of
+    the client and the screen have the same pixels.
+    """
+    left, top, right, bottom = win32gui.GetWindowRect(hwnd)
+    return left < -10000 or top < -10000
+
+
 def client_origin(hwnd):
     """The top left corner of the client area on the screen."""
+    if is_fullscreen(hwnd):
+        return 0, 0
     x, y = win32gui.ClientToScreen(hwnd, (0, 0))
     return x, y
 
 
 def client_size(hwnd):
+    if is_fullscreen(hwnd):
+        return BASE_WIDTH, BASE_HEIGHT
     left, top, right, bottom = win32gui.GetClientRect(hwnd)
     return right - left, bottom - top
 

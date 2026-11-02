@@ -1,0 +1,220 @@
+{
+  "run": "client_tab_cycle_1793605650420447300",
+  "status": "SAMPLED",
+  "samples": [
+    {
+      "step": 0,
+      "guid": "0xF130000045000AF2",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 1,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 2,
+      "guid": "0xF130000045000AF1",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 3,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 4,
+      "guid": "0xF130000045000AF2",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 5,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 6,
+      "guid": "0xF130000045000AF2",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 7,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 8,
+      "guid": "0xF130000045000AF2",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 9,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 10,
+      "guid": "0xF130000045000AF2",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 11,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 12,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 13,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 14,
+      "guid": "0xF130000045000B06",
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 0,
+      "exists": true
+    },
+    {
+      "step": 15,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 16,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 17,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 18,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    },
+    {
+      "step": 19,
+      "guid": "0xF13000012B000AF3",
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary",
+      "range": 1,
+      "exists": true
+    }
+  ],
+  "distinct": {
+    "0xF130000045000AF2": {
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary"
+    },
+    "0xF13000012B000AF3": {
+      "health": 42,
+      "class_id": 1,
+      "class": "ordinary"
+    },
+    "0xF130000045000AF1": {
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary"
+    },
+    "0xF130000045000B06": {
+      "health": 55,
+      "class_id": 1,
+      "class": "ordinary"
+    }
+  },
+  "evidence": {
+    "run": "client_tab_cycle_1793605650420447300",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_tab_cycle_1793605650420447300_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 1002530.603287
+      }
+    ],
+    "states": []
+  }
+}

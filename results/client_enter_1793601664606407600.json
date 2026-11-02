@@ -1,0 +1,19 @@
+{
+  "run": "client_enter_1793601664606407600",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "error": "error(1400, 'GetWindowRect', '\u65e0\u6548\u7684\u7a97\u53e3\u53e5\u67c4\u3002')",
+  "evidence": {
+    "run": "client_enter_1793601664606407600",
+    "frames": [
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793601664606407600_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 998514.6710204
+      }
+    ],
+    "states": []
+  }
+}

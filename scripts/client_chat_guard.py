@@ -51,12 +51,46 @@ def close_chat(hwnd, reader, attempts=3):
         time.sleep(0.4)
     return not chat_open(reader)
 
-
 def ensure_chat_closed(hwnd, reader):
     """Close the chat and report when that was not possible."""
     if close_chat(hwnd, reader):
         return True
     raise ValueError('the chat input of the client stays open')
+
+
+# The button that closes the game menu of the client, in the coordinates of
+# the picture of the client.
+RETURN_TO_GAME = (959, 649)
+
+
+def ensure_no_modal(hwnd, reader):
+    """Close the menu of the client when it covers the screen.
+
+    The game menu is modal: it covers a part of the telemetry strip of the
+    probe, so nothing can be read while it is open. The escape key closes
+    it, and the button is the second try for the case that the client did
+    not take the key.
+    """
+    for _ in range(3):
+        try:
+            reader()
+            return True
+        except Exception:
+            pass
+        ensure_focus(hwnd)
+        d.post_key(hwnd, win32con.VK_ESCAPE)
+        time.sleep(0.6)
+        try:
+            reader()
+            return True
+        except Exception:
+            pass
+        try:
+            d.click_si(*picture_to_screen(hwnd, *RETURN_TO_GAME))
+        except Exception:
+            pass
+        time.sleep(0.9)
+    return False
 
 
 # The close button of the world map window, in the coordinates of the 1920

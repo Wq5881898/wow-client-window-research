@@ -42,5 +42,5 @@ out.write_text(json.dumps(state, indent=2, ensure_ascii=False, default=str),
                encoding='utf-8')
 for key in ('protocol', 'health', 'max_health', 'dead', 'combat', 'pos_x',
             'pos_y', 'facing', 'corpse_x', 'corpse_y', 'corpse_exists',
-            'speed', 'chat_open', 'target_exists'):
+            'unit_x', 'unit_y', 'speed', 'chat_open', 'target_exists'):
     print(f'{key:15} {state.get(key)!r}')
