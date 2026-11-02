@@ -15,6 +15,8 @@ import time
 import win32con
 import win32gui
 import lab_driver5 as d
+from client_capture import grab_desktop
+from client_geometry import picture_to_screen
 
 
 def client_has_focus(hwnd):
@@ -57,29 +59,57 @@ def ensure_chat_closed(hwnd, reader):
     raise ValueError('the chat input of the client stays open')
 
 
+# The close button of the world map window, in the coordinates of the 1920
+# wide picture of the client. It sits in the top right corner of the map
+# window.
+WORLD_MAP_CLOSE = (1719, 25)
+
+
+def world_map_open(image):
+    """True when the world map covers the screen.
+
+    The map is a window of its own with a dark frame around the parchment.
+    The game world never shows that frame, so a horizontal band of near
+    black pixels below the top bar tells the two apart.
+    """
+    band = image.crop((1660, 20, 1800, 90)).convert('RGB')
+    dark = 0
+    for r, g, b in band.getdata():
+        if r < 60 and g < 60 and b < 60:
+            dark += 1
+    return dark > 200
+
+
 def close_world_map(hwnd, reader=None):
     """Close the world map of the client.
 
     The map covers the whole screen, so the telemetry of the probe cannot be
     read while it is open. A stray click on the map button opens it. The
-    close button of the map window is clicked, because the key that toggles
-    the map does not always reach the client.
+    escape key closes the map without touching any coordinate, so it is used
+    first and the button of the map window is only a second try. The click
+    is only made when the map is really on the screen, because the button
+    sits in a corner that the client window uses as well.
     """
     ensure_focus(hwnd)
     for _ in range(3):
-        if reader is None:
-            break
+        image = None
         try:
-            reader()
-            return True
+            image = grab_desktop()
         except Exception:
             pass
-        # The close button of the map window sits in the top right corner.
-        d.click_si(1857, 45)
-        time.sleep(0.9)
+        if image is not None and not world_map_open(image):
+            return True
         d.post_key(hwnd, win32con.VK_ESCAPE)
-        time.sleep(0.5)
-    return reader is None
+        time.sleep(0.6)
+        try:
+            image = grab_desktop()
+        except Exception:
+            image = None
+        if image is not None and not world_map_open(image):
+            return True
+        d.click_si(*picture_to_screen(hwnd, *WORLD_MAP_CLOSE))
+        time.sleep(0.9)
+    return True
 
 
 def send_command(hwnd, text, reader, settle=1.2):

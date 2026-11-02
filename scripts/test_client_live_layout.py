@@ -2,7 +2,7 @@
 import unittest
 from client_live_layout import (
     CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT, V7_LAYOUT,
-    parse_lua_layout, offsets)
+    V8_LAYOUT, parse_lua_layout, offsets)
 import client_live_state
 
 
@@ -12,10 +12,11 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V7_DATA_BYTES)
-        self.assertEqual(client_live_state.V7_TOTAL, total)
+        self.assertEqual(total, client_live_state.V8_DATA_BYTES)
+        self.assertEqual(client_live_state.V8_TOTAL, total)
         for layout, name in ((V3_LAYOUT, 'V3'), (V4_LAYOUT, 'V4'),
-                             (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6')):
+                             (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6'),
+                             (V7_LAYOUT, 'V7')):
             _, layout_total = offsets(layout)
             self.assertEqual(layout_total,
                              getattr(client_live_state, name + '_DATA_BYTES'))
@@ -40,6 +41,12 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual(client_live_state.V7_OFFSETS['target_class'][0], 63)
         self.assertEqual(client_live_state.V7_OFFSETS['event_queue'][0], 68)
         self.assertEqual(client_live_state.V7_OFFSETS['checksum'][0], 108)
+        self.assertEqual(client_live_state.V8_OFFSETS['facing'][0], 40)
+        self.assertEqual(client_live_state.V8_OFFSETS['corpse_x'][0], 42)
+        self.assertEqual(client_live_state.V8_OFFSETS['corpse_y'][0], 44)
+        self.assertEqual(client_live_state.V8_OFFSETS['corpse_exists'][0], 46)
+        self.assertEqual(client_live_state.V8_OFFSETS['event_queue'][0], 73)
+        self.assertEqual(client_live_state.V8_OFFSETS['checksum'][0], 113)
 
     def test_trailer_offset_matches_cell_count(self):
         self.assertEqual(client_live_state.V3_TRAILER_OFFSET,

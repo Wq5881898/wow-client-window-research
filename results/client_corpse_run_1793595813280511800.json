@@ -1,0 +1,450 @@
+{
+  "run": "client_corpse_run_1793595813280511800",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.01837222355784936,
+        "facing": 5.472579098753595,
+        "position": [
+          0.5024490730144198,
+          0.4271152819104295
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.6444923453547761
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.01837222355784936,
+        "facing": 3.6410354745925217,
+        "position": [
+          0.5024490730144198,
+          0.4271152819104295
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.061493902807417136
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.01837222355784936,
+        "facing": 3.2766059443911795,
+        "position": [
+          0.5024490730144198,
+          0.4271152819104295
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.01837222355784936,
+        "facing": 3.22320230105465,
+        "position": [
+          0.5024490730144198,
+          0.4271152819104295
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "left",
+        "seconds": 0.07150652710523467
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.01837222355784936,
+        "facing": 3.5342281879194632,
+        "position": [
+          0.5024490730144198,
+          0.4271152819104295
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.01553785073412577,
+        "facing": 3.5876318312559925,
+        "position": [
+          0.5031662470435645,
+          0.4298619058518349
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.015523345785982669,
+        "facing": 3.5876318312559925,
+        "position": [
+          0.5031662470435645,
+          0.4298771648737316
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.015523345785982669,
+        "facing": 3.3771812080536914,
+        "position": [
+          0.5031662470435645,
+          0.4298771648737316
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.012122733514589236,
+        "facing": 3.2201342281879195,
+        "position": [
+          0.5033493553063249,
+          0.4334325169756619
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "left",
+        "seconds": 0.09998731575961038
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.012060507348050581,
+        "facing": 3.480824544582934,
+        "position": [
+          0.5033646143282215,
+          0.43349355306324866
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.009194557856917678,
+        "facing": 3.5311601150527325,
+        "position": [
+          0.5043717097734035,
+          0.4361791409170672
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.005693414874790204,
+        "facing": 3.5311601150527325,
+        "position": [
+          0.505302510109102,
+          0.4396124208438239
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.005550782514176776,
+        "facing": 3.5311601150527325,
+        "position": [
+          0.5053482871747921,
+          0.43974975204089417
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.005550782514176776,
+        "facing": 3.848418024928092,
+        "position": [
+          0.5053482871747921,
+          0.43974975204089417
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.06722970214935349
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.005550782514176776,
+        "facing": 3.9520613614573348,
+        "position": [
+          0.5053482871747921,
+          0.43974975204089417
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0,
+        "direction": "right",
+        "seconds": 0.1002204008036853
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.005550782514176776,
+        "facing": 3.584563758389262,
+        "position": [
+          0.5053482871747921,
+          0.43974975204089417
+        ],
+        "phase": "SEEK_CORPSE",
+        "avoid": 0.0
+      }
+    },
+    {
+      "action": "accept",
+      "detail": {
+        "distance": 0.0026398548889794505,
+        "facing": 3.3740172579098755,
+        "position": [
+          0.5058670939192798,
+          0.4430609597924773
+        ],
+        "phase": "AT_CORPSE",
+        "avoid": 0.0
+      }
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true,
+    "position": [
+      0.5024490730144198,
+      0.4271152819104295
+    ],
+    "facing": 5.472579098753595,
+    "corpse_exists": true,
+    "corpse": [
+      0.5079880979629205,
+      0.444632639047837
+    ]
+  },
+  "dialog_button": [
+    482,
+    668
+  ],
+  "evidence": {
+    "run": "client_corpse_run_1793595813280511800",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793595813280511800_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 992661.0116295
+      },
+      {
+        "label": "03-at-corpse",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793595813280511800_03-at-corpse.png",
+        "source": "desktop",
+        "host_monotonic": 992670.3085253
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793595813280511800_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 992690.7695881
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 9985,
+          "game_ms": 992660390,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5024490730144198,
+          "pos_y": 0.4271152819104295,
+          "facing": 5.472579098753595,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.5079880979629205,
+          "corpse_y": 0.444632639047837,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      },
+      {
+        "label": "03-at-corpse",
+        "state": {
+          "sequence": 10075,
+          "game_ms": 992669768,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 10.5,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5058670939192798,
+          "pos_y": 0.4430609597924773,
+          "facing": 3.3740172579098755,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.5079880979629205,
+          "corpse_y": 0.444632639047837,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}

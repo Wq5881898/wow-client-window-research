@@ -1,0 +1,32 @@
+{
+  "run": "client_enter_1793586805401345700",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": null,
+  "error": "ValueError('the character was not selected: the highlight is at None, expected near 465')",
+  "evidence": {
+    "run": "client_enter_1793586805401345700",
+    "frames": [
+      {
+        "label": "00-after-logout",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793586805401345700_00-after-logout.png",
+        "source": "desktop",
+        "host_monotonic": 983668.7471701
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793586805401345700_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 983671.6646949
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793586805401345700_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 983672.0375412
+      }
+    ],
+    "states": []
+  }
+}

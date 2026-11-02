@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 7
+local PROTOCOL = 8
 local QUEUE = 4
-local DATA_BYTES = 110
+local DATA_BYTES = 115
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -149,6 +149,16 @@ local function update()
     local ok, value = pcall(UnitClassification, "target")
     if ok and value then classification = value end
   end
+  -- The spot where the corpse lies. It is empty while the character lives
+  -- or after the corpse was recovered.
+  local corpse_x, corpse_y, corpse_exists = 0, 0, 0
+  if GetCorpseMapPosition then
+    local ok, cx, cy = pcall(GetCorpseMapPosition)
+    if ok and cx and cy then
+      corpse_x, corpse_y = cx, cy
+      if cx ~= 0 or cy ~= 0 then corpse_exists = 1 end
+    end
+  end
   local i = 1
   while true do
     local name = GetSpellName(i, BOOKTYPE_SPELL)
@@ -170,7 +180,7 @@ local function update()
     end
   end
   number(PROTOCOL, 1)
-  number(110, 1)
+  number(115, 1)
   number(sequence, 2)
   number(math.floor(GetTime() * 1000) % 4294967296, 4)
   number(UnitHealth("player"), 2)
@@ -191,10 +201,17 @@ local function update()
   local x, y = GetPlayerMapPosition("player")
   number(math.floor((x or 0) * 65535), 2)
   number(math.floor((y or 0) * 65535), 2)
-  -- GetUnitFacing does not exist in 3.3.5a; report 0 instead of raising.
+  -- GetUnitFacing does not exist in 3.3.5a, but GetPlayerFacing does, and
+  -- the driver needs the heading to walk towards the corpse after a death.
   local facing = 0
-  if GetUnitFacing then facing = GetUnitFacing("player") or 0 end
+  if GetPlayerFacing then
+    local ok, value = pcall(GetPlayerFacing)
+    if ok and value then facing = value end
+  end
   number(math.floor(facing * 10430), 2)
+  number(math.floor(corpse_x * 65535), 2)
+  number(math.floor(corpse_y * 65535), 2)
+  number(corpse_exists, 1)
   number(events.serial, 2)
   number(events.started, 2)
   number(events.succeeded, 2)
@@ -238,12 +255,15 @@ local function update()
   cells[#cells]:SetTexture(1, 0, 1, 1)
   text:SetText(string.format("LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
+    .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
     guid, UnitHealth("target"), tostring(range), learned, tostring(casting),
-    x or 0, y or 0, facing, events.serial, events.started,
+    x or 0, y or 0, facing,
+    tostring(corpse_exists == 1), corpse_x, corpse_y,
+    events.serial, events.started,
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
     last.error_reason, chat_open(), target_distance()))
 end

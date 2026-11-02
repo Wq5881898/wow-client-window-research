@@ -98,7 +98,26 @@ V7_LAYOUT = [
     ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V7_LAYOUT
+# Protocol v8: adds the heading of the character and the spot of its corpse.
+# The driver needs both to walk to the corpse after a death, because the
+# character cannot be turned towards it without a facing readout.
+V8_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('corpse_x', 2),
+    ('corpse_y', 2), ('corpse_exists', 1), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('checksum', 1),
+    ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V8_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
@@ -107,6 +126,7 @@ EXPRESSION_NAMES = {
     '107': 'length',
     '109': 'length',
     '110': 'length',
+    '115': 'length',
     'sequence': 'sequence',
     'math.floor(GetTime() * 1000) % 4294967296': 'game_ms',
     'UnitHealth("player")': 'health',
@@ -126,6 +146,9 @@ EXPRESSION_NAMES = {
     'math.floor((x or 0) * 65535)': 'pos_x',
     'math.floor((y or 0) * 65535)': 'pos_y',
     'math.floor(facing * 10430)': 'facing',
+    'math.floor(corpse_x * 65535)': 'corpse_x',
+    'math.floor(corpse_y * 65535)': 'corpse_y',
+    'corpse_exists': 'corpse_exists',
     'events.serial': 'event_serial',
     'events.started': 'cast_started',
     'events.succeeded': 'cast_succeeded',

@@ -2,7 +2,7 @@
 import time
 from PIL import Image
 from client_live_layout import (V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT,
-                                 V7_LAYOUT, offsets)
+                                 V7_LAYOUT, V8_LAYOUT, offsets)
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
@@ -12,21 +12,25 @@ V4_DATA_BYTES = 106
 V5_DATA_BYTES = 107
 V6_DATA_BYTES = 109
 V7_DATA_BYTES = 110
+V8_DATA_BYTES = 115
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
 V5_CELLS = 111
 V6_CELLS = 113
 V7_CELLS = 114
+V8_CELLS = 119
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
 V4_TRAILER_OFFSET = 109
 V5_TRAILER_OFFSET = 110
 V6_TRAILER_OFFSET = 112
 V7_TRAILER_OFFSET = 113
+V8_TRAILER_OFFSET = 118
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
 V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
 V5_OFFSETS, V5_TOTAL = offsets(V5_LAYOUT)
 V6_OFFSETS, V6_TOTAL = offsets(V6_LAYOUT)
 V7_OFFSETS, V7_TOTAL = offsets(V7_LAYOUT)
+V8_OFFSETS, V8_TOTAL = offsets(V8_LAYOUT)
 
 # The spells the probe reports in the spell_bits field.
 SPELL_BITS = {
@@ -242,6 +246,28 @@ def _spell_bit(spell_id):
     return order.index(spell_id)
 
 
+def _decode_v8(data):
+    result = _base_state(data, V8_OFFSETS)
+    result['chat_open'] = bool(data[V8_OFFSETS['chat_open'][0]])
+    offset, size = V8_OFFSETS['target_distance']
+    result['target_distance'] = int.from_bytes(data[offset:offset + size], 'little') / 10
+    result['last_error_reason'] = data[V8_OFFSETS['last_error_reason'][0]]
+    offset, size = V8_OFFSETS['spell_bits']
+    bits = int.from_bytes(data[offset:offset + size], 'little')
+    result['spell_bits'] = bits
+    result['known_spells'] = sorted(
+        spell_id for spell_id in SPELL_BITS if bits & (1 << _spell_bit(spell_id)))
+    result['target_class'] = data[V8_OFFSETS['target_class'][0]]
+    result['target_class_name'] = TARGET_CLASSES.get(result['target_class'], 'unknown')
+    # The heading of the character and the spot of its corpse.
+    offset, size = V8_OFFSETS['corpse_x']
+    result['corpse_x'] = int.from_bytes(data[offset:offset + size], 'little') / 65535
+    offset, size = V8_OFFSETS['corpse_y']
+    result['corpse_y'] = int.from_bytes(data[offset:offset + size], 'little') / 65535
+    result['corpse_exists'] = bool(data[V8_OFFSETS['corpse_exists'][0]])
+    return result
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -302,6 +328,13 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V7_DATA_BYTES):
             return None
         return version, _decode_v7(data)
+    if version == 8:
+        if header[1] != V8_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V8_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V8_DATA_BYTES):
+            return None
+        return version, _decode_v8(data)
     return None
 
 
@@ -312,9 +345,9 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V7_TRAILER_OFFSET, V6_TRAILER_OFFSET,
-                           V5_TRAILER_OFFSET, V4_TRAILER_OFFSET,
-                           V3_TRAILER_OFFSET):
+            for offset in (V8_TRAILER_OFFSET, V7_TRAILER_OFFSET,
+                           V6_TRAILER_OFFSET, V5_TRAILER_OFFSET,
+                           V4_TRAILER_OFFSET, V3_TRAILER_OFFSET):
                 measured = (trailer_left - x) / offset
                 if abs(measured - trio_pitch) > 1.0:
                     continue

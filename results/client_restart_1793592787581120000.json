@@ -1,0 +1,15 @@
+{
+  "run": "client_restart_1793592787581120000",
+  "status": "FAILED",
+  "steps": [
+    {
+      "phase": "closed"
+    }
+  ],
+  "error": "ValueError('the client window did not appear')",
+  "evidence": {
+    "run": "client_restart_1793592787581120000",
+    "frames": [],
+    "states": []
+  }
+}

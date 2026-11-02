@@ -1,0 +1,32 @@
+{
+  "run": "client_enter_1793593968450095800",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": 445,
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_enter_1793593968450095800",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793593968450095800_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 990835.6376666
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793593968450095800_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 990838.5178696
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793593968450095800_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 990858.0179374
+      }
+    ],
+    "states": []
+  }
+}

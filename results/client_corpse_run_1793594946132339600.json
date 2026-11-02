@@ -1,0 +1,3040 @@
+{
+  "run": "client_corpse_run_1793594946132339600",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 3.210642377756472,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8402773951142184
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 5.723969319271332,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4290351859176759
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 4.7280920421860015,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7643474004245213
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 2.3687440076701822,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5568099304387
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 3.7824544582933846,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 1.0328067151603169
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0207136655731281,
+        "facing": 0.7476510067114094,
+        "position": [
+          0.4944075684748608,
+          0.4289921416037232
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02329417513944951,
+        "facing": 0.8010546500479386,
+        "position": [
+          0.4930800335698482,
+          0.4267338063630121
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 0.8010546500479386,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.08
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 0.8042186001917545,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.08
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 1.168648130393097,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.175154580052888
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 1.5864813039309684,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.3158391502676596
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.739405560882071,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.7040291357730813
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 4.991946308724832,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.653090244475008
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 3.267209971236817,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8817410584514469
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.617162032598274,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4425798997364753
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 4.618120805369127,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7789574173220466
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.057718120805369,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4745047451748652
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 3.2609779482262704,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8796427342054717
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 6.141802492809204,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.2659332801368355
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.777372962607862,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.38863682565917307
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 4.420230105465005,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8455872826096299
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 1.749856184084372,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.3708475274236877
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.3781399808245447,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5823908933294697
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 4.366826462128476,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8635683073020639
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.0137104506232024,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4596873478071323
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.956184084372004,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.7770185376215436
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.626558005752637,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.439416272411774
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 4.580441035474593,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7916442085323276
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 2.221093000958773,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5295131223308933
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 3.480824544582934,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9536651572211833
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 0.07852348993288591,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.1918907534353985
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.99731543624161,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.31458212073198494
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.001342281879195,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.6499266171503066
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 3.0095877277085332,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.7949995623139776
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 5.312368168744007,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.5452040963204035
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 3.8986577181208055,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 1.0212008810420201
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02410344484508453,
+        "facing": 0.7068072866730585,
+        "position": [
+          0.4934309910734722,
+          0.4254215304798962
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02638757882043185,
+        "facing": 0.39271332694151484,
+        "position": [
+          0.49321736476691846,
+          0.42276646066987106
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.08
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.28897411313518695,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.10025393936922024
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.025119846596356663,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.18909375975266476
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.522914669223394,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4535350003427485
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.21601150527325,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8935697356794974
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.2816874400767018,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.2339929720588992
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.753020134228188,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.3926908488775814
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.069319271332694,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8358892115390313
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.683125599232982,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.39959192626544626
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.586673058485139,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7687678659111846
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.177085330776606,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5354737433383282
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.697603068072867,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 1.0474325774448132
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.813614573346117,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.08
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.8670182166826462,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.09437370492285357
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.2377756471716204,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.21920785660264283
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.020038350910834,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4825959723397518
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.4369127516778524,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9596580601400947
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.13815915627996164,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.15103338612182135
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.2139980824544585,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.22084698241983125
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.585714285714285,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4323903483256134
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.325982742090124,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8565423832159034
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.7058485139022053,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.3768081484311226
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.4378715244487057,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.6232805425545234
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.426462128475551,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8227109399884869
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.17392138063279,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5344084402596023
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.4337488015340365,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9585927570613688
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.02828379674017258,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.1880284566739389
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.258005752636625,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.20602958505209845
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.683125599232982,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.39959192626544626
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.3196548418024925,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8586729893733551
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.7026845637583892,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.37574284535239666
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.5415148609779483,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.6581772888606657
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.530105465004794,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7878141936823446
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.331064237775647,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5873184931696552
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.848418024928092,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 1.0173385842805607
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.1780441035474591,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.1990962257527569
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.338255033557047,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.2530392998300592
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.2838926174496645,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5714357927231964
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.9049856184084373,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.9982922565094007
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.127804410354746,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.18218050413904877
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.3885906040268456,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.26998730335524396
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.1268456375838927,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5185580217246201
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.1122722914669225,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.928498763897116
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.4953978906999041,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.30594935274011215
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.862895493767977,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4296859194296989
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.226366251198466,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8887669825376077
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.264333652924257,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.2038989788946467
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.003547459252157,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.2917057781108417
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.007670182166827,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.6270179926176871
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.019079578139981,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8189734899253232
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.1647171620325985,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.5741402216191107
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.59712368168744,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 1.013601134217397
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.14132310642377757,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.14996808304309545
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.2139980824544585,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.22084698241983125
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.588878235858101,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.43132504524688753
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.329050814956855,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8555093620486538
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.7090124640460211,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.37787345150984847
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.4409395973154364,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.6243135637217728
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.429626078619367,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.821645636909761
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.023106423777565,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4836289935070012
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.1761265580057527,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8718512609238995
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.104122722914669,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.25784205297194895
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.635953978906999,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4154746267119052
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.376222435282838,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8396266616021951
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.551869606903164,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.32496339859979556
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.334132310642378,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5883515143369046
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.9552253116011507,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.9813765348956924
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.2848513902205176,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.2350582751376251
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.7592521572387345,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.39478917312355666
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.019079578139981,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.8189734899253232
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.478906999041227,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4683523977104816
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.435858101629914,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8195473126637857
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.866059443911793,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.43075122250842485
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.8682646212847556,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.768194043172722
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.381495685522531,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.5011508197706485
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.175167785234899,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.9073218299685043
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.086960690316395,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.16842840985004173
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.187535953978907,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.20229213498893464
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.8723873441994248,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.43288182866587666
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.2797698945349953,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9067480072300418
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 6.104122722914669,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.25784205297194895
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.686289549376798,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.3985266231867204
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.3793863854266535,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8385613585234692
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.0734419942473634,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5005769970321859
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.9656759348034516,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.800992465232889
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.478906999041227,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.4683523977104816
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.5332694151486095,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.7867488906036187
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.180249280920422,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.5365390464170541
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.4369127516778524,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9596580601400947
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.13815915627996164,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.15103338612182135
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.0847555129434324,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.16901441081425544
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.739693192713327,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.38054559849428626
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.429626078619367,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.821645636909761
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.8126558005752638,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.4127701978159908
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.95934803451582,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.7988618590754373
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 5.422339405560882,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.48739872548164154
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 4.3196548418024925,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "right",
+        "seconds": 0.8586729893733551
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 1.4922339405560883,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.3048840496613862
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 2.0137104506232024,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.48046536618230007
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 3.4777564717162033,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE",
+        "direction": "left",
+        "seconds": 0.9734101544291017
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026569090251766955,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49327840085450525,
+          0.4225070572976272
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026739257946268417,
+        "facing": 0.5434324065196549,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ],
+        "phase": "SEEK_CORPSE"
+      }
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true,
+    "position": [
+      0.4944075684748608,
+      0.4289921416037232
+    ],
+    "facing": 3.210642377756472,
+    "corpse_exists": true,
+    "corpse": [
+      0.5079880979629205,
+      0.444632639047837
+    ]
+  },
+  "reason": "time_budget",
+  "evidence": {
+    "run": "client_corpse_run_1793594946132339600",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793594946132339600_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 991793.8805452
+      },
+      {
+        "label": "04-given-up",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793594946132339600_04-given-up.png",
+        "source": "desktop",
+        "host_monotonic": 991975.4375584
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_corpse_run_1793594946132339600_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 991975.7984973
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 1503,
+          "game_ms": 991793303,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4944075684748608,
+          "pos_y": 0.4289921416037232,
+          "facing": 3.210642377756472,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.5079880979629205,
+          "corpse_y": 0.444632639047837,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      },
+      {
+        "label": "04-given-up",
+        "state": {
+          "sequence": 3274,
+          "game_ms": 991974803,
+          "health": 1,
+          "max_health": 52,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 10.5,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.49333943694209204,
+          "pos_y": 0.4222629129472801,
+          "facing": 0.5434324065196549,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.5079880979629205,
+          "corpse_y": 0.444632639047837,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}
