@@ -1,0 +1,24 @@
+{
+  "run": "client_login_1793647415427832200",
+  "status": "FAILED",
+  "steps": [],
+  "error": "NameError(\"name 'picture_to_screen' is not defined\")",
+  "evidence": {
+    "run": "client_login_1793647415427832200",
+    "frames": [
+      {
+        "label": "01-login-screen",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793647415427832200_01-login-screen.png",
+        "source": "desktop",
+        "host_monotonic": 1044263.4541341
+      },
+      {
+        "label": "06-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_login_1793647415427832200_06-end.png",
+        "source": "desktop",
+        "host_monotonic": 1044263.8735698
+      }
+    ],
+    "states": []
+  }
+}

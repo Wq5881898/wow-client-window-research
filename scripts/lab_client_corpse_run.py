@@ -25,6 +25,7 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_corpse_runner import CorpseRunner, corpse_distance, wrap
 from client_chat_guard import ensure_chat_closed, ensure_focus
+from client_read_fresh import read_or_dismiss, find_red_button
 from client_geometry import picture_to_screen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -186,10 +187,10 @@ def main():
                     # The button of the dialog sits in the middle of the
                     # upper half of the picture of the client.
                     button = picture_to_screen(hwnd, *action['point'])
-                for attempt in range(6):
+                for attempt in range(40):
                     d.click_si(*button)
                     time.sleep(1.5)
-                    state = reader()
+                    state = read_or_dismiss(reader, d.game_window())
                     if not state['dead']:
                         result['status'] = 'RECOVERED'
                         result['final'] = {'health': state['health'],
@@ -197,9 +198,11 @@ def main():
                                            'combat': state['combat']}
                         evidence.capture('06-recovered', state)
                         break
-                    # The dialog stays open, so the button is looked for
-                    # again in case the picture of the client moved.
-                    found = find_resurrect_button(grab_desktop())
+                    # The server puts a countdown on the dialog and the
+                    # button stays grey until it is over, so the dialog is
+                    # looked at again and the button is pressed as soon as
+                    # it works.
+                    found = find_red_button(grab_desktop())
                     if found is not None:
                         button = found
                 if result['status'] != 'RECOVERED':

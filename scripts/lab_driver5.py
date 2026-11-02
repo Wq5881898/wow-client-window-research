@@ -180,16 +180,24 @@ def find_game_window():
     return found[0] if found else 0
 
 
-def game_window():
+def game_window(tries=6):
     """The window of the client, looked up again every time.
 
     In the fullscreen mode the client recreates its window when the scene
-    changes, so a handle that was kept from earlier is invalid then.
+    changes, so a handle that was kept from earlier is invalid then. A
+    window that is on its way out is skipped as well, so the handle that is
+    returned can be used right away.
     """
-    hwnd = find_game_window()
-    if not hwnd:
-        raise ValueError('no game window')
-    return hwnd
+    for _ in range(tries):
+        hwnd = find_game_window()
+        if hwnd:
+            try:
+                win32gui.GetWindowRect(hwnd)
+                return hwnd
+            except Exception:
+                pass
+        time.sleep(0.4)
+    raise ValueError('no game window')
 
 
 def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):

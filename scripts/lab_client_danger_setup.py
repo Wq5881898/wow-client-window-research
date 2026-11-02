@@ -6,6 +6,7 @@ until the character is dead. The place of the death and the place of the
 corpse are recorded, so the recovery can be planned from real data.
 """
 import json
+import sys
 import time
 from pathlib import Path
 import win32con
@@ -15,6 +16,8 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_chat_guard import ensure_chat_closed, ensure_no_modal
 from client_read_fresh import read_fresh
+from client_walk import walk_to
+from client_target import select_hostile
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
@@ -73,43 +76,13 @@ def cast_fireball(hwnd, reader, attempts=4):
     Fireball sits in the first slot of the action bar.
     """
     for _ in range(attempts):
-        d.post_key(hwnd, 0x31)
+        d.post_key(d.game_window(), 0x31)
         time.sleep(0.8)
         state = reader()
         if state['cast_started'] or state['cast_succeeded']:
             time.sleep(1.2)
             return reader()
     return reader()
-
-
-def select_hostile(hwnd, reader):
-    """Select the hostile creature that is closest.
-
-    The tab key selects the next hostile in sight, so it is pressed until
-    a hostile that is not the wolf of the standard area shows up, or until
-    the cycle has come back to the first one. A command in the chat is not
-    used: the chat input takes the focus away and the panel of the probe
-    stops being updated while it is open.
-    """
-    seen = []
-    found = []
-    for step in range(12):
-        ensure_chat_closed(hwnd, reader)
-        d.post_key(hwnd, win32con.VK_TAB)
-        time.sleep(0.7)
-        state = read_fresh(reader, hwnd)
-        if not state['target_exists']:
-            continue
-        guid = state['target_guid']
-        if guid in seen:
-            continue
-        seen.append(guid)
-        if state['target_attackable'] and state['target_class'] == 1:
-            found.append(state)
-    if not found:
-        return None
-    # The weakest ordinary creature in reach is used, so the run is short.
-    return min(found, key=lambda s: s['target_health'])
 
 
 def main():
@@ -128,12 +101,21 @@ def main():
             return read_fresh(reader, hwnd)
 
         ensure_no_modal(hwnd, reader)
-        start = reader()
+        start = fresh()
         result['start'] = {'health': start['health'], 'dead': start['dead'],
                            'position': [start['pos_x'], start['pos_y']]}
         evidence.capture('01-start', start)
         if start['dead']:
             raise ValueError('the character is already dead')
+
+        if '--walk-to' in sys.argv:
+            # The hostile creatures roam, so the character walks to the
+            # place where they were seen before.
+            index = sys.argv.index('--walk-to')
+            spot = (float(sys.argv[index + 1]), float(sys.argv[index + 2]))
+            distance = walk_to(d.game_window(), reader, spot, timeout=90.0)
+            result['walk_to'] = {'target': list(spot), 'distance': distance}
+            evidence.capture('01b-walked', None)
 
         state = select_hostile(hwnd, reader)
         if state is None:

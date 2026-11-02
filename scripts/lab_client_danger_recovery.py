@@ -11,6 +11,7 @@ carries it out.
 """
 import ctypes
 import json
+import sys
 import math
 import time
 from pathlib import Path
@@ -23,6 +24,7 @@ from client_evidence import Evidence
 from client_danger_recovery import DangerRecovery
 from client_chat_guard import ensure_chat_closed, ensure_focus
 from client_read_fresh import read_or_dismiss, find_red_button
+from client_target import select_hostile
 from client_geometry import picture_to_screen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +103,8 @@ def main():
     run = 'client_danger_recovery_' + str(time.time_ns())
     result = dict(run=run, status='FAILED', steps=[])
     evidence = Evidence(run)
+    die_again = '--die-again' in sys.argv
+    stage = 'walk-back'
     try:
         hwnd = d.game_window()
         d.ensure_foreground(hwnd)
@@ -128,11 +132,9 @@ def main():
             d.log('danger recovery', str(path), result['status'])
             return 0
         if not state.get('corpse_exists'):
-            result['status'] = 'NO_CORPSE'
-            note('skip', 'the client reports no corpse')
-            path = evidence.write(result)
-            d.log('danger recovery', str(path), result['status'])
-            return 0
+            # The spot of the corpse is only known after the spirit was
+            # released, so this is not an error: the machine asks for it.
+            note('corpse-unknown', {'dead': state['dead']})
 
         ensure_chat_closed(hwnd, reader)
         machine = DangerRecovery(time_budget=TIME_BUDGET)
@@ -146,11 +148,61 @@ def main():
                       'phase': machine.phase, 'dead': state['dead'],
                       'health': state['health']}
             if action['action'] == 'DONE':
+                if die_again and stage == 'walk-back':
+                    # The character is back at the graveyard. It walks into
+                    # the danger zone once more, so the task can show what
+                    # it does when the character dies a second time: the new
+                    # corpse is looked up and the distance to the graveyard
+                    # is compared with the one of the first death.
+                    stage = 'aggro'
+                    machine.route = [tuple(machine.corpses[0]['corpse'])]
+                    machine.route_index = 0
+                    machine.phase = 'ESCAPE'
+                    machine.stuck = 0
+                    machine.avoid = 0.0
+                    machine.last_action = None
+                    machine.last_distance = None
+                    note('walk-back-to-danger', {'target': machine.route[0]})
+                    continue
+                if die_again and stage == 'aggro':
+                    # The character is in the danger zone again. A hostile is
+                    # picked and hit once, so it engages and the character
+                    # dies a second time.
+                    stage = 'wait-death'
+                    target = select_hostile(hwnd, reader)
+                    result['second_target'] = (target or {}).get('target_guid')
+                    if target is None:
+                        result['second_death'] = 'no hostile in reach'
+                        result['status'] = 'RECOVERED'
+                        result['corpses'] = machine.corpses
+                        break
+                    note('aggro', {'guid': target['target_guid'],
+                                   'health': target['target_health']})
+                    d.post_key(d.game_window(), 0x31)
+                    time.sleep(1.0)
+                    deadline = time.monotonic() + 90
+                    while time.monotonic() < deadline:
+                        state = read_or_dismiss(reader, d.game_window())
+                        if state['dead']:
+                            note('second-death', {'position':
+                                                   [state['pos_x'], state['pos_y']]})
+                            break
+                        time.sleep(1.0)
+                    else:
+                        result['second_death'] = 'no death'
+                        result['status'] = 'RECOVERED'
+                        result['corpses'] = machine.corpses
+                        break
+                    continue
                 result['status'] = 'RECOVERED'
                 result['final'] = {'health': state['health'],
                                    'dead': state['dead'],
                                    'combat': state['combat'],
                                    'graveyard': machine.graveyard}
+                if die_again:
+                    result['second_death'] = ('happened'
+                                              if len(machine.corpses) >= 2
+                                              else 'not happened')
                 result['corpses'] = machine.corpses
                 evidence.capture('02-safe', state)
                 break
@@ -194,12 +246,15 @@ def main():
                     # The button of the dialog sits in the middle of the
                     # upper half of the picture of the client.
                     button = picture_to_screen(hwnd, *action['point'])
-                for _ in range(6):
+                for _ in range(40):
                     d.click_si(*button)
-                    time.sleep(1.2)
-                    state = reader()
+                    time.sleep(1.5)
+                    state = read_or_dismiss(reader, d.game_window())
                     if not state['dead']:
                         break
+                    # The server puts a countdown on the dialog, and the
+                    # button is grey until it is over. The dialog is looked
+                    # at again, so the button is pressed as soon as it works.
                     found = find_red_button(grab_desktop())
                     if found is not None:
                         button = found
@@ -212,6 +267,17 @@ def main():
                 continue
             raise ValueError('unknown action ' + str(action))
         result['corpses'] = machine.corpses
+        if len(machine.corpses) >= 2:
+            # The second death has to be closer to the graveyard than the
+            # first one, measured along a path that was really walked.
+            first = machine.corpses[0]['path_length']
+            last = machine.corpses[-1]['path_length']
+            result['path_length_comparison'] = {
+                'first': first,
+                'last': last,
+                'closer_to_graveyard': last < first,
+                'deaths': len(machine.corpses),
+            }
     except Exception as exc:
         result['error'] = repr(exc)
     finally:

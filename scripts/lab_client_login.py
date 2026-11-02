@@ -9,6 +9,11 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode
 from client_evidence import Evidence
+from client_geometry import picture_to_screen
+
+# The account field of the login screen, in the coordinates of the picture of
+# the client.
+ACCOUNT_FIELD = (960, 565)
 
 ROOT = Path(__file__).resolve().parents[1]
 LOGIN = (716, 495)
@@ -59,7 +64,7 @@ def main():
         evidence.capture('01-login-screen')
 
         # Fill the account form: the client shows it on a fresh start.
-        d.click_ui(hwnd, 512, 417)
+        d.click_si(*picture_to_screen(hwnd, *ACCOUNT_FIELD))
         time.sleep(0.4)
         d.clear_field()
         d.type_text('GM01')

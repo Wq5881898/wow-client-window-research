@@ -1,0 +1,18 @@
+{
+  "run": "client_danger_setup_1793646417342616400",
+  "status": "FAILED",
+  "timeline": [],
+  "error": "ValueError('no game window')",
+  "evidence": {
+    "run": "client_danger_setup_1793646417342616400",
+    "frames": [
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_setup_1793646417342616400_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1043265.8003268
+      }
+    ],
+    "states": []
+  }
+}
