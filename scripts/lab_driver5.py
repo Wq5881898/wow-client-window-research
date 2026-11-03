@@ -8,6 +8,7 @@ from pathlib import Path
 
 import win32con
 import win32gui
+import win32process
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -177,7 +178,8 @@ def click_client(hwnd, x, y, hold=0.3):
     """
     ensure_foreground(hwnd)
     time.sleep(0.4)
-    if win32gui.GetForegroundWindow() != hwnd:
+    front = win32gui.GetForegroundWindow()
+    if front not in (hwnd, client_surface(hwnd)):
         raise ValueError('the client is not in front, a click would land in '
                          'another window')
     click_si(x, y, hold=hold)
@@ -215,6 +217,34 @@ def game_window(tries=6):
     raise ValueError('no game window')
 
 
+def client_surface(hwnd):
+    """The window the client draws on.
+
+    In the fullscreen mode the client draws on a window of its own that
+    covers the screen, while the small window it keeps at the top left of
+    the virtual desktop only receives the input. The window in front is the
+    one that matters for a click.
+    """
+    try:
+        pid = win32process.GetWindowThreadProcessId(hwnd)[1]
+    except Exception:
+        return hwnd
+    found = []
+
+    def cb(other, _):
+        try:
+            if win32process.GetWindowThreadProcessId(other)[1] != pid:
+                return True
+            if win32gui.GetClassName(other) == 'D3DProxyWindow':
+                found.append(other)
+        except Exception:
+            pass
+        return True
+
+    win32gui.EnumWindows(cb, None)
+    return found[0] if found else hwnd
+
+
 def is_fullscreen_dummy(hwnd):
     """True when the window is the small one of the fullscreen mode.
 
@@ -250,6 +280,11 @@ def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):
         win32gui.LockSetForegroundWindow(2)  # LSFW_LOCK
     except Exception:
         pass
+    # The window the client draws on has to be in front, otherwise another
+    # window covers the client and every click lands in that window. The
+    # surface of the fullscreen mode must not be moved: changing it throws
+    # the client out of the fullscreen mode.
+    surface = client_surface(hwnd)
     try:
         win32gui.SetForegroundWindow(hwnd)
     except Exception as e:
@@ -260,6 +295,12 @@ def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):
             win32gui.SetForegroundWindow(hwnd)
         except Exception:
             pass
+    if surface != hwnd:
+        try:
+            win32gui.SetWindowPos(surface, win32con.HWND_TOPMOST, 0, 0, 0, 0,
+                                  win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
+        except Exception as exc:
+            log('raising the surface failed', exc)
     try:
         win32gui.UnlockSetForegroundWindow(1)  # LSFW_UNLOCK
     except Exception:
