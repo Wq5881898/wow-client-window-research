@@ -51,9 +51,7 @@ def main():
     print('clicking ignore at', button)
     d.click_client(hwnd, *button)
     time.sleep(1.0)
-    # The chat input may be open after the dialog was closed.
-    d.post_key(hwnd, win32con.VK_ESCAPE)
-    time.sleep(0.5)
+    # The escape key is not sent: on the login screen it closes the client.
     out = ROOT / '.cache' / 'desktop-check' / 'after-dismiss.png'
     grab_desktop().save(out)
     print('saved', out)

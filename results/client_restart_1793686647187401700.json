@@ -1,0 +1,29 @@
+{
+  "run": "client_restart_1793686647187401700",
+  "status": "RESTARTED",
+  "steps": [
+    {
+      "phase": "closed"
+    },
+    {
+      "phase": "started",
+      "how": "task"
+    },
+    {
+      "phase": "window",
+      "hwnd": 658060
+    }
+  ],
+  "evidence": {
+    "run": "client_restart_1793686647187401700",
+    "frames": [
+      {
+        "label": "01-started",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_restart_1793686647187401700_01-started.png",
+        "source": "desktop",
+        "host_monotonic": 1083529.1958621
+      }
+    ],
+    "states": []
+  }
+}

@@ -125,6 +125,10 @@ def read_or_dismiss(reader, hwnd, image=None, tries=6):
     decoded while they are on the screen. The button of the death window is
     clicked, because the character has to become a ghost anyway; the escape
     key closes the game menu.
+
+    The escape key must **not** be sent when the client shows the login
+    screen: there it closes the client, and the driver would kill the
+    client every time it looks at the login screen.
     """
     from client_capture import grab_desktop
     last = None
@@ -136,12 +140,20 @@ def read_or_dismiss(reader, hwnd, image=None, tries=6):
         if image is None:
             image = grab_desktop()
         button = find_red_button(image)
-        image = None
         if button is not None:
-            d.click_si(*button)
+            d.click_client(hwnd, *button)
             time.sleep(1.5)
-        else:
+            image = None
+            continue
+        if game_menu_open(image):
             d.post_key(hwnd, 0x1B)
             time.sleep(0.8)
+            image = None
+            continue
+        # Neither a dialog nor the menu: the client shows the login screen
+        # or the picture is simply too old. The mouse is moved to wake the
+        # client up, and the escape key is left alone.
+        nudge(hwnd)
+        image = None
     raise ValueError('the telemetry of the client cannot be read: '
                      + repr(last))
