@@ -2,6 +2,7 @@
 import json
 import os
 import subprocess
+import sys
 import time
 from pathlib import Path
 import win32con
@@ -75,6 +76,33 @@ def game_window():
     return found[0] if found else 0
 
 
+def set_fullscreen(enabled):
+    """Switch the client between the fullscreen mode and the window mode.
+
+    The client of the fullscreen mode is not exclusive: every other window
+    covers it, and it shrinks its own window when it loses the focus. The
+    window mode gives a window that can be raised, so the driver can always
+    see and click the client.
+    """
+    path = CLIENT / 'WTF' / 'Config.wtf'
+    text = path.read_text(encoding='utf-8', errors='replace')
+    wanted = 'SET gxWindow "%d"' % (1 if enabled else 0)
+    if wanted in text:
+        return wanted
+    lines = []
+    replaced = False
+    for line in text.splitlines():
+        if line.startswith('SET gxWindow'):
+            lines.append(wanted)
+            replaced = True
+        else:
+            lines.append(line)
+    if not replaced:
+        lines.append(wanted)
+    path.write_text('\n'.join(lines) + '\n', encoding='utf-8', errors='replace')
+    return wanted
+
+
 def main():
     run = 'client_restart_' + str(time.time_ns())
     result = dict(run=run, status='FAILED', steps=[])
@@ -97,6 +125,10 @@ def main():
             time.sleep(4.0)
         result['steps'].append({'phase': 'closed'})
 
+        wanted = '--fullscreen' in sys.argv
+        result['steps'].append({'phase': 'mode',
+                                'fullscreen': wanted,
+                                'config': set_fullscreen(wanted)})
         result['steps'].append({'phase': 'started',
                                 'how': start_client()})
         deadline = time.monotonic() + 120

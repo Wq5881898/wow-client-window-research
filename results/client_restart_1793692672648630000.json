@@ -1,0 +1,34 @@
+{
+  "run": "client_restart_1793692672648630000",
+  "status": "RESTARTED",
+  "steps": [
+    {
+      "phase": "closed"
+    },
+    {
+      "phase": "mode",
+      "fullscreen": false,
+      "config": "SET gxWindow \"0\""
+    },
+    {
+      "phase": "started",
+      "how": "task"
+    },
+    {
+      "phase": "window",
+      "hwnd": 8521886
+    }
+  ],
+  "evidence": {
+    "run": "client_restart_1793692672648630000",
+    "frames": [
+      {
+        "label": "01-started",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_restart_1793692672648630000_01-started.png",
+        "source": "desktop",
+        "host_monotonic": 1089550.8005113
+      }
+    ],
+    "states": []
+  }
+}
