@@ -1,0 +1,37 @@
+{
+  "run": "client_enter_1793736443736098300",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": null,
+  "expected_highlight_row": 458,
+  "error": "ValueError('the character was not selected: the highlight is at None, expected near 458')",
+  "wow_processes": [
+    "32736"
+  ],
+  "client_windows": [
+    [
+      9504992,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793736443736098300",
+    "frames": [
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793736443736098300_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 1133293.4396743
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793736443736098300_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1133294.1829791
+      }
+    ],
+    "states": []
+  }
+}

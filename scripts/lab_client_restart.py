@@ -86,7 +86,7 @@ def set_fullscreen(enabled):
     """
     path = CLIENT / 'WTF' / 'Config.wtf'
     text = path.read_text(encoding='utf-8', errors='replace')
-    wanted = 'SET gxWindow "%d"' % (1 if enabled else 0)
+    wanted = 'SET gxWindow "%d"' % (0 if enabled else 1)
     if wanted in text:
         return wanted
     lines = []
@@ -125,7 +125,7 @@ def main():
             time.sleep(4.0)
         result['steps'].append({'phase': 'closed'})
 
-        wanted = '--fullscreen' in sys.argv
+        wanted = '--window' not in sys.argv
         result['steps'].append({'phase': 'mode',
                                 'fullscreen': wanted,
                                 'config': set_fullscreen(wanted)})
