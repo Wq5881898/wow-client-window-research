@@ -28,31 +28,36 @@ def wait_for_window(timeout=180.0):
     return False
 
 
-def enter(attempts=3):
-    for attempt in range(attempts):
-        sys.argv = ['lab_client_enter_character.py', '--character', 'Probehuman']
-        if lab_client_enter_character.main() == 0:
-            return True
-        print('enter failed, waiting and trying again', flush=True)
-        time.sleep(30)
-    return False
+def enter():
+    """One try to enter the character; the caller starts over on failure."""
+    sys.argv = ['lab_client_enter_character.py', '--character', 'Probehuman']
+    return lab_client_enter_character.main() == 0
 
 
 def main():
-    print('== restart ==', flush=True)
-    lab_client_restart.main()
-    if not wait_for_window():
-        print('the client did not get a window', flush=True)
-        return 1
-    time.sleep(10)
-    print('== enter the character ==', flush=True)
-    if not enter():
-        print('could not enter the character', flush=True)
-        return 1
-    time.sleep(5)
-    print('== combat closure ==', flush=True)
-    sys.argv = ['lab_client_combat_loop.py']
-    return lab_client_combat_loop.main()
+    """Run the whole sequence, repeating it while the client leaves.
+
+    The interactive session of the machine is rebuilt every few minutes and
+    the client leaves with it. A run that dies in the middle is therefore
+    simply started again, as long as the session holds.
+    """
+    attempts = 10
+    for attempt in range(1, attempts + 1):
+        print('== attempt %d of %d ==' % (attempt, attempts), flush=True)
+        lab_client_restart.main()
+        if not wait_for_window(120.0):
+            print('the client did not get a window', flush=True)
+            continue
+        print('== enter the character ==', flush=True)
+        if not enter():
+            print('could not enter the character, starting again', flush=True)
+            continue
+        print('== combat closure ==', flush=True)
+        sys.argv = ['lab_client_combat_loop.py']
+        if lab_client_combat_loop.main() == 0:
+            return 0
+        print('the combat closure did not finish, starting again', flush=True)
+    return 1
 
 
 if __name__ == '__main__':

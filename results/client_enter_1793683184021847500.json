@@ -1,0 +1,21 @@
+{
+  "run": "client_enter_1793683184021847500",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "error": "ValueError('another window is over the client at that point, a click would land in that window')",
+  "wow_processes": [],
+  "client_windows": [],
+  "evidence": {
+    "run": "client_enter_1793683184021847500",
+    "frames": [
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793683184021847500_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1080039.1410117
+      }
+    ],
+    "states": []
+  }
+}

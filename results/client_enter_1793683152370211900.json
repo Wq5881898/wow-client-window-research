@@ -1,0 +1,25 @@
+{
+  "run": "client_enter_1793683152370211900",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "error": "ValueError('no game window')",
+  "evidence": {
+    "run": "client_enter_1793683152370211900",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793683152370211900_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 1080022.0089502
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793683152370211900_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1080024.5852395
+      }
+    ],
+    "states": []
+  }
+}

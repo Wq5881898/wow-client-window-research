@@ -15,6 +15,38 @@ ROOT = Path(__file__).resolve().parents[1]
 CLIENT = Path(r'C:\Azerothcore\wowclient\WOW_3.3.5a')
 EXE = CLIENT / 'Wow.exe'
 
+# A process that is started by a scheduled task belongs to the job of that
+# task. When the task ends, the job is closed and the client is killed with
+# it. That is why the client left a few minutes after a restart. The flag
+# takes the client out of the job; if the job does not allow that, a task of
+# its own starts it and stays alive as long as the client runs.
+DETACHED = 0x01000000
+RUN_TASK = 'WowClientRun'
+
+
+def start_client():
+    """Start the client so that it outlives the task that starts it."""
+    try:
+        subprocess.Popen([str(EXE)], cwd=str(CLIENT),
+                         creationflags=DETACHED)
+        return 'detached'
+    except Exception as exc:
+        d.log('detached start failed', repr(exc))
+    # A task that is still marked as running refuses to start a second
+    # time, so the old one is removed first. The client needs its own
+    # directory, otherwise it starts in the directory of the task and
+    # leaves again right away.
+    subprocess.run(['schtasks', '/delete', '/tn', RUN_TASK, '/f'],
+                   capture_output=True)
+    command = 'cmd /c cd /d "%s" && Wow.exe' % CLIENT
+    subprocess.run(['schtasks', '/create', '/tn', RUN_TASK, '/tr', command,
+                    '/sc', 'once', '/st', '00:00', '/f'],
+                   capture_output=True)
+    time.sleep(2.0)
+    result = subprocess.run(['schtasks', '/run', '/tn', RUN_TASK],
+                            capture_output=True)
+    return 'task' if result.returncode == 0 else 'failed'
+
 
 def hide_consoles():
     def cb(hwnd, _):
@@ -65,7 +97,8 @@ def main():
             time.sleep(4.0)
         result['steps'].append({'phase': 'closed'})
 
-        subprocess.Popen([str(EXE)], cwd=str(CLIENT))
+        result['steps'].append({'phase': 'started',
+                                'how': start_client()})
         deadline = time.monotonic() + 120
         hwnd = 0
         while time.monotonic() < deadline:

@@ -192,6 +192,12 @@ def click_client(hwnd, x, y, hold=0.3):
 
 
 def find_game_window():
+    """The window of the client that is still alive.
+
+    The client can have more than one window of this class for a short
+    time: the one that is on its way out is skipped, otherwise the caller
+    would keep getting the handle of a window that is already gone.
+    """
     found = []
 
     def cb(hwnd, _):
@@ -200,7 +206,13 @@ def find_game_window():
         return True
 
     win32gui.EnumWindows(cb, None)
-    return found[0] if found else 0
+    for hwnd in found:
+        try:
+            win32gui.GetWindowRect(hwnd)
+            return hwnd
+        except Exception:
+            continue
+    return 0
 
 
 def game_window(tries=6):

@@ -263,6 +263,28 @@ def main():
         result['status'] = 'IN_WORLD'
     except Exception as exc:
         result['error'] = repr(exc)
+        # What the client looked like when it failed.
+        try:
+            import subprocess
+            out = subprocess.run(['tasklist', '/FI', 'IMAGENAME eq Wow.exe',
+                                   '/FO', 'CSV', '/NH'], capture_output=True,
+                                  text=True, encoding='gbk', errors='replace')
+            result['wow_processes'] = [line.split(',')[1].strip('"')
+                                       for line in out.stdout.splitlines()
+                                       if line.startswith('"Wow.exe"')]
+            windows = []
+
+            def cb(hwnd, _):
+                windows.append((hwnd, win32gui.GetClassName(hwnd),
+                                win32gui.GetWindowText(hwnd)))
+                return True
+
+            win32gui.EnumWindows(cb, None)
+            result['client_windows'] = [w for w in windows
+                                        if 'Wow' in w[2] or 'D3D' in w[1]
+                                        or 'Gx' in w[1]]
+        except Exception:
+            pass
     finally:
         evidence.capture('04-end')
         path = evidence.write(result)

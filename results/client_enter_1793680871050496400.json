@@ -1,0 +1,19 @@
+{
+  "run": "client_enter_1793680871050496400",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "error": "ValueError('no game window')",
+  "evidence": {
+    "run": "client_enter_1793680871050496400",
+    "frames": [
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793680871050496400_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1077718.8856624
+      }
+    ],
+    "states": []
+  }
+}
