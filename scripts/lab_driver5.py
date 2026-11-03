@@ -170,18 +170,24 @@ def click_si(x, y, hold=0.3):
 
 
 def click_client(hwnd, x, y, hold=0.3):
-    """Click on the client, but only when the client is the front window.
+    """Click on the client, but only when the client is under the point.
 
     The client of the fullscreen mode draws on the whole screen. A click
-    that lands while another window is in front would hit that window
-    instead, so the click is refused when the client is not in front.
+    lands in the window that is on top at that place, so the window under
+    the point is checked: if it does not belong to the client, the click is
+    refused instead of hitting another window.
     """
     ensure_foreground(hwnd)
     time.sleep(0.4)
-    front = win32gui.GetForegroundWindow()
-    if front not in (hwnd, client_surface(hwnd)):
-        raise ValueError('the client is not in front, a click would land in '
-                         'another window')
+    try:
+        pid = win32process.GetWindowThreadProcessId(hwnd)[1]
+        under = win32gui.WindowFromPoint((int(x), int(y)))
+        under_pid = win32process.GetWindowThreadProcessId(under)[1]
+    except Exception:
+        pid = under_pid = None
+    if under_pid != pid:
+        raise ValueError('another window is over the client at that point, '
+                         'a click would land in that window')
     click_si(x, y, hold=hold)
 
 
@@ -280,11 +286,9 @@ def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):
         win32gui.LockSetForegroundWindow(2)  # LSFW_LOCK
     except Exception:
         pass
-    # The window the client draws on has to be in front, otherwise another
-    # window covers the client and every click lands in that window. The
-    # surface of the fullscreen mode must not be moved: changing it throws
-    # the client out of the fullscreen mode.
-    surface = client_surface(hwnd)
+    # The window the client draws on must not be moved or resized: that
+    # throws the client out of the fullscreen mode and it leaves. The
+    # foreground window is the small one that receives the input.
     try:
         win32gui.SetForegroundWindow(hwnd)
     except Exception as e:
@@ -295,12 +299,6 @@ def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):
             win32gui.SetForegroundWindow(hwnd)
         except Exception:
             pass
-    if surface != hwnd:
-        try:
-            win32gui.SetWindowPos(surface, win32con.HWND_TOPMOST, 0, 0, 0, 0,
-                                  win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
-        except Exception as exc:
-            log('raising the surface failed', exc)
     try:
         win32gui.UnlockSetForegroundWindow(1)  # LSFW_UNLOCK
     except Exception:
