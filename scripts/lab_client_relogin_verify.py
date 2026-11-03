@@ -116,7 +116,7 @@ def main():
         if logout is None:
             raise ValueError('the logout button of the client was not found')
         result['logout_button'] = logout
-        d.click_si(*logout)
+        d.click_client(hwnd, *logout)
         time.sleep(12.0)
         evidence.capture('02-after-logout')
 
@@ -124,7 +124,7 @@ def main():
         image = grab_desktop()
         if not at_character_selection(image):
             raise ValueError('the client did not reach the character selection')
-        d.click_si(*CHARACTERS[wanted])
+        d.click_client(hwnd, *CHARACTERS[wanted])
         time.sleep(1.5)
         highlight = selected_row(grab_desktop())
         result['highlight_row'] = highlight
@@ -136,7 +136,7 @@ def main():
         result['enter_world_button'] = enter
         if enter is None:
             raise ValueError('the Enter World button was not found')
-        d.click_si(*enter)
+        d.click_client(hwnd, *enter)
         time.sleep(18.0)
         hide_consoles()
         after = reader()

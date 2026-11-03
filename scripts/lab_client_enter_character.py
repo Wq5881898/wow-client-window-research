@@ -77,7 +77,7 @@ def login(hwnd):
     """Fill the account form of the login screen."""
     # The account field of the login screen, in the coordinates of the
     # picture of the client.
-    d.click_si(*picture_to_screen(hwnd, *ACCOUNT_FIELD))
+    d.click_client(hwnd, *picture_to_screen(hwnd, *ACCOUNT_FIELD))
     time.sleep(0.4)
     d.clear_field()
     d.type_text(ACCOUNT)
@@ -211,7 +211,7 @@ def main():
             result['logout_button'] = logout
             d.u.SetCursorPos(*logout)
             time.sleep(0.8)
-            d.click_si(*logout)
+            d.click_client(hwnd, *logout)
             time.sleep(12.0)
             evidence.capture('00-after-logout')
 
@@ -222,7 +222,7 @@ def main():
             evidence.capture('01-after-login')
 
         hwnd = d.game_window()
-        d.click_si(*picture_to_screen(hwnd, *point))
+        d.click_client(hwnd, *picture_to_screen(hwnd, *point))
         time.sleep(1.5)
         evidence.capture('02-picked')
         # The click can miss the entry, so the highlight is checked before
@@ -238,7 +238,7 @@ def main():
         result['enter_world_button'] = enter
         if enter is None:
             raise ValueError('the Enter World button was not found')
-        d.click_si(*enter)
+        d.click_client(hwnd, *enter)
         time.sleep(15.0)
         hide_consoles()
         hwnd = d.game_window()

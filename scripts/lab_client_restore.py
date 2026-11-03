@@ -38,13 +38,24 @@ def main():
     result['work_area'] = work_area()
     result['evidence'].append(evidence('restore-01-window'))
 
-    win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-    time.sleep(0.6)
-    # Fit the window inside the work area so the whole client is visible.
-    left, top, right, bottom = work_area()
-    width, height = right - left, bottom - top
-    win32gui.SetWindowPos(hwnd, 0, left, top, width, height, win32con.SWP_NOZORDER)
-    time.sleep(1.5)
+    # The client of the fullscreen mode keeps a small window at the top
+    # left of the virtual desktop on purpose. Restoring it or moving it
+    # would throw the client out of the fullscreen mode, so nothing is
+    # touched when the client draws on the whole screen.
+    offscreen = win32gui.GetWindowRect(hwnd)[0] < -10000
+    if offscreen:
+        result['fullscreen'] = True
+        result['notes'].append('the client is in the fullscreen mode, '
+                               'the window was not touched')
+    else:
+        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+        time.sleep(0.6)
+        # Fit the window inside the work area so the whole client is visible.
+        left, top, right, bottom = work_area()
+        width, height = right - left, bottom - top
+        win32gui.SetWindowPos(hwnd, 0, left, top, width, height,
+                              win32con.SWP_NOZORDER)
+        time.sleep(1.5)
     result['rect'] = win32gui.GetWindowRect(hwnd)
     d.ensure_foreground(hwnd)
     time.sleep(1.2)

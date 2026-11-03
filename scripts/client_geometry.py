@@ -21,10 +21,17 @@ def is_fullscreen(hwnd):
 
     In the fullscreen mode the client keeps a small window at the top left
     of the virtual desktop and draws on the screen itself, so the picture of
-    the client and the screen have the same pixels.
+    the client and the screen have the same pixels. The size tells the dummy
+    of the fullscreen mode apart from a minimized window, which keeps its
+    own size.
     """
-    left, top, right, bottom = win32gui.GetWindowRect(hwnd)
-    return left < -10000 or top < -10000
+    try:
+        left, top, right, bottom = win32gui.GetWindowRect(hwnd)
+    except Exception:
+        return False
+    if left > -10000 and top > -10000:
+        return False
+    return (right - left) < 400
 
 
 def client_origin(hwnd):

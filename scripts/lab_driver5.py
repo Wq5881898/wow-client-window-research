@@ -168,6 +168,21 @@ def click_si(x, y, hold=0.3):
     log('si clicked', x, y, 'cursor', win32gui.GetCursorPos())
 
 
+def click_client(hwnd, x, y, hold=0.3):
+    """Click on the client, but only when the client is the front window.
+
+    The client of the fullscreen mode draws on the whole screen. A click
+    that lands while another window is in front would hit that window
+    instead, so the click is refused when the client is not in front.
+    """
+    ensure_foreground(hwnd)
+    time.sleep(0.4)
+    if win32gui.GetForegroundWindow() != hwnd:
+        raise ValueError('the client is not in front, a click would land in '
+                         'another window')
+    click_si(x, y, hold=hold)
+
+
 def find_game_window():
     found = []
 
@@ -200,16 +215,37 @@ def game_window(tries=6):
     raise ValueError('no game window')
 
 
+def is_fullscreen_dummy(hwnd):
+    """True when the window is the small one of the fullscreen mode.
+
+    The client of the fullscreen mode keeps a tiny window at the top left of
+    the virtual desktop and draws on the screen itself. Windows reports that
+    window as minimized, so restoring it would throw the client out of the
+    fullscreen mode. The size tells the two apart: the dummy is a few
+    pixels wide, a minimized window keeps its own size.
+    """
+    try:
+        left, top, right, bottom = win32gui.GetWindowRect(hwnd)
+    except Exception:
+        return False
+    return (left < -10000 or top < -10000) and (right - left) < 400
+
+
 def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):
-    if not win32gui.IsWindowVisible(hwnd):
-        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-        time.sleep(0.5)
-    if win32gui.GetWindowRect(hwnd)[0] < -10000:
-        win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
-        time.sleep(0.5)
-    if win32gui.GetClassName(hwnd) != 'GxWindowClassD3d':
-        win32gui.SetWindowPos(hwnd, 0, x, y, w, h, win32con.SWP_NOZORDER)
-        time.sleep(0.5)
+    # The client of the fullscreen mode keeps a small window at the top left
+    # of the virtual desktop on purpose. It looks like a minimized window,
+    # but restoring it throws the client out of the fullscreen mode, so the
+    # state is asked from the window itself.
+    if not is_fullscreen_dummy(hwnd):
+        if win32gui.IsIconic(hwnd):
+            win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+            time.sleep(0.5)
+        if not win32gui.IsWindowVisible(hwnd):
+            win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
+            time.sleep(0.5)
+        if win32gui.GetClassName(hwnd) != 'GxWindowClassD3d':
+            win32gui.SetWindowPos(hwnd, 0, x, y, w, h, win32con.SWP_NOZORDER)
+            time.sleep(0.5)
     try:
         win32gui.LockSetForegroundWindow(2)  # LSFW_LOCK
     except Exception:

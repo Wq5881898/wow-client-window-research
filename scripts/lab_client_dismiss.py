@@ -49,7 +49,7 @@ def main():
         print('no add-on dialog on the screen')
         return 0
     print('clicking ignore at', button)
-    d.click_si(*button)
+    d.click_client(hwnd, *button)
     time.sleep(1.0)
     # The chat input may be open after the dialog was closed.
     d.post_key(hwnd, win32con.VK_ESCAPE)

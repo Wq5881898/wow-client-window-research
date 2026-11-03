@@ -39,8 +39,15 @@ CORPSE_RANGE = 0.004
 # A heading error that is worth correcting with a turn.
 TURN_TOLERANCE = 0.10
 
-# The longest time the whole task may take.
-TIME_BUDGET = 240.0
+# The longest time the whole task may take. A walk across the valley takes
+# a few minutes, so the budget has to be generous.
+TIME_BUDGET = 600.0
+
+# A walk step lasts longer when there is far to go: the reading of the
+# telemetry costs about as much time as the walk itself.
+WALK_MIN = 0.5
+WALK_MAX = 2.0
+WALK_PER_UNIT = 6.0
 
 # A step that is smaller than this does not count as movement.
 MOVEMENT_EPSILON = 0.0004
@@ -181,7 +188,10 @@ class DangerRecovery:
                             'error': error, 'distance': distance}
                 self.last_action = 'WALK'
                 return {'action': 'WALK', 'distance': distance,
-                        'target': target}
+                        'target': target,
+                        'seconds': min(WALK_MAX,
+                                       max(WALK_MIN,
+                                           distance * WALK_PER_UNIT))}
 
             # The ghost stands on the corpse: the client offers the dialog.
             self.phase = 'REVIVE'
@@ -237,4 +247,6 @@ class DangerRecovery:
             return {'action': 'TURN', 'direction': direction,
                     'error': error, 'distance': distance}
         self.last_action = 'WALK'
-        return {'action': 'WALK', 'distance': distance, 'target': target}
+        return {'action': 'WALK', 'distance': distance, 'target': target,
+                'seconds': min(WALK_MAX,
+                               max(WALK_MIN, distance * WALK_PER_UNIT))}

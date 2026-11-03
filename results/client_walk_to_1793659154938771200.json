@@ -1,0 +1,22 @@
+{
+  "run": "client_walk_to_1793659154938771200",
+  "status": "FAILED",
+  "target": [
+    0.4121,
+    0.7305
+  ],
+  "steps": [],
+  "error": "ValueError(\"the telemetry of the client cannot be read: ValueError('live telemetry absent or invalid')\")",
+  "evidence": {
+    "run": "client_walk_to_1793659154938771200",
+    "frames": [
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_to_1793659154938771200_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1056016.9342952
+      }
+    ],
+    "states": []
+  }
+}

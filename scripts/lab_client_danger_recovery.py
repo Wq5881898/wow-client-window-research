@@ -222,7 +222,7 @@ def main():
                 result['release_button'] = button
                 if button is None:
                     raise ValueError('the death window of the client was not found')
-                d.click_si(*button)
+                d.click_client(hwnd, *button)
                 time.sleep(2.0)
                 continue
             if action['action'] == 'TURN':
@@ -234,7 +234,7 @@ def main():
                 continue
             if action['action'] == 'WALK':
                 note('walk', detail)
-                hold(VK_FORWARD, 0.8, hwnd)
+                hold(VK_FORWARD, action.get('seconds', 0.8), hwnd)
                 continue
             if action['action'] == 'ACCEPT':
                 note('accept', detail)
@@ -247,7 +247,7 @@ def main():
                     # upper half of the picture of the client.
                     button = picture_to_screen(hwnd, *action['point'])
                 for _ in range(40):
-                    d.click_si(*button)
+                    d.click_client(hwnd, *button)
                     time.sleep(1.5)
                     state = read_or_dismiss(reader, d.game_window())
                     if not state['dead']:

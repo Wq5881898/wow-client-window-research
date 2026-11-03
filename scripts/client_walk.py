@@ -50,5 +50,7 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
             seconds = min(1.1, max(0.06, abs(error) / TURN_RATE))
             hold(VK_LEFT if error > 0 else VK_RIGHT, seconds, hwnd)
         else:
-            hold(VK_FORWARD, 0.8, hwnd)
+            # The reading of the telemetry costs about as much time as the
+            # walk, so a long way is covered with longer steps.
+            hold(VK_FORWARD, min(2.0, max(0.5, distance * 6.0)), hwnd)
     return distance

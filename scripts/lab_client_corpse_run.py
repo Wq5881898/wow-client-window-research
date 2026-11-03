@@ -188,7 +188,7 @@ def main():
                     # upper half of the picture of the client.
                     button = picture_to_screen(hwnd, *action['point'])
                 for attempt in range(40):
-                    d.click_si(*button)
+                    d.click_client(hwnd, *button)
                     time.sleep(1.5)
                     state = read_or_dismiss(reader, d.game_window())
                     if not state['dead']:
