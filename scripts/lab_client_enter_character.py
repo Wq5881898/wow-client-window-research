@@ -16,7 +16,7 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_chat_guard import close_world_map
 from client_geometry import picture_to_screen
-from client_read_fresh import (game_menu_open, find_logout_button,
+from client_read_fresh import (game_menu_open, find_logout_button, open_menu_logout, release_spirit,
                              read_or_dismiss)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,7 +42,9 @@ EXPECTED_HEALTH = {
     'Syra': (120, 160),
     'Wao': (3000, 4000),
     'Good': (3000, 4000),
-    'Probehuman': (40, 60),
+    # The character gains levels in the experiments, so the health is only
+    # a coarse proof of the identity.
+    'Probehuman': (40, 200),
 }
 
 
@@ -198,14 +200,7 @@ def main():
         if inside_the_world(grab_desktop(), reader):
             # The menu of the client has to be open before the logout can
             # be clicked, so it is opened and checked.
-            logout = None
-            for _ in range(4):
-                image = grab_desktop()
-                logout = find_logout_button(image)
-                if logout is not None:
-                    break
-                d.post_key(hwnd, win32con.VK_ESCAPE)
-                time.sleep(1.2)
+            logout = open_menu_logout(hwnd)
             if logout is None:
                 raise ValueError('the logout button of the client was not found')
             result['logout_button'] = logout
@@ -252,7 +247,26 @@ def main():
         result['position'] = [state['pos_x'], state['pos_y']]
         evidence.capture('03-in-world', state)
         if state['dead']:
-            raise ValueError('the character entered the world as a ghost')
+            # The server kept the character as a ghost, because the client
+            # was closed while it was dead. The window of the death is
+            # closed, so the character comes back at the graveyard and the
+            # run can go on.
+            button = release_spirit(hwnd)
+            result['release_button'] = button
+            evidence.capture('03b-ghost-released')
+            if button is None:
+                raise ValueError('the character entered the world as a ghost '
+                                 'and the death window was not found')
+            time.sleep(4.0)
+            state = reader()
+            result['after_release'] = {'health': state['health'],
+                                       'dead': state['dead'],
+                                       'position': [state['pos_x'],
+                                                    state['pos_y']]}
+            evidence.capture('03c-released', state)
+            if state['dead']:
+                raise ValueError('the character stayed a ghost after the '
+                                 'release of the spirit')
         # The health proves which character was entered.
         low, high = EXPECTED_HEALTH.get(wanted, (0, 100000))
         result['health_expected'] = [low, high]

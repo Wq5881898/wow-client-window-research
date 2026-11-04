@@ -5,6 +5,7 @@ casts are budgeted, health has a floor, and the run ends with a survival check
 rather than a cast count.
 """
 import json
+import sys
 import threading
 import time
 from pathlib import Path
@@ -19,6 +20,7 @@ from client_evidence import Evidence
 from client_retreat import break_engagement
 from client_facing import CastProbe, sweep_toward
 from client_chat_guard import ensure_chat_closed
+from client_walk import walk_to
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
@@ -132,6 +134,19 @@ def move_while_watching(hwnd, vk, seconds, reader, deadline_check=None):
     return states
 
 
+def tab_target(hwnd, reader, steps=8):
+    """Select a hostile creature with the tab key."""
+    for _ in range(steps):
+        d.post_key(hwnd, win32con.VK_TAB)
+        time.sleep(0.5)
+        candidate = reader()
+        if (candidate['target_exists']
+                and candidate['target_attackable']
+                and candidate['target_health'] > 1):
+            return candidate
+    return None
+
+
 def main():
     run = 'client_combat_' + str(time.time_ns())
     result = dict(run=run, status='FAILED', timeline=[], errors=[])
@@ -166,15 +181,19 @@ def main():
         if target_name:
             state = send_command(hwnd, '/target ' + target_name, reader)
         else:
-            for _ in range(6):
-                d.post_key(hwnd, win32con.VK_TAB)
-                time.sleep(0.5)
-                candidate = reader()
-                if (candidate['target_exists']
-                        and candidate['target_attackable']
-                        and candidate['target_health'] > 1):
-                    state = candidate
-                    break
+            state = tab_target(hwnd, reader)
+            if state is None:
+                # The creatures roam, so the character walks to the place
+                # where they were seen before and looks again.
+                spot = (0.50390, 0.44147)
+                if '--walk-to' in sys.argv:
+                    index = sys.argv.index('--walk-to')
+                    spot = (float(sys.argv[index + 1]),
+                            float(sys.argv[index + 2]))
+                note('walk-to', list(spot))
+                walk_to(d.game_window(), reader, spot, timeout=90.0)
+                evidence.capture('01b-walked', None)
+                state = tab_target(hwnd, reader)
         if not state or not state['target_exists'] or not state['target_attackable']:
             raise ValueError('could not acquire a hostile target')
         if state.get('target_class', 1) > 1:

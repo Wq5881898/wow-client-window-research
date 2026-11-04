@@ -104,6 +104,50 @@ def game_menu_open(image):
     return len(menu_buttons(image)) >= 6
 
 
+def open_menu_logout(hwnd, tries=8):
+    """Open the menu of the client and return the logout button.
+
+    The escape key closes the menu again, so it is only sent while the menu
+    is not on the screen. The client is put in front first: the key is sent
+    as real input and goes to the window that has the focus.
+    """
+    from client_capture import grab_desktop
+    for attempt in range(tries):
+        d.ensure_foreground(hwnd)
+        time.sleep(0.6)
+        image = grab_desktop()
+        if game_menu_open(image):
+            logout = find_logout_button(image)
+            if logout is not None:
+                return logout
+            # The menu is open but the button was not found. The picture
+            # may be too old, so it is taken again.
+            time.sleep(1.0)
+            continue
+        d.post_key(hwnd, 0x1B)
+        time.sleep(1.5)
+    return None
+
+
+def release_spirit(hwnd, tries=6):
+    """Close the window of the death, so the character becomes a ghost.
+
+    The button of the window is the only red button in the upper half of
+    the screen.
+    """
+    from client_capture import grab_desktop
+    for attempt in range(tries):
+        image = grab_desktop()
+        button = find_red_button(image)
+        if button is not None:
+            d.click_client(hwnd, *button)
+            time.sleep(2.0)
+            return button
+        d.ensure_foreground(hwnd)
+        time.sleep(0.5)
+    return None
+
+
 def read_fresh(reader, hwnd, tries=4, wait=0.8):
     """Return a state whose sequence moved on since the reading before."""
     state = reader()

@@ -16,7 +16,7 @@ from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_read_fresh import (read_or_dismiss, find_logout_button,
-                                find_red_button)
+                                find_red_button, open_menu_logout)
 
 ROOT = Path(__file__).resolve().parents[1]
 CHARACTERS = {
@@ -29,7 +29,9 @@ EXPECTED_HEALTH = {
     'Syra': (120, 160),
     'Wao': (3000, 4000),
     'Good': (3000, 4000),
-    'Probehuman': (40, 60),
+    # The character gains levels in the experiments, so the health is only
+    # a coarse proof of the identity.
+    'Probehuman': (40, 200),
 }
 
 
@@ -105,14 +107,7 @@ def main():
         evidence.capture('01-before', before)
 
         # Open the menu of the client and leave the game with the logout.
-        logout = None
-        for _ in range(4):
-            image = grab_desktop()
-            logout = find_logout_button(image)
-            if logout is not None:
-                break
-            d.post_key(hwnd, win32con.VK_ESCAPE)
-            time.sleep(1.2)
+        logout = open_menu_logout(hwnd)
         if logout is None:
             raise ValueError('the logout button of the client was not found')
         result['logout_button'] = logout
