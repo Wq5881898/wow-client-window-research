@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import win32gui
 from client_capture import grab_desktop
-from client_live_state import decode, assert_real_frame
+from client_live_state import decode, assert_real_frame, name_hash
 import lab_driver5 as d
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,8 +35,10 @@ def main():
         state = decode(assert_real_frame(grab_desktop()))
         report['telemetry'] = 'ok'
         for key in ('protocol', 'health', 'max_health', 'dead', 'combat',
-                    'pos_x', 'pos_y', 'facing', 'corpse_exists'):
+                    'pos_x', 'pos_y', 'facing', 'corpse_exists',
+                    'player_guid', 'target_name_hash', 'target_guid'):
             report[key] = state.get(key)
+        report['hash_of_probehuman'] = name_hash('Probehuman')
     except Exception as exc:
         report['telemetry'] = 'failed: %r' % (exc,)
     OUT.mkdir(parents=True, exist_ok=True)

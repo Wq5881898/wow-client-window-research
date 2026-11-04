@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 8
+local PROTOCOL = 9
 local QUEUE = 4
-local DATA_BYTES = 115
+local DATA_BYTES = 125
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -85,6 +85,18 @@ local function target_distance()
   local ok, value = pcall(UnitDistance, "player", "target")
   if not ok or not value then return 65535 end
   return value
+end
+
+-- The hash of a name. The byte strip of the panel carries numbers only,
+-- so the name of the target travels as a hash of it. The same hash is
+-- computed in Python to compare the name the driver wants with the name
+-- the client shows.
+local function name_hash(text)
+  local hash = 5381
+  for i = 1, #text do
+    hash = (hash * 33 + string.byte(text, i)) % 65536
+  end
+  return hash
 end
 
 local function push(kind, id, reason)
@@ -190,7 +202,7 @@ local function update()
     end
   end
   number(PROTOCOL, 1)
-  number(115, 1)
+  number(DATA_BYTES, 1)
   number(sequence, 2)
   number(math.floor(GetTime() * 1000) % 4294967296, 4)
   number(UnitHealth("player"), 2)
@@ -245,6 +257,13 @@ local function update()
     number(slot.at, 4)
     number(slot.reason, 1)
   end
+  -- The GUID of the player, so a record of a run names the character that
+  -- made it, and the name of the target as a hash. Both are written before
+  -- the checksum, so the checksum covers them.
+  -- The GUID of the player, the same way the GUID of the target is read.
+  local player_guid = UnitGUID("player") or "0x0000000000000000"
+  for j = 3, 18, 2 do number(tonumber(string.sub(player_guid, j, j + 1), 16) or 0, 1) end
+  number(name_hash(UnitName("target") or ""), 2)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
@@ -266,7 +285,8 @@ local function update()
   text:SetText(string.format("LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
     .. "Corpse exists=%s at=%.5f,%.5f\n"
-    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f",
+    .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
+    .. " player=%s",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -275,7 +295,7 @@ local function update()
     tostring(corpse_exists == 1), corpse_x, corpse_y,
     events.serial, events.started,
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
-    last.error_reason, chat_open(), target_distance()))
+    last.error_reason, chat_open(), target_distance(), UnitGUID("player") or ""))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)

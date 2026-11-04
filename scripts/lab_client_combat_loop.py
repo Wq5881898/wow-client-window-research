@@ -13,7 +13,7 @@ import win32con
 import win32gui
 import lab_driver5 as d
 from client_capture import grab_desktop
-from client_live_state import decode, assert_real_frame
+from client_live_state import decode, assert_real_frame, name_hash
 from client_window_state import window_observable
 from client_combat_controller import CombatController, LOW_HEALTH_RATIO
 from client_evidence import Evidence
@@ -29,6 +29,13 @@ FIREBALL = 133
 # creature of level six has about a hundred and twenty health, and the
 # character deals about twenty one points per cast.
 MAX_TARGET_HEALTH = 130
+# How long the character has to be watched after the fight before the run
+# may call it a success.
+SURVIVAL_OBSERVATION = 30.0
+# The places where the creatures of the valley were seen before. They roam,
+# so the driver walks over them until it finds one.
+SWEEP_SPOTS = [(0.50390, 0.44147), (0.51000, 0.44800), (0.49800, 0.43200),
+               (0.50800, 0.43600)]
 VK_FORWARD = 0x57
 VK_BACK = 0x53
 MAX_HOLD = 2.0
@@ -134,16 +141,31 @@ def move_while_watching(hwnd, vk, seconds, reader, deadline_check=None):
     return states
 
 
-def tab_target(hwnd, reader, steps=8):
-    """Select a hostile creature with the tab key."""
+def tab_target(hwnd, reader, steps=8, prefer_hash=None):
+    """Select a hostile creature with the tab key.
+
+    When a name hash is given, the creature with that name is preferred; the
+    probe reports the name of the target as a hash, so the driver can lock
+    a creature without reading any text.
+    """
+    named = []
+    found = []
     for _ in range(steps):
         d.post_key(hwnd, win32con.VK_TAB)
         time.sleep(0.5)
         candidate = reader()
-        if (candidate['target_exists']
+        if not (candidate['target_exists']
                 and candidate['target_attackable']
                 and candidate['target_health'] > 1):
-            return candidate
+            continue
+        if prefer_hash is not None:
+            if candidate.get('target_name_hash') == prefer_hash:
+                named.append(candidate)
+        found.append(candidate)
+    if named:
+        return named[0]
+    if found:
+        return found[0]
     return None
 
 
@@ -166,8 +188,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5, 6, 7, 8):
-            raise ValueError('protocol 4 to 8 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6, 7, 8, 9):
+            raise ValueError('protocol 4 to 9 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
@@ -177,23 +199,33 @@ def main():
         # the nearest hostile unit in view, which works even when the name of
         # the creature is not known to the caller.
         target_name = result.get('target')
+        prefer_hash = None
+        if '--target-name' in sys.argv:
+            index = sys.argv.index('--target-name')
+            target_name = sys.argv[index + 1]
+            prefer_hash = name_hash(target_name)
+            result['target_name_hash'] = prefer_hash
         state = None
-        if target_name:
+        if target_name and prefer_hash is None:
             state = send_command(hwnd, '/target ' + target_name, reader)
         else:
-            state = tab_target(hwnd, reader)
+            state = tab_target(hwnd, reader, prefer_hash=prefer_hash)
             if state is None:
-                # The creatures roam, so the character walks to the place
+                # The creatures roam, so the character walks over the places
                 # where they were seen before and looks again.
-                spot = (0.50390, 0.44147)
+                spots = list(SWEEP_SPOTS)
                 if '--walk-to' in sys.argv:
                     index = sys.argv.index('--walk-to')
                     spot = (float(sys.argv[index + 1]),
                             float(sys.argv[index + 2]))
-                note('walk-to', list(spot))
-                walk_to(d.game_window(), reader, spot, timeout=90.0)
-                evidence.capture('01b-walked', None)
-                state = tab_target(hwnd, reader)
+                    spots = [spot] + spots
+                note('sweep', [list(spot) for spot in spots])
+                for spot in spots:
+                    walk_to(d.game_window(), reader, spot, timeout=45.0)
+                    evidence.capture('01b-walked', None)
+                    state = tab_target(hwnd, reader, prefer_hash=prefer_hash)
+                    if state is not None:
+                        break
         if not state or not state['target_exists'] or not state['target_attackable']:
             raise ValueError('could not acquire a hostile target')
         if state.get('target_class', 1) > 1:
@@ -204,6 +236,7 @@ def main():
                              + str(state['target_health']))
         target_guid = state['target_guid']
         result['target_guid'] = target_guid
+        result['target_name_hash_seen'] = state.get('target_name_hash')
         result['target_name'] = target_name or 'tab-selected'
         result['target_health_at_start'] = state['target_health']
         evidence.capture('02-target-acquired', state)
@@ -240,8 +273,16 @@ def main():
         while time.monotonic() < deadline:
             state = reader()
             if not window_observable(hwnd):
-                raise ValueError('client window not observable')
-            decision = controller.observe(state, time.monotonic())
+                # The client is not in front any more. The observation is
+                # lost, so the run goes into the recovery branch: the
+                # character turns away and runs. Waiting for the picture to
+                # come back would leave it in the fight.
+                note('lost_observation', {'observable': False,
+                                          'health': state['health'],
+                                          'combat': state['combat']})
+                decision = {'decision': 'RECOVER', 'reason': 'lost_observation'}
+            else:
+                decision = controller.observe(state, time.monotonic())
             note('observe', decision)
 
             if decision['decision'] == 'CAST_ALLOWED':
@@ -339,22 +380,31 @@ def main():
         if final is None:
             raise ValueError('combat loop ended without a verdict')
 
-        # Survival check: alive, out of combat and still for a sustained period.
+        # Survival check: the character has to be alive, out of combat and
+        # still for a sustained period. The observation after the fight is
+        # at least SURVIVAL_OBSERVATION seconds long, because a character
+        # that is still in combat a moment after the run looks safe.
         quiet = 0
-        deadline = time.monotonic() + 20
-        while time.monotonic() < deadline:
+        observed = 0.0
+        deadline = time.monotonic() + SURVIVAL_OBSERVATION + 60
+        last = time.monotonic()
+        while observed < SURVIVAL_OBSERVATION and time.monotonic() < deadline:
             state = reader()
+            now = time.monotonic()
+            observed += now - last
+            last = now
             if state['dead']:
                 raise ValueError('player died during the run')
             if state['combat']:
                 quiet = 0
             else:
                 quiet += 1
-                if quiet >= 6:
-                    break
             time.sleep(0.4)
+        result['survival_observation'] = round(observed, 1)
         if state['combat']:
             raise ValueError('still in combat at the end of the run')
+        if state['dead']:
+            raise ValueError('the character is dead at the end of the run')
         evidence.capture('05-end', state)
         result['final'] = state
         result['status'] = 'COMBAT_LOOP_COMPLETED'

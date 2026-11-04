@@ -2,8 +2,9 @@
 import unittest
 from client_live_layout import (
     CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT, V7_LAYOUT,
-    V8_LAYOUT, parse_lua_layout, offsets)
+    V8_LAYOUT, V9_LAYOUT, parse_lua_layout, offsets)
 import client_live_state
+from client_live_layout import PROBE
 
 
 class LayoutTests(unittest.TestCase):
@@ -12,14 +13,37 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V8_DATA_BYTES)
-        self.assertEqual(client_live_state.V8_TOTAL, total)
+        self.assertEqual(total, client_live_state.V9_DATA_BYTES)
+        self.assertEqual(client_live_state.V9_TOTAL, total)
         for layout, name in ((V3_LAYOUT, 'V3'), (V4_LAYOUT, 'V4'),
                              (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6'),
                              (V7_LAYOUT, 'V7')):
             _, layout_total = offsets(layout)
             self.assertEqual(layout_total,
                              getattr(client_live_state, name + '_DATA_BYTES'))
+
+    def test_the_bytes_the_probe_writes_match_the_layout(self):
+        # The length byte of the probe is written from its own constant, so
+        # the constant and the layout have to agree.
+        source = PROBE.read_text(encoding='utf-8')
+        declared = int(source.split('local DATA_BYTES = ')[1].split('\n')[0])
+        _, total = offsets(CURRENT_LAYOUT)
+        self.assertEqual(declared, total)
+
+    def test_the_ninth_protocol_adds_the_player_and_the_target_name(self):
+        positions, total = offsets(V9_LAYOUT)
+        self.assertEqual(client_live_state.V9_DATA_BYTES, total)
+        self.assertEqual(positions['player_guid'][0], 113)
+        self.assertEqual(positions['target_name_hash'][0], 121)
+        self.assertEqual(positions['checksum'][0], 123)
+        self.assertEqual(positions['weighted'][0], 124)
+
+    def test_the_hash_of_a_name_is_the_same_in_both_languages(self):
+        # The probe computes the hash in Lua, the driver in Python.
+        self.assertEqual(client_live_state.name_hash(''), 5381)
+        self.assertEqual(client_live_state.name_hash('a'),
+                         (5381 * 33 + 97) % 65536)
+        self.assertEqual(client_live_state.name_hash('Probehuman'), 7254)
 
     def test_decoder_uses_shared_offsets(self):
         self.assertEqual(client_live_state.V3_OFFSETS['health'][0], 8)

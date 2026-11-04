@@ -17,13 +17,16 @@ from client_evidence import Evidence
 from client_chat_guard import ensure_chat_closed, ensure_no_modal
 from client_read_fresh import read_fresh
 from client_walk import walk_to
-from client_target import select_hostile
+from client_target import select_hostile, sweep_for_hostile
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
 VK_FORWARD = 0x57
 VK_LEFT = 0x25
 TARGET_NAME = 'Diseased Young Wolf'
+# The places where the creatures of the valley were seen before.
+SWEEP_SPOTS = [(0.50390, 0.44147), (0.51000, 0.44800), (0.49800, 0.43200),
+               (0.50800, 0.43600)]
 DEADLINE = 240.0
 
 
@@ -212,6 +215,10 @@ def main():
                 raise ValueError('no hostile on the route')
         else:
             state = select_hostile(hwnd, reader)
+            if state is None:
+                # The creatures roam, so the driver walks over the places
+                # where they were seen before and looks again.
+                state = sweep_for_hostile(hwnd, reader, SWEEP_SPOTS)
         if state is None:
             raise ValueError('could not acquire a hostile target')
         result['target_guid'] = state['target_guid']

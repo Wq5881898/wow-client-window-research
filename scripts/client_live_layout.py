@@ -117,7 +117,27 @@ V8_LAYOUT = [
     ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V8_LAYOUT
+# Protocol v9: adds the GUID of the player and the name of the target.
+# The records of a run have to name the character that made them, and the
+# driver has to be able to lock a creature by its name; the name travels
+# as a hash, because the byte strip of the panel carries numbers only.
+V9_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('corpse_x', 2),
+    ('corpse_y', 2), ('corpse_exists', 1), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('player_guid', 8),
+    ('target_name_hash', 2), ('checksum', 1), ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V9_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
@@ -127,6 +147,7 @@ EXPRESSION_NAMES = {
     '109': 'length',
     '110': 'length',
     '115': 'length',
+    'DATA_BYTES': 'length',
     'sequence': 'sequence',
     'math.floor(GetTime() * 1000) % 4294967296': 'game_ms',
     'UnitHealth("player")': 'health',
@@ -163,6 +184,7 @@ EXPRESSION_NAMES = {
     'classification': 'target_class',
     'UnitBuff("player", GetSpellInfo(168)) and 1 or 0': 'frost_armor',
     'chat_open()': 'chat_open',
+    'name_hash(UnitName("target") or "")': 'target_name_hash',
     'math.floor(target_distance() * 10)': 'target_distance',
     'checksum': 'checksum',
     'weighted % 256': 'weighted',
@@ -181,9 +203,12 @@ def parse_lua_layout(source=None):
     body = GUID_LOOP.sub('\x00GUID\x00', body)
     body = QUEUE_LOOP.sub('\x00QUEUE\x00', body)
     layout = []
+    guid_count = 0
     for chunk in re.split(r'[\x00]', body):
         if chunk == 'GUID':
-            layout.append(('target_guid', 8))
+            # The first GUID is the target, the second one the player.
+            guid_count += 1
+            layout.append(('target_guid' if guid_count == 1 else 'player_guid', 8))
             continue
         if chunk == 'QUEUE':
             layout.append(('event_queue', 40))
