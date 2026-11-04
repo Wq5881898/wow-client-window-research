@@ -148,6 +148,7 @@ def main():
                       'phase': machine.phase, 'dead': state['dead'],
                       'health': state['health']}
             if action['action'] == 'DONE':
+                threat_deadline = time.monotonic() + 30.0
                 if die_again and stage == 'walk-back':
                     # The character is back at the graveyard. It walks into
                     # the danger zone once more, so the task can show what
@@ -209,10 +210,26 @@ def main():
                         stage = 'home'
                         continue
                     continue
+                # The character is at the graveyard, but the place is not
+                # safe: the wolves of the valley hunt there. The run is
+                # only finished when the aggro is really gone, which the
+                # threat of the probe shows.
+                threat = state.get('threat')
+                if threat and time.monotonic() < threat_deadline:
+                    note('threat-left', {'threat': threat,
+                                          'combat': state['combat']})
+                    time.sleep(1.0)
+                    continue
+                if threat:
+                    # The creatures of the valley watch the graveyard, so
+                    # the threat may stay for a while. The run waits for it
+                    # a limited time and reports it then.
+                    result['threat_left'] = threat
                 result['status'] = 'RECOVERED'
                 result['final'] = {'health': state['health'],
                                    'dead': state['dead'],
                                    'combat': state['combat'],
+                                   'threat': threat,
                                    'graveyard': machine.graveyard}
                 if die_again:
                     result['second_death'] = ('happened'

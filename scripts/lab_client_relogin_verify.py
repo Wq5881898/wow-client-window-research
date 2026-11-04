@@ -141,6 +141,7 @@ def main():
         after = reader()
         result['after'] = {'health': after['health'], 'dead': after['dead'],
                            'combat': after['combat'],
+                           'threat': after.get('threat'),
                            'position': [after['pos_x'], after['pos_y']],
                            'corpse_exists': after.get('corpse_exists'),
                            'speed': after.get('speed')}
@@ -148,6 +149,10 @@ def main():
         low, high = EXPECTED_HEALTH.get(wanted, (0, 100000))
         if after['dead']:
             raise ValueError('the character is dead after the log in')
+        if after.get('threat'):
+            raise ValueError('the character is still in the list of a '
+                             'creature after the log in: threat %s'
+                             % after.get('threat'))
         if not low <= after['health'] <= high:
             raise ValueError('the health after the log in is %d, expected %d-%d'
                              % (after['health'], low, high))
