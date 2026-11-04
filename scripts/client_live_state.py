@@ -3,7 +3,7 @@ import time
 from PIL import Image
 from client_live_layout import (V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT,
                                  V7_LAYOUT, V8_LAYOUT, V9_LAYOUT,
-                                 V10_LAYOUT, offsets)
+                                 V10_LAYOUT, V11_LAYOUT, offsets)
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
@@ -16,6 +16,7 @@ V7_DATA_BYTES = 110
 V8_DATA_BYTES = 115
 V9_DATA_BYTES = 125
 V10_DATA_BYTES = 126
+V11_DATA_BYTES = 133
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
 V5_CELLS = 111
@@ -24,6 +25,7 @@ V7_CELLS = 114
 V8_CELLS = 119
 V9_CELLS = 129
 V10_CELLS = 130
+V11_CELLS = 137
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
 V4_TRAILER_OFFSET = 109
 V5_TRAILER_OFFSET = 110
@@ -32,6 +34,7 @@ V7_TRAILER_OFFSET = 113
 V8_TRAILER_OFFSET = 118
 V9_TRAILER_OFFSET = 128
 V10_TRAILER_OFFSET = 129
+V11_TRAILER_OFFSET = 136
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
 V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
 V5_OFFSETS, V5_TOTAL = offsets(V5_LAYOUT)
@@ -40,6 +43,7 @@ V7_OFFSETS, V7_TOTAL = offsets(V7_LAYOUT)
 V8_OFFSETS, V8_TOTAL = offsets(V8_LAYOUT)
 V9_OFFSETS, V9_TOTAL = offsets(V9_LAYOUT)
 V10_OFFSETS, V10_TOTAL = offsets(V10_LAYOUT)
+V11_OFFSETS, V11_TOTAL = offsets(V11_LAYOUT)
 
 # The spells the probe reports in the spell_bits field.
 SPELL_BITS = {
@@ -307,6 +311,16 @@ def _decode_v10(data):
     return result
 
 
+def _decode_v11(data):
+    result = _decode_v10(data)
+    result['level'] = data[V11_OFFSETS['level'][0]]
+    offset, size = V11_OFFSETS['xp']
+    result['xp'] = int.from_bytes(data[offset:offset + size], 'little')
+    offset, size = V11_OFFSETS['xp_max']
+    result['xp_max'] = int.from_bytes(data[offset:offset + size], 'little')
+    return result
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -388,6 +402,13 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V10_DATA_BYTES):
             return None
         return version, _decode_v10(data)
+    if version == 11:
+        if header[1] != V11_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V11_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V11_DATA_BYTES):
+            return None
+        return version, _decode_v11(data)
     return None
 
 
@@ -398,7 +419,8 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V10_TRAILER_OFFSET, V9_TRAILER_OFFSET,
+            for offset in (V11_TRAILER_OFFSET, V10_TRAILER_OFFSET,
+                           V9_TRAILER_OFFSET,
                            V8_TRAILER_OFFSET,
                            V7_TRAILER_OFFSET, V6_TRAILER_OFFSET,
                            V5_TRAILER_OFFSET, V4_TRAILER_OFFSET,

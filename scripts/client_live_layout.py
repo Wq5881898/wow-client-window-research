@@ -157,7 +157,27 @@ V10_LAYOUT = [
     ('target_name_hash', 2), ('threat', 1), ('checksum', 1), ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V10_LAYOUT
+# Protocol v11: adds the level of the character and its experience. A run
+# that is about the level can be checked without reading the text of the
+# panel.
+V11_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('corpse_x', 2),
+    ('corpse_y', 2), ('corpse_exists', 1), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('player_guid', 8),
+    ('target_name_hash', 2), ('threat', 1), ('level', 1), ('xp', 3),
+    ('xp_max', 3), ('checksum', 1), ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V11_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
@@ -206,6 +226,9 @@ EXPRESSION_NAMES = {
     'chat_open()': 'chat_open',
     'name_hash(UnitName("target") or "")': 'target_name_hash',
     'threat_situation()': 'threat',
+    'UnitLevel("player") or 0': 'level',
+    'math.floor(UnitXP("player") or 0)': 'xp',
+    'math.floor(UnitXPMax("player") or 0)': 'xp_max',
     'math.floor(target_distance() * 10)': 'target_distance',
     'checksum': 'checksum',
     'weighted % 256': 'weighted',

@@ -192,8 +192,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5, 6, 7, 8, 9, 10):
-            raise ValueError('protocol 4 to 10 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6, 7, 8, 9, 10, 11):
+            raise ValueError('protocol 4 to 11 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
@@ -356,8 +356,14 @@ def main():
                 # facing readout, so the turn is blind and the error code
                 # decides when the target came into view. The sweep turns a
                 # small step and casts again until the cast succeeds.
+                # The cast of the sweep needs the heartbeat as well: the
+                # sweep turns and casts for a while, and without the
+                # heartbeat the freshness of the telemetry would look stale
+                # and the run would go into the recovery.
                 probe = CastProbe(
-                    lambda: cast(hwnd, '/cast Fireball', reader),
+                    lambda: cast(hwnd, '/cast Fireball', reader,
+                                 on_tick=lambda s: controller.heartbeat(
+                                     s, time.monotonic())),
                     reader, settle=0)
                 steps, after_state = sweep_toward(probe, max_steps=18,
                                                   hwnd=hwnd)

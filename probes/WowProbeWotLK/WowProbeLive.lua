@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 10
+local PROTOCOL = 11
 local QUEUE = 4
-local DATA_BYTES = 126
+local DATA_BYTES = 133
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -275,6 +275,11 @@ local function update()
   for j = 3, 18, 2 do number(tonumber(string.sub(player_guid, j, j + 1), 16) or 0, 1) end
   number(name_hash(UnitName("target") or ""), 2)
   number(threat_situation(), 1)
+  -- The level of the character and its experience, so a run that is about
+  -- the level can be checked without reading the text of the panel.
+  number(UnitLevel("player") or 0, 1)
+  number(math.floor(UnitXP("player") or 0), 3)
+  number(math.floor(UnitXPMax("player") or 0), 3)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
@@ -297,7 +302,7 @@ local function update()
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
     .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
-    .. " player=%s threat=%d",
+    .. " player=%s threat=%d level=%d xp=%d/%d",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -307,7 +312,8 @@ local function update()
     events.serial, events.started,
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
     last.error_reason, chat_open(), target_distance(), UnitGUID("player") or "",
-    threat_situation()))
+    threat_situation(), UnitLevel("player") or 0, UnitXP("player") or 0,
+    UnitXPMax("player") or 0))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)

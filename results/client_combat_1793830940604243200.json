@@ -1,0 +1,170 @@
+{
+  "run": "client_combat_1793830940604243200",
+  "status": "FAILED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 1227785.278599,
+      "detail": {
+        "health": 67,
+        "position": [
+          0.5025711451895933,
+          0.43437857633325705
+        ]
+      }
+    },
+    {
+      "phase": "sweep",
+      "host_monotonic": 1227791.3076047,
+      "detail": [
+        [
+          0.5039,
+          0.44147
+        ],
+        [
+          0.51,
+          0.448
+        ],
+        [
+          0.498,
+          0.432
+        ],
+        [
+          0.508,
+          0.436
+        ]
+      ]
+    }
+  ],
+  "errors": [],
+  "target_name_hash": 46929,
+  "error": "ValueError('could not acquire a hostile target')",
+  "evidence": {
+    "run": "client_combat_1793830940604243200",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1227785.2785891
+      },
+      {
+        "label": "01b-walked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_01b-walked.png",
+        "source": "desktop",
+        "host_monotonic": 1227806.847097
+      },
+      {
+        "label": "01b-walked-02",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_01b-walked-02.png",
+        "source": "desktop",
+        "host_monotonic": 1227836.8998153
+      },
+      {
+        "label": "01b-walked-03",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_01b-walked-03.png",
+        "source": "desktop",
+        "host_monotonic": 1227885.1253878
+      },
+      {
+        "label": "01b-walked-04",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_01b-walked-04.png",
+        "source": "desktop",
+        "host_monotonic": 1227936.6617505
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793830940604243200_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 1227943.1492709
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 34995,
+          "game_ms": 1227784551,
+          "health": 67,
+          "max_health": 67,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045000AF1",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.5025711451895933,
+          "pos_y": 0.43437857633325705,
+          "facing": 4.159443911792905,
+          "event_serial": 81,
+          "cast_started": 36,
+          "cast_succeeded": 35,
+          "cast_failed": 6,
+          "ui_errors": 4,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1227608517,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 80,
+              "kind": 1,
+              "spell": 133,
+              "at": 1227606567,
+              "reason": 0
+            },
+            {
+              "serial": 81,
+              "kind": 2,
+              "spell": 133,
+              "at": 1227608517,
+              "reason": 0
+            },
+            {
+              "serial": 78,
+              "kind": 1,
+              "spell": 133,
+              "at": 1227601817,
+              "reason": 0
+            },
+            {
+              "serial": 79,
+              "kind": 2,
+              "spell": 133,
+              "at": 1227603250,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 4,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 2,
+          "xp": 822,
+          "xp_max": 900,
+          "protocol": 11
+        }
+      }
+    ]
+  }
+}

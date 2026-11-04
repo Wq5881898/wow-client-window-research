@@ -103,7 +103,7 @@ def main():
         result['health'] = state['health']
         result['position'] = [state['pos_x'], state['pos_y']]
         evidence.capture('05-in-world', state)
-        if state['protocol'] not in (3, 4, 5, 6, 7, 8, 9, 10):
+        if state['protocol'] not in (3, 4, 5, 6, 7, 8, 9, 10, 11):
             raise ValueError('telemetry panel missing, protocol ' + str(state['protocol']))
         if state['dead'] or state['combat']:
             raise ValueError('unexpected state on login')
