@@ -7,6 +7,7 @@ import time
 from pathlib import Path
 import win32con
 import win32gui
+import win32process
 import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode
@@ -23,30 +24,87 @@ EXE = CLIENT / 'Wow.exe'
 # its own starts it and stays alive as long as the client runs.
 DETACHED = 0x01000000
 RUN_TASK = 'WowClientRun'
+PYTHONW = r'C:\APP\Python\pythonw.exe'
+# The launcher reads the display mode from this file: the client is in the
+# fullscreen mode without it and in the window mode with it.
+MODE_FLAG = ROOT / '.cache' / 'desktop-check' / 'windowed.flag'
+
+
+def client_processes():
+    """The number of running instances of the client.
+
+    The output of tasklist is in the code page of the machine, so it is not
+    decoded as text.
+    """
+    result = subprocess.run(['tasklist', '/FI', 'IMAGENAME eq Wow.exe'],
+                            capture_output=True)
+    return result.stdout.count(b'Wow.exe')
+
+
+def task_state():
+    """The state of the task that starts the client."""
+    command = ('(Get-ScheduledTask -TaskName %s -ErrorAction SilentlyContinue)'
+               '.State' % RUN_TASK)
+    result = subprocess.run(['powershell', '-NoProfile', '-Command', command],
+                            capture_output=True, text=True)
+    return result.stdout.strip()
+
+
+def ensure_task():
+    """Make sure the task that starts the client exists.
+
+    The action of the task is the launcher, so the display mode is written
+    before every start and the client keeps no console window that could
+    cover the game.
+    """
+    if task_state():
+        return 'present'
+    action = ('"%s" -X utf8 "%s"' % (PYTHONW, ROOT / 'scripts' /
+                                     'lab_client_launch.py'))
+    subprocess.run(['schtasks', '/create', '/tn', RUN_TASK, '/tr', action,
+                    '/sc', 'once', '/st', '00:00', '/f'],
+                   capture_output=True)
+    return 'created'
 
 
 def start_client():
-    """Start the client so that it outlives the task that starts it."""
-    try:
-        subprocess.Popen([str(EXE)], cwd=str(CLIENT),
-                         creationflags=DETACHED)
-        return 'detached'
-    except Exception as exc:
-        d.log('detached start failed', repr(exc))
-    # A task that is still marked as running refuses to start a second
-    # time, so the old one is removed first. The client needs its own
-    # directory, otherwise it starts in the directory of the task and
-    # leaves again right away.
-    subprocess.run(['schtasks', '/delete', '/tn', RUN_TASK, '/f'],
-                   capture_output=True)
-    command = 'cmd /c cd /d "%s" && Wow.exe' % CLIENT
-    subprocess.run(['schtasks', '/create', '/tn', RUN_TASK, '/tr', command,
-                    '/sc', 'once', '/st', '00:00', '/f'],
-                   capture_output=True)
-    time.sleep(2.0)
-    result = subprocess.run(['schtasks', '/run', '/tn', RUN_TASK],
-                            capture_output=True)
-    return 'task' if result.returncode == 0 else 'failed'
+    """Start the client so that it outlives the task that starts it.
+
+    A task that is still running refuses to start a second time, so the old
+    one is ended first and the task is waited for. The client is started by
+    the launcher, which writes the display mode and keeps the client as its
+    own child.
+    """
+    ensure_task()
+    for attempt in range(4):
+        subprocess.run(['schtasks', '/end', '/tn', RUN_TASK], capture_output=True)
+        deadline = time.monotonic() + 30
+        while time.monotonic() < deadline:
+            if task_state() == 'Ready':
+                break
+            time.sleep(1.0)
+        # A second instance of the client only shows a dialog that there is
+        # one already, and the game window of the real client is missing
+        # then. Every old instance is ended before a new one is started.
+        subprocess.run(['taskkill', '/IM', 'Wow.exe', '/F'], capture_output=True)
+        deadline = time.monotonic() + 30
+        while time.monotonic() < deadline:
+            if not client_processes():
+                break
+            time.sleep(1.0)
+        time.sleep(2.0)
+        result = subprocess.run(['schtasks', '/run', '/tn', RUN_TASK],
+                                capture_output=True)
+        if result.returncode == 0:
+            # The scheduler accepts the start of a task that is still busy
+            # without an error, but the client does not come then. The
+            # process is the proof that the task really did its work.
+            deadline = time.monotonic() + 40
+            while time.monotonic() < deadline:
+                if client_processes():
+                    return 'task'
+                time.sleep(1.0)
+    return 'failed'
 
 
 def hide_consoles():
@@ -63,6 +121,67 @@ def hide_consoles():
                 pass
         return True
     win32gui.EnumWindows(cb, None)
+
+
+def client_pids():
+    result = subprocess.run(['tasklist', '/FI', 'IMAGENAME eq Wow.exe'],
+                            capture_output=True)
+    pids = []
+    for chunk in result.stdout.split(b'\r\n'):
+        if b'Wow.exe' not in chunk or b'INFO' in chunk:
+            continue
+        try:
+            pids.append(int(chunk.split()[1]))
+        except Exception:
+            pass
+    return pids
+
+
+def client_dialogs():
+    """The modal dialogs of the client.
+
+    A client that was killed leaves a dialog behind on the next start, and
+    the game window does not come while the dialog is open.
+    """
+    pids = client_pids()
+    found = []
+
+    def cb(hwnd, _):
+        try:
+            if win32process.GetWindowThreadProcessId(hwnd)[1] not in pids:
+                return True
+            if win32gui.GetClassName(hwnd) != '#32770':
+                return True
+            texts = []
+            win32gui.EnumChildWindows(
+                hwnd,
+                lambda child, _acc: texts.append(
+                    (child, win32gui.GetClassName(child),
+                     win32gui.GetWindowText(child))) or True,
+                None)
+            found.append({'hwnd': hwnd, 'text': win32gui.GetWindowText(hwnd),
+                          'children': texts})
+        except Exception:
+            pass
+        return True
+
+    win32gui.EnumWindows(cb, None)
+    return found
+
+
+def dismiss_dialog(dialog):
+    """Close a dialog of the client with its own buttons."""
+    lines = []
+    for child, cls, text in dialog['children']:
+        lines.append('%s %r' % (cls, text))
+    for child, cls, text in dialog['children']:
+        if cls.lower().startswith('button') and text.strip():
+            win32gui.PostMessage(child, 0x00F5, 0, 0)  # BM_CLICK
+            lines.append('clicked %r' % text)
+            return '\n'.join(lines)
+    win32gui.PostMessage(dialog['hwnd'], win32con.WM_CLOSE, 0, 0)
+    lines.append('closed the dialog')
+    return '\n'.join(lines)
 
 
 def game_window():
@@ -126,6 +245,11 @@ def main():
         result['steps'].append({'phase': 'closed'})
 
         wanted = '--window' not in sys.argv
+        MODE_FLAG.parent.mkdir(parents=True, exist_ok=True)
+        if wanted:
+            MODE_FLAG.unlink(missing_ok=True)
+        else:
+            MODE_FLAG.write_text('windowed\n', encoding='utf-8')
         result['steps'].append({'phase': 'mode',
                                 'fullscreen': wanted,
                                 'config': set_fullscreen(wanted)})
@@ -133,11 +257,17 @@ def main():
                                 'how': start_client()})
         deadline = time.monotonic() + 120
         hwnd = 0
+        dialogs = []
         while time.monotonic() < deadline:
             time.sleep(3.0)
             hwnd = game_window()
             if hwnd:
                 break
+            for dialog in client_dialogs():
+                report = dismiss_dialog(dialog)
+                dialogs.append(report)
+                result['steps'].append({'phase': 'dialog', 'report': report})
+        result['steps'].append({'phase': 'dialogs', 'count': len(dialogs)})
         if not hwnd:
             raise ValueError('the client window did not appear')
         result['steps'].append({'phase': 'window', 'hwnd': hwnd})

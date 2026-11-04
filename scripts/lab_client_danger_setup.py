@@ -117,7 +117,51 @@ def main():
             result['walk_to'] = {'target': list(spot), 'distance': distance}
             evidence.capture('01b-walked', None)
 
-        state = select_hostile(hwnd, reader)
+        route = []
+        if '--route' in sys.argv:
+            # A longer way out of the graveyard: every point of the route is
+            # walked to and looked for a hostile, so the corpse can end up far
+            # away from the place where the ghost appears.
+            index = sys.argv.index('--route')
+            for word in sys.argv[index + 1:]:
+                if '--' in word:
+                    break
+                x, y = word.split(',')
+                route.append((float(x), float(y)))
+            result['route'] = [list(point) for point in route]
+
+        state = None
+        if route:
+            walked = []
+            for point in route:
+                distance = walk_to(d.game_window(), reader, point, timeout=60.0)
+                here = reader()
+                walked.append({'target': list(point), 'distance': distance,
+                               'position': [here['pos_x'], here['pos_y']]})
+                evidence.capture('01c-route', None)
+                if here['dead']:
+                    # The way out of the zone is dangerous on its own: the
+                    # water or a creature of the road can kill the character
+                    # far away from the graveyard. That death is the one the
+                    # recovery has to handle.
+                    result['walked'] = walked
+                    result['dead'] = True
+                    result['death_position'] = [here['pos_x'], here['pos_y']]
+                    result['corpse'] = [here.get('corpse_x'), here.get('corpse_y')]
+                    result['corpse_exists'] = here.get('corpse_exists')
+                    result['died_on_the_way'] = True
+                    result['status'] = 'DEAD'
+                    evidence.capture('05-dead', here)
+                    return 0
+                state = select_hostile(hwnd, reader)
+                if state is not None:
+                    result['walked'] = walked
+                    break
+            result['walked'] = walked
+            if state is None:
+                raise ValueError('no hostile on the route')
+        else:
+            state = select_hostile(hwnd, reader)
         if state is None:
             raise ValueError('could not acquire a hostile target')
         result['target_guid'] = state['target_guid']

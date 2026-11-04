@@ -1,0 +1,20 @@
+{
+  "run": "client_restart_1793756875006101500",
+  "status": "FAILED",
+  "steps": [
+    {
+      "phase": "closed"
+    },
+    {
+      "phase": "mode",
+      "fullscreen": true,
+      "config": "SET gxWindow \"0\""
+    }
+  ],
+  "error": "TypeError(\"argument of type 'NoneType' is not iterable\")",
+  "evidence": {
+    "run": "client_restart_1793756875006101500",
+    "frames": [],
+    "states": []
+  }
+}

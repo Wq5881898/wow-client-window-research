@@ -1,0 +1,24 @@
+{
+  "run": "client_restart_1793756124681668900",
+  "status": "FAILED",
+  "steps": [
+    {
+      "phase": "closed"
+    },
+    {
+      "phase": "mode",
+      "fullscreen": true,
+      "config": "SET gxWindow \"0\""
+    },
+    {
+      "phase": "started",
+      "how": "task"
+    }
+  ],
+  "error": "ValueError('the client window did not appear')",
+  "evidence": {
+    "run": "client_restart_1793756124681668900",
+    "frames": [],
+    "states": []
+  }
+}

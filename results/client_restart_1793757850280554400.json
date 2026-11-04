@@ -1,0 +1,32 @@
+{
+  "run": "client_restart_1793757850280554400",
+  "status": "FAILED",
+  "steps": [
+    {
+      "phase": "closed"
+    },
+    {
+      "phase": "mode",
+      "fullscreen": true,
+      "config": "SET gxWindow \"0\""
+    },
+    {
+      "phase": "started",
+      "how": "task"
+    },
+    {
+      "phase": "dialog",
+      "report": "Button '\u786e\u5b9a'\nStatic 'Running World of Warcraft through a Remote Desktop connection is not supported.  Exiting program.'\nclicked '\u786e\u5b9a'"
+    },
+    {
+      "phase": "dialogs",
+      "count": 1
+    }
+  ],
+  "error": "ValueError('the client window did not appear')",
+  "evidence": {
+    "run": "client_restart_1793757850280554400",
+    "frames": [],
+    "states": []
+  }
+}
