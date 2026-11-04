@@ -84,6 +84,7 @@ class CastProbe:
                 'cast_succeeded': state.get('cast_succeeded', 0),
                 'last_error_reason': state.get('last_error_reason', 0),
                 'event_serial': state.get('event_serial', 0),
+                'target_health': state.get('target_health'),
                 'events': state.get('events') or []}
 
     def attempt(self):
@@ -105,12 +106,18 @@ def sweep_toward(cast, max_steps=40, direction='left', hwnd=None):
     used and the last observed state.
     """
     before = cast.counters()
+    # The health of the target before the first attempt is the baseline.
+    health = before.get('target_health')
     state = cast.attempt()
     steps = 0
+    # A cast only counts when the health of the target drops. The client
+    # raises its success counter even for a cast that did not reach the
+    # target, so the counter alone would end the sweep too early.
     while steps < max_steps:
-        if cast_outcome(state, before) == 'success':
-            break
         if state.get('last_error_reason') in NON_TURNABLE_REASONS:
+            break
+        if (health is not None and state.get('target_health') is not None
+                and state['target_health'] < health):
             break
         turn_step(direction, hwnd=hwnd)
         steps += 1

@@ -36,7 +36,8 @@ def main():
         report['telemetry'] = 'ok'
         for key in ('protocol', 'health', 'max_health', 'dead', 'combat',
                     'pos_x', 'pos_y', 'facing', 'corpse_exists',
-                    'player_guid', 'target_name_hash', 'target_guid'):
+                    'player_guid', 'target_name_hash', 'target_guid',
+                    'threat'):
             report[key] = state.get(key)
         report['hash_of_probehuman'] = name_hash('Probehuman')
     except Exception as exc:

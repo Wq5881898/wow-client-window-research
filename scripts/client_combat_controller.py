@@ -73,6 +73,26 @@ class CombatController:
         self.last_target_health = state['target_health']
         return {'decision': 'BOUND', 'reason': 'target_confirmed'}
 
+    def rebind(self, state):
+        """Bind the fight to another creature.
+
+        The client selects the creature that attacks the character, so a
+        second creature in the pack takes the target away. When the driver
+        asked for a creature by name, the named one is picked again and the
+        fight continues with it.
+        """
+        self.target_guid = state['target_guid']
+        self.last_target_health = state['target_health']
+        self.successful_casts = 0
+        self.attempts = 0
+        self.recovery = None
+        self.target_recovered = False
+        # The driver looked for the creature with the tab key, so the panel
+        # was not sampled for a moment. The gap is known and is not a sign
+        # of a stuck client.
+        self.freshness.reset()
+        return {'decision': 'BOUND', 'reason': 'target_rebound'}
+
     def observe(self, state, now, window_visible=True):
         """Advance the state machine by one observation."""
         if self.recovery:

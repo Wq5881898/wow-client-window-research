@@ -159,11 +159,15 @@ def tab_target(hwnd, reader, steps=8, prefer_hash=None):
                 and candidate['target_health'] > 1):
             continue
         if prefer_hash is not None:
+            # The creature was asked for by name, so only that one counts.
             if candidate.get('target_name_hash') == prefer_hash:
-                named.append(candidate)
+                # The scan stops here: every further key press would only
+                # take time and select another creature.
+                return candidate
+            continue
         found.append(candidate)
-    if named:
-        return named[0]
+    if prefer_hash is not None:
+        return None
     if found:
         return found[0]
     return None
@@ -188,8 +192,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5, 6, 7, 8, 9):
-            raise ValueError('protocol 4 to 9 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6, 7, 8, 9, 10):
+            raise ValueError('protocol 4 to 10 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)
@@ -237,6 +241,12 @@ def main():
         target_guid = state['target_guid']
         result['target_guid'] = target_guid
         result['target_name_hash_seen'] = state.get('target_name_hash')
+        if prefer_hash is not None and result['target_name_hash_seen'] != prefer_hash:
+            # The driver was asked for a creature by name, so a run against
+            # another one would not be what was asked for.
+            raise ValueError('the creature %s was not in reach (the hash of '
+                             'the selected one is %s)'
+                             % (target_name, result['target_name_hash_seen']))
         result['target_name'] = target_name or 'tab-selected'
         result['target_health_at_start'] = state['target_health']
         evidence.capture('02-target-acquired', state)
@@ -249,22 +259,20 @@ def main():
         if binding['decision'] != 'BOUND':
             raise ValueError('target binding failed: ' + str(binding))
 
-        # Close the distance before the first cast. The tab key turns the
-        # character towards the selected creature, so a short walk brings it
-        # into spell range without a facing readout.
-        for approach in range(10):
+        # Close the distance before the first cast. The tab key must not be
+        # pressed here: it selects the next hostile creature and would
+        # break the identity of the bound target. When the walk does not
+        # bring the target into range, the controller takes over: it walks
+        # closer and turns towards the creature when the client says that
+        # the target is not in front.
+        for approach in range(6):
             if state['spell_range'] == 1:
                 break
             ensure_chat_closed(hwnd, reader)
-            d.post_key(hwnd, win32con.VK_TAB)
-            time.sleep(0.4)
             moved = move_while_watching(hwnd, VK_FORWARD, 0.7, reader)
             state = moved[-1] if moved else reader()
             note('approach', {'attempt': approach, 'range': state['spell_range'],
-                              'distance': state['target_distance'],
                               'position': [state['pos_x'], state['pos_y']]})
-        if state['spell_range'] != 1:
-            raise ValueError('the target could not be reached')
         evidence.capture('03-in-range', state)
 
         deadline = time.monotonic() + 90
@@ -282,6 +290,18 @@ def main():
                                           'combat': state['combat']})
                 decision = {'decision': 'RECOVER', 'reason': 'lost_observation'}
             else:
+                if (prefer_hash is not None and state['target_exists']
+                        and state.get('target_name_hash') != prefer_hash):
+                    # The client selected another creature, most likely the
+                    # one that attacked the character. The named creature is
+                    # picked again, so the fight stays about the one that
+                    # was asked for.
+                    again = tab_target(hwnd, reader, prefer_hash=prefer_hash)
+                    if again is not None:
+                        state = again
+                        controller.rebind(state)
+                        note('rebound', {'guid': state['target_guid'],
+                                         'health': state['target_health']})
                 decision = controller.observe(state, time.monotonic())
             note('observe', decision)
 
@@ -339,7 +359,8 @@ def main():
                 probe = CastProbe(
                     lambda: cast(hwnd, '/cast Fireball', reader),
                     reader, settle=0)
-                steps, after_state = sweep_toward(probe, max_steps=18)
+                steps, after_state = sweep_toward(probe, max_steps=18,
+                                                  hwnd=hwnd)
                 note('turn', {'reason': decision['reason'], 'steps': steps,
                               'cast_failed': after_state['cast_failed'],
                               'cast_succeeded': after_state['cast_succeeded'],
@@ -386,6 +407,7 @@ def main():
         # that is still in combat a moment after the run looks safe.
         quiet = 0
         observed = 0.0
+        threats = []
         deadline = time.monotonic() + SURVIVAL_OBSERVATION + 60
         last = time.monotonic()
         while observed < SURVIVAL_OBSERVATION and time.monotonic() < deadline:
@@ -399,12 +421,23 @@ def main():
                 quiet = 0
             else:
                 quiet += 1
+            threats.append(state.get('threat'))
             time.sleep(0.4)
         result['survival_observation'] = round(observed, 1)
+        # The combat flag alone does not tell whether the aggro is gone: a
+        # creature that still has the character on its list keeps a threat
+        # even when the fight was stopped. The threat situation is watched
+        # over the whole observation.
+        result['threat_max'] = max([value for value in threats
+                                    if value is not None] or [0])
+        result['threat_last'] = threats[-1] if threats else None
         if state['combat']:
             raise ValueError('still in combat at the end of the run')
         if state['dead']:
             raise ValueError('the character is dead at the end of the run')
+        if result['threat_max'] > 0:
+            raise ValueError('the threat did not clear during the '
+                             'observation: %s' % result['threat_max'])
         evidence.capture('05-end', state)
         result['final'] = state
         result['status'] = 'COMBAT_LOOP_COMPLETED'

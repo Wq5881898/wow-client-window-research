@@ -25,7 +25,8 @@ SUMMARY = ROOT / 'results' / 'client_full_acceptance.json'
 STEPS = [
     ('restart', 'lab_client_restart.py', []),
     ('enter', 'lab_client_enter_character.py', ['--character', 'Probehuman']),
-    ('combat', 'lab_client_combat_loop.py', []),
+    ('combat', 'lab_client_combat_loop.py',
+     ['--target-name', 'Diseased Young Wolf']),
     ('danger_setup', 'lab_client_danger_setup.py',
      ['--walk-to', '0.50390', '0.44147']),
     ('danger_recovery', 'lab_client_danger_recovery.py', ['--die-again']),

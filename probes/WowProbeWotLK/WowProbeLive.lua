@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 9
+local PROTOCOL = 10
 local QUEUE = 4
-local DATA_BYTES = 125
+local DATA_BYTES = 126
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -84,6 +84,16 @@ local function target_distance()
   if not UnitDistance then return 65535 end
   local ok, value = pcall(UnitDistance, "player", "target")
   if not ok or not value then return 65535 end
+  return value
+end
+
+-- The threat situation of the player: 0 none, 1 low, 2 high, 3 solo.
+-- The client does not offer the exact threat, but the situation is enough
+-- to tell whether a creature still has the character on its list.
+local function threat_situation()
+  if not UnitThreatSituation then return 0 end
+  local ok, value = pcall(UnitThreatSituation, "player")
+  if not ok or not value then return 0 end
   return value
 end
 
@@ -264,6 +274,7 @@ local function update()
   local player_guid = UnitGUID("player") or "0x0000000000000000"
   for j = 3, 18, 2 do number(tonumber(string.sub(player_guid, j, j + 1), 16) or 0, 1) end
   number(name_hash(UnitName("target") or ""), 2)
+  number(threat_situation(), 1)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
@@ -286,7 +297,7 @@ local function update()
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
     .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
-    .. " player=%s",
+    .. " player=%s threat=%d",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -295,7 +306,8 @@ local function update()
     tostring(corpse_exists == 1), corpse_x, corpse_y,
     events.serial, events.started,
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
-    last.error_reason, chat_open(), target_distance(), UnitGUID("player") or ""))
+    last.error_reason, chat_open(), target_distance(), UnitGUID("player") or "",
+    threat_situation()))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)

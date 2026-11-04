@@ -2,7 +2,7 @@
 import unittest
 from client_live_layout import (
     CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT, V7_LAYOUT,
-    V8_LAYOUT, V9_LAYOUT, parse_lua_layout, offsets)
+    V8_LAYOUT, V9_LAYOUT, V10_LAYOUT, parse_lua_layout, offsets)
 import client_live_state
 from client_live_layout import PROBE
 
@@ -13,8 +13,8 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V9_DATA_BYTES)
-        self.assertEqual(client_live_state.V9_TOTAL, total)
+        self.assertEqual(total, client_live_state.V10_DATA_BYTES)
+        self.assertEqual(client_live_state.V10_TOTAL, total)
         for layout, name in ((V3_LAYOUT, 'V3'), (V4_LAYOUT, 'V4'),
                              (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6'),
                              (V7_LAYOUT, 'V7')):
@@ -29,6 +29,13 @@ class LayoutTests(unittest.TestCase):
         declared = int(source.split('local DATA_BYTES = ')[1].split('\n')[0])
         _, total = offsets(CURRENT_LAYOUT)
         self.assertEqual(declared, total)
+
+    def test_the_tenth_protocol_adds_the_threat_situation(self):
+        positions, total = offsets(V10_LAYOUT)
+        self.assertEqual(client_live_state.V10_DATA_BYTES, total)
+        self.assertEqual(positions['threat'][0], 123)
+        self.assertEqual(positions['checksum'][0], 124)
+        self.assertEqual(positions['weighted'][0], 125)
 
     def test_the_ninth_protocol_adds_the_player_and_the_target_name(self):
         positions, total = offsets(V9_LAYOUT)

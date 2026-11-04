@@ -41,12 +41,18 @@ class CastProbeTest(unittest.TestCase):
     def _probe(self, reader, attempt):
         return client_facing.CastProbe(attempt, reader)
 
-    def test_turns_until_the_cast_succeeds(self):
+    def test_turns_until_the_target_loses_health(self):
+        # A cast only counts when the health of the target drops: the client
+        # raises its success counter even for a cast that did not reach.
         outcomes = [
-            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0},
-            {'cast_failed': 1, 'cast_succeeded': 0, 'last_error_reason': 1},
-            {'cast_failed': 2, 'cast_succeeded': 0, 'last_error_reason': 1},
-            {'cast_failed': 2, 'cast_succeeded': 1, 'last_error_reason': 0},
+            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0,
+             'target_health': 42},
+            {'cast_failed': 1, 'cast_succeeded': 0, 'last_error_reason': 5,
+             'target_health': 42},
+            {'cast_failed': 2, 'cast_succeeded': 0, 'last_error_reason': 5,
+             'target_health': 42},
+            {'cast_failed': 2, 'cast_succeeded': 1, 'last_error_reason': 0,
+             'target_health': 23},
         ]
         reader, attempt = self._install(outcomes)
         probe = self._probe(reader, attempt)
@@ -64,10 +70,27 @@ class CastProbeTest(unittest.TestCase):
         steps, state = client_facing.sweep_toward(probe, max_steps=5)
         self.assertEqual(steps, 5)
 
+    def test_the_success_counter_alone_does_not_end_the_sweep(self):
+        # The client raises the counter even when the cast did not reach the
+        # target, so the health of the target decides.
+        outcomes = [
+            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0,
+             'target_health': 42},
+            {'cast_failed': 0, 'cast_succeeded': 1, 'last_error_reason': 0,
+             'target_health': 42},
+        ]
+        reader, attempt = self._install(outcomes)
+        probe = self._probe(reader, attempt)
+        steps, state = client_facing.sweep_toward(probe, max_steps=3)
+        self.assertEqual(steps, 3)
+        self.assertEqual(len(self.turns), 3)
+
     def test_does_not_turn_when_the_first_cast_worked(self):
         outcomes = [
-            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0},
-            {'cast_failed': 0, 'cast_succeeded': 1, 'last_error_reason': 0},
+            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0,
+             'target_health': 42},
+            {'cast_failed': 0, 'cast_succeeded': 1, 'last_error_reason': 0,
+             'target_health': 23},
         ]
         reader, attempt = self._install(outcomes)
         probe = self._probe(reader, attempt)
@@ -87,9 +110,12 @@ class CastProbeTest(unittest.TestCase):
 
     def test_turn_direction_is_honoured(self):
         outcomes = [
-            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0},
-            {'cast_failed': 1, 'cast_succeeded': 0, 'last_error_reason': 1},
-            {'cast_failed': 1, 'cast_succeeded': 1, 'last_error_reason': 0},
+            {'cast_failed': 0, 'cast_succeeded': 0, 'last_error_reason': 0,
+             'target_health': 42},
+            {'cast_failed': 1, 'cast_succeeded': 0, 'last_error_reason': 5,
+             'target_health': 42},
+            {'cast_failed': 1, 'cast_succeeded': 1, 'last_error_reason': 0,
+             'target_health': 23},
         ]
         reader, attempt = self._install(outcomes)
         probe = self._probe(reader, attempt)
