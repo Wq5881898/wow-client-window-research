@@ -1,0 +1,18 @@
+{
+  "run": "client_walk_out_1793778092694578900",
+  "status": "FAILED",
+  "trace": [],
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_walk_out_1793778092694578900",
+    "frames": [
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778092694578900_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1174938.1609351
+      }
+    ],
+    "states": []
+  }
+}

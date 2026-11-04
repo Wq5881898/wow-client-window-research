@@ -60,8 +60,15 @@ def main():
         note('   enter -> %s' % code)
         if code != 0:
             continue
-        code = run('lab_client_danger_setup.py', ['--route'] + ROUTE)
-        note('   setup (walk out and die) -> %s' % code)
+        code = run('lab_client_walk_out.py',
+                   ['--from', '0.49930', '0.43790',
+                    '--direction', 'south-east', '--seconds', '25',
+                    '--stop-when-blocked'])
+        note('   walk out -> %s' % code)
+        if code != 0:
+            continue
+        code = run('lab_client_danger_setup.py', [])
+        note('   setup (die out there) -> %s' % code)
         if code != 0:
             continue
         code = run('lab_client_danger_recovery.py', ['--die-again'])

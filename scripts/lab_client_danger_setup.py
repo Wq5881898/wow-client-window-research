@@ -22,6 +22,7 @@ from client_target import select_hostile
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
 VK_FORWARD = 0x57
+VK_LEFT = 0x25
 TARGET_NAME = 'Diseased Young Wolf'
 DEADLINE = 240.0
 
@@ -68,20 +69,69 @@ def hold(vk, seconds):
     d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key))
 
 
-def cast_fireball(hwnd, reader, attempts=4):
+def cast_fireball(hwnd, reader, attempts=8):
     """Cast fireball with the key of the action bar.
 
     The chat is not used: the chat input takes the focus away from the
     game and the panel of the probe stops being updated while it is open.
     Fireball sits in the first slot of the action bar.
+
+    A creature that moves can make a cast miss, so the spell is cast again
+    until the creature engages. The fight is only about the engagement: the
+    character has to stand in the reach of the creature afterwards.
+    """
+    state = reader()
+    for _ in range(attempts):
+        if state['combat']:
+            return state
+        d.post_key(d.game_window(), 0x31)
+        time.sleep(0.9)
+        state = reader()
+    return state
+
+
+def engage(hwnd, reader, attempts=30):
+    """Make the creature attack the character.
+
+    The client answers a cast that can not work with a message, and the
+    probe turns that message into a reason code: 5 means the target is not
+    in front of the character, 1 means it is out of range and 6 means there
+    is a line of sight in the way. The character turns and walks after the
+    reason until the creature engages.
+
+    The client of 3.3.5a has no UnitDistance, so the distance to the target
+    cannot be read and only the reason of the cast is a sign.
     """
     for _ in range(attempts):
-        d.post_key(d.game_window(), 0x31)
-        time.sleep(0.8)
         state = reader()
-        if state['cast_started'] or state['cast_succeeded']:
-            time.sleep(1.2)
-            return reader()
+        if state['combat']:
+            return state
+        if not state.get('target_exists') or state.get('target_health', 0) <= 0:
+            # The creature died or the client lost it, so another one is
+            # picked with the tab key.
+            d.post_key(d.game_window(), win32con.VK_TAB)
+            time.sleep(0.7)
+            state = reader()
+            if not state.get('target_exists'):
+                continue
+        d.post_key(d.game_window(), 0x31)
+        time.sleep(0.9)
+        state = reader()
+        if state['combat']:
+            return state
+        reason = state.get('last_error_reason', 0)
+        if reason == 5:
+            # The target is not in front of the character.
+            hold(VK_LEFT, 0.35)
+        elif reason == 1:
+            # The target is too far away.
+            hold(VK_FORWARD, 0.8)
+        elif reason == 6:
+            # Something is in the way, so the character walks around it.
+            hold(VK_LEFT, 0.2)
+            hold(VK_FORWARD, 0.6)
+        else:
+            hold(VK_FORWARD, 0.4)
     return reader()
 
 
@@ -169,25 +219,14 @@ def main():
         result['target_class'] = state.get('target_class_name')
         evidence.capture('02-targeted', state)
 
-        # Close the distance first: a miss at long range leaves the
-        # character untouched, so the hostile would never engage.
-        for attempt in range(30):
-            state = fresh()
-            if state['spell_range'] == 1:
-                break
-            hold(VK_FORWARD, 0.6)
-            time.sleep(0.2)
-        state = fresh()
+        # The creature has to attack the character, so the character casts
+        # and turns and walks after the reason of the failed casts.
+        state = engage(hwnd, fresh)
         result['range'] = state['spell_range']
-        if state['spell_range'] != 1:
-            raise ValueError('could not reach cast range')
-        evidence.capture('03-in-range', state)
-
-        # One hit pulls the aggro. The character then stops attacking.
-        state = cast_fireball(hwnd, reader)
         result['aggro_pull'] = {'succeeded': state['cast_succeeded'],
                                 'combat': state['combat'],
-                                'target_health': state['target_health']}
+                                'target_health': state['target_health'],
+                                'error_reason': state.get('last_error_reason')}
         evidence.capture('04-aggro-pulled', state)
         if not state['combat']:
             raise ValueError('the hostile did not engage')

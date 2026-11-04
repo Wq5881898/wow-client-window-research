@@ -175,6 +175,10 @@ def main():
                         result['second_death'] = 'no hostile in reach'
                         result['status'] = 'RECOVERED'
                         result['corpses'] = machine.corpses
+                        result['final'] = {'health': state['health'],
+                                           'dead': state['dead'],
+                                           'combat': state['combat'],
+                                           'graveyard': machine.graveyard}
                         break
                     note('aggro', {'guid': target['target_guid'],
                                    'health': target['target_health']})
@@ -189,10 +193,21 @@ def main():
                             break
                         time.sleep(1.0)
                     else:
-                        result['second_death'] = 'no death'
-                        result['status'] = 'RECOVERED'
-                        result['corpses'] = machine.corpses
-                        break
+                        # No second death in the time that was given. The
+                        # character walks back to the graveyard, so the run
+                        # does not end with the character in the danger
+                        # zone.
+                        machine.route = machine.memory.route_back(
+                            state['pos_x'], state['pos_y'])
+                        machine.route_index = 0
+                        machine.phase = 'ESCAPE'
+                        machine.stuck = 0
+                        machine.avoid = 0.0
+                        machine.last_action = None
+                        machine.last_distance = None
+                        note('walk-back-home', {'route': len(machine.route)})
+                        stage = 'home'
+                        continue
                     continue
                 result['status'] = 'RECOVERED'
                 result['final'] = {'health': state['health'],

@@ -16,7 +16,8 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_chat_guard import close_world_map
 from client_geometry import picture_to_screen
-from client_read_fresh import (game_menu_open, find_logout_button, open_menu_logout, release_spirit,
+from client_read_fresh import (game_menu_open, find_logout_button, open_menu_logout,
+                                release_spirit, wait_out_of_combat,
                              read_or_dismiss)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -166,6 +167,19 @@ def inside_the_world(image, reader):
     return True
 
 
+def run_recovery():
+    """Run the recovery of a ghost, in its own process.
+
+    The recovery drives the client, so it needs the client alone; the
+    console of this process would cover the game.
+    """
+    import subprocess
+    command = [sys.executable.replace('python.exe', 'pythonw.exe'), '-X',
+               'utf8', str(Path(__file__).resolve().parent /
+                           'lab_client_danger_recovery.py')]
+    return subprocess.run(command, cwd=str(ROOT)).returncode
+
+
 def main():
     run = 'client_enter_' + str(time.time_ns())
     result = dict(run=run, status='FAILED', steps=[])
@@ -199,6 +213,9 @@ def main():
         # telemetry: the probe panel stays alive at the character selection.
         if inside_the_world(grab_desktop(), reader):
             # The menu of the client has to be open before the logout can
+            # The menu of the client does not open while the character is in
+            # combat, so the fight has to be over first.
+            wait_out_of_combat(reader, hwnd)
             # be clicked, so it is opened and checked.
             logout = open_menu_logout(hwnd)
             if logout is None:
@@ -255,18 +272,31 @@ def main():
             result['release_button'] = button
             evidence.capture('03b-ghost-released')
             if button is None:
-                raise ValueError('the character entered the world as a ghost '
-                                 'and the death window was not found')
-            time.sleep(4.0)
-            state = reader()
-            result['after_release'] = {'health': state['health'],
-                                       'dead': state['dead'],
-                                       'position': [state['pos_x'],
-                                                    state['pos_y']]}
-            evidence.capture('03c-released', state)
-            if state['dead']:
-                raise ValueError('the character stayed a ghost after the '
-                                 'release of the spirit')
+                # The spirit was released before, so there is no death
+                # window left. The character is a ghost that has to walk to
+                # its corpse and be revived there, which is the work of the
+                # recovery.
+                result['recovery'] = run_recovery()
+                state = reader()
+                result['after_recovery'] = {'health': state['health'],
+                                            'dead': state['dead'],
+                                            'position': [state['pos_x'],
+                                                         state['pos_y']]}
+                evidence.capture('03c-recovered', state)
+                if state['dead']:
+                    raise ValueError('the character stayed a ghost after the '
+                                     'recovery')
+            else:
+                time.sleep(4.0)
+                state = reader()
+                result['after_release'] = {'health': state['health'],
+                                           'dead': state['dead'],
+                                           'position': [state['pos_x'],
+                                                        state['pos_y']]}
+                evidence.capture('03c-released', state)
+                if state['dead']:
+                    raise ValueError('the character stayed a ghost after the '
+                                     'release of the spirit')
         # The health proves which character was entered.
         low, high = EXPECTED_HEALTH.get(wanted, (0, 100000))
         result['health_expected'] = [low, high]

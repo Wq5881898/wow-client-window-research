@@ -1,0 +1,52 @@
+{
+  "run": "client_enter_1793780284304499300",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": 435,
+  "expected_highlight_row": 465,
+  "enter_world_button": [
+    1011,
+    1008
+  ],
+  "error": "ValueError(\"the telemetry of the client cannot be read: ValueError('live telemetry absent or invalid')\")",
+  "wow_processes": [
+    "28200"
+  ],
+  "client_windows": [
+    [
+      4852564,
+      "D3DProxyWindow",
+      "D3DProxyWindow"
+    ],
+    [
+      3998248,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793780284304499300",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780284304499300_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 1177149.4863636
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780284304499300_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 1177153.6251268
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780284304499300_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1177179.8303287
+      }
+    ],
+    "states": []
+  }
+}

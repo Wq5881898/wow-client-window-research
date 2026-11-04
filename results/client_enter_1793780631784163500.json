@@ -1,0 +1,52 @@
+{
+  "run": "client_enter_1793780631784163500",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": 435,
+  "expected_highlight_row": 465,
+  "enter_world_button": [
+    1011,
+    1008
+  ],
+  "error": "ValueError('no game window')",
+  "wow_processes": [
+    "28148"
+  ],
+  "client_windows": [
+    [
+      4786704,
+      "D3DProxyWindow",
+      "D3DProxyWindow"
+    ],
+    [
+      10748716,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793780631784163500",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780631784163500_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 1177496.912754
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780631784163500_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 1177501.0418036
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793780631784163500_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1177521.3929247
+      }
+    ],
+    "states": []
+  }
+}

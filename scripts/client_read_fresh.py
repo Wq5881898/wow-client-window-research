@@ -104,6 +104,26 @@ def game_menu_open(image):
     return len(menu_buttons(image)) >= 6
 
 
+def wait_out_of_combat(reader, hwnd, timeout=60.0):
+    """Wait until the character is not in combat any more.
+
+    The menu of the client does not open while the character is in combat,
+    so a run that wants to log out has to leave the fight first.
+    """
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        try:
+            state = reader()
+        except Exception:
+            time.sleep(1.0)
+            continue
+        if not state.get('combat'):
+            return True
+        d.ensure_foreground(hwnd)
+        time.sleep(1.0)
+    return False
+
+
 def open_menu_logout(hwnd, tries=8):
     """Open the menu of the client and return the logout button.
 

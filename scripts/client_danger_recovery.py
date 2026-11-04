@@ -40,14 +40,16 @@ CORPSE_RANGE = 0.004
 TURN_TOLERANCE = 0.10
 
 # The longest time the whole task may take. A walk across the valley takes
-# a few minutes, so the budget has to be generous.
-TIME_BUDGET = 600.0
+# a few minutes, so the budget has to be generous. A corpse that lies far
+# from the graveyard makes the ghost walk around the rocks on the way, and
+# that walk is slow.
+TIME_BUDGET = 2400.0
 
 # A walk step lasts longer when there is far to go: the reading of the
 # telemetry costs about as much time as the walk itself.
-WALK_MIN = 0.5
+WALK_MIN = 1.2
 WALK_MAX = 2.0
-WALK_PER_UNIT = 6.0
+WALK_PER_UNIT = 10.0
 
 # A step that is smaller than this does not count as movement.
 MOVEMENT_EPSILON = 0.0004
@@ -117,7 +119,7 @@ class DangerRecovery:
             if distance >= self.last_distance - MOVEMENT_EPSILON:
                 self.stuck += 1
                 self.avoid_side = -self.avoid_side
-                self.avoid = self.avoid_side * min(1.6, 0.45 + 0.3 * self.stuck)
+                self.avoid = self.avoid_side * min(0.9, 0.35 + 0.2 * self.stuck)
             else:
                 self.stuck = 0
                 self.avoid = 0.0
@@ -232,6 +234,21 @@ class DangerRecovery:
         target = self.route[self.route_index]
         distance = distance_to(state, target)
         self._detour(distance)
+        if self.stuck >= 3 and self.graveyard:
+            # The path of the ghost is not always walkable for the living
+            # character: the ghost flies over the rocks, the character does
+            # not. When the way is blocked, the straight line to the
+            # graveyard is the next try.
+            self.route = [self.graveyard]
+            self.route_index = 0
+            self.stuck = 0
+            self.avoid = 0.0
+            self.last_action = None
+            self.last_distance = None
+            return {'action': 'WALK', 'distance': distance,
+                    'target': self.graveyard,
+                    'seconds': min(WALK_MAX,
+                                   max(WALK_MIN, distance * WALK_PER_UNIT))}
         if (self.route_index == len(self.route) - 1
                 and distance <= self.safe_range):
             self.phase = 'SAFE'

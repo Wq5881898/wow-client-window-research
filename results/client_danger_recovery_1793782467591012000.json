@@ -1,0 +1,6923 @@
+{
+  "run": "client_danger_recovery_1793782467591012000",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "corpse-unknown",
+      "detail": {
+        "dead": true
+      }
+    },
+    {
+      "action": "release",
+      "detail": {
+        "distance": null,
+        "facing": 4.917353787152445,
+        "position": [
+          0.551750972762646,
+          0.4578469520103761
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 0
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.06158027793116949,
+        "facing": 4.917353787152445,
+        "position": [
+          0.49672693980315863,
+          0.43019760433356224
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.21346086775696496
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.06158027793116949,
+        "facing": 4.603259827420901,
+        "position": [
+          0.49672693980315863,
+          0.43019760433356224
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11348165518380114
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.06158027793116949,
+        "facing": 4.235666347075743,
+        "position": [
+          0.49672693980315863,
+          0.43019760433356224
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.06037585421160387,
+        "facing": 3.8712368168744007,
+        "position": [
+          0.49745937285420005,
+          0.43143358510719465
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12361732008041229
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 3.8712368168744007,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12516549856202122
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 4.392713326941515,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 4.603259827420901,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10784466260895113
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 4.4461169702780445,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 4.132023010546501,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 3.921476510067114,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10917370753994007
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05992931265185931,
+        "facing": 4.285906040268457,
+        "position": [
+          0.4977340352483406,
+          0.43189135576409554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05870529665696168,
+        "facing": 4.496452540747843,
+        "position": [
+          0.4989089799343862,
+          0.43227283131151295
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07474167901091407
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05838407667984284,
+        "facing": 4.496452540747843,
+        "position": [
+          0.49921416037232014,
+          0.4323796444647898
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07494232617220845
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05838407667984284,
+        "facing": 4.285906040268457,
+        "position": [
+          0.49921416037232014,
+          0.4323796444647898
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0572044796017109,
+        "facing": 4.075455417066156,
+        "position": [
+          0.5000686655985351,
+          0.433325703822385
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.061728229230719876
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05671771870681058,
+        "facing": 4.075455417066156,
+        "position": [
+          0.5004196231021592,
+          0.4337224383916991
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06289553625437767
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05671771870681058,
+        "facing": 4.28274209012464,
+        "position": [
+          0.5004196231021592,
+          0.4337224383916991
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.055424088535247974,
+        "facing": 4.493288590604027,
+        "position": [
+          0.5016556038757916,
+          0.4341344319829099
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07098273248650312
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05517078680028708,
+        "facing": 4.493288590604027,
+        "position": [
+          0.5018997482261387,
+          0.4342107270923934
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07118751889172122
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05517078680028708,
+        "facing": 4.285906040268457,
+        "position": [
+          0.5018997482261387,
+          0.4342107270923934
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0544092837611374,
+        "facing": 4.075455417066156,
+        "position": [
+          0.5024185549706264,
+          0.4348973830777447
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06414240993012356
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054398421622183196,
+        "facing": 4.075455417066156,
+        "position": [
+          0.502388036926833,
+          0.4349889372091249
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06470346923407386
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.054398421622183196,
+        "facing": 4.285906040268457,
+        "position": [
+          0.502388036926833,
+          0.4349889372091249
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05446242690728104,
+        "facing": 4.493288590604027,
+        "position": [
+          0.5025101091020066,
+          0.4345769436179141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.3095142283362324
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054460956218739406,
+        "facing": 3.7612655800575263,
+        "position": [
+          0.5025406271458,
+          0.4345159075303273
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07690281638077703
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.054460956218739406,
+        "facing": 3.4440076701821667,
+        "position": [
+          0.5025406271458,
+          0.4345159075303273
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05438665613803826,
+        "facing": 3.2366251198465963,
+        "position": [
+          0.5023727779049363,
+          0.4350499732967117
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6662985124086266
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 4.911121764141899,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13376999473654722
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 5.542569511025887,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0672260657051061
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 5.749856184084372,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13320746301376918
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 5.438926174496644,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 5.1215723873442,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06678148081771493
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 4.914189837008629,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1327933968115347
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.054382445458295195,
+        "facing": 5.32895493767977,
+        "position": [
+          0.5023422598611429,
+          0.43512626840619517
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05447861468267804,
+        "facing": 5.539405560882071,
+        "position": [
+          0.50258640421149,
+          0.43437857633325705
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8347279112910103
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05447861468267804,
+        "facing": 3.2366251198465963,
+        "position": [
+          0.50258640421149,
+          0.43437857633325705
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1017301311987495
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05447861468267804,
+        "facing": 2.9224352828379674,
+        "position": [
+          0.50258640421149,
+          0.43437857633325705
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.054398498666266344,
+        "facing": 2.6083413231064236,
+        "position": [
+          0.5019607843137255,
+          0.4359349965667201
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9529295311576885
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 0.0950143815915628,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14774116334288193
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 5.806423777564717,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 5.492329817833173,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13423997444903435
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 5.699616490891659,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06825857714037128
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 6.067209971236817,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 6.274496644295302,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11473145905886244
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05436706203940153,
+        "facing": 5.910162991371045,
+        "position": [
+          0.5016403448538949,
+          0.4367589837491417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05435583592692323,
+        "facing": 5.699616490891659,
+        "position": [
+          0.5023575188830396,
+          0.43515678644998856
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9606118335393848
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05449004410774879,
+        "facing": 3.0677852348993286,
+        "position": [
+          0.5026321812771801,
+          0.4342565041580835
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12832293545128656
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05449004410774879,
+        "facing": 2.439405560882071,
+        "position": [
+          0.5026321812771801,
+          0.4342565041580835
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07169652706535427
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05449004410774879,
+        "facing": 2.2289549376797697,
+        "position": [
+          0.5026321812771801,
+          0.4342565041580835
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13868504098418655
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05449004410774879,
+        "facing": 2.5965484180249283,
+        "position": [
+          0.5026321812771801,
+          0.4342565041580835
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05419850997255654,
+        "facing": 2.8604026845637582,
+        "position": [
+          0.5021591515983825,
+          0.43598077363241017
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9666136459971144
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05391733012854758,
+        "facing": 5.687823585810163,
+        "position": [
+          0.5019302662699321,
+          0.43723201342793927
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07392246333086172
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05391733012854758,
+        "facing": 5.89837008628955,
+        "position": [
+          0.5019302662699321,
+          0.43723201342793927
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05436414544331277,
+        "facing": 6.105656759348035,
+        "position": [
+          0.5021133745326924,
+          0.43567559319447624
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.913498688345351
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05464063774993195,
+        "facing": 2.439405560882071,
+        "position": [
+          0.5022201876859693,
+          0.43477531090257115
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07546008010996828
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05464063774993195,
+        "facing": 2.7535953978906997,
+        "position": [
+          0.5022201876859693,
+          0.43477531090257115
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05406163140685068,
+        "facing": 2.964046021093001,
+        "position": [
+          0.5019913023575189,
+          0.4367132066834516
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.42867193283388516
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05399118069644713,
+        "facing": 4.010258868648131,
+        "position": [
+          0.5019455252918288,
+          0.4370031280994888
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09733079414945282
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05399118069644713,
+        "facing": 4.324448705656759,
+        "position": [
+          0.5019455252918288,
+          0.4370031280994888
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05282724067496491,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5031509880216678,
+          0.4371404592965591
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10369185720443497
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0525345986110563,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5034561684596017,
+          0.4371709773403525
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1042465300317997
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0525345986110563,
+        "facing": 4.217545541706616,
+        "position": [
+          0.5034561684596017,
+          0.4371709773403525
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05117003275714075,
+        "facing": 4.007094918504315,
+        "position": [
+          0.5044174868390936,
+          0.4384069581139849
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10045711741597725
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.05090814034464109,
+        "facing": 4.007094918504315,
+        "position": [
+          0.504600595101854,
+          0.43865110246433203
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10143424697130128
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.05090814034464109,
+        "facing": 4.321284755512943,
+        "position": [
+          0.504600595101854,
+          0.43865110246433203
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04983137030948166,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5057145037003128,
+          0.4387731746395056
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10051547893157625
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0494474484701407,
+        "facing": 4.585139022051774,
+        "position": [
+          0.5061112382696269,
+          0.4388189517051957
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08522900025442205
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0494474484701407,
+        "facing": 4.267881112176414,
+        "position": [
+          0.5061112382696269,
+          0.4388189517051957
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04809636198189483,
+        "facing": 4.007094918504315,
+        "position": [
+          0.5070725566491188,
+          0.4400396734569314
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.103776939397014
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.047821945034206705,
+        "facing": 4.007094918504315,
+        "position": [
+          0.5072709239337758,
+          0.44028381780727854
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10479766461658264
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.047821945034206705,
+        "facing": 4.321284755512943,
+        "position": [
+          0.5072709239337758,
+          0.44028381780727854
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04679861416341713,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5083237964446479,
+          0.4404058899824521
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.09704908742008929
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.046351214919942776,
+        "facing": 4.531735378715244,
+        "position": [
+          0.5087815671015488,
+          0.4404669260700389
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0648410234651155
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.046351214919942776,
+        "facing": 4.321284755512943,
+        "position": [
+          0.5087815671015488,
+          0.4404669260700389
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0449477846724072,
+        "facing": 4.110738255033557,
+        "position": [
+          0.5098496986343175,
+          0.44158083466849773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07364324613511089
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04473067167715922,
+        "facing": 4.110738255033557,
+        "position": [
+          0.5100175478751812,
+          0.4417486839093614
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07432447353401336
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.04473067167715922,
+        "facing": 4.321284755512943,
+        "position": [
+          0.5100175478751812,
+          0.4417486839093614
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04355328226992339,
+        "facing": 4.531735378715244,
+        "position": [
+          0.5111619745174334,
+          0.4420538643472953
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.060612279831802035
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.043187488126987236,
+        "facing": 4.531735378715244,
+        "position": [
+          0.5115129320210574,
+          0.4421606775005722
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06081658223490541
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.043187488126987236,
+        "facing": 4.321284755512943,
+        "position": [
+          0.5115129320210574,
+          0.4421606775005722
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04183734696278508,
+        "facing": 4.110738255033557,
+        "position": [
+          0.5125505455100328,
+          0.44322880903334094
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07789540125699307
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0415770463387459,
+        "facing": 4.164141898370087,
+        "position": [
+          0.5127489127946898,
+          0.4434424353398947
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06189828211918932
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0415770463387459,
+        "facing": 4.371524448705657,
+        "position": [
+          0.5127489127946898,
+          0.4434424353398947
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04045853906802562,
+        "facing": 4.581975071907958,
+        "position": [
+          0.5138628213931486,
+          0.44365606164644844
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07256175644568447
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04006030620055016,
+        "facing": 4.581975071907958,
+        "position": [
+          0.5142595559624628,
+          0.4437323567559319
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07309974272162786
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.04006030620055016,
+        "facing": 4.318120805369127,
+        "position": [
+          0.5142595559624628,
+          0.4437323567559319
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0388300135197927,
+        "facing": 4.107670182166826,
+        "position": [
+          0.5152056153200579,
+          0.4447241931792172
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0827531367354517
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03845447902834968,
+        "facing": 4.107670182166826,
+        "position": [
+          0.5154955367360952,
+          0.4450293736171511
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08431962733688823
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03845447902834968,
+        "facing": 4.368360498561841,
+        "position": [
+          0.5154955367360952,
+          0.4450293736171511
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.037545929569845087,
+        "facing": 4.632310642377757,
+        "position": [
+          0.516411078049897,
+          0.4451667048142214
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08416809159134694
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.037500734389749386,
+        "facing": 4.581975071907958,
+        "position": [
+          0.5164263370717938,
+          0.44525825894560156
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06745806349407205
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.037500734389749386,
+        "facing": 4.371524448705657,
+        "position": [
+          0.5164263370717938,
+          0.44525825894560156
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.036844218903177836,
+        "facing": 4.164141898370087,
+        "position": [
+          0.5166552224002442,
+          0.4466315709163043
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07605651336630238
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03661885495786702,
+        "facing": 4.164141898370087,
+        "position": [
+          0.5168383306630046,
+          0.44679942015716795
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0769618022728752
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03661885495786702,
+        "facing": 4.424928092042186,
+        "position": [
+          0.5168383306630046,
+          0.44679942015716795
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03577572949604623,
+        "facing": 4.68255033557047,
+        "position": [
+          0.5176165407797361,
+          0.44713511863889527
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08729396873655079
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03539278075522647,
+        "facing": 4.68255033557047,
+        "position": [
+          0.5180132753490502,
+          0.44715037766079196
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08823137511993627
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03539278075522647,
+        "facing": 4.368360498561841,
+        "position": [
+          0.5180132753490502,
+          0.44715037766079196
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03402703378138732,
+        "facing": 4.107670182166826,
+        "position": [
+          0.5190966659037156,
+          0.4482795452811475
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10176524204322158
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03332456496566866,
+        "facing": 4.211313518696069,
+        "position": [
+          0.5196612497138934,
+          0.44885938811322196
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07257344745690758
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03332456496566866,
+        "facing": 4.42176414189837,
+        "position": [
+          0.5196612497138934,
+          0.44885938811322196
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03227402531690723,
+        "facing": 4.632310642377757,
+        "position": [
+          0.5207141222247654,
+          0.4489967193102922
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06293042887841356
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.031821353921311114,
+        "facing": 4.632310642377757,
+        "position": [
+          0.5211718928816663,
+          0.4490424963759823
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06374575954188529
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.031821353921311114,
+        "facing": 4.42176414189837,
+        "position": [
+          0.5211718928816663,
+          0.4490424963759823
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.030506921754519866,
+        "facing": 4.214477468839885,
+        "position": [
+          0.5222858014801252,
+          0.4499427786678874
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07506607153728795
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.030253392032075076,
+        "facing": 4.264717162032598,
+        "position": [
+          0.5224994277866789,
+          0.45012588693064776
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.060352705611305214
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.030253392032075076,
+        "facing": 4.475167785234899,
+        "position": [
+          0.5224994277866789,
+          0.45012588693064776
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02916567549382858,
+        "facing": 4.685714285714286,
+        "position": [
+          0.5236133363851377,
+          0.45017166399633785
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07627444649784323
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028779049277075096,
+        "facing": 4.685714285714286,
+        "position": [
+          0.5240100709544518,
+          0.45018692301823454
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07726639736185821
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.028779049277075096,
+        "facing": 4.475167785234899,
+        "position": [
+          0.5240100709544518,
+          0.45018692301823454
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027627330382033622,
+        "facing": 4.211313518696069,
+        "position": [
+          0.5249866483558404,
+          0.45099565117875945
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07972726883597063
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02721612850861185,
+        "facing": 4.211313518696069,
+        "position": [
+          0.5253376058594644,
+          0.4512855725947967
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08199426547515364
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02721612850861185,
+        "facing": 4.42176414189837,
+        "position": [
+          0.5253376058594644,
+          0.4512855725947967
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 4.685714285714286,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06667858709949216
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 4.685714285714286,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06667858709949216
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 4.478331735378715,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 4.267881112176414,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.30505425745100295
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 4.792521572387344,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1380560122738501
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 5.367401725790987,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 5.6281879194630875,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1279448475514538
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 5.313998082454458,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 5.106615532118888,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5348809954301369
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 3.799712368168744,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11888079805993054
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026414041253426543,
+        "facing": 3.4322147651006714,
+        "position": [
+          0.5260700389105059,
+          0.4516670481422141
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0262296150728475,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.5258716716258488,
+          0.45357442587930114
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9191366292951334
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02621180195674808,
+        "facing": 5.5778523489932885,
+        "position": [
+          0.5258411535820554,
+          0.45387960631723506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10586842158056453
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02621180195674808,
+        "facing": 5.888878235858102,
+        "position": [
+          0.5258411535820554,
+          0.45387960631723506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0264686285582167,
+        "facing": 6.25647171620326,
+        "position": [
+          0.5258716716258488,
+          0.45229266803997864
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9319117555684233
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0266063527386338,
+        "facing": 2.6436241610738254,
+        "position": [
+          0.5258869306477455,
+          0.4516060120546273
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07384565104505861
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0266063527386338,
+        "facing": 2.9609779482262706,
+        "position": [
+          0.5258869306477455,
+          0.4516060120546273
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026184450451998922,
+        "facing": 3.1682646212847554,
+        "position": [
+          0.5259174486915389,
+          0.45357442587930114
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.43933803091371887
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02612130628433736,
+        "facing": 4.214477468839885,
+        "position": [
+          0.5259327077134356,
+          0.45387960631723506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10995691443345101
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02612130628433736,
+        "facing": 4.581975071907958,
+        "position": [
+          0.5259327077134356,
+          0.45387960631723506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025131937959871647,
+        "facing": 4.949568552253116,
+        "position": [
+          0.5270008392462043,
+          0.45348287174792096
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13105170839280508
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 4.742281879194631,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0652962081398591
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 4.531735378715244,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 4.321284755512943,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.30744375302080523
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 5.106615532118888,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 5.317162032598274,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 5.527612655800575,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6495001387509053
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 3.7494726749760305,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08350060383579673
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02485615513633609,
+        "facing": 3.4322147651006714,
+        "position": [
+          0.5272755016403449,
+          0.45351338979171435
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024490654086649664,
+        "facing": 3.2216682646212846,
+        "position": [
+          0.5273823147936217,
+          0.4554055085069047
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8724447681980101
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024440366369142687,
+        "facing": 5.734995206136146,
+        "position": [
+          0.5273975738155184,
+          0.4557869840543221
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07735190659988467
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024440366369142687,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5273975738155184,
+          0.4557869840543221
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024642418032966337,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5274128328374151,
+          0.45398641947051194
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9481269080676523
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024782314587483756,
+        "facing": 2.48974113135187,
+        "position": [
+          0.527321278706035,
+          0.453681239032578
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14443434296291352
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024782314587483756,
+        "facing": 3.118024928092042,
+        "position": [
+          0.527321278706035,
+          0.453681239032578
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024782314587483756,
+        "facing": 3.4322147651006714,
+        "position": [
+          0.527321278706035,
+          0.453681239032578
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15556433212689114
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024782314587483756,
+        "facing": 2.910738255033557,
+        "position": [
+          0.527321278706035,
+          0.453681239032578
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025093636646261235,
+        "facing": 2.7001917545541705,
+        "position": [
+          0.5267719539177539,
+          0.4554512855725948
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.880637017214669
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025160132899325723,
+        "facing": 0.13355704697986578,
+        "position": [
+          0.5266803997863737,
+          0.4557259479667353
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06008217948468365
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025160132899325723,
+        "facing": 6.206232023010546,
+        "position": [
+          0.5266803997863737,
+          0.4557259479667353
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02502861037534184,
+        "facing": 5.995781399808245,
+        "position": [
+          0.5270008392462043,
+          0.4541237506675822
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9653397954789673
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025016183315854534,
+        "facing": 3.2720038350910836,
+        "position": [
+          0.5271076523994812,
+          0.45354390783550774
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10583326225344455
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025016183315854534,
+        "facing": 2.9546500479386384,
+        "position": [
+          0.5271076523994812,
+          0.45354390783550774
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025410967870007198,
+        "facing": 2.590220517737296,
+        "position": [
+          0.5264972915236134,
+          0.4550240329594873
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8506313485705316
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02554651027213126,
+        "facing": 0.23403643336529242,
+        "position": [
+          0.526314183260853,
+          0.4554818036163882
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0947123385988085
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02554651027213126,
+        "facing": 6.199904122722915,
+        "position": [
+          0.526314183260853,
+          0.4554818036163882
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025286699355026504,
+        "facing": 5.885810162991371,
+        "position": [
+          0.5267872129396506,
+          0.4538185702296483
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9337337774431594
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02523810854726381,
+        "facing": 3.37248322147651,
+        "position": [
+          0.5269092851148242,
+          0.4533913176165408
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13928232788659586
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02523810854726381,
+        "facing": 2.7441994247363373,
+        "position": [
+          0.5269092851148242,
+          0.4533913176165408
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06070661594488852
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02523810854726381,
+        "facing": 2.4834132310642376,
+        "position": [
+          0.5269092851148242,
+          0.4533913176165408
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14371743957095842
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02523810854726381,
+        "facing": 2.8510067114093958,
+        "position": [
+          0.5269092851148242,
+          0.4533913176165408
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024966380580998777,
+        "facing": 3.165196548418025,
+        "position": [
+          0.5269245441367209,
+          0.45520714122224765
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9680630600513755
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024906935505078717,
+        "facing": 5.992617449664429,
+        "position": [
+          0.5269398031586175,
+          0.45566491187914854
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07386423667435645
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024906935505078717,
+        "facing": 6.2030680728667305,
+        "position": [
+          0.5269398031586175,
+          0.45566491187914854
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025289668732898816,
+        "facing": 0.18063279002876317,
+        "position": [
+          0.5267414358739605,
+          0.4540932326237888
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8857853469385527
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025470488976361505,
+        "facing": 2.536816874400767,
+        "position": [
+          0.526665140764477,
+          0.45343709468223087
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12782029051953622
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025470488976361505,
+        "facing": 3.061457334611697,
+        "position": [
+          0.526665140764477,
+          0.45343709468223087
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025470488976361505,
+        "facing": 3.3222435282837965,
+        "position": [
+          0.526665140764477,
+          0.45343709468223087
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12218877828368652
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025470488976361505,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.526665140764477,
+          0.45343709468223087
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02569084622342346,
+        "facing": 2.7473633748801536,
+        "position": [
+          0.5262073701075761,
+          0.45510032806897077
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8993129716543402
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02577026091932947,
+        "facing": 0.28744007670182165,
+        "position": [
+          0.5260852979324026,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11088649965417748
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02577026091932947,
+        "facing": 6.046021093000959,
+        "position": [
+          0.5260852979324026,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02577026091932947,
+        "facing": 5.835474592521573,
+        "position": [
+          0.5260852979324026,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12311926507149522
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02577026091932947,
+        "facing": 6.253307766059444,
+        "position": [
+          0.5260852979324026,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026242190629806535,
+        "facing": 0.18063279002876317,
+        "position": [
+          0.5258564126039521,
+          0.45358968490119783
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8813383711003756
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026335869433125055,
+        "facing": 2.4834132310642376,
+        "position": [
+          0.525810635538262,
+          0.4532997634851606
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14497255672513154
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026335869433125055,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.525810635538262,
+          0.4532997634851606
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025790351742399825,
+        "facing": 3.429050814956855,
+        "position": [
+          0.5261310749980926,
+          0.454886701762417
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.3718824961350623
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025623891699891124,
+        "facing": 4.267881112176414,
+        "position": [
+          0.5262378881513695,
+          0.4554665445944915
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11187820981037537
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025623891699891124,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5262378881513695,
+          0.4554665445944915
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02461092916295017,
+        "facing": 5.002972195589646,
+        "position": [
+          0.5273060196841383,
+          0.4549935149156939
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12948414076753884
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0242524044583345,
+        "facing": 4.899328859060403,
+        "position": [
+          0.5276874952315557,
+          0.45482566567483024
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.09926212117945298
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0242524044583345,
+        "facing": 4.585139022051774,
+        "position": [
+          0.5276874952315557,
+          0.45482566567483024
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023263843931693378,
+        "facing": 4.27104506232023,
+        "position": [
+          0.5286030365453575,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10869629081041023
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02326232758431894,
+        "facing": 4.27104506232023,
+        "position": [
+          0.5286030365453575,
+          0.45554283970397497
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10890404724735986
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02326232758431894,
+        "facing": 4.635378715244487,
+        "position": [
+          0.5286030365453575,
+          0.45554283970397497
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023263843931693378,
+        "facing": 5.002972195589646,
+        "position": [
+          0.5286030365453575,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11444906296243733
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023263843931693378,
+        "facing": 5.056375838926175,
+        "position": [
+          0.5286030365453575,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09745015533018694
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023263843931693378,
+        "facing": 5.370565675934803,
+        "position": [
+          0.5286030365453575,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02345628837146317,
+        "facing": 5.684755512943433,
+        "position": [
+          0.5284351873044938,
+          0.45528343633173113
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6785966750066905
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023508527719298396,
+        "facing": 3.7463087248322147,
+        "position": [
+          0.5283894102388037,
+          0.45522240024414434
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06232364830497508
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023508527719298396,
+        "facing": 3.5390220517737294,
+        "position": [
+          0.5283894102388037,
+          0.45522240024414434
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023110628674319122,
+        "facing": 3.328475551294343,
+        "position": [
+          0.5286488136110475,
+          0.45722133211261157
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8616137619762607
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.577948226270374,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14872923801289456
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.155992329817833,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 0.1837967401725791,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13425901638919094
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.155992329817833,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.8418024928092045,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06474181646181189
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.684755512943433,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1147314227483938
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.895206136145734,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.209395973154362,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 0.13662511984659637,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11924382329212238
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.212464046021093,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.84496644295302,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06373469985164266
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.634419942473634,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13075373245563168
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.892042186001918,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06825861345083992
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 0.186960690316395,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13526613299936016
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 6.209395973154362,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.84496644295302,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06373469985164266
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.6375838926174495,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12974661584546246
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023075051933329364,
+        "facing": 5.948609779482263,
+        "position": [
+          0.5286793316548409,
+          0.457450217441062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023240772752420927,
+        "facing": 6.2627996164908915,
+        "position": [
+          0.5286030365453575,
+          0.4557717250324254
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9687325537818703
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023349036003474335,
+        "facing": 2.806999041227229,
+        "position": [
+          0.528526741435874,
+          0.4554360265506981
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06428258053186814
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023349036003474335,
+        "facing": 3.070949185043145,
+        "position": [
+          0.528526741435874,
+          0.4554360265506981
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023086900129701715,
+        "facing": 3.2782358581016298,
+        "position": [
+          0.5286793316548409,
+          0.4570077058060578
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9542273052846699
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023011217194319623,
+        "facing": 5.945445829338447,
+        "position": [
+          0.5287403677424277,
+          0.45767910276951246
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11447978473550662
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023011217194319623,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5287403677424277,
+          0.45767910276951246
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023440326166702958,
+        "facing": 0.3408437200383509,
+        "position": [
+          0.528374151216907,
+          0.45612268253604943
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8587742254660711
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023626771102558033,
+        "facing": 2.750431447746884,
+        "position": [
+          0.5282368200198367,
+          0.45554283970397497
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08412326693472905
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023626771102558033,
+        "facing": 3.0677852348993286,
+        "position": [
+          0.5282368200198367,
+          0.45554283970397497
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023289471765270083,
+        "facing": 3.3285714285714287,
+        "position": [
+          0.5284657053482872,
+          0.4574044403753719
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9437302139839535
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 5.892042186001918,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13296453461968075
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 0.23720038350910835,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06704341484149137
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 0.4476510067114094,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13403192876032363
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 0.13355704697986578,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 6.099424736337488,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06695261862586123
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 5.892042186001918,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13296453461968075
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0232395705009764,
+        "facing": 0.026749760306807285,
+        "position": [
+          0.5285114824139773,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023628086685377626,
+        "facing": 0.23403643336529242,
+        "position": [
+          0.5282063019760433,
+          0.4558632791638056
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8894531849940933
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023699756554502918,
+        "facing": 2.8510067114093958,
+        "position": [
+          0.5281605249103533,
+          0.45557335774776836
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023699756554502918,
+        "facing": 3.061457334611697,
+        "position": [
+          0.5281605249103533,
+          0.45557335774776836
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02344620589128493,
+        "facing": 3.2688398849472673,
+        "position": [
+          0.5283131151293202,
+          0.45722133211261157
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9602972302829628
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023392085544485047,
+        "facing": 6.046021093000959,
+        "position": [
+          0.5283588921950103,
+          0.4578316929884794
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08457989340273682
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023392085544485047,
+        "facing": 0.07698945349952062,
+        "position": [
+          0.5283588921950103,
+          0.4578316929884794
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02381354069520946,
+        "facing": 0.28744007670182165,
+        "position": [
+          0.5280079346913863,
+          0.45601586938277255
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8747093388314308
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 2.590220517737296,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13693062583943894
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.2186001917545544,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06308883667720216
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.5326941514860977,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1630680492503657
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.2217641418983702,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0640959532873711
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 2.8039309683604987,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06890447662528071
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 2.599712368168744,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13390927600893102
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 2.910738255033557,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.2279961649089164,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06607966782255309
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.4353787152444872,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1320915838163726
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.023920467318670258,
+        "facing": 3.0175455417066157,
+        "position": [
+          0.5279316395819028,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02424890958639571,
+        "facing": 2.806999041227229,
+        "position": [
+          0.5275043869687953,
+          0.4575112535286488
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.888606505343058
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02432295748550664,
+        "facing": 0.24352828379674019,
+        "position": [
+          0.5274280918593118,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06902041083050679
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02432295748550664,
+        "facing": 6.265963566634707,
+        "position": [
+          0.5274280918593118,
+          0.45778591592278933
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024131982723629753,
+        "facing": 6.058581016299137,
+        "position": [
+          0.527672236209659,
+          0.456244754711223
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9589511909773552
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02409325628857336,
+        "facing": 3.39137104506232,
+        "position": [
+          0.5277637903410392,
+          0.45558861676966506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11868278008319116
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02409325628857336,
+        "facing": 3.023777564717162,
+        "position": [
+          0.5277637903410392,
+          0.45558861676966506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024537769273146617,
+        "facing": 2.6059443911792903,
+        "position": [
+          0.5272297245746548,
+          0.45694666971847103
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.831883346367292
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024752207791005298,
+        "facing": 0.24976030680728667,
+        "position": [
+          0.5270008392462043,
+          0.4575265125505455
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07432627811790063
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024752207791005298,
+        "facing": 6.212464046021093,
+        "position": [
+          0.5270008392462043,
+          0.4575265125505455
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024497916516977,
+        "facing": 6.005177372962608,
+        "position": [
+          0.5273517967498283,
+          0.45564965285725184
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9493918302904818
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024466455794082173,
+        "facing": 3.388207094918504,
+        "position": [
+          0.5274128328374151,
+          0.4553444724193179
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12041006081389721
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024466455794082173,
+        "facing": 3.020613614573346,
+        "position": [
+          0.5274128328374151,
+          0.4553444724193179
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025022609308865944,
+        "facing": 2.6027804410354745,
+        "position": [
+          0.5267414358739605,
+          0.4570382238498512
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8294844627492421
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025122356520704846,
+        "facing": 0.3,
+        "position": [
+          0.5266346227206836,
+          0.45729762722209505
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.09315785832941136
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025122356520704846,
+        "facing": 6.2627996164908915,
+        "position": [
+          0.5266346227206836,
+          0.45729762722209505
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024822559641886795,
+        "facing": 5.951773729626079,
+        "position": [
+          0.5270313572899977,
+          0.45558861676966506
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9328038977425059
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024775713496796064,
+        "facing": 3.4384467881112175,
+        "position": [
+          0.5271229114213779,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.138556075827141
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024775713496796064,
+        "facing": 2.810162991371045,
+        "position": [
+          0.5271229114213779,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06143286800434338
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024775713496796064,
+        "facing": 2.546308724832215,
+        "position": [
+          0.5271229114213779,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14542028955542577
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024775713496796064,
+        "facing": 2.910738255033557,
+        "position": [
+          0.5271229114213779,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02453721416309351,
+        "facing": 3.2248322147651005,
+        "position": [
+          0.5272297245746548,
+          0.45696192874036773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9713163558883281
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024494456674752453,
+        "facing": 6.052253116011506,
+        "position": [
+          0.5272602426184482,
+          0.4574196993972686
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0772513109620157
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.024494456674752453,
+        "facing": 0.08638542665388303,
+        "position": [
+          0.5272602426184482,
+          0.4574196993972686
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.024980114077492625,
+        "facing": 0.2937679769894535,
+        "position": [
+          0.5268787670710308,
+          0.45552758068207827
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8675976388438602
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025069402750081276,
+        "facing": 2.5965484180249283,
+        "position": [
+          0.526817730983444,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13100646576882594
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025069402750081276,
+        "facing": 3.2248322147651005,
+        "position": [
+          0.526817730983444,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06898247806265816
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025069402750081276,
+        "facing": 3.4353787152444872,
+        "position": [
+          0.526817730983444,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13600151066664717
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025069402750081276,
+        "facing": 3.0175455417066157,
+        "position": [
+          0.526817730983444,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025358625965505664,
+        "facing": 2.806999041227229,
+        "position": [
+          0.5264057373922332,
+          0.4570229648279545
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8945445088338828
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025440908280421982,
+        "facing": 0.24036433365292426,
+        "position": [
+          0.526314183260853,
+          0.4573891813534752
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07294233975535025
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025440908280421982,
+        "facing": 6.209395973154362,
+        "position": [
+          0.526314183260853,
+          0.4573891813534752
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025180460865910685,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5266803997863737,
+          0.4554970626382849
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9485374928024324
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02514846986167624,
+        "facing": 3.381975071907958,
+        "position": [
+          0.5267414358739605,
+          0.45520714122224765
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11928626776795323
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02514846986167624,
+        "facing": 3.0143815915628,
+        "position": [
+          0.5267414358739605,
+          0.45520714122224765
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025555367805387544,
+        "facing": 2.6499520613614576,
+        "position": [
+          0.5262226291294728,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8488500354973543
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025734692157460697,
+        "facing": 0.24036433365292426,
+        "position": [
+          0.5260242618448158,
+          0.45720607309071487
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07514231394649924
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025734692157460697,
+        "facing": 6.209395973154362,
+        "position": [
+          0.5260242618448158,
+          0.45720607309071487
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02548667794830319,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5263904783703365,
+          0.4553139543755245
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9504765025668943
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025456462096691144,
+        "facing": 3.381975071907958,
+        "position": [
+          0.5264515144579233,
+          0.4550240329594873
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12118269807660906
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.025456462096691144,
+        "facing": 3.0143815915628,
+        "position": [
+          0.5264515144579233,
+          0.4550240329594873
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02589025724256498,
+        "facing": 2.5965484180249283,
+        "position": [
+          0.5259021896696422,
+          0.45638208590829327
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8352307526634143
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02609268204856998,
+        "facing": 0.24036433365292426,
+        "position": [
+          0.5256733043411917,
+          0.45696192874036773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07801317424951637
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02609268204856998,
+        "facing": 6.25647171620326,
+        "position": [
+          0.5256733043411917,
+          0.45696192874036773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.025868092865452292,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5260242618448158,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9520838250348387
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 3.4353787152444872,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14069182480649184
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 2.854170661553212,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 2.543144774688399,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14331505926123136
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 2.750431447746884,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07733366195256858
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 3.2216682646212846,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07266567559233389
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 3.4856184084372,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15668361582857301
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02583313200230053,
+        "facing": 3.0175455417066157,
+        "position": [
+          0.5261005569542992,
+          0.45477988860914015
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026156384920573542,
+        "facing": 2.7567593480345156,
+        "position": [
+          0.5256275272755017,
+          0.45653467612726023
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8841843728089733
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026247868510988433,
+        "facing": 0.19319271332694152,
+        "position": [
+          0.5255207141222248,
+          0.45688563363088425
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06385992121436877
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026247868510988433,
+        "facing": 6.265867689357623,
+        "position": [
+          0.5255207141222248,
+          0.45688563363088425
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026098570886482805,
+        "facing": 6.0554170661553215,
+        "position": [
+          0.5257801174944686,
+          0.45526817730983443
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9682982337025619
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026071346187843472,
+        "facing": 3.334803451581975,
+        "position": [
+          0.5258716716258488,
+          0.45468833447775997
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10945583994174855
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026071346187843472,
+        "facing": 3.0175455417066157,
+        "position": [
+          0.5258716716258488,
+          0.45468833447775997
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026479011078188126,
+        "facing": 2.6531160115052734,
+        "position": [
+          0.5253223468375677,
+          0.4562142366674296
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8548569185912618
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026621746037632385,
+        "facing": 0.19319271332694152,
+        "position": [
+          0.5251544975967041,
+          0.4566872663462272
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06606980754451543
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026621746037632385,
+        "facing": 6.265867689357623,
+        "position": [
+          0.5251544975967041,
+          0.4566872663462272
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026483086456687004,
+        "facing": 6.0554170661553215,
+        "position": [
+          0.5254139009689479,
+          0.4550698100251774
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.970235900196178
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026461277857916427,
+        "facing": 3.334803451581975,
+        "position": [
+          0.5255054551003281,
+          0.4544747081712062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11147297618867782
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026461277857916427,
+        "facing": 3.020613614573346,
+        "position": [
+          0.5255054551003281,
+          0.4544747081712062
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026857335041688895,
+        "facing": 2.6531160115052734,
+        "position": [
+          0.524956130312047,
+          0.45601586938277255
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.8569358553993978
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02699764302708185,
+        "facing": 0.29683604985618406,
+        "position": [
+          0.5247882810711834,
+          0.45647364003967345
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1013887608234631
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02699764302708185,
+        "facing": 6.212464046021093,
+        "position": [
+          0.5247882810711834,
+          0.45647364003967345
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026686581003230285,
+        "facing": 5.89837008628955,
+        "position": [
+          0.5252307927061876,
+          0.4548714427405203
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9223703012485651
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02662438724351678,
+        "facing": 3.4384467881112175,
+        "position": [
+          0.5253528648813611,
+          0.45438315403982604
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14531684264975
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02662438724351678,
+        "facing": 2.810162991371045,
+        "position": [
+          0.5253528648813611,
+          0.45438315403982604
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02662438724351678,
+        "facing": 2.549376797698945,
+        "position": [
+          0.5253528648813611,
+          0.45438315403982604
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13768292480780428
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02662438724351678,
+        "facing": 2.9138063279002875,
+        "position": [
+          0.5253528648813611,
+          0.45438315403982604
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026400070312602684,
+        "facing": 3.1777564717162035,
+        "position": [
+          0.5253986419470512,
+          0.4562600137331197
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9786390057485904
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026364644717109992,
+        "facing": 6.058581016299137,
+        "position": [
+          0.5254139009689479,
+          0.4566414892805371
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06623052107588007
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026364644717109992,
+        "facing": 6.265867689357623,
+        "position": [
+          0.5254139009689479,
+          0.4566414892805371
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026755832292533952,
+        "facing": 0.1900287631831256,
+        "position": [
+          0.5251697566186008,
+          0.45479514763103684
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8938301265957563
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02684742405607582,
+        "facing": 2.7567593480345156,
+        "position": [
+          0.5251239795529107,
+          0.45441367208361944
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07238281569076524
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02684742405607582,
+        "facing": 3.070949185043145,
+        "position": [
+          0.5251239795529107,
+          0.45441367208361944
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02654621648052669,
+        "facing": 3.2279961649089164,
+        "position": [
+          0.5252460517280843,
+          0.45636682688639657
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.964035660203458
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 5.84496644295302,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1346758788543874
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 0.1900287631831256,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06530155192162816
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 0.400575263662512,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1323205845256171
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 0.08638542665388303,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 6.052253116011506,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06869448154572433
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 5.84496644295302,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1346758788543874
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02651570645033796,
+        "facing": 6.259635666347076,
+        "position": [
+          0.525261310749981,
+          0.4566720073243305
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026912662697392446,
+        "facing": 0.186960690316395,
+        "position": [
+          0.5250171663996338,
+          0.45474937056534676
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8944746826682693
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02699490464971068,
+        "facing": 2.803835091083413,
+        "position": [
+          0.5249713893339437,
+          0.45444419012741283
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02699490464971068,
+        "facing": 3.0143815915628,
+        "position": [
+          0.5249713893339437,
+          0.45444419012741283
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02674466053558904,
+        "facing": 3.2248322147651005,
+        "position": [
+          0.5250629434653239,
+          0.45610742351415273
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9620816783431582
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.026666820513765704,
+        "facing": 5.895206136145734,
+        "position": [
+          0.525108720531014,
+          0.4567025253681239
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.119128718982008
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.026666820513765704,
+        "facing": 6.2627996164908915,
+        "position": [
+          0.525108720531014,
+          0.4567025253681239
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027158358509347096,
+        "facing": 0.3440076701821668,
+        "position": [
+          0.5247272449835966,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8494954179327104
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027358473087200005,
+        "facing": 2.750431447746884,
+        "position": [
+          0.5245899137865263,
+          0.4545662623025864
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07695247404023148
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.027358473087200005,
+        "facing": 3.061457334611697,
+        "position": [
+          0.5245899137865263,
+          0.4545662623025864
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027025834320803962,
+        "facing": 3.2720038350910836,
+        "position": [
+          0.52475776302739,
+          0.45651941710536353
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9521426679743444
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02698206722816511,
+        "facing": 5.888878235858102,
+        "position": [
+          0.5247882810711834,
+          0.45682459754329746
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12274396107982478
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02698206722816511,
+        "facing": 6.25647171620326,
+        "position": [
+          0.5247882810711834,
+          0.45682459754329746
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027429444764256884,
+        "facing": 0.3408437200383509,
+        "position": [
+          0.5244373235675593,
+          0.4553292133974212
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8529515251018085
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02764901083101159,
+        "facing": 2.6970278044103546,
+        "position": [
+          0.5242847333485924,
+          0.4546730754558633
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09559351345493843
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02764901083101159,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.5242847333485924,
+          0.4546730754558633
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027287965306863015,
+        "facing": 3.3222435282837965,
+        "position": [
+          0.5244983596551461,
+          0.45645838101777675
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9355883947459723
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 5.838638542665389,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13990757119638025
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 0.18063279002876317,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 0.3911792905081496,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12611229425861162
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 0.18063279002876317,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 6.099424736337488,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 5.888878235858102,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1239157801742991
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 6.152828379674017,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 0.186960690316395,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06110749487496116
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 0.39424736337488014,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12708889218362418
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02720750356234102,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5245593957427329,
+          0.45691615167467764
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02703738937872454,
+        "facing": 6.0491850431447745,
+        "position": [
+          0.5248645761806668,
+          0.4549935149156939
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.9684672734435077
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02702405518690908,
+        "facing": 3.4322147651006714,
+        "position": [
+          0.5249103532463569,
+          0.45470359349965667
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1389125790419829
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02702405518690908,
+        "facing": 2.806999041227229,
+        "position": [
+          0.5249103532463569,
+          0.45470359349965667
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.060099766864489
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02702405518690908,
+        "facing": 2.5965484180249283,
+        "position": [
+          0.5249103532463569,
+          0.45470359349965667
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12708828078332102
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02702405518690908,
+        "facing": 2.9075743048897413,
+        "position": [
+          0.5249103532463569,
+          0.45470359349965667
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02678198737752961,
+        "facing": 3.2216682646212846,
+        "position": [
+          0.5250019073777371,
+          0.45651941710536353
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9680224428987062
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02673320104678607,
+        "facing": 6.0491850431447745,
+        "position": [
+          0.5250324254215305,
+          0.45696192874036773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07324059479547883
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02673320104678607,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5250324254215305,
+          0.45696192874036773
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027027410888795258,
+        "facing": 0.186960690316395,
+        "position": [
+          0.5248340581368734,
+          0.4554055085069047
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.902399888410579
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 2.543144774688399,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14467065511154756
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 3.1714285714285713,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 3.429050814956855,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1373219957358372
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 3.118024928092042,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 2.803835091083413,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0616903501706344
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 2.6467881112176412,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11167995645721632
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.027187260994418413,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.5247425040054933,
+          0.45473411154345006
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02692598719766908,
+        "facing": 3.2216682646212846,
+        "position": [
+          0.5248493171587701,
+          0.4567025253681239
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9702738591067089
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02689997212535892,
+        "facing": 5.838638542665389,
+        "position": [
+          0.5248645761806668,
+          0.4569924467841611
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14068630632863424
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02689997212535892,
+        "facing": 0.08322147651006712,
+        "position": [
+          0.5248645761806668,
+          0.4569924467841611
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027439107340262506,
+        "facing": 0.39424736337488014,
+        "position": [
+          0.5244220645456626,
+          0.455390249485008
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8366739317416091
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.5399808245445827,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14820317935808458
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.165196548418025,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.476222435282838,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14981178119653835
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.2656759348034514,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08279274859254934
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.7976030680728665,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06619947234218392
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.5399808245445827,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14820317935808458
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.750431447746884,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08121466543925229
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.2186001917545544,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06780807418063768
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.4824544582933843,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15179549573172008
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 3.2656759348034514,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08279274859254934
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.7976030680728665,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06619947234218392
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.536816874400767,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1492102959682538
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0276236724725677,
+        "facing": 2.9578139980824543,
+        "position": [
+          0.5242847333485924,
+          0.4549019607843137
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027394925348494113,
+        "facing": 3.2186001917545544,
+        "position": [
+          0.5243762874799726,
+          0.45679407949950407
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9725469007312915
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 5.785234899328859,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15980676226204946
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 0.12722914669223395,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 0.4414189837008629,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13920380184727393
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 0.23403643336529242,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07319188585345426
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 6.149664429530201,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 5.942377756471716,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10978663729031109
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 6.2030680728667305,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027636919559808345,
+        "facing": 0.13039309683604985,
+        "position": [
+          0.5242389562829023,
+          0.45522240024414434
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.91892471629714
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027697915783833918,
+        "facing": 2.7473633748801536,
+        "position": [
+          0.5242084382391089,
+          0.4549172198062104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08245910013502736
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.027697915783833918,
+        "facing": 3.0646212847555128,
+        "position": [
+          0.5242084382391089,
+          0.4549172198062104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027392099184734238,
+        "facing": 3.2720038350910836,
+        "position": [
+          0.5243762874799726,
+          0.45687037460898755
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.956433926522736
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 5.888974113135187,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1267855449225612
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02735278739781482,
+        "facing": 6.25647171620326,
+        "position": [
+          0.524406805523766,
+          0.4571602960250248
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027938002340306616,
+        "facing": 0.3911792905081496,
+        "position": [
+          0.5239185168230717,
+          0.4554207675288014
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8385105023820668
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028061768583763923,
+        "facing": 2.6436241610738254,
+        "position": [
+          0.5238269626916915,
+          0.4550698100251774
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11765918580457059
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.028061768583763923,
+        "facing": 3.0112176414189835,
+        "position": [
+          0.5238269626916915,
+          0.4550698100251774
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02768890273438038,
+        "facing": 3.378811121764142,
+        "position": [
+          0.5240863660639353,
+          0.4566872663462272
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9204512600280591
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027579148746665047,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5241779201953155,
+          0.45726710917830166
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09310986773670735
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.027579148746665047,
+        "facing": 6.259635666347076,
+        "position": [
+          0.5241779201953155,
+          0.45726710917830166
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028047070163225572,
+        "facing": 0.2906040268456376,
+        "position": [
+          0.5238117036697948,
+          0.455390249485008
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8702848309963716
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02813469447627184,
+        "facing": 2.857334611697028,
+        "position": [
+          0.523750667582208,
+          0.45510032806897077
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02813469447627184,
+        "facing": 3.0677852348993286,
+        "position": [
+          0.523750667582208,
+          0.45510032806897077
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.027869378526752527,
+        "facing": 3.2782358581016298,
+        "position": [
+          0.523903257801175,
+          0.456748302433814
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9532494652190352
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02780649764119502,
+        "facing": 5.998849472674976,
+        "position": [
+          0.5239490348668651,
+          0.45734340428778514
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0940381378252159
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02780649764119502,
+        "facing": 0.03298178331735379,
+        "position": [
+          0.5239490348668651,
+          0.45734340428778514
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028188704448183357,
+        "facing": 0.24036433365292426,
+        "position": [
+          0.5236591134508278,
+          0.4555123216601816
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8878007087467773
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028282151495526202,
+        "facing": 2.8039309683604987,
+        "position": [
+          0.523598077363241,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.067741357493429
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.028282151495526202,
+        "facing": 3.0143815915628,
+        "position": [
+          0.523598077363241,
+          0.45514610513466086
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028080518433836854,
+        "facing": 3.2248322147651005,
+        "position": [
+          0.5236896314946212,
+          0.45680933852140077
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9710351795413188
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.02803431588562883,
+        "facing": 5.945445829338447,
+        "position": [
+          0.5237201495384146,
+          0.4574044403753719
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11177701643731991
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.02803431588562883,
+        "facing": 6.2627996164908915,
+        "position": [
+          0.5237201495384146,
+          0.4574044403753719
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0284445726948257,
+        "facing": 0.2937679769894535,
+        "position": [
+          0.5233844510566873,
+          0.455741206988632
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8736089478232844
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028592642526212877,
+        "facing": 2.7535953978906997,
+        "position": [
+          0.5232776379034104,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08511891329967322
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.028592642526212877,
+        "facing": 3.0677852348993286,
+        "position": [
+          0.5232776379034104,
+          0.45523765926604104
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028298192429242676,
+        "facing": 3.2782358581016298,
+        "position": [
+          0.5234607461661708,
+          0.4571755550469215
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.9582480728740819
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028262081346321265,
+        "facing": 5.895206136145734,
+        "position": [
+          0.5234912642099642,
+          0.4574807354848554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12866868842497345
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.028262081346321265,
+        "facing": 6.2627996164908915,
+        "position": [
+          0.5234912642099642,
+          0.4574807354848554
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.028686393005092296,
+        "facing": 0.3440076701821668,
+        "position": [
+          0.5231250476844435,
+          0.45598535133897916
+        ],
+        "phase": "RELEASE",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.8605319245010605
+      }
+    }
+  ],
+  "start": {
+    "health": 0,
+    "dead": true,
+    "position": [
+      0.551750972762646,
+      0.4578469520103761
+    ],
+    "facing": 4.917353787152445,
+    "corpse_exists": false,
+    "corpse": [
+      0.0,
+      0.0
+    ]
+  },
+  "release_button": [
+    960,
+    244
+  ],
+  "reason": "time_budget",
+  "corpses": [],
+  "evidence": {
+    "run": "client_danger_recovery_1793782467591012000",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793782467591012000_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1179312.9177943
+      },
+      {
+        "label": "03-given-up",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793782467591012000_03-given-up.png",
+        "source": "desktop",
+        "host_monotonic": 1179554.5971926
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793782467591012000_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1179555.0067717
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 1723,
+          "game_ms": 1179312201,
+          "health": 0,
+          "max_health": 67,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.551750972762646,
+          "pos_y": 0.4578469520103761,
+          "facing": 4.917353787152445,
+          "event_serial": 2,
+          "cast_started": 1,
+          "cast_succeeded": 1,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1179245617,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 1,
+              "spell": 133,
+              "at": 1179244259,
+              "reason": 0
+            },
+            {
+              "serial": 2,
+              "kind": 2,
+              "spell": 133,
+              "at": 1179245617,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "protocol": 8
+        }
+      },
+      {
+        "label": "03-given-up",
+        "state": {
+          "sequence": 4129,
+          "game_ms": 1179553901,
+          "health": 1,
+          "max_health": 67,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5229724574654765,
+          "pos_y": 0.4553444724193179,
+          "facing": 2.7001917545541705,
+          "event_serial": 2,
+          "cast_started": 1,
+          "cast_succeeded": 1,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1179245617,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 1,
+              "spell": 133,
+              "at": 1179244259,
+              "reason": 0
+            },
+            {
+              "serial": 2,
+              "kind": 2,
+              "spell": 133,
+              "at": 1179245617,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.551750972762646,
+          "corpse_y": 0.4578469520103761,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}

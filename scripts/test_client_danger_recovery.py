@@ -59,6 +59,17 @@ class PathMemoryTest(unittest.TestCase):
         memory.record(0.03, 0.04)
         self.assertAlmostEqual(memory.length(), 0.05)
 
+    def test_a_point_of_another_map_area_is_dropped(self):
+        # The coordinates of the areas are not comparable, so a point that
+        # is far away from the last one does not belong to the path.
+        memory = PathMemory(min_step=0.001)
+        memory.record(0.0, 0.0)
+        self.assertFalse(memory.record(0.9, 0.4))
+        self.assertEqual(len(memory.points), 1)
+        self.assertAlmostEqual(memory.length(), 0.0)
+        self.assertTrue(memory.record(0.01, 0.0))
+        self.assertAlmostEqual(memory.length(), 0.01)
+
     def test_the_route_back_leads_to_the_start(self):
         memory = PathMemory(min_step=0.001)
         memory.record(0.0, 0.0)

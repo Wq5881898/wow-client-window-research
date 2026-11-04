@@ -1,0 +1,153 @@
+{
+  "run": "client_enter_1793783082208836400",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Probehuman",
+  "highlight_row": 437,
+  "expected_highlight_row": 465,
+  "enter_world_button": [
+    1010,
+    1008
+  ],
+  "protocol": 8,
+  "health": 1,
+  "dead": true,
+  "power": 0,
+  "position": [
+    0.5229724574654765,
+    0.4553444724193179
+  ],
+  "release_button": null,
+  "error": "ValueError('the character entered the world as a ghost and the death window was not found')",
+  "wow_processes": [
+    "37912"
+  ],
+  "client_windows": [
+    [
+      3607520,
+      "D3DProxyWindow",
+      "D3DProxyWindow"
+    ],
+    [
+      5177902,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793783082208836400",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793783082208836400_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 1179947.1857193
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793783082208836400_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 1179951.2419429
+      },
+      {
+        "label": "03-in-world",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793783082208836400_03-in-world.png",
+        "source": "desktop",
+        "host_monotonic": 1179972.0131887
+      },
+      {
+        "label": "03b-ghost-released",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793783082208836400_03b-ghost-released.png",
+        "source": "desktop",
+        "host_monotonic": 1179980.6151969
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793783082208836400_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1179981.4926909
+      }
+    ],
+    "states": [
+      {
+        "label": "03-in-world",
+        "state": {
+          "sequence": 158,
+          "game_ms": 1179971301,
+          "health": 1,
+          "max_health": 67,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5229724574654765,
+          "pos_y": 0.4553444724193179,
+          "facing": 3.0143815915628,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.551750972762646,
+          "corpse_y": 0.4578469520103761,
+          "corpse_exists": true,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}

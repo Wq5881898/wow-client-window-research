@@ -31,6 +31,32 @@ def hold(vk, seconds, hwnd):
         d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key))
 
 
+def walk_heading(hwnd, reader, heading, seconds=60.0, stop=None, trace=None):
+    """Walk in a fixed direction until the stop function says so.
+
+    The heading of the client is kept, so the character walks straight even
+    when the ground is not level. The function returns whether the stop was
+    reached and the state of the last reading.
+    """
+    deadline = time.monotonic() + seconds
+    state = reader()
+    while time.monotonic() < deadline:
+        state = reader()
+        error = wrap(heading - state['facing'])
+        if abs(error) > 0.10:
+            hold(VK_LEFT if error > 0 else VK_RIGHT,
+                 min(1.1, max(0.06, abs(error) / TURN_RATE)), hwnd)
+            continue
+        hold(VK_FORWARD, 1.2, hwnd)
+        state = reader()
+        if trace is not None:
+            trace.append({'position': [state['pos_x'], state['pos_y']],
+                          'facing': state['facing']})
+        if stop is not None and stop(state):
+            return True, state
+    return False, state
+
+
 def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
     """Walk towards a place. Returns the distance that is left."""
     deadline = time.monotonic() + timeout

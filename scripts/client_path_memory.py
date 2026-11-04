@@ -16,16 +16,29 @@ import math
 class PathMemory:
     """The waypoints of a walked path."""
 
-    def __init__(self, min_step=0.002):
+    # A step of the character is far below this distance. A point that is
+    # farther away belongs to another map area: the coordinates of the areas
+    # are not comparable, so such a point is not part of the path.
+    MAX_JUMP = 0.1
+
+    def __init__(self, min_step=0.002, max_jump=MAX_JUMP):
         self.min_step = min_step
+        self.max_jump = max_jump
         self.points = []
 
     def record(self, x, y):
-        """Add a point when it is far enough from the last one."""
+        """Add a point when it is far enough from the last one.
+
+        Returns False when the point was dropped: either it is too close to
+        the last one, or it belongs to another map area.
+        """
         if not self.points:
             self.points.append((float(x), float(y)))
             return True
-        if math.dist(self.points[-1], (x, y)) >= self.min_step:
+        step = math.dist(self.points[-1], (x, y))
+        if step >= self.max_jump:
+            return False
+        if step >= self.min_step:
             self.points.append((float(x), float(y)))
             return True
         return False

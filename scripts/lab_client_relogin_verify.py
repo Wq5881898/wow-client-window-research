@@ -16,7 +16,8 @@ from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_read_fresh import (read_or_dismiss, find_logout_button,
-                                find_red_button, open_menu_logout)
+                                find_red_button, open_menu_logout,
+                                wait_out_of_combat)
 
 ROOT = Path(__file__).resolve().parents[1]
 CHARACTERS = {
@@ -107,6 +108,9 @@ def main():
         evidence.capture('01-before', before)
 
         # Open the menu of the client and leave the game with the logout.
+        # The menu of the client does not open while the character is in
+        # combat, so the fight has to be over first.
+        result['out_of_combat'] = wait_out_of_combat(reader, hwnd)
         logout = open_menu_logout(hwnd)
         if logout is None:
             raise ValueError('the logout button of the client was not found')

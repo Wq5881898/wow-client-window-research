@@ -1,0 +1,365 @@
+{
+  "run": "client_walk_out_1793778958466683900",
+  "status": "FAILED",
+  "trace": [
+    {
+      "direction": "south",
+      "position": [
+        0.5842374303807126,
+        0.40740062561989776
+      ],
+      "step": 0.0049135472134798665
+    },
+    {
+      "direction": "south",
+      "position": [
+        0.5793850614175632,
+        0.409750514991989
+      ],
+      "step": 0.005391425100620743
+    },
+    {
+      "direction": "south",
+      "position": [
+        0.5773861295490959,
+        0.4149843595025559
+      ],
+      "step": 0.005602575923230821
+    },
+    {
+      "direction": "south",
+      "position": [
+        0.5774166475928892,
+        0.42244602121004043
+      ],
+      "step": 0.0074617241163110444
+    },
+    {
+      "direction": "south",
+      "position": [
+        0.5744716563668268,
+        0.43353933012893875
+      ],
+      "step": 0.011477564031260877
+    },
+    {
+      "direction": "west",
+      "position": [
+        0.5665827420462348,
+        0.43361562523842223
+      ],
+      "step": 0.007889283243829757
+    },
+    {
+      "direction": "west",
+      "position": [
+        0.5595025558861677,
+        0.43434805828946366
+      ],
+      "step": 0.007117969811362209
+    },
+    {
+      "direction": "west",
+      "position": [
+        0.5524223697261006,
+        0.4332494087129015
+      ],
+      "step": 0.00716491918679381
+    },
+    {
+      "direction": "west",
+      "position": [
+        0.5452658884565499,
+        0.43389028763256277
+      ],
+      "step": 0.00718512003734776
+    },
+    {
+      "direction": "west",
+      "position": [
+        0.5379568169680323,
+        0.43311207751583125
+      ],
+      "step": 0.00735038346006816
+    },
+    {
+      "direction": "north-west",
+      "position": [
+        0.5377279316395819,
+        0.43305104142824447
+      ],
+      "step": 0.00023688372161837138
+    },
+    {
+      "direction": "north-west",
+      "position": [
+        0.5333638513771267,
+        0.42528419928282596
+      ],
+      "step": 0.00890892998339306
+    },
+    {
+      "direction": "north-west",
+      "position": [
+        0.5293202105745022,
+        0.42116426337071794
+      ],
+      "step": 0.005772772545365645
+    },
+    {
+      "direction": "north-west",
+      "position": [
+        0.5270313572899977,
+        0.4178683146410315
+      ],
+      "step": 0.00401274561699447
+    },
+    {
+      "direction": "north-west",
+      "position": [
+        0.5216601815823606,
+        0.41084916456855114
+      ],
+      "step": 0.008838438562456183
+    },
+    {
+      "direction": "south-west",
+      "position": [
+        0.518425268940261,
+        0.41574731059739073
+      ],
+      "step": 0.005869965444689862
+    },
+    {
+      "direction": "south-west",
+      "position": [
+        0.5132524605172808,
+        0.42232394903486686
+      ],
+      "step": 0.008367205036219873
+    },
+    {
+      "direction": "south-west",
+      "position": [
+        0.5096513313496605,
+        0.42738994430457006
+      ],
+      "step": 0.006215499927965659
+    },
+    {
+      "direction": "south-west",
+      "position": [
+        0.5011367971313039,
+        0.43978027008468756
+      ],
+      "step": 0.015033877274110277
+    },
+    {
+      "direction": "south-west",
+      "position": [
+        0.49243915465018695,
+        0.4524605172808423
+      ],
+      "step": 0.015376529312069091
+    }
+  ],
+  "start": {
+    "position": [
+      0.5869382772564279,
+      0.40329594872968644
+    ],
+    "facing": 3.632406519654842,
+    "health": 67
+  },
+  "end": {
+    "position": [
+      0.49243915465018695,
+      0.4524605172808423
+    ],
+    "health": 67
+  },
+  "error": "ValueError('the character did not reach another map area')",
+  "evidence": {
+    "run": "client_walk_out_1793778958466683900",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778958466683900_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1175803.8555282
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778958466683900_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 1176071.7153281
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778958466683900_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1176072.1281488
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 5983,
+          "game_ms": 1175803101,
+          "health": 67,
+          "max_health": 67,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5869382772564279,
+          "pos_y": 0.40329594872968644,
+          "facing": 3.632406519654842,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "protocol": 8
+        }
+      },
+      {
+        "label": "02-end",
+        "state": {
+          "sequence": 8656,
+          "game_ms": 1176071002,
+          "health": 67,
+          "max_health": 67,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 7.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.49243915465018695,
+          "pos_y": 0.4524605172808423,
+          "facing": 2.3412272291466922,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}

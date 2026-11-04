@@ -1,0 +1,342 @@
+{
+  "run": "client_walk_out_1793778696556815500",
+  "status": "FAILED",
+  "trace": [
+    {
+      "direction": "north-east",
+      "position": [
+        0.5825741969939727,
+        0.41853971160448616
+      ],
+      "step": 0.0027564822276000362
+    },
+    {
+      "direction": "north-east",
+      "position": [
+        0.5812161440451667,
+        0.4179293507286183
+      ],
+      "step": 0.001488908395621028
+    },
+    {
+      "direction": "north-east",
+      "position": [
+        0.5797207598992905,
+        0.41574731059739073
+      ],
+      "step": 0.002645273686790405
+    },
+    {
+      "direction": "north-east",
+      "position": [
+        0.5805294880598154,
+        0.4071412222476539
+      ],
+      "step": 0.008644003581738129
+    },
+    {
+      "direction": "north-east",
+      "position": [
+        0.5873807888914321,
+        0.3943389028763256
+      ],
+      "step": 0.014520320394908623
+    },
+    {
+      "direction": "north",
+      "position": [
+        0.5871671625848783,
+        0.3852292668039979
+      ],
+      "step": 0.009112140559117073
+    },
+    {
+      "direction": "north",
+      "position": [
+        0.588189517051957,
+        0.3835202563515679
+      ],
+      "step": 0.00199146312616394
+    },
+    {
+      "direction": "north",
+      "position": [
+        0.5882505531395438,
+        0.3834744792858778
+      ],
+      "step": 7.629510948348184e-05
+    },
+    {
+      "direction": "north",
+      "position": [
+        0.5882047760738537,
+        0.3835202563515679
+      ],
+      "step": 6.47385471445681e-05
+    },
+    {
+      "direction": "east",
+      "position": [
+        0.5902800030518044,
+        0.3839627679865721
+      ],
+      "step": 0.0021218820789875447
+    },
+    {
+      "direction": "east",
+      "position": [
+        0.5907072556649119,
+        0.3834897383077745
+      ],
+      "step": 0.0006374181299826153
+    },
+    {
+      "direction": "east",
+      "position": [
+        0.5906157015335317,
+        0.3834287022201877
+      ],
+      "step": 0.00011003437172393306
+    },
+    {
+      "direction": "south-east",
+      "position": [
+        0.5888303959716182,
+        0.38612954909590297
+      ],
+      "step": 0.003237574677974248
+    },
+    {
+      "direction": "south-east",
+      "position": [
+        0.5877012283512627,
+        0.38960860608834974
+      ],
+      "step": 0.0036577119995363427
+    },
+    {
+      "direction": "south-east",
+      "position": [
+        0.5881742580300603,
+        0.3969634546425574
+      ],
+      "step": 0.007370044391477822
+    },
+    {
+      "direction": "south-east",
+      "position": [
+        0.58803692683299,
+        0.39992370489051654
+      ],
+      "step": 0.0029634340532954276
+    },
+    {
+      "direction": "south-east",
+      "position": [
+        0.586984054322118,
+        0.40321965362020296
+      ],
+      "step": 0.0034600315826407583
+    }
+  ],
+  "start": {
+    "position": [
+      0.5833676661326009,
+      0.42117952239261464
+    ],
+    "facing": 4.744582933844679,
+    "health": 67
+  },
+  "blocked": "east",
+  "end": {
+    "position": [
+      0.586984054322118,
+      0.40321965362020296
+    ],
+    "health": 67
+  },
+  "error": "ValueError('the character did not reach another map area')",
+  "evidence": {
+    "run": "client_walk_out_1793778696556815500",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778696556815500_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1175541.9780702
+      },
+      {
+        "label": "02-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778696556815500_02-end.png",
+        "source": "desktop",
+        "host_monotonic": 1175769.7411583
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_out_1793778696556815500_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1175770.148675
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 3368,
+          "game_ms": 1175541201,
+          "health": 67,
+          "max_health": 67,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.5833676661326009,
+          "pos_y": 0.42117952239261464,
+          "facing": 4.744582933844679,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "protocol": 8
+        }
+      },
+      {
+        "label": "02-end",
+        "state": {
+          "sequence": 5643,
+          "game_ms": 1175769051,
+          "health": 67,
+          "max_health": 67,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 2.34,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.586984054322118,
+          "pos_y": 0.40321965362020296,
+          "facing": 3.632406519654842,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "protocol": 8
+        }
+      }
+    ]
+  }
+}
