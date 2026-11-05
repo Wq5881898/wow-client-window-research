@@ -120,18 +120,24 @@ class GraveyardAnchorTests(unittest.TestCase):
         self.assertEqual(action['action'], 'RELEASE')
         self.assertEqual(action['attempt'], 2)
 
-    def test_the_anchor_is_kept_when_the_character_dies_again(self):
+    def test_the_end_of_the_task_is_kept_when_the_character_dies_again(self):
+        # The end of the task is a property of the task and not of the
+        # death: a second death has the same end as the first one, so the
+        # two runs can be compared. The place where the second ghost
+        # appeared is kept apart.
         machine = DangerRecovery()
         machine.observe(state(corpse_exists=False), 0.0)
         machine.observe(state(corpse_exists=True), 1.0)
         first = machine.graveyard
         machine.observe(state(dead=False, health=26), 2.0)
-        # A second death somewhere else: the anchor belongs to the ghost
-        # that is walking now.
+        # A second death somewhere else.
         machine.observe(state(corpse_exists=False, pos_x=0.7, pos_y=0.7), 3.0)
-        self.assertIsNone(machine.graveyard)
+        self.assertEqual(machine.graveyard, first)
         machine.observe(state(corpse_exists=True, pos_x=0.5, pos_y=0.44), 4.0)
-        self.assertNotEqual(machine.graveyard, first)
+        self.assertEqual(machine.graveyard, first)
+        self.assertEqual(len(machine.releases), 2)
+        self.assertAlmostEqual(machine.releases[1]['position'][0], 0.5)
+        self.assertFalse(machine.releases[1]['is_the_end'])
 
 
 class DangerRecoveryTest(unittest.TestCase):
@@ -239,11 +245,36 @@ class DangerRecoveryTest(unittest.TestCase):
         machine.observe(state(corpse_dx=0.01, corpse_dy=NEAR, facing=0.0,
                                pos_x=PLAYER_X + 0.05), 2.0)
         self.assertEqual(machine.phase, 'GHOST')
-        # The anchor belongs to the ghost that is walking now.
-        self.assertAlmostEqual(machine.graveyard[0], PLAYER_X + 0.05)
+        # The end of the task is the place of the first ghost.
+        self.assertAlmostEqual(machine.graveyard[0], PLAYER_X)
         # The path of the first death is kept, so the two can be compared.
         self.assertEqual(len(machine.corpses), 1)
         self.assertEqual(len(machine.memory.points), 1)
+        self.assertEqual(machine.deaths, 2)
+
+    def test_a_corpse_is_counted_once_per_death(self):
+        # The dialog of the resurrection may have to be clicked more than
+        # once. Every click must not add another corpse.
+        machine = DangerRecovery()
+        machine.observe(state(corpse_dy=NEAR, facing=0.0), 0.0)
+        machine.observe(state(corpse_dy=NEAR, facing=0.0), 1.0)
+        machine.observe(state(corpse_dy=NEAR, facing=0.0), 2.0)
+        self.assertEqual(len(machine.corpses), 1)
+        self.assertEqual(machine.corpses[0]['death'], 1)
+
+    def test_a_second_corpse_is_counted(self):
+        machine = DangerRecovery()
+        machine.observe(state(corpse_dy=NEAR, facing=0.0), 0.0)
+        machine.observe(state(dead=False, health=26), 1.0)
+        # The second death: the ghost appears on the new corpse.
+        machine.observe(state(corpse_dx=0.01, corpse_dy=NEAR, facing=0.0,
+                               pos_x=PLAYER_X + 0.01, pos_y=PLAYER_Y + NEAR),
+                        2.0)
+        machine.observe(state(corpse_dx=0.01, corpse_dy=NEAR, facing=0.0,
+                               pos_x=PLAYER_X + 0.01, pos_y=PLAYER_Y + NEAR),
+                        3.0)
+        self.assertEqual(len(machine.corpses), 2)
+        self.assertEqual(machine.corpses[1]['death'], 2)
 
     def test_the_run_gives_up_after_the_budget(self):
         machine = DangerRecovery(time_budget=10.0)

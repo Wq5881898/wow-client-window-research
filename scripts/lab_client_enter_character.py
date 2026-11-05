@@ -14,6 +14,7 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_parent_run import stamp
 from client_chat_guard import close_world_map
 from client_geometry import picture_to_screen
 from client_read_fresh import (game_menu_open, find_logout_button, open_menu_logout,
@@ -182,7 +183,7 @@ def run_recovery():
 
 def main():
     run = 'client_enter_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', steps=[])
+    result = stamp(dict(run=run, status='FAILED', steps=[]), sys.argv)
     wanted = 'Syra'
     if '--character' in sys.argv:
         wanted = sys.argv[sys.argv.index('--character') + 1]

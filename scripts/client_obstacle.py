@@ -21,6 +21,10 @@ class Obstacle:
 
     The detour is kept in one direction until the character moved again, so
     that a wall is followed instead of being approached from both sides.
+
+    The state has one owner: the number of the steps that did not move the
+    character and the side of the detour are kept here, so that the walk
+    and this primitive cannot count the same step twice.
     """
 
     def __init__(self, threshold=0.0006, angle=math.pi / 2, tries=3):
@@ -30,6 +34,10 @@ class Obstacle:
         self.side = 1
         self.hits = 0
         self.detour = 0.0
+        # The number of the steps that were meant to move the character and
+        # did not move it, and the distance the character covered.
+        self.blocked = 0
+        self.traveled = 0.0
 
     def note(self, moved):
         """Report how far the character moved and return the detour to use.
@@ -37,17 +45,39 @@ class Obstacle:
         A detour of zero means that the character is on its way to the
         target.
         """
+        self.traveled += moved
         if moved >= self.threshold:
             self.hits = 0
             self.detour = 0.0
             return 0.0
         self.hits += 1
+        self.blocked += 1
         if self.hits > self.tries:
             # The other side of the obstacle may be the way out.
             self.side = -self.side
             self.hits = 0
         self.detour = self.side * self.angle
         return self.detour
+
+    def turned(self):
+        """The character was turned and did not try to move.
+
+        A turn is not a collision: the character did not stand in front of
+        a rock, it only looked the other way. Counting it as blocked would
+        make the walk give up while it is still on its way.
+        """
+        self.hits = 0
+        self.detour = 0.0
+
+    def slide_heading(self, towards):
+        """The direction of the world to slide along the obstacle.
+
+        The direction is a direction of the world and not an angle towards
+        the target: an angle towards the target makes the character walk on
+        a circle around it.
+        """
+        from client_danger_recovery import wrap
+        return wrap(towards + self.side * self.angle)
 
     @property
     def stuck(self):

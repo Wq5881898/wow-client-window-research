@@ -14,6 +14,7 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_parent_run import stamp
 from client_chat_guard import ensure_chat_closed, ensure_no_modal
 from client_read_fresh import read_fresh
 from client_walk import walk_to
@@ -140,7 +141,7 @@ def engage(hwnd, reader, attempts=30):
 
 def main():
     run = 'client_danger_setup_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', timeline=[])
+    result = stamp(dict(run=run, status='FAILED', timeline=[]), sys.argv)
     evidence = Evidence(run)
     try:
         hwnd = d.game_window()
@@ -166,8 +167,12 @@ def main():
             # place where they were seen before.
             index = sys.argv.index('--walk-to')
             spot = (float(sys.argv[index + 1]), float(sys.argv[index + 2]))
-            distance = walk_to(d.game_window(), reader, spot, timeout=90.0)
-            result['walk_to'] = {'target': list(spot), 'distance': distance}
+            walked = walk_to(d.game_window(), reader, spot, timeout=90.0)
+            result['walk_to'] = {'target': list(spot),
+                                 'distance': walked.distance,
+                                 'arrived': walked.arrived,
+                                 'blocked': walked.blocked,
+                                 'reason': walked.reason}
             evidence.capture('01b-walked', None)
 
         route = []
@@ -187,9 +192,13 @@ def main():
         if route:
             walked = []
             for point in route:
-                distance = walk_to(d.game_window(), reader, point, timeout=60.0)
+                leg = walk_to(d.game_window(), reader, point, timeout=60.0)
                 here = reader()
-                walked.append({'target': list(point), 'distance': distance,
+                walked.append({'target': list(point),
+                               'distance': leg.distance,
+                               'arrived': leg.arrived,
+                               'blocked': leg.blocked,
+                               'reason': leg.reason,
                                'position': [here['pos_x'], here['pos_y']]})
                 evidence.capture('01c-route', None)
                 if here['dead']:

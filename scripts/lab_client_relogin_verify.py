@@ -15,6 +15,7 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_parent_run import stamp
 from client_read_fresh import (read_or_dismiss, find_logout_button,
                                 find_red_button, open_menu_logout,
                                 wait_out_of_combat)
@@ -86,7 +87,7 @@ def selected_row(image):
 
 def main():
     run = 'client_relogin_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED')
+    result = stamp(dict(run=run, status='FAILED'), sys.argv)
     evidence = Evidence(run)
     wanted = 'Probehuman'
     if '--character' in sys.argv[1:]:

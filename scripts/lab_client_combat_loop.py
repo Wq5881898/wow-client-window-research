@@ -24,6 +24,10 @@ from client_retreat import break_engagement
 from client_facing import CastProbe, sweep_toward
 from client_chat_guard import ensure_chat_closed
 from client_walk import walk_to
+from client_action_guard import (ActionCancelled, ActionGuard, STOP_READING,
+                                 STOP_STALE)
+from client_survival_watch import SurvivalWatch
+from client_parent_run import stamp
 
 ROOT = Path(__file__).resolve().parents[1]
 FIREBALL = 133
@@ -64,8 +68,12 @@ def hide_consoles():
     win32gui.EnumWindows(cb, None)
 
 
-def hold(vk, seconds):
-    """Press and release a movement key."""
+def hold(vk, seconds, stop=None):
+    """Press and release a movement key.
+
+    The key is released as soon as the run stops the action, so a cancelled
+    move does not carry the character on.
+    """
     import ctypes
     if not 0 < seconds <= MAX_HOLD:
         raise ValueError('hold duration must be in (0, %d]' % MAX_HOLD)
@@ -75,7 +83,11 @@ def hold(vk, seconds):
     try:
         if d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key)) != 1:
             raise RuntimeError('key down failed')
-        time.sleep(seconds)
+        deadline = time.monotonic() + seconds
+        while time.monotonic() < deadline:
+            if stop is not None and stop.is_set():
+                break
+            time.sleep(0.05)
     finally:
         key.union.ki.dwFlags = 2
         if d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key)) != 1:
@@ -105,15 +117,31 @@ def cast(hwnd, text, reader, timeout=6.0, on_tick=None):
 
     The command is typed by a worker thread so the caller can keep sampling
     while the cast is in flight; a long cast must not look like a dead link.
+
+    The thread stops typing as soon as the check of the caller reports a
+    reason, so an action that has to be aborted does not go on in the
+    background. The reason is raised, so the caller cannot mistake a
+    stopped cast for a cast that happened.
     """
-    before = reader()
+    try:
+        before = reader()
+    except Exception:
+        # The panel cannot be read even once, so the action never starts.
+        raise ActionCancelled(STOP_READING)
+    stop = threading.Event()
 
     def worker():
+        if stop.is_set():
+            return
         d.post_key(hwnd, win32con.VK_RETURN)
         time.sleep(0.5)
         for character in text:
+            if stop.is_set():
+                return
             win32gui.PostMessage(hwnd, win32con.WM_CHAR, ord(character), 0)
             time.sleep(0.05)
+        if stop.is_set():
+            return
         time.sleep(0.3)
         d.post_key(hwnd, win32con.VK_RETURN)
 
@@ -121,51 +149,81 @@ def cast(hwnd, text, reader, timeout=6.0, on_tick=None):
     thread.start()
     deadline = time.monotonic() + timeout
     state = before
+    reason = None
+    finished = False
     while time.monotonic() < deadline:
-        state = reader()
+        try:
+            state = reader()
+        except Exception:
+            # The panel cannot be read any more. The cast is stopped, and
+            # the loss of the observation is a reason of its own.
+            reason = STOP_READING
+            break
         if on_tick is not None:
-            on_tick(state)
+            reason = on_tick(state)
+        if reason:
+            break
         if (state['cast_succeeded'] != before['cast_succeeded']
                 or state['cast_failed'] != before['cast_failed']
                 or state['ui_errors'] != before['ui_errors']):
+            finished = True
             break
         time.sleep(0.06)
-    thread.join()
+    if not finished:
+        # The action was stopped or ran out of time, so the thread that
+        # types must stop as well. A cast that was carried out is left
+        # alone: its command is already on its way to the client.
+        stop.set()
+    thread.join(timeout=5.0)
+    if reason:
+        raise ActionCancelled(reason)
     return state
 
 
 def move_while_watching(hwnd, vk, seconds, reader, deadline_check=None):
-    """Hold a movement key while sampling, so the heartbeat never sees a gap."""
-    worker = threading.Thread(target=hold, args=(vk, seconds))
+    """Hold a movement key while sampling, so the heartbeat never sees a gap.
+
+    The check of the caller runs at every sample. When it reports a reason
+    the key is released at once and the reason is returned, so a movement
+    that has to stop does not carry the character further into danger.
+    """
+    stop = threading.Event()
+    worker = threading.Thread(target=hold, args=(vk, seconds, stop))
     worker.start()
     states = []
+    reason = None
     while worker.is_alive():
-        states.append(reader())
+        try:
+            state = reader()
+        except Exception:
+            reason = STOP_READING
+            break
+        states.append(state)
         if deadline_check is not None:
-            deadline_check(states[-1])
+            reason = deadline_check(state)
+        if reason:
+            break
         time.sleep(0.05)
+    stop.set()
     worker.join()
-    return states
+    return states, reason
 
 
-def action_check(controller, state, now):
+def action_check(controller, state, now, guard):
     """Watch the character while a spell is in flight.
 
     The heartbeat alone only keeps the freshness alive. The checks that can
     stop the fight have to run at every sample: a character that is dying,
     that is below the floor of the health, or that is fighting another
     creature than the one that was bound.
+
+    The reason is latched in the guard, so an action that was stopped
+    cannot go on after the sample that stopped it.
     """
     if not controller.heartbeat(state, now):
-        return False
-    if state.get('dead'):
-        return False
-    maximum = state.get('max_health') or 0
-    if maximum and state.get('health', 0) / maximum <= controller.low_health:
-        return False
-    if state.get('target_exists') and state.get('target_guid') != controller.target_guid:
-        return False
-    return True
+        return guard.cancel(STOP_STALE)
+    return guard.check_state(state, controller.low_health,
+                             controller.target_guid)
 
 
 def tab_target(hwnd, reader, steps=8, prefer_hash=None):
@@ -202,7 +260,8 @@ def tab_target(hwnd, reader, steps=8, prefer_hash=None):
 
 def main():
     run = 'client_combat_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', timeline=[], errors=[])
+    result = stamp(dict(run=run, status='FAILED', timeline=[], errors=[]),
+                   sys.argv)
     evidence = Evidence(run)
     hwnd = d.find_game_window()
     try:
@@ -290,6 +349,9 @@ def main():
         binding = controller.bind_target(state)
         if binding['decision'] != 'BOUND':
             raise ValueError('target binding failed: ' + str(binding))
+        # The guard latches the reason an action has to stop. Once it is
+        # set, no further action of this run may start.
+        guard = ActionGuard()
 
         # Close the distance before the first cast. The tab key must not be
         # pressed here: it selects the next hostile creature and would
@@ -301,7 +363,12 @@ def main():
             if state['spell_range'] == 1:
                 break
             ensure_chat_closed(hwnd, reader)
-            moved = move_while_watching(hwnd, VK_FORWARD, 0.7, reader)
+            moved, reason = move_while_watching(
+                hwnd, VK_FORWARD, 0.7, reader,
+                deadline_check=lambda s: guard.check_state(
+                    s, controller.low_health, controller.target_guid))
+            if reason:
+                raise ValueError('the approach was stopped: ' + str(reason))
             state = moved[-1] if moved else reader()
             note('approach', {'attempt': approach, 'range': state['spell_range'],
                               'position': [state['pos_x'], state['pos_y']]})
@@ -361,78 +428,99 @@ def main():
                 ensure_chat_closed(hwnd, reader)
                 # The cast runs in a worker thread; keep reading telemetry so
                 # the heartbeat stays alive while the spell is in flight.
-                after = cast(hwnd, '/cast Fireball', reader,
-                             on_tick=lambda s: action_check(controller, s,
-                                                          time.monotonic()))
-                note('cast_result', {
-                    'succeeded': after['cast_succeeded'],
-                    'failed': after['cast_failed'],
-                    'ui_errors': after['ui_errors'],
-                    'target_health': after['target_health'],
-                    'player_health': after['health'],
-                })
-                state = after
-                if time.monotonic() - last_evidence > 12:
-                    evidence.capture('03-mid-fight', state)
-                    last_evidence = time.monotonic()
-                if after['health'] < after['max_health'] * LOW_HEALTH_RATIO:
-                    # Aborting the run here would leave the character in
-                    # combat. Low health is a recovery trigger, not an exit.
-                    note('health_floor', {'health': after['health'],
-                                          'ratio': round(after['health'] / after['max_health'], 3)})
-                    decision = {'decision': 'RECOVER', 'reason': 'low_health'}
+                try:
+                    after = cast(hwnd, '/cast Fireball', reader,
+                                 on_tick=lambda s: action_check(
+                                     controller, s, time.monotonic(), guard))
+                except ActionCancelled as exc:
+                    # The cast was stopped while it was in the air. The
+                    # fight is over: the character has to get out, and the
+                    # stop has to be visible in the result.
+                    note('cast_cancelled', {'reason': exc.reason})
+                    result['cancelled'] = exc.reason
+                    decision = {'decision': 'RECOVER', 'reason': exc.reason}
                 else:
-                    continue
+                    note('cast_result', {
+                        'succeeded': after['cast_succeeded'],
+                        'failed': after['cast_failed'],
+                        'ui_errors': after['ui_errors'],
+                        'target_health': after['target_health'],
+                        'player_health': after['health'],
+                    })
+                    state = after
+                    if time.monotonic() - last_evidence > 12:
+                        evidence.capture('03-mid-fight', state)
+                        last_evidence = time.monotonic()
+                    if after['health'] < after['max_health'] * LOW_HEALTH_RATIO:
+                        # Aborting the run here would leave the character in
+                        # combat. Low health is a recovery trigger, not an exit.
+                        note('health_floor', {'health': after['health'],
+                                              'ratio': round(after['health'] / after['max_health'], 3)})
+                        decision = {'decision': 'RECOVER', 'reason': 'low_health'}
+                    else:
+                        continue
 
             if decision['decision'] == 'CLOSE_DISTANCE':
                 # The target is out of range. Fireball reaches 30 yards, so
                 # walk forward until the range check flips to in-range.
                 before_distance = state.get('target_distance', 0)
-                moved = move_while_watching(hwnd, VK_FORWARD, 0.6, reader)
-                after_state = moved[-1] if moved else reader()
-                walked = math.hypot(after_state['pos_x'] - state['pos_x'],
-                                     after_state['pos_y'] - state['pos_y'])
-                note('close_distance', {
-                    'distance_before': before_distance,
-                    'distance_after': after_state.get('target_distance', 0),
-                    'range_after': after_state['spell_range'],
-                    'walked': walked,
-                    'position': [after_state['pos_x'], after_state['pos_y']],
-                })
-                if walked < 0.0005:
-                    # The character does not move: a wall or a rock is in the
-                    # way. Walking into it again would only use up the time
-                    # of the fight, so the character turns and tries the
-                    # next direction.
-                    hold(VK_LEFT, 0.8)
-                    note('detour', {'position': [after_state['pos_x'],
-                                                 after_state['pos_y']]})
-                continue
+                moved, reason = move_while_watching(
+                    hwnd, VK_FORWARD, 0.6, reader,
+                    deadline_check=lambda s: guard.check_state(
+                        s, controller.low_health, controller.target_guid))
+                if reason:
+                    note('close_distance_cancelled', {'reason': reason})
+                    result['cancelled'] = reason
+                    decision = {'decision': 'RECOVER', 'reason': reason}
+                else:
+                    after_state = moved[-1] if moved else reader()
+                    walked = math.hypot(after_state['pos_x'] - state['pos_x'],
+                                         after_state['pos_y'] - state['pos_y'])
+                    note('close_distance', {
+                        'distance_before': before_distance,
+                        'distance_after': after_state.get('target_distance', 0),
+                        'range_after': after_state['spell_range'],
+                        'walked': walked,
+                        'position': [after_state['pos_x'], after_state['pos_y']],
+                    })
+                    if walked < 0.0005:
+                        # The character does not move: a wall or a rock is in
+                        # the way. Walking into it again would only use up the
+                        # time of the fight, so the character turns and tries
+                        # the next direction.
+                        hold(VK_LEFT, 0.8)
+                        note('detour', {'position': [after_state['pos_x'],
+                                                     after_state['pos_y']]})
+                    continue
 
             if decision['decision'] == 'TURN':
                 # The client says the target is not in front. There is no
                 # facing readout, so the turn is blind and the error code
                 # decides when the target came into view. The sweep turns a
                 # small step and casts again until the cast succeeds.
-                # The cast of the sweep needs the heartbeat as well: the
-                # sweep turns and casts for a while, and without the
-                # heartbeat the freshness of the telemetry would look stale
-                # and the run would go into the recovery.
+                # The cast of the sweep is watched like every other cast: a
+                # character that is dying during the sweep has to stop it.
                 probe = CastProbe(
                     lambda: cast(hwnd, '/cast Fireball', reader,
-                                 on_tick=lambda s: controller.heartbeat(
-                                     s, time.monotonic())),
+                                 on_tick=lambda s: action_check(
+                                     controller, s, time.monotonic(), guard)),
                     reader, settle=0)
-                steps, after_state = sweep_toward(probe, max_steps=18,
-                                                  hwnd=hwnd)
-                note('turn', {'reason': decision['reason'], 'steps': steps,
-                              'cast_failed': after_state['cast_failed'],
-                              'cast_succeeded': after_state['cast_succeeded'],
-                              'target_health': after_state['target_health'],
-                              'error_reason': after_state['last_error_reason']})
-                state = after_state
-                controller.record_attempt()
-                continue
+                try:
+                    steps, after_state = sweep_toward(probe, max_steps=18,
+                                                      hwnd=hwnd)
+                except ActionCancelled as exc:
+                    note('sweep_cancelled', {'reason': exc.reason})
+                    result['cancelled'] = exc.reason
+                    decision = {'decision': 'RECOVER', 'reason': exc.reason}
+                else:
+                    note('turn', {'reason': decision['reason'], 'steps': steps,
+                                  'cast_failed': after_state['cast_failed'],
+                                  'cast_succeeded': after_state['cast_succeeded'],
+                                  'target_health': after_state['target_health'],
+                                  'error_reason': after_state['last_error_reason']})
+                    state = after_state
+                    controller.record_attempt()
+                    continue
 
             if decision['decision'] == 'WAIT':
                 time.sleep(0.2)
@@ -455,6 +543,10 @@ def main():
             # pursuit line and never opens a gap. Turn away and run instead.
             evidence.capture('04-recover-trigger', state)
             note('recover', decision)
+            # The reason is latched, so no further action of this run starts
+            # after a recovery was triggered.
+            guard.cancel(decision.get('reason', 'recovery'))
+            result['recovery_reason'] = decision.get('reason')
             try:
                 steps = break_engagement(hwnd, reader, steps=8,
                                          hold_seconds=MAX_HOLD)
@@ -473,53 +565,61 @@ def main():
         if final is None:
             raise ValueError('combat loop ended without a verdict')
 
-        # Survival check: the character has to be alive, out of combat and
-        # still for a sustained period. The observation after the fight is
-        # at least SURVIVAL_OBSERVATION seconds long, because a character
-        # that is still in combat a moment after the run looks safe.
-        quiet = 0
-        observed = 0.0
+        # Survival check: the character has to be alive, out of combat, still
+        # and observed for a continuous time. A condition that is broken
+        # resets the time, so a fight that ends in the last second of the
+        # observation does not pass, and a picture that repeats itself does
+        # not count as an observation.
+        watch = SurvivalWatch(required=SURVIVAL_OBSERVATION,
+                              player_guid=start.get('player_guid'))
         threats = []
         deadline = time.monotonic() + SURVIVAL_OBSERVATION + 60
-        last = time.monotonic()
-        while observed < SURVIVAL_OBSERVATION and time.monotonic() < deadline:
-            state = reader()
-            now = time.monotonic()
-            observed += now - last
-            last = now
-            if state['dead']:
-                raise ValueError('player died during the run')
-            if state['combat']:
-                quiet = 0
-            else:
-                quiet += 1
+        while not watch.passed and time.monotonic() < deadline:
+            try:
+                state = reader()
+            except Exception as exc:
+                raise ValueError('the observation was lost during the '
+                                 'survival check: ' + repr(exc))
+            reason = watch.observe(state, time.monotonic())
             threats.append(state.get('threat'))
+            if reason:
+                note('quiet_broken', {'reason': reason,
+                                      'quiet': round(watch.quiet, 1)})
             time.sleep(0.4)
-        result['survival_observation'] = round(observed, 1)
+        result['survival_observation'] = round(watch.quiet, 1)
+        result['survival_watch'] = watch.summary()
+        if not watch.passed:
+            raise ValueError('the character was not quiet for %d seconds, '
+                             'the last breaks were %s'
+                             % (SURVIVAL_OBSERVATION, watch.breaks[-5:]))
         # The combat flag alone does not tell whether the aggro is gone: a
         # creature that still has the character on its list keeps a threat
         # even when the fight was stopped. The threat situation is watched
-        # over the whole observation.
-        result['threat_max'] = max([value for value in threats
-                                    if value is not None] or [0])
+        # over the whole observation. A value that could not be read is
+        # counted apart, so it cannot hide a threat that was read.
+        valid = [value for value in threats
+                 if value is not None and value != THREAT_UNKNOWN]
+        unknown = [value for value in threats if value == THREAT_UNKNOWN]
+        result['threat_max'] = max(valid) if valid else 0
         result['threat_last'] = threats[-1] if threats else None
+        result['threat_unknown_samples'] = len(unknown)
         if state['combat']:
             raise ValueError('still in combat at the end of the run')
         if state['dead']:
             raise ValueError('the character is dead at the end of the run')
-        if result['threat_max'] == THREAT_UNKNOWN:
+        if valid and max(valid) > 0:
+            raise ValueError('the threat did not clear during the '
+                             'observation: %s' % max(valid))
+        if unknown or not valid:
             # The threat could not be read. That is not a cleared threat, so
             # the report says so instead of claiming the aggro was gone. The
             # fight itself is judged by the combat flag, the health and the
             # movement of the character.
             result['threat_available'] = False
             result['threat_note'] = ('the threat could not be read on this '
-                                    'client, so a cleared aggro is not proven')
+                                     'client, so a cleared aggro is not proven')
         else:
             result['threat_available'] = True
-            if result['threat_max'] > 0:
-                raise ValueError('the threat did not clear during the '
-                                 'observation: %s' % result['threat_max'])
         evidence.capture('05-end', state)
         result['final'] = state
         result['status'] = 'COMBAT_LOOP_COMPLETED'

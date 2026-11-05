@@ -79,13 +79,14 @@ def marker_in(image, centre=None):
 def heading_to(mark, centre=CENTRE):
     """The heading of a mark on the minimap.
 
-    The map has north at the top and the heading of the client grows
-    counter clockwise from the north, so the heading is the angle of the
-    mark counted from the top towards the right.
+    The map has north at the top and the east on the right, and the
+    movement at the heading h is (-sin h, -cos h) in the map coordinates,
+    where x grows to the east and y to the south. A heading therefore has
+    sin h = -east and cos h = -south.
     """
     east = mark['x'] - centre[0]
     south = mark['y'] - centre[1]
-    return math.atan2(east, -south)
+    return math.atan2(-east, -south)
 
 
 def distance_to(mark, centre=CENTRE):

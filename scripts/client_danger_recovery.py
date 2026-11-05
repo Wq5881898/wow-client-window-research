@@ -99,7 +99,15 @@ class DangerRecovery:
         self.started = None
         self.phase = 'IDLE'
         self.memory = PathMemory()
+        # The place the character has to end at. It is written when the
+        # first ghost appears and it does not change when the character
+        # dies again: the task has one end, not one per death.
         self.graveyard = None
+        # The places where the ghosts of this run appeared. The last one is
+        # the release point of the newest death.
+        self.releases = []
+        # The number of the deaths of this run and the corpses of them.
+        self.deaths = 0
         self.corpses = []
         self.route = []
         self.route_index = 0
@@ -117,6 +125,9 @@ class DangerRecovery:
         self.best_side = None
         # The world direction the character slides along while it is blocked.
         self.slide = None
+        # True when the route of the ghost could not be walked and the
+        # character went straight to the end of the task.
+        self.route_is_direct = False
 
     def _elapsed(self, now):
         if self.started is None:
@@ -162,10 +173,13 @@ class DangerRecovery:
         graveyard: the spirit has to be released first. Only when the ghost
         appears does the client tell where the graveyard is, and that spot
         is the anchor of the route back.
+
+        The end of the task is kept: a second death has the same end as the
+        first one, so the two runs can be compared.
         """
         self.phase = 'DEAD_BODY'
         self.memory = PathMemory()
-        self.graveyard = None
+        self.deaths += 1
         self.death_position = (state['pos_x'], state['pos_y'])
         self.route = []
         self.route_index = 0
@@ -178,6 +192,7 @@ class DangerRecovery:
         self.best_distance = None
         self.best_side = None
         self.slide = None
+        self.route_is_direct = False
 
     def _ghost_target(self, state):
         """The position of the corpse the ghost has to reach."""
@@ -212,7 +227,16 @@ class DangerRecovery:
                 # graveyard. That spot is the anchor of the route back and
                 # it is not the place where the character fell.
                 self.phase = 'GHOST'
-                self.graveyard = (state['pos_x'], state['pos_y'])
+                if self.graveyard is None:
+                    # The end of the task is the place of the first ghost.
+                    # A later death has the same end.
+                    self.graveyard = (state['pos_x'], state['pos_y'])
+                self.releases.append({'death': self.deaths,
+                                      'position': [state['pos_x'],
+                                                    state['pos_y']],
+                                      'is_the_end':
+                                          self.graveyard == (state['pos_x'],
+                                                             state['pos_y'])})
             # Every step of the ghost is a step the server accepts, so the
             # path of the ghost is the feasible path back to the graveyard.
             self.memory.record(state['pos_x'], state['pos_y'])
@@ -247,13 +271,19 @@ class DangerRecovery:
             # The ghost stands on the corpse: the client offers the dialog.
             self.phase = 'REVIVE'
             self.accept_attempts += 1
-            self.last_action = 'ACCEPT'
-            self.corpses.append({'corpse': list(target),
-                                 'path_length': self.memory.length()})
+            # One corpse per death. The dialog may have to be clicked more
+            # than once, and every click must not add another corpse.
+            if not self.corpses or self.corpses[-1]['death'] != self.deaths:
+                self.corpses.append({'corpse': list(target),
+                                     'path_length': self.memory.length(),
+                                     'death': self.deaths,
+                                     'death_position': list(self.death_position
+                                                            or target)})
             if self.accept_attempts > 6:
                 self.phase = 'FAILED'
                 return {'action': 'GIVE_UP', 'reason': 'dialog_not_accepted',
                         'elapsed': elapsed}
+            self.last_action = 'ACCEPT'
             return {'action': 'ACCEPT', 'point': self.accept_point,
                     'attempt': self.accept_attempts}
 
@@ -286,10 +316,13 @@ class DangerRecovery:
         if self.stuck >= 3 and self.graveyard:
             # The path of the ghost is not always walkable for the living
             # character: the ghost flies over the rocks, the character does
-            # not. When the way is blocked, the straight line to the
-            # graveyard is the next try.
+            # not. When the way is blocked, the straight line to the end of
+            # the task is the next try. The report says that the route of
+            # the ghost was not walked, so this path is not held for a
+            # verified route of the living.
             self.route = [self.graveyard]
             self.route_index = 0
+            self.route_is_direct = True
             self.stuck = 0
             self.avoid = 0.0
             self.last_action = None

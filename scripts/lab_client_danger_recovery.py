@@ -19,8 +19,9 @@ import win32con
 import win32gui
 import lab_driver5 as d
 from client_capture import grab_desktop
-from client_live_state import decode, assert_real_frame
+from client_live_state import decode, assert_real_frame, THREAT_UNKNOWN
 from client_evidence import Evidence
+from client_parent_run import stamp
 from client_danger_recovery import DangerRecovery
 from client_chat_guard import ensure_chat_closed, ensure_focus
 from client_read_fresh import read_or_dismiss, find_red_button
@@ -101,7 +102,7 @@ def find_resurrect_button(image):
 
 def main():
     run = 'client_danger_recovery_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', steps=[])
+    result = stamp(dict(run=run, status='FAILED', steps=[]), sys.argv)
     evidence = Evidence(run)
     die_again = '--die-again' in sys.argv
     stage = 'walk-back'
@@ -138,6 +139,10 @@ def main():
 
         ensure_chat_closed(hwnd, reader)
         machine = DangerRecovery(time_budget=TIME_BUDGET)
+        # The deadline for the threat is set once. It was set again on every
+        # turn of the loop before, so a threat that could not be read kept
+        # the run waiting until the whole budget was used up.
+        threat_deadline = time.monotonic() + 30.0
         while True:
             hwnd = d.game_window()
             state = read_or_dismiss(reader, hwnd)
@@ -148,7 +153,6 @@ def main():
                       'phase': machine.phase, 'dead': state['dead'],
                       'health': state['health']}
             if action['action'] == 'DONE':
-                threat_deadline = time.monotonic() + 30.0
                 if die_again and stage == 'walk-back':
                     # The character is back at the graveyard. It walks into
                     # the danger zone once more, so the task can show what
@@ -173,9 +177,16 @@ def main():
                     target = select_hostile(hwnd, reader)
                     result['second_target'] = (target or {}).get('target_guid')
                     if target is None:
-                        result['second_death'] = 'no hostile in reach'
+                        # No hostile creature was in reach, so the second
+                        # death did not happen. The character is alive and
+                        # out of combat, but the task asked for a second
+                        # death, so the result says that it is missing.
+                        result['second_death'] = 'not happened'
+                        result['second_death_reason'] = 'no hostile in reach'
                         result['status'] = 'RECOVERED'
                         result['corpses'] = machine.corpses
+                        result['deaths'] = machine.deaths
+                        result['releases'] = machine.releases
                         result['final'] = {'health': state['health'],
                                            'dead': state['dead'],
                                            'combat': state['combat'],
@@ -215,16 +226,27 @@ def main():
                 # only finished when the aggro is really gone, which the
                 # threat of the probe shows.
                 threat = state.get('threat')
-                if threat and time.monotonic() < threat_deadline:
+                if threat == THREAT_UNKNOWN:
+                    # The threat could not be read. That is not a threat
+                    # that is left, and it is not a threat that is gone:
+                    # the run says so instead of waiting for a number that
+                    # never comes.
+                    result['threat_available'] = False
+                    result['threat_note'] = ('the threat could not be read '
+                                             'on this client')
+                elif threat and time.monotonic() < threat_deadline:
                     note('threat-left', {'threat': threat,
                                           'combat': state['combat']})
                     time.sleep(1.0)
                     continue
-                if threat:
+                elif threat:
                     # The creatures of the valley watch the graveyard, so
                     # the threat may stay for a while. The run waits for it
                     # a limited time and reports it then.
                     result['threat_left'] = threat
+                    result['threat_available'] = True
+                else:
+                    result['threat_available'] = True
                 result['status'] = 'RECOVERED'
                 result['final'] = {'health': state['health'],
                                    'dead': state['dead'],
@@ -236,6 +258,9 @@ def main():
                                               if len(machine.corpses) >= 2
                                               else 'not happened')
                 result['corpses'] = machine.corpses
+                result['deaths'] = machine.deaths
+                result['releases'] = machine.releases
+                result['route_was_direct'] = machine.route_is_direct
                 evidence.capture('02-safe', state)
                 break
             if action['action'] == 'GIVE_UP':

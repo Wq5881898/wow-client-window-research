@@ -12,6 +12,7 @@ import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode
 from client_evidence import Evidence
+from client_parent_run import stamp
 
 ROOT = Path(__file__).resolve().parents[1]
 CLIENT = Path(r'C:\Azerothcore\wowclient\WOW_3.3.5a')
@@ -224,7 +225,7 @@ def set_fullscreen(enabled):
 
 def main():
     run = 'client_restart_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', steps=[])
+    result = stamp(dict(run=run, status='FAILED', steps=[]), sys.argv)
     evidence = Evidence(run)
     try:
         hwnd = game_window()
