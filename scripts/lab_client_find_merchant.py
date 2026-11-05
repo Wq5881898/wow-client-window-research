@@ -22,6 +22,7 @@ from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_minimap import find_markers, heading, CENTRE
+from client_live_state import name_hash
 from client_walk import walk_heading
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,10 +35,12 @@ ARRIVED = 12.0
 # How long the walk may take.
 WALK_BUDGET = 420.0
 # The grid the cursor is put on to name the people around.
-PROBE_X = range(500, 1450, 40)
-PROBE_Y = range(200, 750, 40)
+PROBE_X = range(520, 1440, 80)
+PROBE_Y = range(220, 740, 80)
 # How many directions are looked at.
 TURNS = 5
+# The hash of an empty name: that is no unit at all.
+EMPTY_NAME = name_hash('')
 
 
 def turn_character(hwnd, seconds):
@@ -61,10 +64,32 @@ def main():
         d.ensure_foreground(hwnd)
         time.sleep(1.0)
 
+        seen = {}
         deadline = time.monotonic() + WALK_BUDGET
         last_position = None
         detour = 0.0
         while time.monotonic() < deadline:
+            # The name of the people around is looked at after every short
+            # walk. A person that is seen is the goal, so the walk ends then.
+            for turn in range(TURNS):
+                for y in PROBE_Y:
+                    for x in PROBE_X:
+                        d.u.SetCursorPos(int(x), int(y))
+                        time.sleep(0.12)
+                        try:
+                            reading = decode(assert_real_frame(grab_desktop()))
+                        except Exception:
+                            continue
+                        digest = reading.get('cursor_name_hash')
+                        if not digest or digest in seen:
+                            continue
+                        seen[digest] = True
+                        shot = OUT / ('merchant-%s.png' % digest)
+                        grab_desktop().save(shot)
+                        result['names'].append({'hash': digest, 'x': x, 'y': y,
+                                                'turn': turn,
+                                                'picture': str(shot)})
+                turn_character(hwnd, 1.1)
             picture = grab_desktop()
             markers = [marker for marker in find_markers(picture)
                        if marker['pixels'] >= MIN_PIXELS]
@@ -96,34 +121,15 @@ def main():
                                    'distance': round(distance, 1)})
             if distance <= ARRIVED:
                 result['walk'].append({'action': 'arrived'})
+            found = [digest for digest in seen if digest != EMPTY_NAME]
+            if found:
+                result['walk'].append({'action': 'found', 'hashes': found})
                 break
             wanted = heading(CENTRE, marker) + detour
             walk_heading(hwnd,
                          lambda: decode(assert_real_frame(grab_desktop())),
                          wanted, seconds=6.0)
 
-        # Name the people around the character. The camera can be inside a
-        # rock, so the character is turned and every direction is looked at.
-        seen = {}
-        for turn in range(TURNS):
-            for y in PROBE_Y:
-                for x in PROBE_X:
-                    d.u.SetCursorPos(int(x), int(y))
-                    time.sleep(0.12)
-                    try:
-                        reading = decode(assert_real_frame(grab_desktop()))
-                    except Exception:
-                        continue
-                    digest = reading.get('cursor_name_hash')
-                    if not digest or digest in seen:
-                        continue
-                    seen[digest] = True
-                    shot = OUT / ('merchant-%s.png' % digest)
-                    grab_desktop().save(shot)
-                    result['names'].append({'hash': digest, 'x': x, 'y': y,
-                                            'turn': turn,
-                                            'picture': str(shot)})
-            turn_character(hwnd, 1.1)
         evidence.capture('01-end', None)
         result['status'] = 'SCANNED'
     except Exception as exc:

@@ -1,0 +1,889 @@
+{
+  "run": "client_find_merchant_1793851594516242800",
+  "status": "SCANNED",
+  "walk": [
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1816,
+        "y": 98,
+        "pixels": 23,
+        "kind": "yellow",
+        "height": 7,
+        "width": 3,
+        "shape": "dot"
+      },
+      "distance": 33.1
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1816,
+        "y": 108,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 30.3
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1816,
+        "y": 98,
+        "pixels": 21,
+        "kind": "yellow",
+        "height": 6,
+        "width": 4,
+        "shape": "dot"
+      },
+      "distance": 33.1
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1816,
+        "y": 98,
+        "pixels": 21,
+        "kind": "yellow",
+        "height": 6,
+        "width": 4,
+        "shape": "dot"
+      },
+      "distance": 33.1
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1816,
+        "y": 108,
+        "pixels": 5,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 30.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1813,
+        "y": 103,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 3,
+        "width": 5,
+        "shape": "dot"
+      },
+      "distance": 28.5
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1811,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 28.7
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1807,
+        "y": 94,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 27.7
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1802,
+        "y": 91,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 26.4
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1797,
+        "y": 90,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 24.6
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1791,
+        "y": 89,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 23.5
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1786,
+        "y": 89,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 23.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1780,
+        "y": 91,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 21.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 93,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 22.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1772,
+        "y": 98,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 19.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1769,
+        "y": 100,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 20.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1771,
+        "y": 102,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 18.0
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1771,
+        "y": 102,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 18.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 17.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1778,
+        "y": 84,
+        "pixels": 22,
+        "kind": "yellow",
+        "height": 6,
+        "width": 4,
+        "shape": "dot"
+      },
+      "distance": 29.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1784,
+        "y": 94,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 18.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1788,
+        "y": 94,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 18.1
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1789,
+        "y": 93,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 19.2
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1783,
+        "y": 93,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 19.2
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1778,
+        "y": 96,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 17.9
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 100,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 103,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.8
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 104,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 15.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1777,
+        "y": 100,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1783,
+        "y": 98,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1788,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.1
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1788,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1783,
+        "y": 100,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 12.4
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1778,
+        "y": 102,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 12.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 104,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 13.6
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 103,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 98,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 17.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1781,
+        "y": 96,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1786,
+        "y": 96,
+        "pixels": 5,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 16.0
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1787,
+        "y": 96,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.0
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1787,
+        "y": 96,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1788,
+        "y": 98,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1794,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.1
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1794,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1789,
+        "y": 98,
+        "pixels": 5,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 14.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1784,
+        "y": 98,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.1
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1779,
+        "y": 101,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 13.0
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 104,
+        "pixels": 5,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 13.6
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1774,
+        "y": 104,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 14.4
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1774,
+        "y": 104,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 14.4
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 103,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1775,
+        "y": 98,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 17.8
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1780,
+        "y": 97,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.2
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1780,
+        "y": 97,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.2
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1776,
+        "y": 100,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 1,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.6
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 104,
+        "pixels": 6,
+        "kind": "yellow",
+        "height": 2,
+        "width": 1,
+        "shape": "dot"
+      },
+      "distance": 15.3
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1772,
+        "y": 103,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.6
+    },
+    {
+      "action": "stuck",
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1772,
+        "y": 103,
+        "pixels": 8,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 16.6
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1773,
+        "y": 104,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1777,
+        "y": 100,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.0
+    }
+  ],
+  "names": [
+    {
+      "hash": 5381,
+      "x": 500,
+      "y": 200,
+      "turn": 0,
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\merchant-5381.png"
+    }
+  ],
+  "evidence": {
+    "run": "client_find_merchant_1793851594516242800",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_find_merchant_1793851594516242800_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 1249434.5218662
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_find_merchant_1793851594516242800_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1249434.915249
+      }
+    ],
+    "states": []
+  }
+}
