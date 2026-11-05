@@ -1,0 +1,52 @@
+{
+  "run": "client_name_scan_1793867705317645600",
+  "status": "SCANNED",
+  "names": [
+    {
+      "hash": 7254,
+      "at": [
+        45,
+        60
+      ],
+      "text_width": 26,
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\name-7254.png"
+    }
+  ],
+  "turns": 4,
+  "evidence": {
+    "run": "client_name_scan_1793867705317645600",
+    "frames": [
+      {
+        "label": "02-turn-0",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_name_scan_1793867705317645600_02-turn-0.png",
+        "source": "desktop",
+        "host_monotonic": 1264559.9033139
+      },
+      {
+        "label": "02-turn-1",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_name_scan_1793867705317645600_02-turn-1.png",
+        "source": "desktop",
+        "host_monotonic": 1264571.1097514
+      },
+      {
+        "label": "02-turn-2",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_name_scan_1793867705317645600_02-turn-2.png",
+        "source": "desktop",
+        "host_monotonic": 1264582.1959087
+      },
+      {
+        "label": "02-turn-3",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_name_scan_1793867705317645600_02-turn-3.png",
+        "source": "desktop",
+        "host_monotonic": 1264593.45994
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_name_scan_1793867705317645600_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1264595.4839793
+      }
+    ],
+    "states": []
+  }
+}

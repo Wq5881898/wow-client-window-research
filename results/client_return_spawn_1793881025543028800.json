@@ -1,0 +1,797 @@
+{
+  "run": "client_return_spawn_1793881025543028800",
+  "status": "FAILED",
+  "steps": [
+    {
+      "position": [
+        0.49672693980315863,
+        0.43019760433356224
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    },
+    {
+      "position": [
+        0.49333943694209204,
+        0.4222629129472801
+      ],
+      "zone": 48885,
+      "marker": {
+        "x": 1875,
+        "y": 43,
+        "width": 4,
+        "height": 10,
+        "pixels": 28
+      },
+      "heading": 0.684,
+      "distance": 83.9
+    }
+  ],
+  "start": {
+    "position": [
+      0.49672693980315863,
+      0.43019760433356224
+    ],
+    "zone": 48885
+  },
+  "reason": "the mark of the quest was not reached",
+  "evidence": {
+    "run": "client_return_spawn_1793881025543028800",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_return_spawn_1793881025543028800_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1277870.5405757
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_return_spawn_1793881025543028800_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1278295.014282
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 19164,
+          "game_ms": 1277869901,
+          "health": 1,
+          "max_health": 97,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.49672693980315863,
+          "pos_y": 0.43019760433356224,
+          "facing": 0.5873441994247364,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.440161745632105,
+          "corpse_y": 0.5043106736858167,
+          "corpse_exists": true,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "protocol": 14
+        }
+      }
+    ]
+  }
+}

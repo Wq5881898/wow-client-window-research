@@ -1,0 +1,203 @@
+{
+  "run": "client_combat_1793863971996261600",
+  "status": "FAILED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 1260816.2233334,
+      "detail": {
+        "health": 97,
+        "position": [
+          0.46494239719234,
+          0.496055542839704
+        ]
+      }
+    },
+    {
+      "phase": "sweep",
+      "host_monotonic": 1260822.6248796,
+      "detail": [
+        [
+          0.46494239719234,
+          0.496055542839704
+        ],
+        [
+          0.47094239719234,
+          0.502055542839704
+        ],
+        [
+          0.45894239719234,
+          0.490055542839704
+        ],
+        [
+          0.47094239719234,
+          0.490055542839704
+        ],
+        [
+          0.45894239719234,
+          0.502055542839704
+        ],
+        [
+          0.47694239719234,
+          0.496055542839704
+        ],
+        [
+          0.46494239719234,
+          0.508055542839704
+        ]
+      ]
+    }
+  ],
+  "errors": [],
+  "error": "ValueError('could not acquire a hostile target')",
+  "evidence": {
+    "run": "client_combat_1793863971996261600",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1260816.2233247
+      },
+      {
+        "label": "01b-walked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked.png",
+        "source": "desktop",
+        "host_monotonic": 1260823.1871357
+      },
+      {
+        "label": "01b-walked-02",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-02.png",
+        "source": "desktop",
+        "host_monotonic": 1260847.2070933
+      },
+      {
+        "label": "01b-walked-03",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-03.png",
+        "source": "desktop",
+        "host_monotonic": 1260898.8113193
+      },
+      {
+        "label": "01b-walked-04",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-04.png",
+        "source": "desktop",
+        "host_monotonic": 1260923.0562981
+      },
+      {
+        "label": "01b-walked-05",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-05.png",
+        "source": "desktop",
+        "host_monotonic": 1260960.5582011
+      },
+      {
+        "label": "01b-walked-06",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-06.png",
+        "source": "desktop",
+        "host_monotonic": 1261012.3122134
+      },
+      {
+        "label": "01b-walked-07",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_01b-walked-07.png",
+        "source": "desktop",
+        "host_monotonic": 1261059.4087106
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793863971996261600_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 1261065.9262321
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 173,
+          "game_ms": 1260815501,
+          "health": 97,
+          "max_health": 97,
+          "power": 243,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.46494239719234,
+          "pos_y": 0.496055542839704,
+          "facing": 2.4880153403643335,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "protocol": 13
+        }
+      }
+    ]
+  }
+}

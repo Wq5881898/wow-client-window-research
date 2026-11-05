@@ -1,0 +1,482 @@
+{
+  "run": "client_return_spawn_1793864755165508100",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "walked",
+      "step": 0.00118,
+      "position": [
+        0.46807049668116274,
+        0.5162737468528268
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.46807049668116274,
+        0.5162737468528268
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0045,
+      "position": [
+        0.4698863202868696,
+        0.5203936827649348
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00362,
+      "position": [
+        0.4695506218051423,
+        0.5239948119325551
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4695506218051423,
+        0.5239948119325551
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00135,
+      "position": [
+        0.46883344777599756,
+        0.5228503852903029
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0033,
+      "position": [
+        0.4681925688563363,
+        0.5196154726482033
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4681925688563363,
+        0.5196154726482033
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4681925688563363,
+        0.5196154726482033
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4681925688563363,
+        0.5196154726482033
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4681925688563363,
+        0.5196154726482033
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00362,
+      "position": [
+        0.46799420157167926,
+        0.5159990844586863
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.46799420157167926,
+        0.5159990844586863
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0001,
+      "position": [
+        0.46808575570305944,
+        0.5159685664148929
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00474,
+      "position": [
+        0.4678873884184024,
+        0.5113450827801937
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4678873884184024,
+        0.5113450827801937
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00149,
+      "position": [
+        0.46764324406805524,
+        0.5128099488822766
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00143,
+      "position": [
+        0.46805523765926604,
+        0.5141832608529793
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0036,
+      "position": [
+        0.46768902113374533,
+        0.517769130998703
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.46768902113374533,
+        0.517769130998703
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00134,
+      "position": [
+        0.4683299000534066,
+        0.5189440756847487
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4683299000534066,
+        0.5189440756847487
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00314,
+      "position": [
+        0.4670786602578775,
+        0.5218280308232243
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00142,
+      "position": [
+        0.4666208896009766,
+        0.5231708247501335
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00142,
+      "position": [
+        0.466147859922179,
+        0.5245136186770428
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00298,
+      "position": [
+        0.46797894254978256,
+        0.5268635080491341
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00288,
+      "position": [
+        0.469916838330663,
+        0.5247272449835966
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.469916838330663,
+        0.5247272449835966
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00274,
+      "position": [
+        0.4720378423743038,
+        0.5229877164873732
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0034,
+      "position": [
+        0.472480354009308,
+        0.5196154726482033
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.472480354009308,
+        0.5196154726482033
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.472480354009308,
+        0.5196154726482033
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00141,
+      "position": [
+        0.4727855344472419,
+        0.5182421606775006
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00358,
+      "position": [
+        0.4732433051041428,
+        0.5146868085755703
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4732433051041428,
+        0.5146868085755703
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00105,
+      "position": [
+        0.4742351415274281,
+        0.5143511100938429
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4742351415274281,
+        0.5143511100938429
+      ],
+      "detour": -1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.0,
+      "position": [
+        0.4742351415274281,
+        0.5143511100938429
+      ],
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "walked",
+      "step": 0.00462,
+      "position": [
+        0.472327763790341,
+        0.5185626001373312
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00513,
+      "position": [
+        0.4720836194399939,
+        0.5236896314946212
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00359,
+      "position": [
+        0.472480354009308,
+        0.5277332722972458
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.00452,
+      "position": [
+        0.4725261310749981,
+        0.5322499427786679
+      ]
+    },
+    {
+      "action": "walked",
+      "step": 0.0109,
+      "position": [
+        0.4724650949874113,
+        0.5431448844129091
+      ]
+    }
+  ],
+  "start": {
+    "position": [
+      0.46721599145494774,
+      0.5154650186923018
+    ]
+  },
+  "reason": "the border of the area was not reached",
+  "evidence": {
+    "run": "client_return_spawn_1793864755165508100",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_return_spawn_1793864755165508100_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1261600.4698451
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_return_spawn_1793864755165508100_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1261905.6282168
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 337,
+          "game_ms": 1261599651,
+          "health": 97,
+          "max_health": 97,
+          "power": 243,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.46721599145494774,
+          "pos_y": 0.5154650186923018,
+          "facing": 3.8923298178331733,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "protocol": 13
+        }
+      }
+    ]
+  }
+}

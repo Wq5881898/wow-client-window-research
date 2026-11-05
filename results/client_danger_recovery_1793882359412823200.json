@@ -1,0 +1,6219 @@
+{
+  "run": "client_danger_recovery_1793882359412823200",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0391006563196167,
+        "facing": 2.1833173537871526,
+        "position": [
+          0.4527962157625696,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.20029446513449392
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0391006563196167,
+        "facing": 2.393863854266539,
+        "position": [
+          0.4527962157625696,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13327543253050503
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0391006563196167,
+        "facing": 3.0253116011505274,
+        "position": [
+          0.4527962157625696,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06772062791114841
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0391006563196167,
+        "facing": 3.2325982742090122,
+        "position": [
+          0.4527962157625696,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13370202521981134
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0391006563196167,
+        "facing": 2.8147651006711407,
+        "position": [
+          0.4527962157625696,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.60431447746884,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1051284360343243
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.5006711409395974,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07213773737999277
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.290124640460211,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.082837967401726,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.47466554457158716
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.1823585810162993,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12467726319520059
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.5499520613614575,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039411584154998194,
+        "facing": 3.9143815915627997,
+        "position": [
+          0.45484092469672693,
+          0.4677347981994354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6539503606701956
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03949300475759778,
+        "facing": 2.1864813039309685,
+        "position": [
+          0.45520714122224765,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1068651814711225
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03949300475759778,
+        "facing": 1.8691275167785235,
+        "position": [
+          0.45520714122224765,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906614774072037,
+        "facing": 1.5581975071907959,
+        "position": [
+          0.4523689631494621,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.4028520817754489
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906138235826723,
+        "facing": 2.447267497603068,
+        "position": [
+          0.4523537041275654,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11997043308453624
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03906138235826723,
+        "facing": 2.8147651006711407,
+        "position": [
+          0.4523537041275654,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03913264448965408,
+        "facing": 3.2325982742090122,
+        "position": [
+          0.45307087815671016,
+          0.4673685816739147
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03915361843509897,
+        "facing": 3.2325982742090122,
+        "position": [
+          0.45317769130998703,
+          0.4673838406958114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03915361843509897,
+        "facing": 3.443144774688399,
+        "position": [
+          0.45317769130998703,
+          0.4673838406958114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039480683831837955,
+        "facing": 3.600191754554171,
+        "position": [
+          0.45510032806897077,
+          0.4677653162432288
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5082267425886146
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03950711352515229,
+        "facing": 2.2398849472674978,
+        "position": [
+          0.45520714122224765,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07607076961921233
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03950711352515229,
+        "facing": 2.0294343240651966,
+        "position": [
+          0.45520714122224765,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 1.822051773729626,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.3187076666756596
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.5540747842761267,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08569750550468716
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.8713326941514863,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0390854119613239,
+        "facing": 3.081783317353787,
+        "position": [
+          0.45265888456549935,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09051303794770635
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03907583764502473,
+        "facing": 3.081783317353787,
+        "position": [
+          0.45267414358739605,
+          0.4672922865644312
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09035552035619332
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03907583764502473,
+        "facing": 3.342569511025887,
+        "position": [
+          0.45267414358739605,
+          0.4672922865644312
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03935326596979495,
+        "facing": 3.6033557046979867,
+        "position": [
+          0.4544899671931029,
+          0.46765850308995194
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5043368958904515
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0394031822959473,
+        "facing": 2.4503355704697984,
+        "position": [
+          0.45470359349965667,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13901624057713835
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0394031822959473,
+        "facing": 1.8252157238734419,
+        "position": [
+          0.45470359349965667,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0394031822959473,
+        "facing": 1.6146692233940556,
+        "position": [
+          0.45470359349965667,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12698461924816548
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0394031822959473,
+        "facing": 1.9320230105465004,
+        "position": [
+          0.45470359349965667,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.195877277085331,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.48631233982713706
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.4525407478427614,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08630393347901202
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.7667305848513903,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03948138857805815,
+        "facing": 3.9771812080536915,
+        "position": [
+          0.45517662317845425,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6766351734376509
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 2.3026845637583895,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14497025552764092
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6744007670182166,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.3633748801534036,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1540213029519946
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6241610738255035,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07101047932592448
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.994822627037392,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 2.2053691275167786,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11399379009364782
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.994822627037392,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6775647171620327,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.5235858101629913,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10302458005524345
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6806327900287632,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.994822627037392,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 2.1519654841802494,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.09699488246139744
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.994822627037392,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6806327900287632,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.5235858101629913,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10302458005524345
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.781208053691275,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039065885495888325,
+        "facing": 1.9916586768935762,
+        "position": [
+          0.4524605172808423,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.26409077373695367
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.4094918504314475,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1317196827209055
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.0410354745925217,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06930689640590466
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.251486097794823,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13629541032473697
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.836816874400767,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.626270373921381,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.23802365986697427
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.0441035474592524,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10502322995432231
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.361457334611697,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0393477128437485,
+        "facing": 3.67248322147651,
+        "position": [
+          0.4544747081712062,
+          0.46765850308995194
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.526225900078498
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03937808422055441,
+        "facing": 2.4158197507190797,
+        "position": [
+          0.4545967803463798,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.127181525532951
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03937808422055441,
+        "facing": 2.0482262703739216,
+        "position": [
+          0.4545967803463798,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 1.6303930968360498,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6663908484836346
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 3.3582933844678813,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11638310459060708
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 3.7258868648130394,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03946727651386004,
+        "facing": 4.090316395014382,
+        "position": [
+          0.45517662317845425,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.7126940244214991
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955180861568528,
+        "facing": 2.312176414189837,
+        "position": [
+          0.45554283970397497,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14960707153311506
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03955180861568528,
+        "facing": 1.787535953978907,
+        "position": [
+          0.45554283970397497,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03931387716471735,
+        "facing": 1.3665388302972195,
+        "position": [
+          0.4529640650034333,
+          0.46713969634546426
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.7459150643682585
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03928999914260408,
+        "facing": 3.4015340364333655,
+        "position": [
+          0.45297932402533,
+          0.46717021438925765
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0979585751952224
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03928999914260408,
+        "facing": 3.7187919463087247,
+        "position": [
+          0.45297932402533,
+          0.46717021438925765
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03958539974984354,
+        "facing": 3.9795781399808243,
+        "position": [
+          0.45566491187914854,
+          0.4678873884184024
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6813095713385892
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03959578289979242,
+        "facing": 2.148034515819751,
+        "position": [
+          0.45593957427328907,
+          0.46799420157167926
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1006790679083102
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03959578289979242,
+        "facing": 1.830680728667306,
+        "position": [
+          0.45593957427328907,
+          0.46799420157167926
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03909029354273785,
+        "facing": 1.5196548418024929,
+        "position": [
+          0.45267414358739605,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.412565807116212
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.4589645254074783,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11609017019189609
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.8265580057526365,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911695426924099,
+        "facing": 3.1941514860977946,
+        "position": [
+          0.45297932402533,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03913264448965408,
+        "facing": 3.1941514860977946,
+        "position": [
+          0.45307087815671016,
+          0.4673685816739147
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03913264448965408,
+        "facing": 3.4046021093000958,
+        "position": [
+          0.45307087815671016,
+          0.4673685816739147
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03942574568241074,
+        "facing": 3.5617449664429532,
+        "position": [
+          0.45484092469672693,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.49391026830865725
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039448797859985216,
+        "facing": 2.2548418024928094,
+        "position": [
+          0.4549782558937972,
+          0.4677500572213321
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07903020359386663
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039448797859985216,
+        "facing": 1.9908916586768937,
+        "position": [
+          0.4549782558937972,
+          0.4677500572213321
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.67679769894535,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.365179761572129
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.408724832214765,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1322001190863133
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.0401725790987535,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06879594135534016
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.2507190795781398,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13581497395932904
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.8328859060402682,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.622339405560882,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.23927492595839675
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.0401725790987535,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10627449604574479
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.3543624161073824,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039326430931108894,
+        "facing": 3.6685522531160113,
+        "position": [
+          0.45433737697413595,
+          0.46762798504615855
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5238493623779044
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03937249319889783,
+        "facing": 2.2045062320230104,
+        "position": [
+          0.4545815213244831,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03937249319889783,
+        "facing": 1.9940556088207095,
+        "position": [
+          0.4545815213244831,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.7866730584851391,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6166842459480272
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.461169702780441,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08367540968725025
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.77535953978907,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03948138857805815,
+        "facing": 3.985810162991371,
+        "position": [
+          0.45517662317845425,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6793818551017486
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 2.311313518696069,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14771693719173873
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6798657718120806,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.3688398849472676,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15228173789806584
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.6296260786193673,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06927091427199582
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.9972195589645254,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 2.2076701821668263,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11472623853740718
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03951734932191359,
+        "facing": 1.8432406519654843,
+        "position": [
+          0.4553444724193179,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.6327900287631831,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.3791878380590283
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.364717162032598,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1462081955732126
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.993096836049856,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.3072866730584853,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15382099820174877
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.98993288590604,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.625503355704698,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06319737194714256
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.4150527325023967,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13018588586597485
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.7825503355704697,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039065843774957275,
+        "facing": 3.0465004793863852,
+        "position": [
+          0.4525062943465324,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10300146806273831
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03907066820730603,
+        "facing": 3.0465004793863852,
+        "position": [
+          0.4525215533684291,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10288352212253256
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03907066820730603,
+        "facing": 3.3606903163950146,
+        "position": [
+          0.4525215533684291,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03936388780147302,
+        "facing": 3.671620325982742,
+        "position": [
+          0.4545967803463798,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5269604953290741
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0393917494635086,
+        "facing": 2.364717162032598,
+        "position": [
+          0.45474937056534676,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11219785993672653
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0393917494635086,
+        "facing": 1.9972195589645254,
+        "position": [
+          0.45474937056534676,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.6296260786193673,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6666738522346092
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4077660594439116,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10067431731950063
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.7219558964525405,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039469792576369,
+        "facing": 4.036049856184085,
+        "position": [
+          0.45514610513466086,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6951460216324455
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039530365637621585,
+        "facing": 2.2045062320230104,
+        "position": [
+          0.4554512855725948,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11460761420351759
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039530365637621585,
+        "facing": 1.8370086289549377,
+        "position": [
+          0.4554512855725948,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0390276265686188,
+        "facing": 1.4694151486097795,
+        "position": [
+          0.45233844510566873,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.43127104916575826
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.5650047938638543,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0824546622809845
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.7755512943432405,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0390562110072625,
+        "facing": 3.036241610738255,
+        "position": [
+          0.452475776302739,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10650294658978901
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906102470761412,
+        "facing": 3.0896452540747843,
+        "position": [
+          0.4524910353246357,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08938603480129372
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03906102470761412,
+        "facing": 3.403835091083413,
+        "position": [
+          0.4524910353246357,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039361326519263946,
+        "facing": 3.664621284755513,
+        "position": [
+          0.4545510032806897,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5243429762506399
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03938900083384997,
+        "facing": 2.357718120805369,
+        "position": [
+          0.45470359349965667,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1095806989683775
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03938900083384997,
+        "facing": 1.9901246404602109,
+        "position": [
+          0.45470359349965667,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.675934803451582,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6519333273039504
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4540747842761266,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.08593379238884181
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.7682646212847555,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03948138857805815,
+        "facing": 3.9787152444870566,
+        "position": [
+          0.45517662317845425,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6771234724001571
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 2.3043144774688398,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14537557943737406
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 1.675934803451582,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 1.3586768935762223,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1556302122625998
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 1.6728667305848515,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 2.0403643336529242,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06135763920113481
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 2.1975071907957813,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1113777641728733
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03951148925498631,
+        "facing": 1.8299137104506231,
+        "position": [
+          0.4553292133974212,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 1.6194630872483222,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.38319364841164705
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.3513902205177373,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15033213493764996
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.979769894534995,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.290699904122723,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14865942354198547
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.0331735378715243,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06668623521124123
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.665580057526366,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.45503355704698,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11734143628331843
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.7189837008628954,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.982837967401726,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.139980824544583,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10068405047574198
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.9294343240651965,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.615340364333653,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06631419470141071
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.4079578139980824,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13232611069523037
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.665580057526366,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.0331735378715243,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06668623521124123
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.193384467881112,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11768295810799237
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.9325982742090124,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.6718120805369128,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.4645254074784275,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11432008645281078
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.6749760306807286,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.042569511025887,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06967706635659231
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.253020134228188,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1366655802754246
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 3.042569511025887,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06967706635659231
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.574496644295302,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0793151545781408
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.3105465004793864,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.16333309481438005
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039051653093373884,
+        "facing": 2.728379674017258,
+        "position": [
+          0.4523689631494621,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039065843774957275,
+        "facing": 3.042569511025887,
+        "position": [
+          0.4525062943465324,
+          0.46724650949874114
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10425273415416064
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03905619312243983,
+        "facing": 3.042569511025887,
+        "position": [
+          0.4525215533684291,
+          0.46726176852063783
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10409544699687123
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03905619312243983,
+        "facing": 3.3567593480345157,
+        "position": [
+          0.4525215533684291,
+          0.46726176852063783
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03935326596979495,
+        "facing": 3.6676893576222436,
+        "position": [
+          0.4544899671931029,
+          0.46765850308995194
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5248149336305592
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039405924027726504,
+        "facing": 2.203739213806328,
+        "position": [
+          0.45474937056534676,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06091134240975955
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039405924027726504,
+        "facing": 1.9932885906040267,
+        "position": [
+          0.45474937056534676,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 1.7827420901246405,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.617699225155295
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.350431447746884,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1186882041590187
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.721188878235858,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03947889684570111,
+        "facing": 4.088686481303931,
+        "position": [
+          0.45520714122224765,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.712402765010926
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 2.3073825503355705,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14819425742622713
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.6854266538830298,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.3712368168744007,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14979018444323908
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.738830297219559,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 2.0529242569511026,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06719766702049554
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 2.2100671140939596,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11721779199223403
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.9995206136145733,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.635091083413231,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0658027628921564
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.4780441035474592,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11579236917873832
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03955774511409897,
+        "facing": 1.8393096836049856,
+        "position": [
+          0.45555809872587166,
+          0.4678721293965057
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911094491170174,
+        "facing": 2.049856184084372,
+        "position": [
+          0.4528725108720531,
+          0.4673228046082246
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.24214871751568
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.3607861936720997,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.14517866246522854
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.9891658676893575,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 3.306423777564717,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15582712923474532
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.9923298178331734,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.6781399808245445,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.4676893576222434,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1111503285155712
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.6247363374880153,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06116072222898929
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.938926174496644,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 3.0928092042186,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08783149870574382
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039075664844899,
+        "facing": 2.882358581016299,
+        "position": [
+          0.45262836652170596,
+          0.46727702754253453
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.6215723873441994,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.23951907543964987
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.0896452540747843,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09052685450491676
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4540747842761266,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039361326519263946,
+        "facing": 3.718024928092042,
+        "position": [
+          0.4545510032806897,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5413418838828902
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039394636795848766,
+        "facing": 2.4111217641418983,
+        "position": [
+          0.45471885252155336,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.126694190002518
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039394636795848766,
+        "facing": 2.04352828379674,
+        "position": [
+          0.45471885252155336,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906138235826723,
+        "facing": 1.6256951102588686,
+        "position": [
+          0.4523537041275654,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6679639437572252
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906138235826723,
+        "facing": 3.350431447746884,
+        "position": [
+          0.4523537041275654,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11896331647436702
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03906138235826723,
+        "facing": 3.718024928092042,
+        "position": [
+          0.4523537041275654,
+          0.46720073243305105
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03948138857805815,
+        "facing": 4.082454458293385,
+        "position": [
+          0.45517662317845425,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.7101446897396454
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 2.301150527325024,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.14593656229191906
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.6728667305848515,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.3618408437200384,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15305499618771629
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.6728667305848515,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 2.0403643336529242,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06292573866584904
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 2.2509108341323105,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12994477126983792
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.986960690316395,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.6225311601150527,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.0700746912468029
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.4120805369127516,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1370632051656352
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0395599375964524,
+        "facing": 1.773346116970278,
+        "position": [
+          0.45552758068207827,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03909572838750779,
+        "facing": 2.0372962607861935,
+        "position": [
+          0.4527809567406729,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.24689199408947338
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03907070396369107,
+        "facing": 2.4047938638542665,
+        "position": [
+          0.4525673304341192,
+          0.46726176852063783
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1316815239722814
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03907070396369107,
+        "facing": 2.825790987535954,
+        "position": [
+          0.4525673304341192,
+          0.46726176852063783
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03916149414615164,
+        "facing": 3.2436241610738255,
+        "position": [
+          0.453330281528954,
+          0.4674296177615015
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.2436241610738255,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.4540747842761266,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.6080536912751677,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08343047142811764
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.44784276126558,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.1870565675934803,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 2.9734419942473633,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11857270562370502
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039183183556891474,
+        "facing": 3.2844678811121764,
+        "position": [
+          0.45343709468223087,
+          0.4674448767833982
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0394955014951988,
+        "facing": 3.5483221476510067,
+        "position": [
+          0.45517662317845425,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.4923318427522463
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03951387875875431,
+        "facing": 2.3451581975071907,
+        "position": [
+          0.4552986953536278,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11035586254525001
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03951387875875431,
+        "facing": 1.9775647171620325,
+        "position": [
+          0.4552986953536278,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 1.6099712368168744,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.386412430856588
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 2.4456375838926174,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1204115710312841
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039032390107000915,
+        "facing": 2.8132310642377756,
+        "position": [
+          0.4523537041275654,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911142116985839,
+        "facing": 3.1808245445829337,
+        "position": [
+          0.4529182879377432,
+          0.4673380636301213
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039121956898375755,
+        "facing": 3.1808245445829337,
+        "position": [
+          0.4529945830472267,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039121956898375755,
+        "facing": 3.391275167785235,
+        "position": [
+          0.4529945830472267,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039405924027726504,
+        "facing": 3.545254074784276,
+        "position": [
+          0.45474937056534676,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.487928785121514
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03943142953636633,
+        "facing": 2.184947267497603,
+        "position": [
+          0.45485618371862363,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03943142953636633,
+        "facing": 2.027804410354746,
+        "position": [
+          0.45485618371862363,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.870757430488974,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.589919359065651
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.3347075743048897,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12392955540886286
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.9630872483221475,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07608990710777797
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 4.120134228187919,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12607951339435988
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.702301054650048,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03926554030596127,
+        "facing": 3.4918504314477468,
+        "position": [
+          0.45392538338292515,
+          0.46753643091477837
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5119669723965735
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03927994713566191,
+        "facing": 2.184947267497603,
+        "position": [
+          0.4540474555580987,
+          0.46756694895857176
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.09697992745108376
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03927994713566191,
+        "facing": 1.8644295302013423,
+        "position": [
+          0.4540474555580987,
+          0.46756694895857176
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.5503355704697988,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6919128048591531
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4352828379674016,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09191545467954396
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.702301054650048,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039469792576369,
+        "facing": 4.013326941514861,
+        "position": [
+          0.45514610513466086,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6879130932503209
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03952676073293863,
+        "facing": 2.2351869606903163,
+        "position": [
+          0.4554055085069047,
+          0.4678416113527123
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12398611240457386
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03952676073293863,
+        "facing": 1.6068072866730585,
+        "position": [
+          0.4554055085069047,
+          0.4678416113527123
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07603335011206697
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03952676073293863,
+        "facing": 1.4497603068072866,
+        "position": [
+          0.4554055085069047,
+          0.4678416113527123
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12602295639864888
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03952676073293863,
+        "facing": 1.814189837008629,
+        "position": [
+          0.4554055085069047,
+          0.4678416113527123
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03907555163060919,
+        "facing": 2.02464046021093,
+        "position": [
+          0.45258258945601587,
+          0.46726176852063783
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.25257024263364747
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906598681796394,
+        "facing": 2.4424736337488016,
+        "position": [
+          0.4524147402151522,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12098508367270792
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03906598681796394,
+        "facing": 2.8100671140939597,
+        "position": [
+          0.4524147402151522,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911695426924099,
+        "facing": 3.177660594439118,
+        "position": [
+          0.45297932402533,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03912258776156314,
+        "facing": 3.177660594439118,
+        "position": [
+          0.45304036011291676,
+          0.4673685816739147
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03912258776156314,
+        "facing": 3.388111217641419,
+        "position": [
+          0.45304036011291676,
+          0.4673685816739147
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039422893112357436,
+        "facing": 3.54209012464046,
+        "position": [
+          0.45479514763103684,
+          0.467704280155642
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.48726502487308887
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039448511598491234,
+        "facing": 2.181783317353787,
+        "position": [
+          0.4549019607843137,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039448511598491234,
+        "facing": 2.02464046021093,
+        "position": [
+          0.4549019607843137,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.8675934803451582,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.3044475781104086
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.3890699904122723,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13845644954342515
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.020613614573346,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.0625701295833849
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.231064237775647,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12955864350221719
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.8132310642377756,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.6027804410354745,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.245500737730352
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.020613614573346,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11250030781770005
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.388111217641419,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039375529775048476,
+        "facing": 3.755704697986577,
+        "position": [
+          0.4545510032806897,
+          0.46765850308995194
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5532906331165102
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03942006691549791,
+        "facing": 2.2917545541706614,
+        "position": [
+          0.45482566567483024,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08954540965099335
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03942006691549791,
+        "facing": 1.9775647171620325,
+        "position": [
+          0.45482566567483024,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.7671140939597316,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6229100577199824
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4949185043144775,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07293283251211173
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.8091083413231064,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039469792576369,
+        "facing": 3.9661553211888783,
+        "position": [
+          0.45514610513466086,
+          0.4677958342870222
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6728979001532525
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 2.2917545541706614,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1412641042881778
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 1.6633748801534036,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 1.34928092042186,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15873457080162678
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 1.6602109300095877,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 2.027804410354746,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 2.181783317353787,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10625917241350782
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.0395056342125924,
+        "facing": 1.870757430488974,
+        "position": [
+          0.4553139543755245,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 1.6602109300095877,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.3702232072200736
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.341994247363375,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15320483707118243
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.9702780441035475,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.2813039309683605,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.145786721408453
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.0236816874400767,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06378301439255218
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.6561840843720037,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.4456375838926174,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1202141384168509
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.5996164908916586,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07120113005528161
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.9671140939597316,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.2279002876318312,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12878781377620263
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.9671140939597316,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.649856184084372,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.4424736337488016,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12122125502702011
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.653020134228188,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.01744966442953,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.061799299857370336
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.2279002876318312,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12878781377620263
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.9671140939597316,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.5996164908916586,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07120113005528161
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.4424736337488016,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12122125502702011
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 2.806903163950144,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906108431628372,
+        "facing": 3.01744966442953,
+        "position": [
+          0.4524452582589456,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11275982196939924
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03906108431628372,
+        "facing": 3.01744966442953,
+        "position": [
+          0.4524452582589456,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11275982196939924
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03906108431628372,
+        "facing": 3.384947267497603,
+        "position": [
+          0.4524452582589456,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0393750892347064,
+        "facing": 3.7525407478427613,
+        "position": [
+          0.4546272983901732,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5529477880974806
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03943435824669489,
+        "facing": 2.2885906040268456,
+        "position": [
+          0.4549019607843137,
+          0.4677347981994354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08915576175944326
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03943435824669489,
+        "facing": 2.02464046021093,
+        "position": [
+          0.4549019607843137,
+          0.4677347981994354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904671301370605,
+        "facing": 1.7105465004793863,
+        "position": [
+          0.4523994811932555,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6405227233891089
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.54209012464046,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039056425624495614,
+        "facing": 3.699137104506232,
+        "position": [
+          0.4523842221713588,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03945501836995365,
+        "facing": 3.9096836049856183,
+        "position": [
+          0.4550698100251774,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6543062170829329
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03948471457453843,
+        "facing": 2.2351869606903163,
+        "position": [
+          0.45522240024414434,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12252927242447269
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03948471457453843,
+        "facing": 1.8675934803451582,
+        "position": [
+          0.45522240024414434,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.5,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.4214562170009794
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.5996164908916586,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07143741693943627
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.8100671140939597,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.01744966442953,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11299595559494964
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.01744966442953,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11299595559494964
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.5357622243528284,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.7463087248322147,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.11900708896585349
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.5357622243528284,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.1682646212847554,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06499006384354958
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.0111217641418984,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.11501018881528809
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.039051498073214265,
+        "facing": 3.3253116011505273,
+        "position": [
+          0.4524147402151522,
+          0.46723125047684444
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03931323752591037,
+        "facing": 3.5891658676893576,
+        "position": [
+          0.45426108186465247,
+          0.46761272602426185
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.4979591411346118
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03933977379641207,
+        "facing": 2.282262703739214,
+        "position": [
+          0.45441367208361944,
+          0.46764324406805524
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.08320002491009151
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03933977379641207,
+        "facing": 1.9681687440076703,
+        "position": [
+          0.45441367208361944,
+          0.46764324406805524
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.7576222435282838,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6259314075504901
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4321188878235858,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09292257128971318
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.7493767976989454,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.0394905373423498,
+        "facing": 4.060402684563758,
+        "position": [
+          0.45523765926604104,
+          0.4678110933089189
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.703627177089784
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03954809380402866,
+        "facing": 2.1754554170661553,
+        "position": [
+          0.4554970626382849,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1057002222799469
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03954809380402866,
+        "facing": 1.8581975071907957,
+        "position": [
+          0.4554970626382849,
+          0.467856870374609
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.5471716203259827,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.4064410239039109
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.489645254074784,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10644234881410623
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.803835091083413,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03909542465173335,
+        "facing": 3.117929050814957,
+        "position": [
+          0.45273517967498283,
+          0.4672922865644312
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07837919363464092
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03909572838750779,
+        "facing": 3.117929050814957,
+        "position": [
+          0.4527809567406729,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07798633109003036
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03909572838750779,
+        "facing": 3.3787152444870565,
+        "position": [
+          0.4527809567406729,
+          0.4673075455863279
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03939192974326765,
+        "facing": 3.639501438159156,
+        "position": [
+          0.4546730754558633,
+          0.46768902113374533
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.5173102969939224
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03944006447380584,
+        "facing": 2.489645254074784,
+        "position": [
+          0.4549172198062104,
+          0.4677347981994354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.15326766900759756
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03944006447380584,
+        "facing": 1.914765100671141,
+        "position": [
+          0.4549172198062104,
+          0.4677347981994354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.5471716203259827,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6929199214693225
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.275071907957814,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1429121775762951
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.9065196548418024,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 4.217545541706616,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.1570864975135097
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.9599232981783317,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.07508279049760874
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.488686481303931,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.07491654704729359
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.2247363374880154,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.15893448728353282
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.7463087248322147,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039460786514882745,
+        "facing": 3.956759348034516,
+        "position": [
+          0.4550850690470741,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6694048533966148
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03949393921034152,
+        "facing": 2.178619367209971,
+        "position": [
+          0.45528343633173113,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.10502490010447957
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03949393921034152,
+        "facing": 1.8613614573346118,
+        "position": [
+          0.45528343633173113,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.5503355704697988,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.4054339072937416
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.4928092042186,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.10543523220393702
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.8132310642377756,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911142116985839,
+        "facing": 3.177660594439118,
+        "position": [
+          0.4529182879377432,
+          0.4673380636301213
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03911695426924099,
+        "facing": 3.177660594439118,
+        "position": [
+          0.45297932402533,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03911695426924099,
+        "facing": 3.388111217641419,
+        "position": [
+          0.45297932402533,
+          0.467353322652018
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.039394887986711265,
+        "facing": 3.5483221476510067,
+        "position": [
+          0.4546425574120699,
+          0.46767376211184863
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.48801236462795095
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03943142953636633,
+        "facing": 2.395397890699904,
+        "position": [
+          0.45485618371862363,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12276478549812182
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03943142953636633,
+        "facing": 2.027804410354746,
+        "position": [
+          0.45485618371862363,
+          0.4677195391775387
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.6602109300095877,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.6569383916696399
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.4384467881112175,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.09090833806937473
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 3.7525407478427613,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03946655971640323,
+        "facing": 3.9630872483221475,
+        "position": [
+          0.45510032806897077,
+          0.4677805752651255
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.6715330151924375
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03949978419696622,
+        "facing": 2.02464046021093,
+        "position": [
+          0.4552986953536278,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03949978419696622,
+        "facing": 1.814189837008629,
+        "position": [
+          0.4552986953536278,
+          0.4678263523308156
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 1.6068072866730585,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.38745840173647866
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.4456375838926174,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.12045042530100554
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.03904688594195672,
+        "facing": 2.8132310642377756,
+        "position": [
+          0.4523537041275654,
+          0.46721599145494774
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true,
+    "position": [
+      0.4527962157625696,
+      0.4673075455863279
+    ],
+    "facing": 2.1833173537871526,
+    "corpse_exists": true,
+    "corpse": [
+      0.440161745632105,
+      0.5043106736858167
+    ]
+  },
+  "reason": "time_budget",
+  "corpses": [],
+  "evidence": {
+    "run": "client_danger_recovery_1793882359412823200",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793882359412823200_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1279203.2704448
+      },
+      {
+        "label": "03-given-up",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793882359412823200_03-given-up.png",
+        "source": "desktop",
+        "host_monotonic": 1279444.5718828
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793882359412823200_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1279444.8118449
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 254,
+          "game_ms": 1279202751,
+          "health": 1,
+          "max_health": 97,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4527962157625696,
+          "pos_y": 0.4673075455863279,
+          "facing": 2.1833173537871526,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.440161745632105,
+          "corpse_y": 0.5043106736858167,
+          "corpse_exists": true,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "protocol": 14
+        }
+      },
+      {
+        "label": "03-given-up",
+        "state": {
+          "sequence": 2662,
+          "game_ms": 1279444001,
+          "health": 1,
+          "max_health": 97,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 10.5,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4529182879377432,
+          "pos_y": 0.4673380636301213,
+          "facing": 3.1808245445829337,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.440161745632105,
+          "corpse_y": 0.5043106736858167,
+          "corpse_exists": true,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "protocol": 14
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "run": "client_danger_recovery_1793884070682073000",
+  "status": "FAILED",
+  "steps": [
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04072982817599922,
+        "facing": 3.469798657718121,
+        "position": [
+          0.4604104676890211,
+          0.4689707789730678
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.27009033998085463
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04072982817599922,
+        "facing": 2.99856184084372,
+        "position": [
+          0.4604104676890211,
+          0.4689707789730678
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.12009100243595229
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.04072982817599922,
+        "facing": 2.630968360498562,
+        "position": [
+          0.4604104676890211,
+          0.4689707789730678
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.04008446015514045,
+        "facing": 2.263470757430489,
+        "position": [
+          0.45813687342641335,
+          0.46848249027237354
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.1314977464001616
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.040050386485571646,
+        "facing": 2.2665388302972196,
+        "position": [
+          0.4579995422293431,
+          0.46845197222858015
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "left",
+        "seconds": 0.13160549389047083
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.040050386485571646,
+        "facing": 2.8383509108341323,
+        "position": [
+          0.4579995422293431,
+          0.46845197222858015
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.06
+      }
+    },
+    {
+      "action": "turn",
+      "detail": {
+        "distance": 0.040050386485571646,
+        "facing": 3.1022051773729626,
+        "position": [
+          0.4579995422293431,
+          0.46845197222858015
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1,
+        "direction": "right",
+        "seconds": 0.13439536593483306
+      }
+    },
+    {
+      "action": "walk",
+      "detail": {
+        "distance": 0.040050386485571646,
+        "facing": 2.7409395973154362,
+        "position": [
+          0.4579995422293431,
+          0.46845197222858015
+        ],
+        "phase": "GHOST",
+        "dead": true,
+        "health": 1
+      }
+    }
+  ],
+  "start": {
+    "health": 1,
+    "dead": true,
+    "position": [
+      0.4604104676890211,
+      0.4689707789730678
+    ],
+    "facing": 3.469798657718121,
+    "corpse_exists": true,
+    "corpse": [
+      0.440161745632105,
+      0.5043106736858167
+    ]
+  },
+  "error": "NameError(\"name 'state' is not defined\")",
+  "evidence": {
+    "run": "client_danger_recovery_1793884070682073000",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793884070682073000_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1280914.6006443
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_danger_recovery_1793884070682073000_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1280920.376288
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 258,
+          "game_ms": 1280914001,
+          "health": 1,
+          "max_health": 97,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4604104676890211,
+          "pos_y": 0.4689707789730678,
+          "facing": 3.469798657718121,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.440161745632105,
+          "corpse_y": 0.5043106736858167,
+          "corpse_exists": true,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "protocol": 14
+        }
+      }
+    ]
+  }
+}
