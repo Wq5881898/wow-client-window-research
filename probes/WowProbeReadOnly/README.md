@@ -1,6 +1,6 @@
 # WowProbeReadOnly
 
-只读能力探针源码。本机无 WoW，**未加载、未运行**。不是 bot，默认 `DefaultState: disabled`。
+现代Forever只读能力探针源码，尚无目标build加载运行证据；本机已有3.3.5a对照环境，使用另一套WowProbeWotLK。此探针默认 `DefaultState: disabled`。
 
 ## 做什么
 
