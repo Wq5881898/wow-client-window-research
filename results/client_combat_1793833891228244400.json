@@ -1,0 +1,2331 @@
+{
+  "run": "client_combat_1793833891228244400",
+  "status": "FAILED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 1230735.8649259,
+      "detail": {
+        "health": 82,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "target_acquired",
+      "host_monotonic": 1230742.3023603,
+      "detail": {
+        "guid": "0xF130000045000AF0",
+        "health": 55,
+        "distance": 6552.6,
+        "range": 0
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230743.2611045,
+      "detail": {
+        "attempt": 0,
+        "range": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230744.2292642,
+      "detail": {
+        "attempt": 1,
+        "range": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230745.2136304,
+      "detail": {
+        "attempt": 2,
+        "range": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230746.1819152,
+      "detail": {
+        "attempt": 3,
+        "range": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230747.164765,
+      "detail": {
+        "attempt": 4,
+        "range": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1230748.2016601,
+      "detail": {
+        "attempt": 5,
+        "range": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230748.7964297,
+      "detail": {
+        "decision": "WAIT",
+        "reason": "heartbeat_warmup"
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230749.1968001,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230749.9632337,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230750.1976938,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230750.9511237,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230751.1632944,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230751.9191901,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230752.1332159,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230752.9022921,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230753.143532,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230753.9244717,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230754.1263658,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230754.881482,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230755.0750501,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230755.8619688,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230756.0643033,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230756.8080537,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230757.0087493,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230757.7587,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230757.9629613,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230758.7471204,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230758.9397577,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230759.6906376,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230759.8928731,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230760.6396183,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230760.8388446,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230761.6282714,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230761.8232078,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230762.5736589,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230762.7721959,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230763.5230198,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230763.7227868,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230764.5117473,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230764.7042299,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230765.4560173,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230765.6554561,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230766.4082756,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230766.6039318,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230767.3975004,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230767.5919906,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230768.3414938,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230768.5356882,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230769.2893159,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230769.4876937,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230770.2785353,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230770.4771784,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230771.2236096,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230771.4214381,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230772.1741874,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230772.3734399,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230773.1592765,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230773.3549922,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230774.1056829,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230774.3073744,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230775.0566556,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230775.2583715,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230776.0437462,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230776.243051,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230776.9873802,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230777.2005049,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230777.9576406,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230778.1480954,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230778.9437878,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230779.1464362,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230779.9002065,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230780.1057594,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230780.8614972,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230781.0597617,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230781.848641,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230782.0455698,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230782.7969383,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230782.9913554,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230783.767766,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230783.9784857,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230784.7643815,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230784.9618742,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230785.7139453,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230785.9152923,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230786.6707409,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230786.8731058,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230787.6526445,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230787.853354,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230788.604012,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230788.8061501,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230789.5564037,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230789.7951788,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230790.5403987,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230790.7420239,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230791.5116626,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230791.7095382,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230792.5781609,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230792.7811872,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230793.5473368,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230793.7493728,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230794.5328704,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230794.7488396,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230795.556188,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230795.7790466,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230796.5811238,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230796.7917237,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230797.5846416,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230797.8150618,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230798.6151791,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230798.816292,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230799.5970564,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230799.7908913,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230800.5853814,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230800.7898248,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230801.6226561,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230801.8391331,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230802.6438745,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230802.8556452,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230803.6636638,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230803.885274,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230804.6887806,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230804.9061468,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230805.7096543,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230805.9216167,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230806.7313065,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230806.9400157,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230807.7412339,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230807.9559503,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230808.7568698,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230808.9739236,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230809.7864681,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230810.0011535,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230810.7680218,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230810.9687551,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230811.7192727,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230811.9146988,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230812.6882604,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230812.8860569,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230813.6366598,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230813.8372303,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230814.5848745,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230814.7828847,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230815.5918729,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230815.8038264,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230816.5562368,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230816.7531462,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230817.5054881,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230817.7361855,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230818.4855903,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230818.6832756,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230819.4376513,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230819.6364546,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230820.3849796,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230820.6286744,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230821.3731179,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230821.5753548,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230822.3246373,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230822.5211715,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230823.2858795,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230823.4872473,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230824.2390467,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230824.4325902,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230825.1901498,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230825.3854754,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230826.1729195,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230826.3666311,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230827.1206015,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230827.3241178,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230828.0747354,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230828.2694769,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230829.0601919,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230829.2539824,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230830.0033064,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230830.2010428,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230830.9520908,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230831.1513051,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230831.925958,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42447547112230105
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230832.1206932,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230832.8790693,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009536888685435,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230833.0728659,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230833.8731514,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230834.0822863,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230834.9315634,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230835.1343947,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230835.9275813,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230836.1357568,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230836.9379139,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230837.1459398,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230837.9951037,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1230838.2030928,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1230838.9858837,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "position": [
+          0.5009689478904402,
+          0.42446021210040435
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "target_guid": "0xF130000045000AF0",
+  "target_name_hash_seen": 22786,
+  "target_name": "tab-selected",
+  "target_health_at_start": 55,
+  "error": "ValueError('combat loop ended without a verdict')",
+  "evidence": {
+    "run": "client_combat_1793833891228244400",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793833891228244400_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1230735.8649167
+      },
+      {
+        "label": "02-target-acquired",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793833891228244400_02-target-acquired.png",
+        "source": "desktop",
+        "host_monotonic": 1230742.3023471
+      },
+      {
+        "label": "03-in-range",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793833891228244400_03-in-range.png",
+        "source": "desktop",
+        "host_monotonic": 1230748.5981392
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793833891228244400_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 1230839.4026388
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 64422,
+          "game_ms": 1230735201,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045000AF0",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.5009689478904402,
+          "pos_y": 0.42446021210040435,
+          "facing": 6.163854266538831,
+          "event_serial": 215,
+          "cast_started": 67,
+          "cast_succeeded": 66,
+          "cast_failed": 72,
+          "ui_errors": 10,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1230027550,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 212,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230020867,
+              "reason": 0
+            },
+            {
+              "serial": 213,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230022783,
+              "reason": 0
+            },
+            {
+              "serial": 214,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230026083,
+              "reason": 0
+            },
+            {
+              "serial": 215,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230027550,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 5,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 418,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "02-target-acquired",
+        "state": {
+          "sequence": 64433,
+          "game_ms": 1230736301,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045000AF0",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.5009689478904402,
+          "pos_y": 0.42446021210040435,
+          "facing": 6.163854266538831,
+          "event_serial": 215,
+          "cast_started": 67,
+          "cast_succeeded": 66,
+          "cast_failed": 72,
+          "ui_errors": 10,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1230027550,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 212,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230020867,
+              "reason": 0
+            },
+            {
+              "serial": 213,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230022783,
+              "reason": 0
+            },
+            {
+              "serial": 214,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230026083,
+              "reason": 0
+            },
+            {
+              "serial": 215,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230027550,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 5,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 418,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "03-in-range",
+        "state": {
+          "sequence": 64548,
+          "game_ms": 1230747801,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 7.0,
+          "target_guid": "0xF130000045000AF0",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.5009536888685435,
+          "pos_y": 0.42446021210040435,
+          "facing": 6.163854266538831,
+          "event_serial": 215,
+          "cast_started": 67,
+          "cast_succeeded": 66,
+          "cast_failed": 72,
+          "ui_errors": 10,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1230027550,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 212,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230020867,
+              "reason": 0
+            },
+            {
+              "serial": 213,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230022783,
+              "reason": 0
+            },
+            {
+              "serial": 214,
+              "kind": 1,
+              "spell": 133,
+              "at": 1230026083,
+              "reason": 0
+            },
+            {
+              "serial": 215,
+              "kind": 2,
+              "spell": 133,
+              "at": 1230027550,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 5,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 418,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      }
+    ]
+  }
+}

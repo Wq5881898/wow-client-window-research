@@ -1,0 +1,1473 @@
+{
+  "run": "client_combat_1793835622709101200",
+  "status": "COMBAT_LOOP_COMPLETED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 1232467.4033882,
+      "detail": {
+        "health": 82,
+        "position": [
+          0.4972915236133364,
+          0.43907835507743953
+        ]
+      }
+    },
+    {
+      "phase": "target_acquired",
+      "host_monotonic": 1232473.9001375,
+      "detail": {
+        "guid": "0xF130000045063E4F",
+        "health": 55,
+        "distance": 6552.6,
+        "range": 0
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232474.9243534,
+      "detail": {
+        "attempt": 0,
+        "range": 0,
+        "position": [
+          0.4968032349126421,
+          0.4378881513694972
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232475.9677588,
+      "detail": {
+        "attempt": 1,
+        "range": 0,
+        "position": [
+          0.4960708018616007,
+          0.43614862287327383
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232476.9720187,
+      "detail": {
+        "attempt": 2,
+        "range": 0,
+        "position": [
+          0.49530785076676587,
+          0.43430228122377357
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232477.9503769,
+      "detail": {
+        "attempt": 3,
+        "range": 0,
+        "position": [
+          0.49451438162813766,
+          0.4324254215304799
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232478.9687873,
+      "detail": {
+        "attempt": 4,
+        "range": 0,
+        "position": [
+          0.49376668955519953,
+          0.43064011596856644
+        ]
+      }
+    },
+    {
+      "phase": "approach",
+      "host_monotonic": 1232479.9435061,
+      "detail": {
+        "attempt": 5,
+        "range": 0,
+        "position": [
+          0.4929579613946746,
+          0.42870222018768595
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232480.5773276,
+      "detail": {
+        "decision": "WAIT",
+        "reason": "heartbeat_warmup"
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232481.0108612,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232481.7653569,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0006624946470158643,
+        "position": [
+          0.49292744335088123,
+          0.42735942626077666
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232481.9615898,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232482.7143531,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007588199746185282,
+        "position": [
+          0.49321736476691846,
+          0.42624551766231783
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232482.9079463,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232483.6599778,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0006624946470158643,
+        "position": [
+          0.4934615091172656,
+          0.42529945830472266
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232483.9048642,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232484.6638312,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0012995276816080952,
+        "position": [
+          0.4930495155260548,
+          0.4234531166552224
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232484.8646109,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232485.609546,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007588199746185282,
+        "position": [
+          0.49333943694209204,
+          0.42232394903486686
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232485.8107389,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232486.5620166,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0,
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ]
+      }
+    },
+    {
+      "phase": "detour",
+      "host_monotonic": 1232487.3632564,
+      "detail": {
+        "position": [
+          0.49333943694209204,
+          0.4222629129472801
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232487.5615264,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232488.3101961,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.001313074077556471,
+        "position": [
+          0.49329365987640195,
+          0.42357518883039597
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232488.5063582,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232489.2591379,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.000682404204623417,
+        "position": [
+          0.4933852140077821,
+          0.42485694666971846
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232489.4957401,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232490.2455269,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.001129579951068692,
+        "position": [
+          0.4934767681391623,
+          0.4260624093995575
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232490.4440816,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232491.1974212,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0010996028518621443,
+        "position": [
+          0.4934004730296788,
+          0.42777141985198747
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232491.3920682,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232492.1458304,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0012063316014986319,
+        "position": [
+          0.49330891889829864,
+          0.42978561074235144
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232492.3492244,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232493.1106941,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0014051562594914226,
+        "position": [
+          0.49321736476691846,
+          0.43179980163271536
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232493.310492,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232494.060319,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0011612907661823686,
+        "position": [
+          0.4931258106355383,
+          0.43350881208514536
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232494.2629869,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232495.0428198,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0012984522102390925,
+        "position": [
+          0.4930342565041581,
+          0.4355077439536126
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232495.246344,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232495.9937329,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0010691120198735513,
+        "position": [
+          0.4929732204165713,
+          0.4371252002746624
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232496.1983201,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232496.9438279,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0012222467014267621,
+        "position": [
+          0.49286640726329445,
+          0.4391393911650263
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232497.1466902,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232497.9308339,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0011155795667313144,
+        "position": [
+          0.49279011215381097,
+          0.4408484016174563
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232498.1234545,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232498.8787804,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0009308003356984784,
+        "position": [
+          0.4927595941100176,
+          0.442572671091783
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232499.0769179,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232499.8307677,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0003350041718181135,
+        "position": [
+          0.49323262378881516,
+          0.44281681544213014
+        ]
+      }
+    },
+    {
+      "phase": "detour",
+      "host_monotonic": 1232500.6317122,
+      "detail": {
+        "position": [
+          0.49323262378881516,
+          0.44281681544213014
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232500.8314066,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232501.5801404,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0009633749366088069,
+        "position": [
+          0.4938582436865797,
+          0.44202334630350193
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232501.7797273,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232502.5279531,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0010997087203312543,
+        "position": [
+          0.4947127489127947,
+          0.4404821850919356
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232502.7256908,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232503.5161594,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0009709583135688091,
+        "position": [
+          0.49546044098573283,
+          0.4391699092088197
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232503.7305744,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232504.4787916,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0009766966052219548,
+        "position": [
+          0.49625391012436104,
+          0.43773556115053025
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232504.6786158,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232505.4278683,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0003823899927105096,
+        "position": [
+          0.496757457846952,
+          0.43682001983672847
+        ]
+      }
+    },
+    {
+      "phase": "detour",
+      "host_monotonic": 1232506.2286238,
+      "detail": {
+        "position": [
+          0.496757457846952,
+          0.43682001983672847
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232506.4319141,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232507.1922901,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007679700637620554,
+        "position": [
+          0.496055542839704,
+          0.437094682230869
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232507.3909578,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232508.1381585,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008304609643206061,
+        "position": [
+          0.4947890440222782,
+          0.4375677119096666
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232508.3380522,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232509.11828,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007679700637620554,
+        "position": [
+          0.49367513542381936,
+          0.4379949645227741
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232509.3214857,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232510.0700198,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007679700637620554,
+        "position": [
+          0.49243915465018695,
+          0.438452735179675
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232510.2747264,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232511.0238259,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008643936240646065,
+        "position": [
+          0.4911726558327611,
+          0.43892576485847257
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232511.2236487,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232512.0175363,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007626458533363703,
+        "position": [
+          0.49005874723430226,
+          0.43933775844968337
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232512.2228328,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232512.9743949,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007679700637620554,
+        "position": [
+          0.48885328450446325,
+          0.43979552910658426
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232513.173897,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232513.9273172,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008643936240646065,
+        "position": [
+          0.48755626764324406,
+          0.44028381780727854
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232514.1256059,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232514.9142962,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007626458533363703,
+        "position": [
+          0.4864423590447852,
+          0.44069581139848935
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232515.1053059,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232515.8607929,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.00080193382732713,
+        "position": [
+          0.4852063782711528,
+          0.44116884107728693
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232516.0572422,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232516.8088883,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008983404916173021,
+        "position": [
+          0.483939879453727,
+          0.4416418707560845
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232517.0074189,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232517.7945572,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.00080193382732713,
+        "position": [
+          0.4828564888990616,
+          0.4420538643472953
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232517.9912479,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232518.7439282,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008304609643206061,
+        "position": [
+          0.48165102616922256,
+          0.4424963759822995
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232518.9445724,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232519.6934438,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0007626458533363703,
+        "position": [
+          0.4805371175707637,
+          0.4429083695735103
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232519.8907289,
+      "detail": {
+        "decision": "CLOSE_DISTANCE",
+        "reason": "out_of_range"
+      }
+    },
+    {
+      "phase": "close_distance",
+      "host_monotonic": 1232520.6804983,
+      "detail": {
+        "distance_before": 6552.6,
+        "distance_after": 6552.6,
+        "range_after": 0,
+        "walked": 0.0008359103333975609,
+        "position": [
+          0.47924010070954454,
+          0.4434119172961013
+        ]
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232520.8798274,
+      "detail": {
+        "decision": "VERIFY_SURVIVAL",
+        "reason": "target_gone_after_hit",
+        "last_target_health": 55,
+        "successful_casts": 280
+      }
+    }
+  ],
+  "errors": [],
+  "target_guid": "0xF130000045063E4F",
+  "target_name_hash_seen": 22786,
+  "target_name": "tab-selected",
+  "target_health_at_start": 55,
+  "survival_observation": 30.5,
+  "threat_max": 0,
+  "threat_last": 0,
+  "final": {
+    "sequence": 16998,
+    "game_ms": 1232551101,
+    "health": 82,
+    "max_health": 82,
+    "power": 201,
+    "combat": false,
+    "dead": false,
+    "target_health": 0,
+    "target_max_health": 0,
+    "spell_range": 2,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0x0000000000000000",
+    "target_exists": false,
+    "target_attackable": false,
+    "target_dead": false,
+    "pos_x": 0.47881284809643704,
+    "pos_y": 0.44356450751506826,
+    "facing": 1.8158197507190796,
+    "event_serial": 280,
+    "cast_started": 89,
+    "cast_succeeded": 86,
+    "cast_failed": 92,
+    "ui_errors": 13,
+    "event_kind": 2,
+    "event_spell": 133,
+    "event_ms": 1232335000,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 280,
+        "kind": 2,
+        "spell": 133,
+        "at": 1232335000,
+        "reason": 0
+      },
+      {
+        "serial": 277,
+        "kind": 1,
+        "spell": 133,
+        "at": 1232328867,
+        "reason": 0
+      },
+      {
+        "serial": 278,
+        "kind": 2,
+        "spell": 133,
+        "at": 1232330300,
+        "reason": 0
+      },
+      {
+        "serial": 279,
+        "kind": 1,
+        "spell": 133,
+        "at": 1232333117,
+        "reason": 0
+      }
+    ],
+    "chat_open": false,
+    "target_distance": 0.0,
+    "last_error_reason": 0,
+    "spell_bits": 48,
+    "known_spells": [
+      133,
+      168
+    ],
+    "target_class": 0,
+    "target_class_name": "no target",
+    "corpse_x": 0.0,
+    "corpse_y": 0.0,
+    "corpse_exists": false,
+    "player_guid": "0x0000000000000008",
+    "target_name_hash": 5381,
+    "threat": 0,
+    "level": 3,
+    "xp": 694,
+    "xp_max": 1400,
+    "protocol": 11
+  },
+  "outcome": "target_defeated",
+  "evidence": {
+    "run": "client_combat_1793835622709101200",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835622709101200_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1232467.4033789
+      },
+      {
+        "label": "02-target-acquired",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835622709101200_02-target-acquired.png",
+        "source": "desktop",
+        "host_monotonic": 1232473.9001261
+      },
+      {
+        "label": "03-in-range",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835622709101200_03-in-range.png",
+        "source": "desktop",
+        "host_monotonic": 1232480.3736802
+      },
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835622709101200_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 1232552.269444
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835622709101200_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 1232552.7318886
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 16154,
+          "game_ms": 1232466668,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045063E4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4972915236133364,
+          "pos_y": 0.43907835507743953,
+          "facing": 0.5592521572387344,
+          "event_serial": 280,
+          "cast_started": 89,
+          "cast_succeeded": 86,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1232335000,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 280,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232335000,
+              "reason": 0
+            },
+            {
+              "serial": 277,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232328867,
+              "reason": 0
+            },
+            {
+              "serial": 278,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232330300,
+              "reason": 0
+            },
+            {
+              "serial": 279,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232333117,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 694,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "02-target-acquired",
+        "state": {
+          "sequence": 16166,
+          "game_ms": 1232467868,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045063E4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4972915236133364,
+          "pos_y": 0.43907835507743953,
+          "facing": 0.5592521572387344,
+          "event_serial": 280,
+          "cast_started": 89,
+          "cast_succeeded": 86,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1232335000,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 280,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232335000,
+              "reason": 0
+            },
+            {
+              "serial": 277,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232328867,
+              "reason": 0
+            },
+            {
+              "serial": 278,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232330300,
+              "reason": 0
+            },
+            {
+              "serial": 279,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232333117,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 694,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "03-in-range",
+        "state": {
+          "sequence": 16283,
+          "game_ms": 1232479601,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 0,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 7.0,
+          "target_guid": "0xF130000045063E4F",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4929579613946746,
+          "pos_y": 0.42870222018768595,
+          "facing": 0.5592521572387344,
+          "event_serial": 280,
+          "cast_started": 89,
+          "cast_succeeded": 86,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1232335000,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 280,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232335000,
+              "reason": 0
+            },
+            {
+              "serial": 277,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232328867,
+              "reason": 0
+            },
+            {
+              "serial": 278,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232330300,
+              "reason": 0
+            },
+            {
+              "serial": 279,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232333117,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 694,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "05-end",
+        "state": {
+          "sequence": 16998,
+          "game_ms": 1232551101,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.47881284809643704,
+          "pos_y": 0.44356450751506826,
+          "facing": 1.8158197507190796,
+          "event_serial": 280,
+          "cast_started": 89,
+          "cast_succeeded": 86,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 2,
+          "event_spell": 133,
+          "event_ms": 1232335000,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 280,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232335000,
+              "reason": 0
+            },
+            {
+              "serial": 277,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232328867,
+              "reason": 0
+            },
+            {
+              "serial": 278,
+              "kind": 2,
+              "spell": 133,
+              "at": 1232330300,
+              "reason": 0
+            },
+            {
+              "serial": 279,
+              "kind": 1,
+              "spell": 133,
+              "at": 1232333117,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 0,
+          "level": 3,
+          "xp": 694,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      }
+    ]
+  }
+}

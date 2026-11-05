@@ -5,6 +5,7 @@ casts are budgeted, health has a floor, and the run ends with a survival check
 rather than a cast count.
 """
 import json
+import math
 import sys
 import threading
 import time
@@ -37,6 +38,7 @@ SURVIVAL_OBSERVATION = 30.0
 SWEEP_SPOTS = [(0.50390, 0.44147), (0.51000, 0.44800), (0.49800, 0.43200),
                (0.50800, 0.43600)]
 VK_FORWARD = 0x57
+VK_LEFT = 0x25
 VK_BACK = 0x53
 MAX_HOLD = 2.0
 
@@ -343,12 +345,23 @@ def main():
                 before_distance = state.get('target_distance', 0)
                 moved = move_while_watching(hwnd, VK_FORWARD, 0.6, reader)
                 after_state = moved[-1] if moved else reader()
+                walked = math.hypot(after_state['pos_x'] - state['pos_x'],
+                                     after_state['pos_y'] - state['pos_y'])
                 note('close_distance', {
                     'distance_before': before_distance,
                     'distance_after': after_state.get('target_distance', 0),
                     'range_after': after_state['spell_range'],
+                    'walked': walked,
                     'position': [after_state['pos_x'], after_state['pos_y']],
                 })
+                if walked < 0.0005:
+                    # The character does not move: a wall or a rock is in the
+                    # way. Walking into it again would only use up the time
+                    # of the fight, so the character turns and tries the
+                    # next direction.
+                    hold(VK_LEFT, 0.8)
+                    note('detour', {'position': [after_state['pos_x'],
+                                                 after_state['pos_y']]})
                 continue
 
             if decision['decision'] == 'TURN':

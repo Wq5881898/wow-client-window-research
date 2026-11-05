@@ -22,12 +22,14 @@ from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 
 ROOT = Path(__file__).resolve().parents[1]
-# The standard creature of the valley.
-TARGET_NAME = 'Diseased Young Wolf'
+# The creature of the valley the fights are made against. For leveling the
+# weakest ordinary creature in reach is used: the standard creature is often
+# not around, and a fight that finds nothing is a fight that is lost.
+TARGET_NAME = None
 # How many fights at most.
-ROUNDS = 30
+ROUNDS = 150
 # How long the character may rest between the fights.
-REST_BUDGET = 120.0
+REST_BUDGET = 90.0
 
 
 def reader():
@@ -59,7 +61,10 @@ def rest(hwnd, budget=REST_BUDGET):
             # and revives it.
             run('lab_client_danger_recovery.py', [])
             continue
-        if not state['combat'] and not state.get('threat'):
+        if not state['combat']:
+            # Only the combat flag is waited for. The threat of the valley
+            # stays while a creature watches the character, and waiting for
+            # it would waste the time of every round.
             return state
         d.ensure_foreground(hwnd)
         time.sleep(1.0)
@@ -101,8 +106,9 @@ def main():
                 best_level = level
                 result['status'] = 'LEVELLED'
                 break
-            code = run('lab_client_combat_loop.py',
-                       ['--target-name', TARGET_NAME])
+            argv = [] if TARGET_NAME is None else ['--target-name',
+                                                   TARGET_NAME]
+            code = run('lab_client_combat_loop.py', argv)
             try:
                 after = reader()
             except Exception:

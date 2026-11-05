@@ -1,0 +1,624 @@
+{
+  "run": "client_combat_1793835372661565400",
+  "status": "COMBAT_LOOP_COMPLETED",
+  "timeline": [
+    {
+      "phase": "baseline",
+      "host_monotonic": 1232217.3619533,
+      "detail": {
+        "health": 82,
+        "position": [
+          0.4864728770885786,
+          0.45564965285725184
+        ]
+      }
+    },
+    {
+      "phase": "target_acquired",
+      "host_monotonic": 1232223.9020073,
+      "detail": {
+        "guid": "0xF13000012B0640E3",
+        "health": 42,
+        "distance": 6552.6,
+        "range": 1
+      }
+    },
+    {
+      "phase": "observe",
+      "host_monotonic": 1232224.5458938,
+      "detail": {
+        "decision": "RECOVER",
+        "reason": "target_identity_changed"
+      }
+    },
+    {
+      "phase": "recover",
+      "host_monotonic": 1232224.9817171,
+      "detail": {
+        "decision": "RECOVER",
+        "reason": "target_identity_changed"
+      }
+    },
+    {
+      "phase": "retreat_step",
+      "host_monotonic": 1232228.6980892,
+      "detail": {
+        "attempt": 0,
+        "health": 82,
+        "combat": false,
+        "position": [
+          0.49053177691309985,
+          0.4554207675288014
+        ]
+      }
+    },
+    {
+      "phase": "recover_result",
+      "host_monotonic": 1232228.8987894,
+      "detail": {
+        "health": 82,
+        "combat": false,
+        "dead": false
+      }
+    }
+  ],
+  "errors": [],
+  "target_guid": "0xF13000012B0640E3",
+  "target_name_hash_seen": 46929,
+  "target_name": "tab-selected",
+  "target_health_at_start": 42,
+  "survival_observation": 30.0,
+  "threat_max": 0,
+  "threat_last": 0,
+  "final": {
+    "sequence": 14078,
+    "game_ms": 1232258601,
+    "health": 82,
+    "max_health": 82,
+    "power": 201,
+    "combat": false,
+    "dead": false,
+    "target_health": 55,
+    "target_max_health": 55,
+    "spell_range": 1,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0xF130000045000B04",
+    "target_exists": true,
+    "target_attackable": true,
+    "target_dead": false,
+    "pos_x": 0.49053177691309985,
+    "pos_y": 0.4554207675288014,
+    "facing": 4.750143815915628,
+    "event_serial": 270,
+    "cast_started": 84,
+    "cast_succeeded": 81,
+    "cast_failed": 92,
+    "ui_errors": 13,
+    "event_kind": 4,
+    "event_spell": 133,
+    "event_ms": 1232182501,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 268,
+        "kind": 4,
+        "spell": 133,
+        "at": 1232182500,
+        "reason": 0
+      },
+      {
+        "serial": 269,
+        "kind": 4,
+        "spell": 133,
+        "at": 1232182500,
+        "reason": 0
+      },
+      {
+        "serial": 270,
+        "kind": 4,
+        "spell": 133,
+        "at": 1232182501,
+        "reason": 0
+      },
+      {
+        "serial": 267,
+        "kind": 5,
+        "spell": 0,
+        "at": 1232182500,
+        "reason": 0
+      }
+    ],
+    "chat_open": false,
+    "target_distance": 6552.6,
+    "last_error_reason": 0,
+    "spell_bits": 48,
+    "known_spells": [
+      133,
+      168
+    ],
+    "target_class": 1,
+    "target_class_name": "ordinary",
+    "corpse_x": 0.0,
+    "corpse_y": 0.0,
+    "corpse_exists": false,
+    "player_guid": "0x0000000000000008",
+    "target_name_hash": 22786,
+    "threat": 0,
+    "level": 3,
+    "xp": 610,
+    "xp_max": 1400,
+    "protocol": 11
+  },
+  "outcome": "recovered",
+  "evidence": {
+    "run": "client_combat_1793835372661565400",
+    "frames": [
+      {
+        "label": "01-start",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_01-start.png",
+        "source": "desktop",
+        "host_monotonic": 1232217.3619427
+      },
+      {
+        "label": "02-target-acquired",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_02-target-acquired.png",
+        "source": "desktop",
+        "host_monotonic": 1232223.9019955
+      },
+      {
+        "label": "03-in-range",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_03-in-range.png",
+        "source": "desktop",
+        "host_monotonic": 1232224.3443197
+      },
+      {
+        "label": "04-recover-trigger",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_04-recover-trigger.png",
+        "source": "desktop",
+        "host_monotonic": 1232224.9817104
+      },
+      {
+        "label": "05-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_05-end.png",
+        "source": "desktop",
+        "host_monotonic": 1232259.730911
+      },
+      {
+        "label": "06-final",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_combat_1793835372661565400_06-final.png",
+        "source": "desktop",
+        "host_monotonic": 1232260.1190712
+      }
+    ],
+    "states": [
+      {
+        "label": "01-start",
+        "state": {
+          "sequence": 13661,
+          "game_ms": 1232216601,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4864728770885786,
+          "pos_y": 0.45564965285725184,
+          "facing": 3.1761265580057527,
+          "event_serial": 270,
+          "cast_started": 84,
+          "cast_succeeded": 81,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 4,
+          "event_spell": 133,
+          "event_ms": 1232182501,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 268,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 269,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 270,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182501,
+              "reason": 0
+            },
+            {
+              "serial": 267,
+              "kind": 5,
+              "spell": 0,
+              "at": 1232182500,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 0,
+          "level": 3,
+          "xp": 610,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "02-target-acquired",
+        "state": {
+          "sequence": 13673,
+          "game_ms": 1232217801,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 42,
+          "target_max_health": 42,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000012B0640E3",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4864728770885786,
+          "pos_y": 0.45564965285725184,
+          "facing": 3.1761265580057527,
+          "event_serial": 270,
+          "cast_started": 84,
+          "cast_succeeded": 81,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 4,
+          "event_spell": 133,
+          "event_ms": 1232182501,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 268,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 269,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 270,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182501,
+              "reason": 0
+            },
+            {
+              "serial": 267,
+              "kind": 5,
+              "spell": 0,
+              "at": 1232182500,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 46929,
+          "threat": 0,
+          "level": 3,
+          "xp": 610,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "03-in-range",
+        "state": {
+          "sequence": 13673,
+          "game_ms": 1232217801,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 42,
+          "target_max_health": 42,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF13000012B0640E3",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4864728770885786,
+          "pos_y": 0.45564965285725184,
+          "facing": 3.1761265580057527,
+          "event_serial": 270,
+          "cast_started": 84,
+          "cast_succeeded": 81,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 4,
+          "event_spell": 133,
+          "event_ms": 1232182501,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 268,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 269,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 270,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182501,
+              "reason": 0
+            },
+            {
+              "serial": 267,
+              "kind": 5,
+              "spell": 0,
+              "at": 1232182500,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 46929,
+          "threat": 0,
+          "level": 3,
+          "xp": 610,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "04-recover-trigger",
+        "state": {
+          "sequence": 13736,
+          "game_ms": 1232224201,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045000B04",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.4864728770885786,
+          "pos_y": 0.45564965285725184,
+          "facing": 3.1761265580057527,
+          "event_serial": 270,
+          "cast_started": 84,
+          "cast_succeeded": 81,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 4,
+          "event_spell": 133,
+          "event_ms": 1232182501,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 268,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 269,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 270,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182501,
+              "reason": 0
+            },
+            {
+              "serial": 267,
+              "kind": 5,
+              "spell": 0,
+              "at": 1232182500,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 610,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      },
+      {
+        "label": "05-end",
+        "state": {
+          "sequence": 14078,
+          "game_ms": 1232258601,
+          "health": 82,
+          "max_health": 82,
+          "power": 201,
+          "combat": false,
+          "dead": false,
+          "target_health": 55,
+          "target_max_health": 55,
+          "spell_range": 1,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000045000B04",
+          "target_exists": true,
+          "target_attackable": true,
+          "target_dead": false,
+          "pos_x": 0.49053177691309985,
+          "pos_y": 0.4554207675288014,
+          "facing": 4.750143815915628,
+          "event_serial": 270,
+          "cast_started": 84,
+          "cast_succeeded": 81,
+          "cast_failed": 92,
+          "ui_errors": 13,
+          "event_kind": 4,
+          "event_spell": 133,
+          "event_ms": 1232182501,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 268,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 269,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182500,
+              "reason": 0
+            },
+            {
+              "serial": 270,
+              "kind": 4,
+              "spell": 133,
+              "at": 1232182501,
+              "reason": 0
+            },
+            {
+              "serial": 267,
+              "kind": 5,
+              "spell": 0,
+              "at": 1232182500,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 22786,
+          "threat": 0,
+          "level": 3,
+          "xp": 610,
+          "xp_max": 1400,
+          "protocol": 11
+        }
+      }
+    ]
+  }
+}
