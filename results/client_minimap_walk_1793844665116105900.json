@@ -1,0 +1,285 @@
+{
+  "run": "client_minimap_walk_1793844665116105900",
+  "status": "NOT_REACHED",
+  "steps": [
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1798,
+        "y": 124,
+        "pixels": 21
+      },
+      "distance": 17.0,
+      "heading": 2.356
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1802,
+        "y": 122,
+        "pixels": 11
+      },
+      "distance": 18.9,
+      "heading": 2.129
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1808,
+        "y": 129,
+        "pixels": 7
+      },
+      "distance": 27.8,
+      "heading": 2.229
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1813,
+        "y": 127,
+        "pixels": 7
+      },
+      "distance": 30.9,
+      "heading": 2.078
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1817,
+        "y": 122,
+        "pixels": 6
+      },
+      "distance": 32.6,
+      "heading": 1.883
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1818,
+        "y": 123,
+        "pixels": 8
+      },
+      "distance": 33.8,
+      "heading": 1.902
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1818,
+        "y": 123,
+        "pixels": 6
+      },
+      "distance": 33.8,
+      "heading": 1.902
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1821,
+        "y": 123,
+        "pixels": 6
+      },
+      "distance": 36.7,
+      "heading": 1.875
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1827,
+        "y": 113,
+        "pixels": 23
+      },
+      "distance": 41.0,
+      "heading": 1.595
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1832,
+        "y": 115,
+        "pixels": 22
+      },
+      "distance": 46.1,
+      "heading": 1.636
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1849,
+        "y": 115,
+        "pixels": 19
+      },
+      "distance": 63.1,
+      "heading": 1.618
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1865,
+        "y": 115,
+        "pixels": 22
+      },
+      "distance": 79.1,
+      "heading": 1.609
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    },
+    {
+      "action": "no_marker"
+    }
+  ],
+  "evidence": {
+    "run": "client_minimap_walk_1793844665116105900",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_walk_1793844665116105900_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 1241692.1221299
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_minimap_walk_1793844665116105900_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1241692.4801801
+      }
+    ],
+    "states": []
+  }
+}
