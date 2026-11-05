@@ -68,9 +68,15 @@ def find_markers(image, centre=CENTRE, radius=RADIUS):
         xs = [point[0] for point in blob]
         ys = [point[1] for point in blob]
         kinds = set(point[2] for point in blob)
-        markers.append({'x': sum(xs) // len(xs), 'y': sum(ys) // len(ys),
-                        'pixels': len(blob),
-                        'kind': 'yellow' if 'yellow' in kinds else 'blue'})
+        marker = {'x': sum(xs) // len(xs), 'y': sum(ys) // len(ys),
+                  'pixels': len(blob),
+                  'kind': 'yellow' if 'yellow' in kinds else 'blue',
+                  'height': max(ys) - min(ys),
+                  'width': max(xs) - min(xs)}
+        # The mark of a quest is a tall thin exclamation mark, the dot of a
+        # person a small square.
+        marker['shape'] = 'mark' if marker['height'] >= 8 else 'dot'
+        markers.append(marker)
     # The bigger groups are the exclamation mark, the smaller ones the dots.
     markers.sort(key=lambda marker: -marker['pixels'])
     return markers
@@ -106,3 +112,12 @@ def nearest(markers, centre=CENTRE, biggest=True):
     return min(markers,
                key=lambda marker: math.hypot(marker['x'] - centre[0],
                                              marker['y'] - centre[1]))
+
+
+def person_markers(markers):
+    """The dots of the people and the creatures around.
+
+    They are drawn as small squares, the mark of a quest as a tall
+    exclamation mark.
+    """
+    return [marker for marker in markers if marker['shape'] == 'dot']
