@@ -51,6 +51,10 @@ WALK_MIN = 1.2
 WALK_MAX = 2.0
 WALK_PER_UNIT = 10.0
 
+# How often the character may be blocked on one side of an obstacle before
+# the other side is tried.
+STUCK_LIMIT = 6
+
 # A step that is smaller than this does not count as movement.
 MOVEMENT_EPSILON = 0.0004
 
@@ -107,22 +111,48 @@ class DangerRecovery:
         self.stuck = 0
         self.avoid = 0.0
         self.avoid_side = 1
+        # The smallest distance to the target that was reached, and the side
+        # of the detour that reached it.
+        self.best_distance = None
+        self.best_side = None
+        # The world direction the character slides along while it is blocked.
+        self.slide = None
 
     def _elapsed(self, now):
         if self.started is None:
             self.started = now
         return now - self.started
 
-    def _detour(self, distance):
+    def _detour(self, distance, state=None, target=None):
         """Leave the direct line when the last walk did not help."""
         if self.last_action == 'WALK' and self.last_distance is not None:
             if distance >= self.last_distance - MOVEMENT_EPSILON:
                 self.stuck += 1
-                self.avoid_side = -self.avoid_side
-                self.avoid = self.avoid_side * min(0.9, 0.35 + 0.2 * self.stuck)
+                if self.slide is None:
+                    # The character does not move towards the target, so it
+                    # slides along the obstacle. The direction of the slide is
+                    # a direction of the world and not an angle towards the
+                    # target: an angle towards the target makes the character
+                    # walk on a circle around it.
+                    towards = bearing_to(state, target)
+                    side = 1 if self.best_side is None else self.best_side
+                    self.slide = wrap(towards + side * math.pi / 2)
+                    self.avoid_side = side
+                elif self.stuck > STUCK_LIMIT:
+                    # The way along this side of the obstacle is not
+                    # working, so the other side is tried.
+                    self.avoid_side = -self.avoid_side
+                    towards = bearing_to(state, target)
+                    self.slide = wrap(towards + self.avoid_side * math.pi / 2)
+                    self.stuck = 0
             else:
+                # The character moved and came closer, so it is free again.
                 self.stuck = 0
+                self.slide = None
                 self.avoid = 0.0
+                self.best_side = self.avoid_side
+        if self.best_distance is None or distance < self.best_distance:
+            self.best_distance = distance
         self.last_distance = distance
 
     def _start_death(self, state):
@@ -145,6 +175,9 @@ class DangerRecovery:
         self.avoid = 0.0
         self.last_action = None
         self.last_distance = None
+        self.best_distance = None
+        self.best_side = None
+        self.slide = None
 
     def _ghost_target(self, state):
         """The position of the corpse the ghost has to reach."""
@@ -185,13 +218,16 @@ class DangerRecovery:
             self.memory.record(state['pos_x'], state['pos_y'])
             target = self._ghost_target(state)
             distance = distance_to(state, target)
-            self._detour(distance)
+            self._detour(distance, state, target)
             record = {'phase': self.phase, 'distance': distance,
                       'facing': state['facing'], 'elapsed': elapsed,
                       'avoid': self.avoid}
             self.history.append(record)
             if distance > self.corpse_range:
-                wanted = bearing_to(state, target) + self.avoid
+                if self.slide is not None:
+                    wanted = self.slide
+                else:
+                    wanted = bearing_to(state, target) + self.avoid
                 error = wrap(wanted - state['facing'])
                 record['bearing_error'] = error
                 if abs(error) > TURN_TOLERANCE:
@@ -246,7 +282,7 @@ class DangerRecovery:
             self.route_index += 1
         target = self.route[self.route_index]
         distance = distance_to(state, target)
-        self._detour(distance)
+        self._detour(distance, state, target)
         if self.stuck >= 3 and self.graveyard:
             # The path of the ghost is not always walkable for the living
             # character: the ghost flies over the rocks, the character does

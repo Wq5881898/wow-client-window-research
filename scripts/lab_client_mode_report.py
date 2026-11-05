@@ -38,7 +38,8 @@ def main():
                     'pos_x', 'pos_y', 'facing', 'corpse_exists',
                     'player_guid', 'target_name_hash', 'target_guid',
                     'threat', 'level', 'xp', 'xp_max',
-                    'money', 'bag_items', 'cursor_name_hash'):
+                    'money', 'bag_items', 'cursor_name_hash',
+                    'zone_hash', 'subzone_hash', 'map_id'):
             report[key] = state.get(key)
         report['hash_of_probehuman'] = name_hash('Probehuman')
     except Exception as exc:

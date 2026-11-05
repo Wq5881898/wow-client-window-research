@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 13
+local PROTOCOL = 14
 local QUEUE = 4
-local DATA_BYTES = 140
+local DATA_BYTES = 146
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -173,6 +173,55 @@ local function name_hash(text)
     hash = (hash * 33 + string.byte(text, i)) % 65536
   end
   return hash
+end
+
+-- The zone and the subzone of the character, and the map it is on. The
+-- names are reported as hashes, because the byte strip of the panel carries
+-- numbers only.
+local function zone_hash()
+  local ok, name = pcall(GetRealZoneText)
+  if not ok or not name then return name_hash("") end
+  return name_hash(name)
+end
+
+local function subzone_hash()
+  local ok, name = pcall(GetSubZoneText)
+  if not ok or not name then return name_hash("") end
+  return name_hash(name)
+end
+
+local function map_id()
+  -- On this client GetPlayerMapPosition answers with the position only,
+  -- the map id has its own function.
+  if not GetPlayerMapID then return 0 end
+  local ok, id = pcall(GetPlayerMapID, "player")
+  if not ok or not id then return 0 end
+  return id
+end
+
+-- The zone and the subzone of the character, and the map it is on. The
+-- names travel as hashes, because the byte strip of the panel carries
+-- numbers only. The driver needs them, because the coordinates of the
+-- probe belong to the area the character is in.
+local function zone_hash()
+  local ok, name = pcall(GetRealZoneText)
+  if not ok or not name then return name_hash("") end
+  return name_hash(name)
+end
+
+local function subzone_hash()
+  local ok, name = pcall(GetSubZoneText)
+  if not ok or not name then return name_hash("") end
+  return name_hash(name)
+end
+
+local function map_id()
+  -- On this client GetPlayerMapPosition answers with the position only,
+  -- the map id has its own function.
+  if not GetPlayerMapID then return 0 end
+  local ok, id = pcall(GetPlayerMapID, "player")
+  if not ok or not id then return 0 end
+  return id
 end
 
 local function push(kind, id, reason)
@@ -357,6 +406,9 @@ local function update()
   end
   number(bag_count, 1)
   number(name_hash(UnitName("mouseover") or ""), 2)
+  number(zone_hash(), 2)
+  number(subzone_hash(), 2)
+  number(map_id(), 2)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
@@ -381,7 +433,7 @@ local function update()
     .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
     .. " player=%s threat=%d level=%d xp=%d/%d money=%d bags=%d cursor=%s"
-    .. "\nspells[%s] threatreason=%s",
+    .. "\nspells[%s] threatreason=%s zone=%s subzone=%s map=%d",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -393,7 +445,8 @@ local function update()
     last.error_reason, chat_open(), target_distance(), UnitGUID("player") or "",
     threat_situation(), UnitLevel("player") or 0, UnitXP("player") or 0,
     UnitXPMax("player") or 0, GetMoney and GetMoney() or 0, bag_count,
-    UnitName("mouseover") or "", SPELL_TEXT, threat_reason())
+    UnitName("mouseover") or "", SPELL_TEXT, threat_reason(),
+    tostring(GetRealZoneText()), tostring(GetSubZoneText()), map_id())
   if okText and panelText then
     text:SetText(panelText)
   else
