@@ -247,7 +247,7 @@ def main():
                 # are relative to the character: the coordinates of the
                 # probe belong to the map area the character is in, and the
                 # areas have their own basis.
-                here = (state['pos_x'], state['pos_y'])
+                here = (reader()['pos_x'], reader()['pos_y'])
                 spots = [(here[0] + offset[0], here[1] + offset[1])
                          for offset in SWEEP_OFFSETS]
                 if '--walk-to' in sys.argv:
