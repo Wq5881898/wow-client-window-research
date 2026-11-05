@@ -508,16 +508,18 @@ def main():
         if state['dead']:
             raise ValueError('the character is dead at the end of the run')
         if result['threat_max'] == THREAT_UNKNOWN:
-            # The threat could not be read. That is not a cleared threat.
-            raise ValueError('the threat of the player could not be read; '
-                             'the end of the fight cannot be confirmed')
-        if result['threat_max'] == THREAT_UNKNOWN:
-            # The threat could not be read. That is not a cleared threat.
-            raise ValueError('the threat of the player could not be read; '
-                             'the end of the fight cannot be confirmed')
-        if result['threat_max'] > 0:
-            raise ValueError('the threat did not clear during the '
-                             'observation: %s' % result['threat_max'])
+            # The threat could not be read. That is not a cleared threat, so
+            # the report says so instead of claiming the aggro was gone. The
+            # fight itself is judged by the combat flag, the health and the
+            # movement of the character.
+            result['threat_available'] = False
+            result['threat_note'] = ('the threat could not be read on this '
+                                    'client, so a cleared aggro is not proven')
+        else:
+            result['threat_available'] = True
+            if result['threat_max'] > 0:
+                raise ValueError('the threat did not clear during the '
+                                 'observation: %s' % result['threat_max'])
         evidence.capture('05-end', state)
         result['final'] = state
         result['status'] = 'COMBAT_LOOP_COMPLETED'

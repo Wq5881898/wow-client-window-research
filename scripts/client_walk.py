@@ -1,29 +1,45 @@
-"""Walk the character to a place in the zone.
+"""The walking primitives of the driver, with the way around obstacles.
 
-The heading of the client and the map coordinates were measured, so the walk
-is a closed loop: turn towards the place, walk a little, look where the
-character is now and turn again.
+The character walks into a rock and stays there. The walk then has to turn
+away from the target and follow the obstacle, keeping the same side until the
+character moves again, so that a wall is slid along instead of approached
+from both sides.
 """
 import ctypes
 import math
 import time
 
 import lab_driver5 as d
+from client_obstacle import Obstacle, wanted_heading
 from client_danger_recovery import bearing_to, wrap
 
 VK_FORWARD = 0x57
+VK_BACKWARD = 0x53
 VK_LEFT = 0x25
 VK_RIGHT = 0x27
+
+# The client turns with pi radians per second.
 TURN_RATE = math.pi
+# A movement of the character counts as real above this.
+MOVED = 0.0006
 
 
-def hold(vk, seconds, hwnd):
-    """Hold a key down for a while with the client in the foreground."""
-    d.ensure_foreground(hwnd)
+def hold(vk, seconds, hwnd=None):
+    """Hold a key down for a while.
+
+    The keyboard input of the system goes to the foreground window, so the
+    client has to be in front before the key is pressed.
+    """
+    if hwnd is not None:
+        try:
+            d.ensure_foreground(hwnd)
+        except Exception:
+            pass
     key = d.INPUT()
     key.type = 1
     key.union.ki = d.KEYBDINPUT(vk, 0, 0, 0, None)
-    d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key))
+    if d.SendInput(1, ctypes.byref(key), ctypes.sizeof(key)) != 1:
+        raise RuntimeError('the key could not be sent')
     try:
         time.sleep(seconds)
     finally:
@@ -58,9 +74,16 @@ def walk_heading(hwnd, reader, heading, seconds=60.0, stop=None, trace=None):
 
 
 def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
-    """Walk towards a place. Returns the distance that is left."""
+    """Walk towards a place. Returns the distance that is left.
+
+    When the character does not move at all, the walk turns away from the
+    target and follows the obstacle. The detour keeps its side until the
+    character moves again, so the character slides along a wall instead of
+    oscillating between two directions.
+    """
     deadline = time.monotonic() + timeout
     distance = None
+    obstacle = Obstacle()
     while time.monotonic() < deadline:
         state = reader()
         distance = math.hypot(target[0] - state['pos_x'],
@@ -68,10 +91,13 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
         if trace is not None:
             trace.append({'distance': distance,
                           'position': [state['pos_x'], state['pos_y']],
-                          'facing': state['facing']})
+                          'facing': state['facing'],
+                          'detour': obstacle.detour})
         if distance <= tolerance:
             return distance
-        error = wrap(bearing_to(state, target) - state['facing'])
+        before = (state['pos_x'], state['pos_y'])
+        error = wrap(wanted_heading(state, target, obstacle.detour)
+                     - state['facing'])
         if abs(error) > 0.10:
             seconds = min(1.1, max(0.06, abs(error) / TURN_RATE))
             hold(VK_LEFT if error > 0 else VK_RIGHT, seconds, hwnd)
@@ -79,4 +105,8 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
             # The reading of the telemetry costs about as much time as the
             # walk, so a long way is covered with longer steps.
             hold(VK_FORWARD, min(2.0, max(0.5, distance * 6.0)), hwnd)
+        after = reader()
+        moved = math.hypot(after['pos_x'] - before[0],
+                            after['pos_y'] - before[1])
+        obstacle.note(moved)
     return distance

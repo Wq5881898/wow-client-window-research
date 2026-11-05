@@ -103,6 +103,19 @@ local function threat_situation()
   return value
 end
 
+-- The reason of an unreadable threat: 1 the function is missing, 2 the call
+-- raised an error, 3 the client answered with nothing, 4 the answer is
+-- outside the known range. Only a value of zero to three means that the
+-- threat was really read.
+local function threat_reason()
+  if not UnitThreatSituation then return "missing" end
+  local ok, value = pcall(UnitThreatSituation, "player")
+  if not ok then return "error" end
+  if value == nil then return "nil" end
+  if value < 0 or value > 3 then return "range" end
+  return "read"
+end
+
 -- The number of items in the bags. The containers are only counted every
 -- second, because eighty calls in a tenth of a second is too much work for
 -- every update.
@@ -121,6 +134,34 @@ local function count_bag_items()
   end
   return count
 end
+
+-- The spell table of the client. GetSpellInfo answers with the name, the
+-- rank and the cast time, so the ids the driver uses can be checked
+-- against the client itself. The table is written into the text of the
+-- panel and the byte strip is not touched, so the protocol does not
+-- change.
+local SPELL_CHECKS = {116, 120, 122, 123, 133, 168, 212, 213}
+
+-- The table is read once, when the addon loads. GetSpellInfo raises an
+-- error for an id the client does not know, so every single call is
+-- guarded and the table is built outside of the update of the panel.
+local SPELL_TEXT = (function()
+  local ok, table_text = pcall(function()
+    local parts = {}
+    for _, id in ipairs(SPELL_CHECKS) do
+      local known, name, rank, texture, castTime = pcall(GetSpellInfo, id)
+      if known and name then
+        parts[#parts + 1] = string.format("%d=%s/c%s", id, name,
+                                           tostring(castTime))
+      else
+        parts[#parts + 1] = string.format("%d=none", id)
+      end
+    end
+    return table.concat(parts, " ")
+  end)
+  if ok and table_text then return table_text end
+  return "unreadable"
+end)()
 
 -- The hash of a name. The byte strip of the panel carries numbers only,
 -- so the name of the target travels as a hash of it. The same hash is
@@ -334,11 +375,13 @@ local function update()
   end
   -- Trailing marker lets the decoder measure the cell pitch from the strip itself.
   cells[#cells]:SetTexture(1, 0, 1, 1)
-  text:SetText(string.format("LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
+  local okText, panelText = pcall(string.format,
+    "LIVE v%d #%d t=%.1f HP %d/%d MP %d combat=%s dead=%s speed=%s\n"
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
     .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
-    .. " player=%s threat=%d level=%d xp=%d/%d money=%d bags=%d cursor=%s",
+    .. " player=%s threat=%d level=%d xp=%d/%d money=%d bags=%d cursor=%s"
+    .. "\nspells[%s] threatreason=%s",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -350,7 +393,12 @@ local function update()
     last.error_reason, chat_open(), target_distance(), UnitGUID("player") or "",
     threat_situation(), UnitLevel("player") or 0, UnitXP("player") or 0,
     UnitXPMax("player") or 0, GetMoney and GetMoney() or 0, bag_count,
-    UnitName("mouseover") or ""))
+    UnitName("mouseover") or "", SPELL_TEXT, threat_reason())
+  if okText and panelText then
+    text:SetText(panelText)
+  else
+    text:SetText("PANEL ERROR")
+  end
 end
 
 frame:SetScript("OnUpdate", function(_, delta)
