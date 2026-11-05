@@ -36,9 +36,12 @@ MAX_TARGET_HEALTH = 130
 # may call it a success.
 SURVIVAL_OBSERVATION = 30.0
 # The places where the creatures of the valley were seen before. They roam,
-# so the driver walks over them until it finds one.
-SWEEP_SPOTS = [(0.50390, 0.44147), (0.51000, 0.44800), (0.49800, 0.43200),
-               (0.50800, 0.43600)]
+# so the driver walks over them until it finds one. The offsets are relative
+# to the character: the coordinates of the probe belong to the map area the
+# character is in, and every area has its own basis.
+SWEEP_OFFSETS = [(0.0, 0.0), (0.006, 0.006), (-0.006, -0.006),
+                  (0.006, -0.006), (-0.006, 0.006), (0.012, 0.0),
+                  (0.0, 0.012)]
 VK_FORWARD = 0x57
 VK_LEFT = 0x25
 VK_BACK = 0x53
@@ -240,8 +243,13 @@ def main():
             state = tab_target(hwnd, reader, prefer_hash=prefer_hash)
             if state is None:
                 # The creatures roam, so the character walks over the places
-                # where they were seen before and looks again.
-                spots = list(SWEEP_SPOTS)
+                # where they were seen before and looks again. The places
+                # are relative to the character: the coordinates of the
+                # probe belong to the map area the character is in, and the
+                # areas have their own basis.
+                here = (state['pos_x'], state['pos_y'])
+                spots = [(here[0] + offset[0], here[1] + offset[1])
+                         for offset in SWEEP_OFFSETS]
                 if '--walk-to' in sys.argv:
                     index = sys.argv.index('--walk-to')
                     spot = (float(sys.argv[index + 1]),
