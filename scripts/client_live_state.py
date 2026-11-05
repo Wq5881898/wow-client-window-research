@@ -3,7 +3,8 @@ import time
 from PIL import Image
 from client_live_layout import (V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT,
                                  V7_LAYOUT, V8_LAYOUT, V9_LAYOUT,
-                                 V10_LAYOUT, V11_LAYOUT, offsets)
+                                 V10_LAYOUT, V11_LAYOUT, V12_LAYOUT,
+                                 V13_LAYOUT, offsets)
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
@@ -17,6 +18,8 @@ V8_DATA_BYTES = 115
 V9_DATA_BYTES = 125
 V10_DATA_BYTES = 126
 V11_DATA_BYTES = 133
+V12_DATA_BYTES = 140
+V13_DATA_BYTES = 140
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
 V5_CELLS = 111
@@ -26,6 +29,8 @@ V8_CELLS = 119
 V9_CELLS = 129
 V10_CELLS = 130
 V11_CELLS = 137
+V12_CELLS = 144
+V13_CELLS = 144
 V3_TRAILER_OFFSET = 106   # cells between the first marker and the end marker
 V4_TRAILER_OFFSET = 109
 V5_TRAILER_OFFSET = 110
@@ -35,6 +40,8 @@ V8_TRAILER_OFFSET = 118
 V9_TRAILER_OFFSET = 128
 V10_TRAILER_OFFSET = 129
 V11_TRAILER_OFFSET = 136
+V12_TRAILER_OFFSET = 143
+V13_TRAILER_OFFSET = 143
 V3_OFFSETS, V3_TOTAL = offsets(V3_LAYOUT)
 V4_OFFSETS, V4_TOTAL = offsets(V4_LAYOUT)
 V5_OFFSETS, V5_TOTAL = offsets(V5_LAYOUT)
@@ -44,6 +51,8 @@ V8_OFFSETS, V8_TOTAL = offsets(V8_LAYOUT)
 V9_OFFSETS, V9_TOTAL = offsets(V9_LAYOUT)
 V10_OFFSETS, V10_TOTAL = offsets(V10_LAYOUT)
 V11_OFFSETS, V11_TOTAL = offsets(V11_LAYOUT)
+V12_OFFSETS, V12_TOTAL = offsets(V12_LAYOUT)
+V13_OFFSETS, V13_TOTAL = offsets(V13_LAYOUT)
 
 # The spells the probe reports in the spell_bits field.
 SPELL_BITS = {
@@ -321,6 +330,24 @@ def _decode_v11(data):
     return result
 
 
+def _decode_v12(data):
+    result = _decode_v11(data)
+    offset, size = V12_OFFSETS['money']
+    result['money'] = int.from_bytes(data[offset:offset + size], 'little')
+    result['bag_items'] = data[V12_OFFSETS['bag_items'][0]]
+    offset, size = V12_OFFSETS['npc_name_hash']
+    result['npc_name_hash'] = int.from_bytes(data[offset:offset + size], 'little')
+    return result
+
+
+def _decode_v13(data):
+    result = _decode_v12(data)
+    offset, size = V13_OFFSETS['cursor_name_hash']
+    result['cursor_name_hash'] = int.from_bytes(data[offset:offset + size],
+                                                'little')
+    return result
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -409,6 +436,20 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V11_DATA_BYTES):
             return None
         return version, _decode_v11(data)
+    if version == 12:
+        if header[1] != V12_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V12_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V12_DATA_BYTES):
+            return None
+        return version, _decode_v12(data)
+    if version == 13:
+        if header[1] != V13_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V13_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V13_DATA_BYTES):
+            return None
+        return version, _decode_v13(data)
     return None
 
 
@@ -419,7 +460,9 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V11_TRAILER_OFFSET, V10_TRAILER_OFFSET,
+            for offset in (V13_TRAILER_OFFSET, V12_TRAILER_OFFSET,
+                           V11_TRAILER_OFFSET,
+                           V10_TRAILER_OFFSET,
                            V9_TRAILER_OFFSET,
                            V8_TRAILER_OFFSET,
                            V7_TRAILER_OFFSET, V6_TRAILER_OFFSET,

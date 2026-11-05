@@ -177,7 +177,50 @@ V11_LAYOUT = [
     ('xp_max', 3), ('checksum', 1), ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V11_LAYOUT
+# Protocol v12: adds the money of the character, the number of items in the
+# bags and the name of the creature under the cursor. With them a trade with
+# a merchant can be made and checked: the money has to change, and the
+# merchant is found by the name of the creature under the cursor.
+V12_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('corpse_x', 2),
+    ('corpse_y', 2), ('corpse_exists', 1), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('player_guid', 8),
+    ('target_name_hash', 2), ('threat', 1), ('level', 1), ('xp', 3),
+    ('xp_max', 3), ('money', 4), ('bag_items', 1), ('npc_name_hash', 2),
+    ('checksum', 1), ('weighted', 1),
+]
+
+# Protocol v13: the name of the unit under the cursor. The token "npc" of
+# 3.3.5a does not answer on this client, but "mouseover" names the unit
+# under the cursor, whoever it is. A merchant is found that way.
+V13_LAYOUT = [
+    ('protocol', 1), ('length', 1), ('sequence', 2), ('game_ms', 4),
+    ('health', 2), ('max_health', 2), ('power', 2), ('combat', 1), ('dead', 1),
+    ('target_health', 2), ('target_max_health', 2), ('spell_range', 1),
+    ('spell_learned', 1), ('casting', 1), ('speed', 2), ('target_guid', 8),
+    ('target_exists', 1), ('target_attackable', 1), ('target_dead', 1),
+    ('pos_x', 2), ('pos_y', 2), ('facing', 2), ('corpse_x', 2),
+    ('corpse_y', 2), ('corpse_exists', 1), ('event_serial', 2),
+    ('cast_started', 2), ('cast_succeeded', 2), ('cast_failed', 2),
+    ('ui_errors', 2), ('last_kind', 1), ('last_spell', 2), ('last_at', 4),
+    ('last_reason', 1), ('last_error_reason', 1), ('spell_bits', 2),
+    ('target_class', 1), ('frost_armor', 1), ('chat_open', 1),
+    ('target_distance', 2), ('event_queue', 40), ('player_guid', 8),
+    ('target_name_hash', 2), ('threat', 1), ('level', 1), ('xp', 3),
+    ('xp_max', 3), ('money', 4), ('bag_items', 1), ('cursor_name_hash', 2),
+    ('checksum', 1), ('weighted', 1),
+]
+
+CURRENT_LAYOUT = V13_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
@@ -229,6 +272,9 @@ EXPRESSION_NAMES = {
     'UnitLevel("player") or 0': 'level',
     'math.floor(UnitXP("player") or 0)': 'xp',
     'math.floor(UnitXPMax("player") or 0)': 'xp_max',
+    'math.floor(GetMoney and GetMoney() or 0)': 'money',
+    'bag_count': 'bag_items',
+    'name_hash(UnitName("mouseover") or "")': 'cursor_name_hash',
     'math.floor(target_distance() * 10)': 'target_distance',
     'checksum': 'checksum',
     'weighted % 256': 'weighted',

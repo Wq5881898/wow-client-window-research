@@ -194,8 +194,8 @@ def main():
                                        'detail': detail})
 
         start = reader()
-        if start['protocol'] not in (4, 5, 6, 7, 8, 9, 10, 11):
-            raise ValueError('protocol 4 to 11 required, got ' + str(start['protocol']))
+        if start['protocol'] not in (4, 5, 6, 7, 8, 9, 10, 11, 12, 13):
+            raise ValueError('protocol 4 to 12 required, got ' + str(start['protocol']))
         if start['dead'] or start['combat']:
             raise ValueError('must start alive and out of combat')
         evidence.capture('01-start', start)

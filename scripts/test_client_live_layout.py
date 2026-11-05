@@ -2,8 +2,8 @@
 import unittest
 from client_live_layout import (
     CURRENT_LAYOUT, V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT, V7_LAYOUT,
-    V8_LAYOUT, V9_LAYOUT, V10_LAYOUT, V11_LAYOUT, parse_lua_layout,
-    offsets)
+    V8_LAYOUT, V9_LAYOUT, V10_LAYOUT, V11_LAYOUT, V12_LAYOUT,
+    V13_LAYOUT, parse_lua_layout, offsets)
 import client_live_state
 from client_live_layout import PROBE
 
@@ -14,8 +14,8 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V11_DATA_BYTES)
-        self.assertEqual(client_live_state.V11_TOTAL, total)
+        self.assertEqual(total, client_live_state.V13_DATA_BYTES)
+        self.assertEqual(client_live_state.V13_TOTAL, total)
         for layout, name in ((V3_LAYOUT, 'V3'), (V4_LAYOUT, 'V4'),
                              (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6'),
                              (V7_LAYOUT, 'V7')):
@@ -30,6 +30,21 @@ class LayoutTests(unittest.TestCase):
         declared = int(source.split('local DATA_BYTES = ')[1].split('\n')[0])
         _, total = offsets(CURRENT_LAYOUT)
         self.assertEqual(declared, total)
+
+    def test_the_thirteenth_protocol_names_the_unit_under_the_cursor(self):
+        positions, total = offsets(V13_LAYOUT)
+        self.assertEqual(client_live_state.V13_DATA_BYTES, total)
+        self.assertEqual(positions['cursor_name_hash'][0], 136)
+        self.assertEqual(positions['checksum'][0], 138)
+
+    def test_the_twelfth_protocol_adds_money_bags_and_the_npc(self):
+        positions, total = offsets(V12_LAYOUT)
+        self.assertEqual(client_live_state.V12_DATA_BYTES, total)
+        self.assertEqual(positions['money'][0], 131)
+        self.assertEqual(positions['bag_items'][0], 135)
+        self.assertEqual(positions['npc_name_hash'][0], 136)
+        self.assertEqual(positions['checksum'][0], 138)
+        self.assertEqual(positions['weighted'][0], 139)
 
     def test_the_eleventh_protocol_adds_the_level_and_the_experience(self):
         positions, total = offsets(V11_LAYOUT)

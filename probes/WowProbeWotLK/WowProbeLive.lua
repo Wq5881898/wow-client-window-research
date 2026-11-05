@@ -10,9 +10,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 11
+local PROTOCOL = 13
 local QUEUE = 4
-local DATA_BYTES = 133
+local DATA_BYTES = 140
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -95,6 +95,25 @@ local function threat_situation()
   local ok, value = pcall(UnitThreatSituation, "player")
   if not ok or not value then return 0 end
   return value
+end
+
+-- The number of items in the bags. The containers are only counted every
+-- second, because eighty calls in a tenth of a second is too much work for
+-- every update.
+local bag_count = 0
+local bag_tick = 0
+
+local function count_bag_items()
+  local count = 0
+  for bag = 0, 4 do
+    local slots = GetContainerNumSlots and GetContainerNumSlots(bag) or 0
+    for slot = 1, slots do
+      if GetContainerItemInfo and GetContainerItemInfo(bag, slot) then
+        count = count + 1
+      end
+    end
+  end
+  return count
 end
 
 -- The hash of a name. The byte strip of the panel carries numbers only,
@@ -280,6 +299,17 @@ local function update()
   number(UnitLevel("player") or 0, 1)
   number(math.floor(UnitXP("player") or 0), 3)
   number(math.floor(UnitXPMax("player") or 0), 3)
+  -- The money of the character, so a trade with a merchant can be checked.
+  number(math.floor(GetMoney and GetMoney() or 0), 4)
+  -- The number of items in the bags and the name of the creature under the
+  -- cursor, which is how a merchant is found.
+  bag_tick = bag_tick + 1
+  if bag_tick >= 10 then
+    bag_tick = 0
+    bag_count = count_bag_items()
+  end
+  number(bag_count, 1)
+  number(name_hash(UnitName("mouseover") or ""), 2)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
@@ -302,7 +332,7 @@ local function update()
     .. "Target %s HP %d range=%s learned=%d cast=%s pos=%.4f,%.4f facing=%.2f\n"
     .. "Corpse exists=%s at=%.5f,%.5f\n"
     .. "Events seq=%d start=%d ok=%d fail=%d err=%d last=%d/%d reason=%d er=%d chat=%d dist=%.1f"
-    .. " player=%s threat=%d level=%d xp=%d/%d",
+    .. " player=%s threat=%d level=%d xp=%d/%d money=%d bags=%d cursor=%s",
     PROTOCOL, sequence, GetTime(), UnitHealth("player"), UnitHealthMax("player"),
     UnitPower("player"), tostring(UnitAffectingCombat("player")),
     tostring(UnitIsDeadOrGhost("player")), tostring(GetUnitSpeed("player")),
@@ -313,7 +343,8 @@ local function update()
     events.succeeded, events.failed, events.errors, last.kind, last.spell, last.reason,
     last.error_reason, chat_open(), target_distance(), UnitGUID("player") or "",
     threat_situation(), UnitLevel("player") or 0, UnitXP("player") or 0,
-    UnitXPMax("player") or 0))
+    UnitXPMax("player") or 0, GetMoney and GetMoney() or 0, bag_count,
+    UnitName("mouseover") or ""))
 end
 
 frame:SetScript("OnUpdate", function(_, delta)
