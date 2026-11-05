@@ -126,10 +126,17 @@ class DangerRecovery:
         self.last_distance = distance
 
     def _start_death(self, state):
-        """A new death: the graveyard is where the ghost appears."""
-        self.phase = 'GHOST'
+        """A new death.
+
+        The character lies on the ground where it fell, and that is not the
+        graveyard: the spirit has to be released first. Only when the ghost
+        appears does the client tell where the graveyard is, and that spot
+        is the anchor of the route back.
+        """
+        self.phase = 'DEAD_BODY'
         self.memory = PathMemory()
-        self.graveyard = (state['pos_x'], state['pos_y'])
+        self.graveyard = None
+        self.death_position = (state['pos_x'], state['pos_y'])
         self.route = []
         self.route_index = 0
         self.accept_attempts = 0
@@ -152,14 +159,14 @@ class DangerRecovery:
                     'elapsed': elapsed}
 
         if state['dead']:
-            if self.phase not in ('GHOST', 'REVIVE', 'RELEASE'):
+            if self.phase not in ('DEAD_BODY', 'RELEASING', 'GHOST', 'REVIVE'):
                 self._start_death(state)
             if not state.get('corpse_exists'):
                 # The client shows the window of the death until the spirit
                 # is released. The spot of the corpse is only known after
                 # that, because the client does not keep it while the
                 # character is still lying on the ground.
-                self.phase = 'RELEASE'
+                self.phase = 'RELEASING'
                 self.release_attempts += 1
                 if self.release_attempts > 4:
                     self.phase = 'FAILED'
@@ -167,6 +174,12 @@ class DangerRecovery:
                             'elapsed': elapsed}
                 return {'action': 'RELEASE',
                         'attempt': self.release_attempts}
+            if self.phase in ('DEAD_BODY', 'RELEASING'):
+                # The spirit was released and the ghost appeared at the
+                # graveyard. That spot is the anchor of the route back and
+                # it is not the place where the character fell.
+                self.phase = 'GHOST'
+                self.graveyard = (state['pos_x'], state['pos_y'])
             # Every step of the ghost is a step the server accepts, so the
             # path of the ghost is the feasible path back to the graveyard.
             self.memory.record(state['pos_x'], state['pos_y'])

@@ -90,10 +90,16 @@ end
 -- The threat situation of the player: 0 none, 1 low, 2 high, 3 solo.
 -- The client does not offer the exact threat, but the situation is enough
 -- to tell whether a creature still has the character on its list.
+-- 255 means that the threat could not be read at all: the function is
+-- missing, the call failed or the client answered with nothing. That is
+-- not the same as a threat of zero, and the driver has to tell them apart.
+local THREAT_UNKNOWN = 255
+
 local function threat_situation()
-  if not UnitThreatSituation then return 0 end
+  if not UnitThreatSituation then return THREAT_UNKNOWN end
   local ok, value = pcall(UnitThreatSituation, "player")
-  if not ok or not value then return 0 end
+  if not ok or value == nil then return THREAT_UNKNOWN end
+  if value < 0 or value > 3 then return THREAT_UNKNOWN end
   return value
 end
 

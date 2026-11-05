@@ -14,9 +14,11 @@ import win32con
 import win32gui
 import lab_driver5 as d
 from client_capture import grab_desktop
-from client_live_state import decode, assert_real_frame, name_hash
+from client_live_state import (decode, assert_real_frame, name_hash,
+                                THREAT_UNKNOWN)
 from client_window_state import window_observable
-from client_combat_controller import CombatController, LOW_HEALTH_RATIO
+from client_combat_controller import (CombatController, LOW_HEALTH_RATIO,
+                                     KILL_REASONS)
 from client_evidence import Evidence
 from client_retreat import break_engagement
 from client_facing import CastProbe, sweep_toward
@@ -141,6 +143,26 @@ def move_while_watching(hwnd, vk, seconds, reader, deadline_check=None):
         time.sleep(0.05)
     worker.join()
     return states
+
+
+def action_check(controller, state, now):
+    """Watch the character while a spell is in flight.
+
+    The heartbeat alone only keeps the freshness alive. The checks that can
+    stop the fight have to run at every sample: a character that is dying,
+    that is below the floor of the health, or that is fighting another
+    creature than the one that was bound.
+    """
+    if not controller.heartbeat(state, now):
+        return False
+    if state.get('dead'):
+        return False
+    maximum = state.get('max_health') or 0
+    if maximum and state.get('health', 0) / maximum <= controller.low_health:
+        return False
+    if state.get('target_exists') and state.get('target_guid') != controller.target_guid:
+        return False
+    return True
 
 
 def tab_target(hwnd, reader, steps=8, prefer_hash=None):
@@ -281,8 +303,23 @@ def main():
         last_evidence = time.monotonic()
         final = None
         while time.monotonic() < deadline:
-            state = reader()
-            if not window_observable(hwnd):
+            decision = None
+            try:
+                state = reader()
+            except Exception as exc:
+                # The panel cannot be read any more. The fight is over and
+                # the character has to get out; whether that worked is
+                # checked afterwards, and an unreadable panel is never
+                # reported as a success.
+                note('reading_failed', {'error': repr(exc)})
+                result['reading_failed'] = repr(exc)
+                decision = {'decision': 'RECOVER', 'reason': 'reading_failed'}
+                state = {'dead': False, 'health': 0, 'max_health': 1,
+                         'combat': True, 'target_exists': False,
+                         'target_guid': '', 'target_health': 0,
+                         'target_dead': False, 'speed': 0.0,
+                         'pos_x': 0.0, 'pos_y': 0.0, 'facing': 0.0}
+            if decision is None and not window_observable(hwnd):
                 # The client is not in front any more. The observation is
                 # lost, so the run goes into the recovery branch: the
                 # character turns away and runs. Waiting for the picture to
@@ -291,7 +328,7 @@ def main():
                                           'health': state['health'],
                                           'combat': state['combat']})
                 decision = {'decision': 'RECOVER', 'reason': 'lost_observation'}
-            else:
+            elif decision is None:
                 if (prefer_hash is not None and state['target_exists']
                         and state.get('target_name_hash') != prefer_hash):
                     # The client selected another creature, most likely the
@@ -317,8 +354,8 @@ def main():
                 # The cast runs in a worker thread; keep reading telemetry so
                 # the heartbeat stays alive while the spell is in flight.
                 after = cast(hwnd, '/cast Fireball', reader,
-                             on_tick=lambda s: controller.heartbeat(
-                                 s, time.monotonic()))
+                             on_tick=lambda s: action_check(controller, s,
+                                                          time.monotonic()))
                 note('cast_result', {
                     'succeeded': after['cast_succeeded'],
                     'failed': after['cast_failed'],
@@ -394,7 +431,15 @@ def main():
                 continue
 
             if decision['decision'] == 'VERIFY_SURVIVAL':
-                final = 'target_defeated'
+                # A kill has to be proved: the death of the bound creature
+                # has to have been seen. A creature that vanished without
+                # that proof leaves the outcome of the fight unknown, and
+                # that must not be reported as a kill.
+                reason = decision.get('reason')
+                final = ('target_defeated'
+                         if reason in KILL_REASONS else 'target_gone_unconfirmed')
+                result['kill_evidence'] = reason
+                result['kill_confirmed'] = decision.get('kill_confirmed', False)
                 break
 
             # RECOVER: retreat and confirm the character survives.
@@ -454,6 +499,14 @@ def main():
             raise ValueError('still in combat at the end of the run')
         if state['dead']:
             raise ValueError('the character is dead at the end of the run')
+        if result['threat_max'] == THREAT_UNKNOWN:
+            # The threat could not be read. That is not a cleared threat.
+            raise ValueError('the threat of the player could not be read; '
+                             'the end of the fight cannot be confirmed')
+        if result['threat_max'] == THREAT_UNKNOWN:
+            # The threat could not be read. That is not a cleared threat.
+            raise ValueError('the threat of the player could not be read; '
+                             'the end of the fight cannot be confirmed')
         if result['threat_max'] > 0:
             raise ValueError('the threat did not clear during the '
                              'observation: %s' % result['threat_max'])

@@ -1,0 +1,76 @@
+{
+  "run": "client_find_merchant_1793855421458281000",
+  "status": "SCANNED",
+  "walk": [
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1783,
+        "y": 97,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.3
+    },
+    {
+      "action": "stuck",
+      "detour": 1.5707963267948966
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1783,
+        "y": 97,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 15.3
+    },
+    {
+      "action": "marker",
+      "marker": {
+        "x": 1788,
+        "y": 98,
+        "pixels": 7,
+        "kind": "yellow",
+        "height": 2,
+        "width": 2,
+        "shape": "dot"
+      },
+      "distance": 14.1
+    }
+  ],
+  "names": [
+    {
+      "hash": 5381,
+      "x": 520,
+      "y": 220,
+      "turn": 0,
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\merchant-5381.png"
+    }
+  ],
+  "evidence": {
+    "run": "client_find_merchant_1793855421458281000",
+    "frames": [
+      {
+        "label": "01-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_find_merchant_1793855421458281000_01-end.png",
+        "source": "desktop",
+        "host_monotonic": 1252860.1202079
+      },
+      {
+        "label": "09-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_find_merchant_1793855421458281000_09-end.png",
+        "source": "desktop",
+        "host_monotonic": 1252860.467118
+      }
+    ],
+    "states": []
+  }
+}

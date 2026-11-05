@@ -340,6 +340,14 @@ def _decode_v12(data):
     return result
 
 
+# The value the probe reports when the threat could not be read.
+THREAT_UNKNOWN = 255
+
+
+# The value the probe reports when the threat could not be read.
+THREAT_UNKNOWN = 255
+
+
 def _decode_v13(data):
     result = _decode_v12(data)
     offset, size = V13_OFFSETS['cursor_name_hash']

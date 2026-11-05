@@ -111,7 +111,11 @@ def main():
                 result['walk'].append({'action': 'no_marker'})
                 time.sleep(2.0)
                 continue
-            marker = min(markers,
+            # The blue marks are the people that can be asked for a quest,
+            # the yellow mark of a tracked quest is often inside a building.
+            blue = [item for item in markers if item['kind'] == 'blue']
+            pool = blue if blue else markers
+            marker = min(pool,
                          key=lambda item: math.hypot(item['x'] - CENTRE[0],
                                                      item['y'] - CENTRE[1]))
             east = marker['x'] - CENTRE[0]
@@ -130,6 +134,25 @@ def main():
                          lambda: decode(assert_real_frame(grab_desktop())),
                          wanted, seconds=6.0)
 
+        # A fine sweep of the whole picture names every unit that is close
+        # enough to be pointed at. It is slow, so it is only done once, at
+        # the end.
+        for y in range(180, 800, 40):
+            for x in range(460, 1480, 40):
+                d.u.SetCursorPos(int(x), int(y))
+                time.sleep(0.1)
+                try:
+                    reading = decode(assert_real_frame(grab_desktop()))
+                except Exception:
+                    continue
+                digest = reading.get('cursor_name_hash')
+                if not digest or digest in seen:
+                    continue
+                seen[digest] = True
+                shot = OUT / ('merchant-%s.png' % digest)
+                grab_desktop().save(shot)
+                result['names'].append({'hash': digest, 'x': x, 'y': y,
+                                        'picture': str(shot)})
         evidence.capture('01-end', None)
         result['status'] = 'SCANNED'
     except Exception as exc:

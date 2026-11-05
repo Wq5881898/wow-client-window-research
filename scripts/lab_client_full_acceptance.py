@@ -25,13 +25,51 @@ SUMMARY = ROOT / 'results' / 'client_full_acceptance.json'
 STEPS = [
     ('restart', 'lab_client_restart.py', []),
     ('enter', 'lab_client_enter_character.py', ['--character', 'Probehuman']),
-    ('combat', 'lab_client_combat_loop.py',
-     ['--target-name', 'Diseased Young Wolf']),
+    ('combat', 'lab_client_combat_loop.py', []),
     ('danger_setup', 'lab_client_danger_setup.py',
      ['--walk-to', '0.50390', '0.44147']),
     ('danger_recovery', 'lab_client_danger_recovery.py', ['--die-again']),
     ('relogin', 'lab_client_relogin_verify.py', ['--character', 'Probehuman']),
 ]
+
+# The file name each step writes its result under.
+RESULT_PREFIX = {
+    'restart': 'client_restart_',
+    'enter': 'client_enter_',
+    'combat': 'client_combat_',
+    'danger_setup': 'client_danger_setup_',
+    'danger_recovery': 'client_danger_recovery_',
+    'relogin': 'client_relogin_',
+}
+
+# What a step has to show before the chain counts as done.
+REQUIRED = {
+    'combat': lambda result: (result.get('status') == 'COMBAT_LOOP_COMPLETED'
+                              and result.get('outcome') == 'target_defeated'),
+    'danger_setup': lambda result: result.get('status') == 'DEAD',
+    'danger_recovery': lambda result: result.get('status') == 'RECOVERED',
+    'relogin': lambda result: result.get('status') == 'VERIFIED',
+}
+
+
+def problems_of(record):
+    """The steps that did not show what the chain promised.
+
+    The exit code of a step is not enough: a fight that ended with a
+    retreat returns zero as well. Every step that has a post condition is
+    checked against the result it wrote.
+    """
+    problems = []
+    for step in record['steps']:
+        check = REQUIRED.get(step['step'])
+        if check is None or not step.get('result'):
+            continue
+        result = read(step['result'])
+        if result is None:
+            problems.append(step['step'] + ': the result is unreadable')
+        elif not check(result):
+            problems.append('%s: %s' % (step['step'], result.get('status')))
+    return problems
 
 
 def note(text):
@@ -57,9 +95,15 @@ def run(script, argv):
     return subprocess.run(command, cwd=str(ROOT)).returncode
 
 
-def latest(prefix):
+def results_of(prefix):
+    """The result files of the given kind with their time."""
     files = sorted((ROOT / 'results').glob(prefix + '*.json'),
                    key=lambda p: p.stat().st_mtime)
+    return files
+
+
+def latest(prefix):
+    files = results_of(prefix)
     if not files:
         return None
     try:
@@ -68,10 +112,18 @@ def latest(prefix):
         return None
 
 
+def read(path):
+    try:
+        return json.loads(Path(path).read_text(encoding='utf-8'))
+    except Exception:
+        return None
+
+
 def main():
     LOG.write_text('', encoding='utf-8')
     attempts = 5
-    report = {'attempts': [], 'status': 'FAILED'}
+    report = {'run': 'client_full_acceptance_' + str(time.time_ns()),
+              'attempts': [], 'status': 'FAILED'}
     for attempt in range(1, attempts + 1):
         note('== attempt %d of %d ==' % (attempt, attempts))
         record = {'attempt': attempt, 'steps': []}
@@ -82,20 +134,38 @@ def main():
                                         'error': 'no client window'})
                 failed = True
                 break
+            # The result of the step is the file that the step wrote, so the
+            # report can point at it and not at the newest file of the kind.
+            before = set(results_of(RESULT_PREFIX[name]))
             code = run(script, argv)
-            record['steps'].append({'step': name, 'code': code})
+            fresh = [path for path in results_of(RESULT_PREFIX[name])
+                     if path not in before]
+            path = str(fresh[-1]) if fresh else None
+            record['steps'].append({'step': name, 'code': code,
+                                    'result': path})
             note('   %s -> %s' % (name, code))
             if code != 0:
                 failed = True
                 break
+        # The exit code of a step is not enough: the step has to show what
+        # the chain promises. A fight that ended with a retreat is not a
+        # fight that was won.
+        problems = problems_of(record)
+        record['problems'] = problems
         report['attempts'].append(record)
-        if not failed:
+        if not failed and not problems:
             report['status'] = 'ACCEPTED'
             break
         note('   the attempt failed, the run starts again')
     report['combat'] = latest('client_combat_')
     report['danger_recovery'] = latest('client_danger_recovery_')
     report['relogin'] = latest('client_relogin_')
+    # The report of a run is written under the name of the run, so a later
+    # run does not overwrite the evidence of this one.
+    path = ROOT / 'results' / ('client_full_acceptance_%s.json' % report['run'])
+    path.write_text(json.dumps(report, indent=2, ensure_ascii=False),
+                    encoding='utf-8')
+    report['report'] = str(path)
     SUMMARY.write_text(json.dumps(report, indent=2, ensure_ascii=False),
                        encoding='utf-8')
     note('status %s' % report['status'])

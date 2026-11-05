@@ -30,8 +30,10 @@ KILL_HEALTH_THRESHOLD = 5
 # with a high resistance takes less than that, so the fight can never end.
 MIN_TARGET_PROGRESS = 5
 
-# Reasons a vanishing target can still be treated as a kill.
-KILL_REASONS = ('target_gone_after_hit', 'target_dead', 'target_dead_out_of_combat')
+# Reasons of a vanishing target that can still be treated as a kill. The
+# death of the creature has to have been seen.
+KILL_REASONS = ('target_gone_after_death', 'target_dead',
+                'target_dead_out_of_combat')
 
 
 class CombatController:
@@ -47,6 +49,15 @@ class CombatController:
         self.finished = False
         self.recovery = None
         self.last_target_health = None
+        # Whether the death of the bound creature was seen while it was
+        # still selected. A creature that vanishes without that proof is
+        # not a kill, however low its health was.
+        self.last_target_dead = False
+        # The events of an earlier fight must not be counted as hits of this
+        # one, so the serial of the newest event at the binding is the
+        # baseline of the fight.
+        self.event_baseline = 0
+        self.hit_serials = set()
         self.successful_casts = 0
         self.target_recovered = False
         self.recoveries = 0
@@ -71,6 +82,10 @@ class CombatController:
         # The baseline of the health is taken at the binding, so the first
         # observation is not mistaken for a recovery.
         self.last_target_health = state['target_health']
+        self.last_target_dead = bool(state.get('target_dead'))
+        self.event_baseline = state.get('event_serial') or 0
+        self.hit_serials = set()
+        self.successful_casts = 0
         return {'decision': 'BOUND', 'reason': 'target_confirmed'}
 
     def rebind(self, state):
@@ -83,7 +98,10 @@ class CombatController:
         """
         self.target_guid = state['target_guid']
         self.last_target_health = state['target_health']
+        self.last_target_dead = bool(state.get('target_dead'))
         self.successful_casts = 0
+        self.hit_serials = set()
+        self.event_baseline = state.get('event_serial') or 0
         self.attempts = 0
         self.recovery = None
         self.target_recovered = False
@@ -118,13 +136,30 @@ class CombatController:
 
         # The bound target must still be the same entity for the whole fight.
         if not state['target_exists']:
-            # A target that vanishes right after our hits is a kill, not a loss.
-            if self.successful_casts > 0 and self.last_target_health is not None:
+            # The creature is gone. That is a kill only when its death was
+            # seen while it was still selected. A success event of the
+            # spell is no proof: the client counts a cast that did not reach
+            # the creature as a success as well, and a creature with one to
+            # five health left may simply have walked out of sight.
+            if self.successful_casts > 0:
                 self.finished = True
+                if self.last_target_dead:
+                    return {'decision': 'VERIFY_SURVIVAL',
+                            'reason': 'target_gone_after_death',
+                            'last_target_health': self.last_target_health,
+                            'successful_casts': self.successful_casts,
+                            'kill_confirmed': True}
+                # The outcome of the fight is unknown and must not be
+                # reported as a kill.
                 return {'decision': 'VERIFY_SURVIVAL',
-                        'reason': 'target_gone_after_hit',
+                        'reason': 'target_gone_unconfirmed',
                         'last_target_health': self.last_target_health,
-                        'successful_casts': self.successful_casts}
+                        'successful_casts': self.successful_casts,
+                        'kill_confirmed': False,
+                        'low_health_hint':
+                            (self.last_target_health is not None
+                             and self.last_target_health
+                             <= KILL_HEALTH_THRESHOLD)}
             return self._recover('target_lost')
         if state['target_guid'] != self.target_guid:
             return self._recover('target_identity_changed')
@@ -145,7 +180,10 @@ class CombatController:
 
         if state['target_dead'] or state['target_health'] <= 0:
             # Death of the target does not end the run: the player must be
-            # seen alive and out of combat for a sustained period.
+            # seen alive and out of combat for a sustained period. The death
+            # is remembered, so a creature that vanishes right afterwards is
+            # a kill and not a loss.
+            self.last_target_dead = True
             self.finished = True
             return {'decision': 'VERIFY_SURVIVAL',
                     'reason': 'target_dead' if state['combat'] else 'target_dead_out_of_combat'}
@@ -224,8 +262,19 @@ class CombatController:
         return None
 
     def _count_successful_casts(self, state):
-        """Track confirmed successful casts on the bound spell."""
+        """Track the successful casts of the bound spell of this fight.
+
+        The queue of the probe only holds the last events, so the hits are
+        counted by their serial: every serial that is newer than the
+        baseline of the binding counts once. The events of an earlier fight
+        are older than the baseline and do not count.
+        """
         for event in state.get('events') or []:
-            if event.get('kind') == 2 and event.get('spell') == self.spell_id:
-                self.successful_casts = max(self.successful_casts, event.get('serial', 0))
+            if event.get('kind') != 2 or event.get('spell') != self.spell_id:
+                continue
+            serial = event.get('serial') or 0
+            if serial <= self.event_baseline:
+                continue
+            self.hit_serials.add(serial)
+        self.successful_casts = len(self.hit_serials)
         return self.successful_casts

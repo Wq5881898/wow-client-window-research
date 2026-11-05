@@ -90,6 +90,50 @@ class PathMemoryTest(unittest.TestCase):
             self.assertLessEqual(length, 0.035)
 
 
+class GraveyardAnchorTests(unittest.TestCase):
+    """The anchor of the graveyard is where the ghost appears.
+
+    The counterexample of the review: the character dies at (0.6, 0.6) and
+    the corpse is not released yet, so the position is the place of the
+    death. The ghost appears at the graveyard, and only that spot is the
+    anchor of the route back.
+    """
+
+    def test_the_anchor_is_not_the_place_of_the_death(self):
+        machine = DangerRecovery()
+        action = machine.observe(state(corpse_exists=False, pos_x=0.6,
+                                       pos_y=0.6), 0.0)
+        self.assertEqual(action['action'], 'RELEASE')
+        self.assertIsNone(machine.graveyard)
+        # The spirit was released and the ghost stands at the graveyard.
+        machine.observe(state(corpse_exists=True, pos_x=0.49, pos_y=0.43), 1.0)
+        self.assertEqual(machine.phase, 'GHOST')
+        self.assertAlmostEqual(machine.graveyard[0], 0.49)
+        self.assertAlmostEqual(machine.graveyard[1], 0.43)
+
+    def test_the_body_on_the_ground_is_a_state_of_its_own(self):
+        machine = DangerRecovery()
+        machine.observe(state(corpse_exists=False), 0.0)
+        self.assertEqual(machine.phase, 'RELEASING')
+        # The release is repeated while the window is still up.
+        action = machine.observe(state(corpse_exists=False), 1.0)
+        self.assertEqual(action['action'], 'RELEASE')
+        self.assertEqual(action['attempt'], 2)
+
+    def test_the_anchor_is_kept_when_the_character_dies_again(self):
+        machine = DangerRecovery()
+        machine.observe(state(corpse_exists=False), 0.0)
+        machine.observe(state(corpse_exists=True), 1.0)
+        first = machine.graveyard
+        machine.observe(state(dead=False, health=26), 2.0)
+        # A second death somewhere else: the anchor belongs to the ghost
+        # that is walking now.
+        machine.observe(state(corpse_exists=False, pos_x=0.7, pos_y=0.7), 3.0)
+        self.assertIsNone(machine.graveyard)
+        machine.observe(state(corpse_exists=True, pos_x=0.5, pos_y=0.44), 4.0)
+        self.assertNotEqual(machine.graveyard, first)
+
+
 class DangerRecoveryTest(unittest.TestCase):
     def test_a_living_character_without_a_route_is_done(self):
         machine = DangerRecovery()
@@ -109,7 +153,7 @@ class DangerRecoveryTest(unittest.TestCase):
         machine = DangerRecovery()
         action = machine.observe(state(corpse_exists=False), 0.0)
         self.assertEqual(action['action'], 'RELEASE')
-        self.assertEqual(machine.phase, 'RELEASE')
+        self.assertEqual(machine.phase, 'RELEASING')
 
     def test_a_far_corpse_in_front_makes_the_character_walk(self):
         machine = DangerRecovery()
@@ -192,8 +236,11 @@ class DangerRecoveryTest(unittest.TestCase):
         machine.observe(state(corpse_dy=NEAR, facing=0.0), 0.0)
         machine.observe(state(dead=False, health=26), 1.0)
         # The character dies a second time somewhere else.
-        machine.observe(state(corpse_dx=0.01, corpse_dy=NEAR, facing=0.0), 2.0)
+        machine.observe(state(corpse_dx=0.01, corpse_dy=NEAR, facing=0.0,
+                               pos_x=PLAYER_X + 0.05), 2.0)
         self.assertEqual(machine.phase, 'GHOST')
+        # The anchor belongs to the ghost that is walking now.
+        self.assertAlmostEqual(machine.graveyard[0], PLAYER_X + 0.05)
         # The path of the first death is kept, so the two can be compared.
         self.assertEqual(len(machine.corpses), 1)
         self.assertEqual(len(machine.memory.points), 1)
