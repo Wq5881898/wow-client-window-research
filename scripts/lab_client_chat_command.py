@@ -53,9 +53,11 @@ def main():
         commands = []
         for argument in sys.argv[1:]:
             if argument.startswith('--say='):
-                commands.append(argument.split('=', 1)[1])
+                # The command line of a task splits at the spaces, so a
+                # space in the text is written as an underline.
+                commands.append(argument.split('=', 1)[1].replace('_', ' '))
         if not commands:
-            commands = ['.revive']
+            raise ValueError('explicit --say= command required')
         for index, command in enumerate(commands):
             send(hwnd, command)
             time.sleep(2.0)

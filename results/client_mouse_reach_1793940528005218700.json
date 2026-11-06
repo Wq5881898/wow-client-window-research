@@ -1,0 +1,109 @@
+{
+  "run": "client_mouse_reach_1793940528005218700",
+  "status": "MEASURED",
+  "places": [
+    {
+      "place": "the character",
+      "at": [
+        960,
+        620
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    },
+    {
+      "place": "the minimap",
+      "at": [
+        1780,
+        115
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    },
+    {
+      "place": "the empty ground",
+      "at": [
+        300,
+        400
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    },
+    {
+      "place": "the chat frame",
+      "at": [
+        300,
+        940
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    },
+    {
+      "place": "the action bar",
+      "at": [
+        960,
+        1040
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    },
+    {
+      "place": "the panel",
+      "at": [
+        300,
+        700
+      ],
+      "cursor_name_hash": 5381,
+      "cursor_is_probehuman": false
+    }
+  ],
+  "probehuman_hash": 7254,
+  "evidence": {
+    "run": "client_mouse_reach_1793940528005218700",
+    "frames": [
+      {
+        "label": "02-the-character",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-character.png",
+        "source": "desktop",
+        "host_monotonic": 1337373.4612251
+      },
+      {
+        "label": "02-the-minimap",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-minimap.png",
+        "source": "desktop",
+        "host_monotonic": 1337375.2605682
+      },
+      {
+        "label": "02-the-empty-ground",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-empty-ground.png",
+        "source": "desktop",
+        "host_monotonic": 1337377.0832004
+      },
+      {
+        "label": "02-the-chat-frame",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-chat-frame.png",
+        "source": "desktop",
+        "host_monotonic": 1337378.8980853
+      },
+      {
+        "label": "02-the-action-bar",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-action-bar.png",
+        "source": "desktop",
+        "host_monotonic": 1337380.7556073
+      },
+      {
+        "label": "02-the-panel",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_02-the-panel.png",
+        "source": "desktop",
+        "host_monotonic": 1337382.5495901
+      },
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_reach_1793940528005218700_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 1337382.9549084
+      }
+    ],
+    "states": []
+  }
+}

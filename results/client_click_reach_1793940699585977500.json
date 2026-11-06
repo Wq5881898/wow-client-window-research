@@ -1,0 +1,18 @@
+{
+  "run": "client_click_reach_1793940699585977500",
+  "status": "MEASURED",
+  "minimap_change": 0.0007,
+  "picture_change": 0.0775,
+  "evidence": {
+    "run": "client_click_reach_1793940699585977500",
+    "frames": [
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_click_reach_1793940699585977500_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 1337550.3537021
+      }
+    ],
+    "states": []
+  }
+}

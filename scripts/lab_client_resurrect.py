@@ -1,79 +1,89 @@
-"""Release the character from the ghost state and wait for the respawn."""
+"""Resurrect the character at its corpse.
+
+The ghost of the character stands on its corpse and the client asks
+whether it wants to come back. The question is a red button in the upper
+half of the screen, and the driver has to press it.
+
+The script reports what the client answered: the character is alive, or it
+is still a ghost, or the dialog was never there.
+"""
 import json
+import sys
 import time
 from pathlib import Path
-import win32con
-import win32gui
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lab_driver5 as d
 from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
+from client_parent_run import stamp
+from client_read_fresh import find_red_button
 
 ROOT = Path(__file__).resolve().parents[1]
-RESURRECT = (960, 252)    # "Accept" button of the "Resurrect now?" dialog
 
 
-def hide_consoles():
-    def cb(hwnd, _):
-        try:
-            cls = win32gui.GetClassName(hwnd)
-            title = win32gui.GetWindowText(hwnd)
-        except Exception:
-            return True
-        if cls == 'ConsoleWindowClass' or 'python.exe' in title.lower():
-            try:
-                win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
-            except Exception:
-                pass
-        return True
-    win32gui.EnumWindows(cb, None)
+def reader():
+    return decode(assert_real_frame(grab_desktop()))
 
 
 def main():
     run = 'client_resurrect_' + str(time.time_ns())
-    result = dict(run=run, status='FAILED', steps=[])
+    result = stamp(dict(run=run, status='FAILED'), sys.argv)
     evidence = Evidence(run)
-    hwnd = d.find_game_window()
     try:
-        if not hwnd:
-            raise ValueError('no game window')
+        hwnd = d.game_window()
         d.ensure_foreground(hwnd)
-        hide_consoles()
-
-        def reader():
-            return decode(assert_real_frame(grab_desktop()))
-
+        time.sleep(1.0)
         state = reader()
-        evidence.capture('01-ghost', state)
-        result['start'] = {'health': state['health'], 'dead': state['dead'],
-                           'combat': state['combat']}
+        result['before'] = {'dead': state['dead'], 'health': state['health'],
+                            'position': [state['pos_x'], state['pos_y']],
+                            'corpse_exists': state.get('corpse_exists'),
+                            'corpse': [state.get('corpse_x'),
+                                       state.get('corpse_y')]}
         if not state['dead']:
             result['status'] = 'ALREADY_ALIVE'
+            result['after'] = result['before']
+            evidence.capture('01-already-alive', state)
         else:
-            # The ghost dialog offers a release button on the right edge.
-            d.click_si(*RESURRECT)
-            time.sleep(2.0)
-            state = reader()
-            evidence.capture('02-after-release', state)
-            result['after_release'] = {'dead': state['dead'], 'health': state['health']}
-            # Wait for the server to respawn the character.
-            deadline = time.monotonic() + 60
-            while time.monotonic() < deadline:
-                time.sleep(2.0)
+            button = find_red_button(grab_desktop())
+            result['button'] = button
+            if button is None:
+                raise ValueError('the dialog of the resurrection was not found')
+            evidence.capture('01-dialog')
+            # The client puts a countdown on the dialog, and the button is
+            # grey until it is over. The button is pressed again and again,
+            # and the state is read after every try, so a dialog that waits
+            # is not taken for a refusal.
+            for attempt in range(10):
+                d.u.SetCursorPos(*button)
+                time.sleep(0.5)
+                try:
+                    d.click_client(hwnd, *button)
+                except Exception as exc:
+                    result.setdefault('click_errors', []).append(repr(exc))
+                time.sleep(1.5)
                 state = reader()
-                if not state['dead'] and state['health'] > 0:
+                result['after'] = {'dead': state['dead'],
+                                   'health': state['health'],
+                                   'position': [state['pos_x'],
+                                                state['pos_y']],
+                                   'corpse_exists': state.get('corpse_exists')}
+                if not state['dead']:
                     break
-            evidence.capture('03-respawned', state)
+                # Enter is deliberately not used: in the game it can open
+                # chat rather than activate this dialog.
+            evidence.capture('02-after', state)
             if state['dead']:
-                raise ValueError('still a ghost after release')
-            result['status'] = 'RESURRECTED'
-        result['final'] = state
+                result['reason'] = 'the character stayed a ghost'
+            else:
+                result['status'] = 'RESURRECTED'
     except Exception as exc:
         result['error'] = repr(exc)
     finally:
-        evidence.capture('04-end')
+        evidence.capture('03-end')
         path = evidence.write(result)
-        d.log('resurrect run', path, result['status'])
+        d.log('resurrect', str(path), result['status'])
     return 0 if result['status'] in ('RESURRECTED', 'ALREADY_ALIVE') else 1
 
 

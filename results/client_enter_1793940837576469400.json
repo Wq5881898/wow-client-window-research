@@ -1,0 +1,288 @@
+{
+  "run": "client_enter_1793940837576469400",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Syra",
+  "inside_the_world": false,
+  "at_character_selection": true,
+  "name_rows": [
+    436,
+    506
+  ],
+  "expected_name_row": 436,
+  "highlight_band": [
+    434,
+    434
+  ],
+  "enter_world_button": [
+    957,
+    1008
+  ],
+  "protocol": 14,
+  "health": 1,
+  "dead": true,
+  "power": 0,
+  "position": [
+    0.43860532539864194,
+    0.47510490577553977
+  ],
+  "release_button": [
+    960,
+    229
+  ],
+  "after_release": {
+    "health": 97,
+    "dead": false,
+    "position": [
+      0.43860532539864194,
+      0.47510490577553977
+    ]
+  },
+  "health_expected": [
+    120,
+    160
+  ],
+  "error": "ValueError('the character that was entered is not the requested one: health 97, expected 120-160')",
+  "wow_processes": [
+    "10308"
+  ],
+  "client_windows": [
+    [
+      2821518,
+      "D3DProxyWindow",
+      "D3DProxyWindow"
+    ],
+    [
+      9571632,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793940837576469400",
+    "frames": [
+      {
+        "label": "01-after-login",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_01-after-login.png",
+        "source": "desktop",
+        "host_monotonic": 1337766.7554129
+      },
+      {
+        "label": "02-picked",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_02-picked.png",
+        "source": "desktop",
+        "host_monotonic": 1337770.512411
+      },
+      {
+        "label": "03-in-world",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_03-in-world.png",
+        "source": "desktop",
+        "host_monotonic": 1337791.2272405
+      },
+      {
+        "label": "03b-ghost-released",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_03b-ghost-released.png",
+        "source": "desktop",
+        "host_monotonic": 1337796.0288599
+      },
+      {
+        "label": "03c-released",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_03c-released.png",
+        "source": "desktop",
+        "host_monotonic": 1337800.6544516
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793940837576469400_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1337801.9723983
+      }
+    ],
+    "states": [
+      {
+        "label": "03-in-world",
+        "state": {
+          "sequence": 151,
+          "game_ms": 1337790551,
+          "health": 1,
+          "max_health": 97,
+          "power": 0,
+          "combat": false,
+          "dead": true,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.43860532539864194,
+          "pos_y": 0.47510490577553977,
+          "facing": 4.3809204218600195,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.4371404592965591,
+          "corpse_y": 0.491981383993286,
+          "corpse_exists": true,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 5381,
+          "map_id": 0,
+          "protocol": 14
+        }
+      },
+      {
+        "label": "03c-released",
+        "state": {
+          "sequence": 245,
+          "game_ms": 1337799951,
+          "health": 97,
+          "max_health": 97,
+          "power": 190,
+          "combat": false,
+          "dead": false,
+          "target_health": 0,
+          "target_max_health": 0,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0x0000000000000000",
+          "target_exists": false,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.43860532539864194,
+          "pos_y": 0.47510490577553977,
+          "facing": 4.3809204218600195,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 0.0,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 0,
+          "target_class_name": "no target",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5381,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5381,
+          "cursor_name_hash": 5381,
+          "zone_hash": 48885,
+          "subzone_hash": 5381,
+          "map_id": 0,
+          "protocol": 14
+        }
+      }
+    ]
+  }
+}

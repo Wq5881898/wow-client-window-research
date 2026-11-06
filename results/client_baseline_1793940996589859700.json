@@ -1,0 +1,132 @@
+{
+  "run": "client_baseline_1793940996589859700",
+  "at": 1793940996.589862,
+  "session": {
+    "session": 1,
+    "remote": false,
+    "screen": [
+      1920,
+      1080
+    ]
+  },
+  "window": {
+    "hwnd": 9571632,
+    "foreground": 1311800,
+    "foreground_class": "Chrome_WidgetWin_1",
+    "foreground_title": "中国电信智能网关 - Google Chrome",
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": true,
+    "rect": [
+      -32000,
+      -32000,
+      -31840,
+      -31972
+    ],
+    "title": "World of Warcraft"
+  },
+  "window_after": {
+    "hwnd": 9571632,
+    "foreground": 9571632,
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": false,
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "title": "World of Warcraft"
+  },
+  "display_mode": "not set",
+  "probe": {
+    "deployed": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\Interface\\AddOns\\WowProbeWotLK\\WowProbeLive.lua",
+    "deployed_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "repo_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "deployed_exists": true,
+    "same": true,
+    "protocol": "local PROTOCOL = 14"
+  },
+  "client": {
+    "process": null
+  },
+  "telemetry": {
+    "protocol": 14,
+    "sequence": 275,
+    "game_ms": 1337841651,
+    "player_guid": "0x0000000000000008",
+    "level": 4,
+    "xp": 2,
+    "xp_max": 2100,
+    "health": 97,
+    "max_health": 97,
+    "power": 243,
+    "combat": false,
+    "dead": false,
+    "speed": 0.0,
+    "pos_x": 0.43860532539864194,
+    "pos_y": 0.47510490577553977,
+    "facing": 4.3809204218600195,
+    "zone_hash": 48885,
+    "subzone_hash": 5381,
+    "map_id": 0,
+    "money": 0,
+    "bag_items": 1,
+    "cursor_name_hash": 5381,
+    "known_spells": [
+      133,
+      168
+    ],
+    "spell_bits": 48,
+    "frost_armor": false,
+    "target_exists": false,
+    "target_attackable": false,
+    "target_dead": false,
+    "target_health": 0,
+    "target_max_health": 0,
+    "target_guid": "0x0000000000000000",
+    "target_name_hash": 5381,
+    "target_class_name": "no target",
+    "spell_learned": true,
+    "spell_range": 2,
+    "casting": false,
+    "threat": 255,
+    "chat_open": false,
+    "corpse_exists": false,
+    "sequence_after": 287,
+    "game_ms_after": 1337842851,
+    "advancing": true
+  },
+  "events": [
+    {
+      "serial": 0,
+      "kind": 0,
+      "spell": 0,
+      "at": 0,
+      "reason": 0
+    },
+    {
+      "serial": 0,
+      "kind": 0,
+      "spell": 0,
+      "at": 0,
+      "reason": 0
+    },
+    {
+      "serial": 0,
+      "kind": 0,
+      "spell": 0,
+      "at": 0,
+      "reason": 0
+    },
+    {
+      "serial": 0,
+      "kind": 0,
+      "spell": 0,
+      "at": 0,
+      "reason": 0
+    }
+  ],
+  "status": "READ"
+}

@@ -1,0 +1,26 @@
+{
+  "run": "client_chat_command_1793943708744654500",
+  "status": "TYPED",
+  "commands": [
+    {
+      "command": ".gm on",
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_chat_command_1793943708744654500_0.png"
+    },
+    {
+      "command": ".gm fly",
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_chat_command_1793943708744654500_1.png"
+    }
+  ],
+  "evidence": {
+    "run": "client_chat_command_1793943708744654500",
+    "frames": [
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_chat_command_1793943708744654500_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 1340562.9784612
+      }
+    ],
+    "states": []
+  }
+}

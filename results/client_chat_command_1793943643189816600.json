@@ -1,0 +1,22 @@
+{
+  "run": "client_chat_command_1793943643189816600",
+  "status": "TYPED",
+  "commands": [
+    {
+      "command": ".teleport zone Northshire Valley",
+      "picture": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_chat_command_1793943643189816600_0.png"
+    }
+  ],
+  "evidence": {
+    "run": "client_chat_command_1793943643189816600",
+    "frames": [
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_chat_command_1793943643189816600_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 1340493.5544873
+      }
+    ],
+    "states": []
+  }
+}
