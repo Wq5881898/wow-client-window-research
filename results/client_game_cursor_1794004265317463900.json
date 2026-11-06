@@ -1,0 +1,29 @@
+{
+  "run": "client_game_cursor_1794004265317463900",
+  "status": "FAILED",
+  "system_cursor": [
+    92,
+    21
+  ],
+  "window_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "client_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "evidence": {
+    "run": "client_game_cursor_1794004265317463900",
+    "frames": [],
+    "states": []
+  }
+}

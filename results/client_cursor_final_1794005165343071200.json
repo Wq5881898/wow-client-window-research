@@ -1,0 +1,23 @@
+{
+  "run": "client_cursor_final_1794005165343071200",
+  "status": "MEASURED",
+  "menu_after": false,
+  "evidence": {
+    "run": "client_cursor_final_1794005165343071200",
+    "frames": [
+      {
+        "label": "01-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cursor_final_1794005165343071200_01-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1402007.2403352
+      },
+      {
+        "label": "02-click",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cursor_final_1794005165343071200_02-click.png",
+        "source": "desktop",
+        "host_monotonic": 1402008.2673194
+      }
+    ],
+    "states": []
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run": "client_game_cursor_1793983464750326200",
+  "status": "QUERY_SENT",
+  "system_cursor": [
+    960,
+    650
+  ],
+  "window_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "client_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "evidence": {
+    "run": "client_game_cursor_1793983464750326200",
+    "frames": [
+      {
+        "label": "01-client-cursor",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_game_cursor_1793983464750326200_01-client-cursor.png",
+        "source": "desktop",
+        "host_monotonic": 1380319.9291837
+      }
+    ],
+    "states": []
+  }
+}

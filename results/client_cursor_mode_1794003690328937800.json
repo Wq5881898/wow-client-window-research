@@ -1,0 +1,40 @@
+{
+  "run": "client_cursor_mode_1794003690328937800",
+  "status": "MEASURED",
+  "rect_before": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "rect_windowed": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "rect_restored": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "evidence": {
+    "run": "client_cursor_mode_1794003690328937800",
+    "frames": [
+      {
+        "label": "01-toggle",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cursor_mode_1794003690328937800_01-toggle.png",
+        "source": "desktop",
+        "host_monotonic": 1400533.9904424
+      },
+      {
+        "label": "02-query",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_cursor_mode_1794003690328937800_02-query.png",
+        "source": "desktop",
+        "host_monotonic": 1400543.7572661
+      }
+    ],
+    "states": []
+  }
+}

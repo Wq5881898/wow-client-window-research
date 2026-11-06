@@ -1,0 +1,43 @@
+{
+  "run": "client_game_cursor_1794004487804523900",
+  "status": "QUERY_SENT",
+  "system_cursor": [
+    75,
+    16
+  ],
+  "window_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "client_rect": [
+    0,
+    0,
+    1920,
+    1080
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "menu_after_click": false,
+  "evidence": {
+    "run": "client_game_cursor_1794004487804523900",
+    "frames": [
+      {
+        "label": "01-client-cursor",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_game_cursor_1794004487804523900_01-client-cursor.png",
+        "source": "desktop",
+        "host_monotonic": 1401345.9554166
+      },
+      {
+        "label": "02-after-click",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_game_cursor_1794004487804523900_02-after-click.png",
+        "source": "desktop",
+        "host_monotonic": 1401347.4836219
+      }
+    ],
+    "states": []
+  }
+}
