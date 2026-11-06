@@ -1,0 +1,48 @@
+{
+  "run": "client_enter_1793926929929329800",
+  "status": "FAILED",
+  "steps": [],
+  "character": "Syra",
+  "inside_the_world": true,
+  "logout_button": [
+    967,
+    572
+  ],
+  "at_character_selection": true,
+  "expected_highlight_row": 146,
+  "highlight_row": 188,
+  "error": "ValueError('the character was not selected: the highlight is at 188, expected near 146')",
+  "wow_processes": [
+    "39336"
+  ],
+  "client_windows": [
+    [
+      12913524,
+      "D3DProxyWindow",
+      "D3DProxyWindow"
+    ],
+    [
+      1314380,
+      "GxWindowClassD3d",
+      "World of Warcraft"
+    ]
+  ],
+  "evidence": {
+    "run": "client_enter_1793926929929329800",
+    "frames": [
+      {
+        "label": "00-after-logout",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793926929929329800_00-after-logout.png",
+        "source": "desktop",
+        "host_monotonic": 1323801.430368
+      },
+      {
+        "label": "04-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_enter_1793926929929329800_04-end.png",
+        "source": "desktop",
+        "host_monotonic": 1323829.8545303
+      }
+    ],
+    "states": []
+  }
+}

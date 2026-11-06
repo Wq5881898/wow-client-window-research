@@ -1,0 +1,18 @@
+{
+  "run": "client_walk_picture_1793925539397216800",
+  "status": "MEASURED",
+  "picture": 0.0069,
+  "minimap": 0.0003,
+  "evidence": {
+    "run": "client_walk_picture_1793925539397216800",
+    "frames": [
+      {
+        "label": "03-end",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_walk_picture_1793925539397216800_03-end.png",
+        "source": "desktop",
+        "host_monotonic": 1322388.9986313
+      }
+    ],
+    "states": []
+  }
+}

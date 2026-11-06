@@ -18,6 +18,7 @@ Three rules keep the way out of an obstacle honest:
 """
 import ctypes
 import math
+from client_motion import TURN_RATE
 import time
 
 import lab_driver5 as d
@@ -30,7 +31,6 @@ VK_LEFT = 0x25
 VK_RIGHT = 0x27
 
 # The client turns with pi radians per second.
-TURN_RATE = math.pi
 # A movement of the character counts as real above this.
 MOVED = 0.0006
 # How often the character may be blocked on one side of an obstacle before

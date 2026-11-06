@@ -31,12 +31,11 @@ ACCOUNT_FIELD = (960, 565)
 # The names of the characters on the selection screen, in the coordinates of
 # the 1920 wide picture of the client. The list sits on the right edge of the
 # window and every entry shows its name on the first of three lines.
-CHARACTERS = {
-    'Syra': (1600, 146),
-    'Wao': (1600, 226),
-    'Good': (1600, 304),
-    'Probehuman': (1620, 465),
-}
+# The characters of the account in the order of the list on the screen.
+# The rows are not written down: they are found in the picture, because the
+# list moves when a character is added and a wrong row picks the wrong
+# character. The fourth entry shows its name as a question mark.
+CHARACTERS = ['Syra', 'Wao', 'Good', '?', 'Probehuman']
 
 # The health of each character tells which one was actually entered, so a
 # click that misses the entry cannot go unnoticed.
@@ -95,6 +94,42 @@ def login(hwnd):
     time.sleep(10.0)
 
 
+def golden_rows(image, x_from, x_to, y_from=100, y_to=560):
+    """The rows that hold a golden band, as a list of (top, bottom).
+
+    The names of the characters and the band behind the selected one are
+    both golden. The band of the selection starts to the right of the
+    names, so the two are looked for in different columns.
+    """
+    rows = []
+    for y in range(y_from, y_to):
+        count = 0
+        for x in range(x_from, x_to, 4):
+            r, g, b = image.getpixel((x, y))
+            if r > 180 and g > 170 and b < 150:
+                count += 1
+        if count >= 20:
+            rows.append(y)
+    bands = []
+    for y in rows:
+        if bands and y - bands[-1][1] <= 2:
+            bands[-1][1] = y
+        else:
+            bands.append([y, y])
+    return [(top, bottom) for top, bottom in bands]
+
+
+def name_rows(image):
+    """The rows of the names of the characters of the list.
+
+    The name of every character is written in golden letters in the column
+    of the names. The rows are found in the picture, so the list may grow
+    and shrink without the driver picking the wrong character.
+    """
+    bands = golden_rows(image, 1580, 1700)
+    return [(top + bottom) // 2 for top, bottom in bands]
+
+
 def selected_row(image):
     """Return the vertical centre of the highlighted entry of the list.
 
@@ -124,11 +159,15 @@ def find_enter_world(image):
     The button sits at the bottom of the screen in the middle. Its position
     moves with the size of the client window, so it is found in the picture
     instead of being guessed.
+
+    The search stays above the action bar of the world: that bar has red
+    icons of its own, and one of them was mistaken for the button, which
+    made every picture of the world look like the selection screen.
     """
     pixels = image.convert('RGB').load()
     width, height = image.size
     best = None
-    for y in range(int(height * 0.75), height - 10):
+    for y in range(int(height * 0.86), int(height * 0.96)):
         left = right = None
         for x in range(int(width * 0.35), int(width * 0.65)):
             r, g, b = pixels[x, y]
@@ -153,14 +192,11 @@ def at_character_selection(image):
 def inside_the_world(image, reader):
     """True when the client shows the game world.
 
-    The three screens are told apart by what is on the screen. The
-    character selection shows a red Enter World button and the login screen
-    shows the logo of the game. Only in the world the probe panel of the
-    telemetry is on the screen, because the add-on is loaded when the
-    character enters the world.
+    The panel of the probe is only on the screen in the world, so the
+    reading of the panel decides. The Enter World button does not decide:
+    the action bar of the world has red icons in the same part of the
+    picture, and they were mistaken for the button.
     """
-    if find_enter_world(image) is not None:
-        return False
     try:
         reader()
     except Exception:
@@ -194,17 +230,26 @@ def main():
         d.ensure_foreground(hwnd)
         hide_consoles()
 
+        def picture():
+            # The desktop is shared with the user, so another window can be
+            # in front. The picture of the screen is then not of the game,
+            # and the red icon of the client in the task bar is mistaken for
+            # the Enter World button. The client is brought to the front
+            # before every picture.
+            d.restore_foreground(hwnd)
+            return grab_desktop()
+
         def raw_reader():
-            return decode(assert_real_frame(grab_desktop()))
+            return decode(assert_real_frame(picture()))
 
         def reader():
             # A window of the client that is modal freezes the panel of the
             # probe, so it is closed before the reading.
             return read_or_dismiss(raw_reader, d.game_window())
 
-        point = CHARACTERS.get(wanted)
-        if point is None:
+        if wanted not in CHARACTERS:
             raise ValueError('unknown character ' + wanted)
+        index = CHARACTERS.index(wanted)
 
         # The client may be inside the world, at the selection or at the
         # login. The world map covers the screen and hides the telemetry, so
@@ -212,7 +257,9 @@ def main():
         close_world_map(hwnd, reader)
         # The three screens are told apart by the picture, not by the
         # telemetry: the probe panel stays alive at the character selection.
-        if inside_the_world(grab_desktop(), reader):
+        in_world = inside_the_world(picture(), reader)
+        result['inside_the_world'] = in_world
+        if in_world:
             # The menu of the client has to be open before the logout can
             # The menu of the client does not open while the character is in
             # combat, so the fight has to be over first.
@@ -229,25 +276,57 @@ def main():
             evidence.capture('00-after-logout')
 
         # The logout lands on the login screen when the session was fresh.
-        if not at_character_selection(grab_desktop()):
+        at_selection = at_character_selection(picture())
+        result['at_character_selection'] = at_selection
+        if not at_selection:
             hwnd = d.game_window()
             login(hwnd)
             evidence.capture('01-after-login')
+            # The login takes a while, and the list of the characters comes
+            # after the realm. The list is waited for, or the names are
+            # read from the picture of the login screen.
+            deadline = time.monotonic() + 90
+            while time.monotonic() < deadline:
+                if at_character_selection(picture()):
+                    at_selection = True
+                    break
+                time.sleep(2.0)
+            result['at_character_selection'] = at_selection
+            if not at_selection:
+                raise ValueError('the list of the characters did not appear')
 
         hwnd = d.game_window()
-        d.click_client(hwnd, *picture_to_screen(hwnd, *point))
-        time.sleep(1.5)
+        # The row of the name of the wanted character is found in the
+        # picture, so a list that grew or shrank does not pick the wrong
+        # character.
+        rows = name_rows(picture())
+        result['name_rows'] = rows
+        if index >= len(rows):
+            raise ValueError('the list shows %d characters, %s is the %d'
+                             % (len(rows), wanted, index + 1))
+        name_y = rows[index]
+        result['expected_name_row'] = name_y
+        # The click can miss the entry: only the name and the level line of
+        # an entry answer to a click. A few points around the name are
+        # tried until the band of the selection covers it. The first click
+        # can also be swallowed by the window that has to take the focus.
+        band = None
+        for attempt in range(8):
+            offset = (0, 8, -8)[attempt % 3]
+            d.click_client(hwnd, *picture_to_screen(hwnd, 1620,
+                                                    name_y + offset))
+            time.sleep(1.0)
+            bands = golden_rows(picture(), 1700, 1880)
+            band = bands[0] if bands else None
+            result['highlight_band'] = band
+            if band and band[0] - 12 <= name_y <= band[1] + 12:
+                break
+        if not band or not (band[0] - 12 <= name_y <= band[1] + 12):
+            raise ValueError('the character was not selected: the band is '
+                             '%s, the name of %s is at %s'
+                             % (band, wanted, name_y))
         evidence.capture('02-picked')
-        # The click can miss the entry, so the highlight is checked before
-        # the character is entered.
-        highlight = selected_row(grab_desktop())
-        result['highlight_row'] = highlight
-        expected_y = picture_to_screen(hwnd, *point)[1]
-        result['expected_highlight_row'] = expected_y
-        if highlight is None or abs(highlight - expected_y) > 40:
-            raise ValueError('the character was not selected: the highlight '
-                             'is at %s, expected near %s' % (highlight, expected_y))
-        enter = find_enter_world(grab_desktop())
+        enter = find_enter_world(picture())
         result['enter_world_button'] = enter
         if enter is None:
             raise ValueError('the Enter World button was not found')

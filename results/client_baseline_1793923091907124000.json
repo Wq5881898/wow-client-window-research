@@ -1,0 +1,30 @@
+{
+  "run": "client_baseline_1793923091907124000",
+  "at": 1793923091.9071257,
+  "session": {
+    "session": 0,
+    "remote": false,
+    "screen": [
+      1024,
+      768
+    ]
+  },
+  "window": {
+    "hwnd": 0,
+    "foreground": 0
+  },
+  "display_mode": "not set",
+  "probe": {
+    "deployed": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\Interface\\AddOns\\WowProbeWotLK\\WowProbeLive.lua",
+    "deployed_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "repo_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "deployed_exists": true,
+    "same": true,
+    "protocol": "local PROTOCOL = 14"
+  },
+  "client": {
+    "process": null
+  },
+  "error": "RuntimeError('BitBlt failed')",
+  "status": "FAILED"
+}

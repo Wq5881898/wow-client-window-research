@@ -19,6 +19,43 @@ LOG = OUT / 'driver5.log'
 u = ctypes.windll.user32
 g = ctypes.windll.gdi32
 
+# The window station and the desktop of the interactive session. A task of
+# the user that is started from the session of the services runs in the
+# session of the user, but on the window station of the service: the
+# picture of the screen can be read there, but the mouse and the keyboard
+# do not reach the client. The driver switches to the interactive ones
+# before it sends anything.
+WINSTA_ALL = 0x000003FF
+DESKTOP_ALL = 0x000001FF
+u.OpenWindowStationW.restype = wt.HANDLE
+u.OpenWindowStationW.argtypes = [wt.LPWSTR, wt.BOOL, wt.DWORD]
+u.OpenDesktopW.restype = wt.HANDLE
+u.OpenDesktopW.argtypes = [wt.LPWSTR, wt.DWORD, wt.BOOL, wt.DWORD]
+u.SetProcessWindowStation.restype = wt.BOOL
+u.SetProcessWindowStation.argtypes = [wt.HANDLE]
+u.SetThreadDesktop.restype = wt.BOOL
+u.SetThreadDesktop.argtypes = [wt.HANDLE]
+
+
+def use_interactive_desktop():
+    """Switch to the window station and the desktop of the user.
+
+    The function reports whether the desktop could be made current. A
+    failure is not fatal: the picture of the screen is readable either
+    way, and the caller can see from the log that the input did not get
+    through.
+    """
+    station = u.OpenWindowStationW('WinSta0', False, WINSTA_ALL)
+    if station:
+        u.SetProcessWindowStation(station)
+    desktop = u.OpenDesktopW('Default', 0, False, DESKTOP_ALL)
+    if desktop:
+        u.SetThreadDesktop(desktop)
+    return bool(desktop)
+
+
+use_interactive_desktop()
+
 
 def log(*a):
     with open(LOG, 'a', encoding='utf-8') as f:
@@ -271,12 +308,39 @@ def is_fullscreen_dummy(hwnd):
     window as minimized, so restoring it would throw the client out of the
     fullscreen mode. The size tells the two apart: the dummy is a few
     pixels wide, a minimized window keeps its own size.
+
+    A window that is really minimized is not the dummy. The client shrinks
+    itself and is moved out of the way when it loses the focus, and such a
+    window has to be restored, or the driver reads a screen without the
+    game on it.
     """
     try:
         left, top, right, bottom = win32gui.GetWindowRect(hwnd)
     except Exception:
         return False
+    if win32gui.IsIconic(hwnd):
+        return False
     return (left < -10000 or top < -10000) and (right - left) < 400
+
+
+def restore_foreground(hwnd):
+    """Bring the client to the front, but only when it is not there.
+
+    The desktop of the machine is shared with the user, so another window
+    can be in front while the driver runs. The panel of the probe is then
+    not on the screen, and every reading would be of the other program
+    instead of the game. The check of the foreground is cheap, so it can
+    run before every reading.
+    """
+    if not hwnd:
+        return False
+    if u.GetForegroundWindow() == hwnd:
+        return True
+    try:
+        ensure_foreground(hwnd)
+    except Exception:
+        return False
+    return u.GetForegroundWindow() == hwnd
 
 
 def ensure_foreground(hwnd, x=40, y=30, w=1200, h=800):

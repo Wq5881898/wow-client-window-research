@@ -271,6 +271,9 @@ def main():
         hide_consoles()
 
         def reader():
+            # The desktop is shared with the user: another window can be in
+            # front, and then the picture is not of the game.
+            d.restore_foreground(hwnd)
             return decode(assert_real_frame(grab_desktop()))
 
         def note(phase, detail):

@@ -11,6 +11,7 @@ console takes the focus away from the client and the keys are lost.
 """
 import ctypes
 import math
+from client_motion import TURN_RATE
 import sys
 import time
 from pathlib import Path
@@ -24,7 +25,6 @@ from client_live_state import decode, assert_real_frame
 VK_FORWARD = 0x57
 VK_LEFT = 0x25
 VK_RIGHT = 0x27
-TURN_RATE = math.pi
 
 
 def hide_consoles():

@@ -62,8 +62,13 @@ def ensure_task():
         return 'present'
     action = ('"%s" -X utf8 "%s"' % (PYTHONW, ROOT / 'scripts' /
                                      'lab_client_launch.py'))
+    # The client has to run in the session of the user, so the task is
+    # created with the flag for an interactive logon. Without it the task
+    # runs in the session of the services and the client is nowhere near
+    # the desktop of the user.
     subprocess.run(['schtasks', '/create', '/tn', RUN_TASK, '/tr', action,
-                    '/sc', 'once', '/st', '00:00', '/f'],
+                    '/sc', 'once', '/st', '00:00', '/it', '/ru', 'qrz',
+                    '/f'],
                    capture_output=True)
     return 'created'
 

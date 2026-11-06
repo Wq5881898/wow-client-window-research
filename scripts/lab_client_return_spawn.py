@@ -49,14 +49,14 @@ def reader():
 def in_valley(state):
     """True when the character is in the valley of the birth.
 
-    The probe reports the zone and the subzone of the character. In this
-    client the valley is the subzone and the forest around it is the zone,
-    so both names are checked.
+    The probe reports the zone and the subzone of the character. The valley
+    is its own area, so only its name counts. Elwynn Forest is the forest
+    around the valley: a character that is in the forest is not in the
+    valley, and the coordinates of the place of the birth may not be used
+    there.
     """
     return (state.get('zone_hash') == NORTHSHIRE
-            or state.get('subzone_hash') == NORTHSHIRE
-            or state.get('zone_hash') == ELWYNN
-            or state.get('subzone_hash') == ELWYNN)
+            or state.get('subzone_hash') == NORTHSHIRE)
 
 
 def main():

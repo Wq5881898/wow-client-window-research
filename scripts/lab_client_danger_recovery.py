@@ -27,6 +27,7 @@ from client_chat_guard import ensure_chat_closed, ensure_focus
 from client_read_fresh import read_or_dismiss, find_red_button
 from client_target import select_hostile
 from client_geometry import picture_to_screen
+from client_motion import TURN_RATE
 
 ROOT = Path(__file__).resolve().parents[1]
 VK_FORWARD = 0x57
@@ -36,7 +37,6 @@ VK_RIGHT = 0x27
 # The turn rate of the client was measured at exactly one half turn per
 # second, and the left arrow key raises the heading while the right one
 # lowers it.
-TURN_RATE = math.pi
 
 # The longest time the whole task may take.
 TIME_BUDGET = 240.0

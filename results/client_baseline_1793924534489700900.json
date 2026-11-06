@@ -1,0 +1,56 @@
+{
+  "run": "client_baseline_1793924534489700900",
+  "at": 1793924534.4897034,
+  "session": {
+    "session": 1,
+    "remote": false,
+    "screen": [
+      1920,
+      1080
+    ]
+  },
+  "window": {
+    "hwnd": 11799620,
+    "foreground": 1311800,
+    "foreground_class": "Chrome_WidgetWin_1",
+    "foreground_title": "中国电信智能网关 - Google Chrome",
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": true,
+    "rect": [
+      -32000,
+      -32000,
+      -31840,
+      -31972
+    ],
+    "title": "World of Warcraft"
+  },
+  "window_after": {
+    "hwnd": 11799620,
+    "foreground": 11799620,
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": true,
+    "rect": [
+      -32000,
+      -32000,
+      -31840,
+      -31972
+    ],
+    "title": "World of Warcraft"
+  },
+  "display_mode": "not set",
+  "probe": {
+    "deployed": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\Interface\\AddOns\\WowProbeWotLK\\WowProbeLive.lua",
+    "deployed_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "repo_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "deployed_exists": true,
+    "same": true,
+    "protocol": "local PROTOCOL = 14"
+  },
+  "client": {
+    "process": null
+  },
+  "error": "ValueError('live telemetry absent or invalid')",
+  "status": "FAILED"
+}

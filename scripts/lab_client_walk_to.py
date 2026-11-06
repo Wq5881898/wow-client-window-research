@@ -8,6 +8,7 @@ import argparse
 import ctypes
 import json
 import math
+from client_motion import TURN_RATE
 import time
 from pathlib import Path
 import win32con
@@ -23,7 +24,6 @@ ROOT = Path(__file__).resolve().parents[1]
 VK_FORWARD = 0x57
 VK_LEFT = 0x25
 VK_RIGHT = 0x27
-TURN_RATE = math.pi
 
 
 def hide_consoles():
