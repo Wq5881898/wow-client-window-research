@@ -1,15 +1,12 @@
 """The measured motion constants of the client.
 
-The rate of the turn was measured on this client with the probe
-``scripts/lab_client_turn_rate.py``: the heading changes by 2.66 radians
-per second while the left key is held, and by the same amount in the
-other direction while the right key is held. The value of pi that was
-assumed before is about a fifth too large, so every turn with it passes
-the wanted heading and the walk circles around the target.
-
-The measurement of 2026-11-06: 2.702, 2.613, 2.660 and 2.791 radians per
-second for four turns of half a second each.
+The current experimental estimate is 2.66 radians per second. The raw
+four 0.6-second samples were 2.702, 2.613, 2.618 and 2.791. Readout delay
+and input overhead have not been isolated, so these samples do not prove
+the older pi-radians/second calibration wrong.
 """
 
-# Radians per second of the heading.
+# Experimental estimate, not a universal calibration. Sampling latency and
+# key overhead have not been isolated. A larger divisor shortens the turn
+# and tends to under-turn; the historical overshoot explanation is withdrawn.
 TURN_RATE = 2.66

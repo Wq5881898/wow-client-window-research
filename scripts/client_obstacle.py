@@ -38,6 +38,8 @@ class Obstacle:
         # did not move it, and the distance the character covered.
         self.blocked = 0
         self.traveled = 0.0
+        self.consecutive_blocked = 0
+        self.direction_blocked = 0
 
     def note(self, moved):
         """Report how far the character moved and return the detour to use.
@@ -47,10 +49,14 @@ class Obstacle:
         """
         self.traveled += moved
         if moved >= self.threshold:
+            self.consecutive_blocked = 0
+            self.direction_blocked = 0
             self.hits = 0
             self.detour = 0.0
             return 0.0
         self.hits += 1
+        self.consecutive_blocked += 1
+        self.direction_blocked += 1
         self.blocked += 1
         if self.hits > self.tries:
             # The other side of the obstacle may be the way out.
@@ -66,8 +72,15 @@ class Obstacle:
         a rock, it only looked the other way. Counting it as blocked would
         make the walk give up while it is still on its way.
         """
-        self.hits = 0
-        self.detour = 0.0
+        # Turning is not a movement attempt and must preserve blocked history.
+        return None
+
+    def next_direction(self, every):
+        """Consume a bounded set of blocked movement attempts once."""
+        if self.direction_blocked < every:
+            return False
+        self.direction_blocked = 0
+        return True
 
     def slide_heading(self, towards):
         """The direction of the world to slide along the obstacle.

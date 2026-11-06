@@ -15,7 +15,7 @@ from client_capture import grab_desktop
 from client_live_state import decode, assert_real_frame
 from client_evidence import Evidence
 from client_parent_run import stamp
-from client_chat_guard import close_world_map
+from client_chat_guard import close_world_map, ensure_chat_closed
 from client_geometry import picture_to_screen
 from client_read_fresh import (game_menu_open, find_logout_button, open_menu_logout,
                                 release_spirit, wait_out_of_combat,
@@ -181,12 +181,14 @@ def find_enter_world(image):
 
 
 def at_character_selection(image):
-    """The character selection shows a red Enter World button at the bottom.
+    """True when the client shows the list of the characters.
 
-    The login screen has no such button, so the two screens can be told
-    apart without reading any text.
+    The list has a golden band behind the selected character, and the band
+    is wide. The red button of the world is not used to tell the screens
+    apart: the action bar of the world has red parts of its own, and they
+    were mistaken for the button.
     """
-    return find_enter_world(image) is not None
+    return bool(golden_rows(image, 1700, 1880))
 
 
 def inside_the_world(image, reader):
@@ -201,6 +203,42 @@ def inside_the_world(image, reader):
         reader()
     except Exception:
         return False
+    return True
+
+
+def wait_for_selection(picture, timeout=60.0):
+    """Wait until the list of the characters is on the screen.
+
+    The logout and the login both take their time, and the list comes
+    after the realm. The names of the characters may only be read from the
+    list, so the wait is part of the job and not a comfort.
+    """
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        if at_character_selection(picture()):
+            return True
+        time.sleep(2.0)
+    return False
+
+
+def login_form_visible(image):
+    """Require both dark input fields and the blue login button, at 1080p."""
+    if image.size != (1920, 1080):
+        return False
+    rgb = image.convert('RGB')
+    def fraction(box, predicate):
+        pixels = list(rgb.crop(box).getdata())
+        return sum(predicate(*pixel) for pixel in pixels) / len(pixels)
+    dark = lambda r, g, b: max(r, g, b) < 100
+    blue = lambda r, g, b: b > r * 1.4 and b > 70
+    return (fraction((840, 555, 1080, 575), dark) > .65
+            and fraction((840, 653, 1080, 675), dark) > .65
+            and fraction((850, 800, 1070, 813), blue) > .5)
+
+
+def verify_player(state, expected_guid):
+    if not expected_guid or state.get('player_guid') != expected_guid:
+        raise ValueError('player identity unverified or mismatched; no recovery allowed')
     return True
 
 
@@ -224,6 +262,9 @@ def main():
     if '--character' in sys.argv:
         wanted = sys.argv[sys.argv.index('--character') + 1]
     result['character'] = wanted
+    expected_guid = '0x0000000000000008' if wanted == 'Probehuman' else None
+    if '--expected-player-guid' in sys.argv:
+        expected_guid = sys.argv[sys.argv.index('--expected-player-guid') + 1]
     evidence = Evidence(run)
     try:
         hwnd = d.game_window()
@@ -236,7 +277,8 @@ def main():
             # and the red icon of the client in the task bar is mistaken for
             # the Enter World button. The client is brought to the front
             # before every picture.
-            d.restore_foreground(hwnd)
+            if not d.restore_foreground(d.game_window()):
+                raise ValueError('client foreground unconfirmed')
             return grab_desktop()
 
         def raw_reader():
@@ -255,6 +297,12 @@ def main():
         # login. The world map covers the screen and hides the telemetry, so
         # it is closed before the state of the client is looked at.
         close_world_map(hwnd, reader)
+        # An open chat input swallows every key, and the keys of the login
+        # would end up in the chat of the game instead of in the form.
+        try:
+            ensure_chat_closed(hwnd, reader)
+        except Exception as exc:
+            result['chat_close_error'] = repr(exc)
         # The three screens are told apart by the picture, not by the
         # telemetry: the probe panel stays alive at the character selection.
         in_world = inside_the_world(picture(), reader)
@@ -275,22 +323,18 @@ def main():
             time.sleep(12.0)
             evidence.capture('00-after-logout')
 
-        # The logout lands on the login screen when the session was fresh.
-        at_selection = at_character_selection(picture())
+        # The logout lands on the list of the characters, or on the login
+        # screen when the session was fresh. Both are waited for, so the
+        # names are never read from the picture of the wrong screen.
+        at_selection = wait_for_selection(picture, 60.0)
         result['at_character_selection'] = at_selection
         if not at_selection:
+            if not login_form_visible(picture()):
+                raise ValueError('unknown interface; login form not confirmed')
             hwnd = d.game_window()
             login(hwnd)
             evidence.capture('01-after-login')
-            # The login takes a while, and the list of the characters comes
-            # after the realm. The list is waited for, or the names are
-            # read from the picture of the login screen.
-            deadline = time.monotonic() + 90
-            while time.monotonic() < deadline:
-                if at_character_selection(picture()):
-                    at_selection = True
-                    break
-                time.sleep(2.0)
+            at_selection = wait_for_selection(picture, 120.0)
             result['at_character_selection'] = at_selection
             if not at_selection:
                 raise ValueError('the list of the characters did not appear')
@@ -301,6 +345,8 @@ def main():
         # character.
         rows = name_rows(picture())
         result['name_rows'] = rows
+        if len(rows) != len(CHARACTERS):
+            raise ValueError('character list ambiguous; refusing selection')
         if index >= len(rows):
             raise ValueError('the list shows %d characters, %s is the %d'
                              % (len(rows), wanted, index + 1))
@@ -343,40 +389,10 @@ def main():
         result['power'] = state['power']
         result['position'] = [state['pos_x'], state['pos_y']]
         evidence.capture('03-in-world', state)
+        result['player_guid'] = state.get('player_guid')
+        verify_player(state, expected_guid)
         if state['dead']:
-            # The server kept the character as a ghost, because the client
-            # was closed while it was dead. The window of the death is
-            # closed, so the character comes back at the graveyard and the
-            # run can go on.
-            button = release_spirit(hwnd)
-            result['release_button'] = button
-            evidence.capture('03b-ghost-released')
-            if button is None:
-                # The spirit was released before, so there is no death
-                # window left. The character is a ghost that has to walk to
-                # its corpse and be revived there, which is the work of the
-                # recovery.
-                result['recovery'] = run_recovery()
-                state = reader()
-                result['after_recovery'] = {'health': state['health'],
-                                            'dead': state['dead'],
-                                            'position': [state['pos_x'],
-                                                         state['pos_y']]}
-                evidence.capture('03c-recovered', state)
-                if state['dead']:
-                    raise ValueError('the character stayed a ghost after the '
-                                     'recovery')
-            else:
-                time.sleep(4.0)
-                state = reader()
-                result['after_release'] = {'health': state['health'],
-                                           'dead': state['dead'],
-                                           'position': [state['pos_x'],
-                                                        state['pos_y']]}
-                evidence.capture('03c-released', state)
-                if state['dead']:
-                    raise ValueError('the character stayed a ghost after the '
-                                     'release of the spirit')
+            raise ValueError('entered dead character; recovery requires a separate task')
         # The health proves which character was entered.
         low, high = EXPECTED_HEALTH.get(wanted, (0, 100000))
         result['health_expected'] = [low, high]

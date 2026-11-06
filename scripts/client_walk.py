@@ -31,8 +31,10 @@ VK_LEFT = 0x25
 VK_RIGHT = 0x27
 
 # The client turns with pi radians per second.
-# A movement of the character counts as real above this.
-MOVED = 0.0006
+# A movement of the character counts as real above this. The step of the
+# walk is about a tenth of a thousandth, so the threshold has to stay
+# below that.
+MOVED = 0.0004
 # How often the character may be blocked on one side of an obstacle before
 # the other side is tried.
 STUCK_LIMIT = 6
@@ -40,8 +42,19 @@ STUCK_LIMIT = 6
 # which is the way out of a rock it stands in.
 BACKWARD_AFTER = 4
 # How many steps may pass without the character coming closer before the
-# walk is given up.
-NO_PROGRESS_LIMIT = 12
+# walk is given up. The limit leaves room for the three directions of the
+# slide, so the walk really tries them all before it gives up.
+NO_PROGRESS_LIMIT = 18
+# The directions the walk tries when the way ahead is blocked: the quarter
+# turn to the left, the quarter turn to the right, and the way back. A
+# pocket that is closed to the front is often open to one of the sides.
+SLIDE_ANGLES = (math.pi / 2, -math.pi / 2, math.pi)
+# How many blocked steps are given to one of the directions above before
+# the next one is tried.
+SLIDE_EVERY = 3
+# The shortest step of a walk. A shorter one is not seen by the probe, and
+# a step that is not seen cannot be told from a blocked one.
+MIN_STEP = 1.4
 
 
 class FocusLost(RuntimeError):
@@ -140,12 +153,13 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
     """
     deadline = time.monotonic() + timeout
     distance = None
-    obstacle = Obstacle(tries=STUCK_LIMIT)
+    obstacle = Obstacle(threshold=MOVED, tries=STUCK_LIMIT)
     slide = None
+    slide_index = 0
     best = None
     steps = 0
     without_progress = 0
-    reason = None
+    reason = 'timeout'
     while time.monotonic() < deadline:
         state = reader()
         distance = math.hypot(target[0] - state['pos_x'],
@@ -164,14 +178,14 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
             without_progress = 0
         else:
             without_progress += 1
-            if without_progress >= NO_PROGRESS_LIMIT:
-                # The character does not come closer. The walk is given up
-                # with a reason, so the report does not look like a walk
-                # that is still on its way.
-                return WalkResult(distance=distance, arrived=False,
-                                  blocked=obstacle.blocked, steps=steps,
-                                  traveled=obstacle.traveled,
-                                  reason='no_progress')
+        if without_progress >= NO_PROGRESS_LIMIT:
+            # The character does not come closer. The walk is given up
+            # with a reason, so the report does not look like a walk
+            # that is still on its way.
+            return WalkResult(distance=distance, arrived=False,
+                              blocked=obstacle.blocked, steps=steps,
+                              traveled=obstacle.traveled,
+                              reason='no_progress')
         before = (state['pos_x'], state['pos_y'])
         if slide is not None:
             wanted = slide
@@ -188,7 +202,8 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
             else:
                 # The reading of the telemetry costs about as much time as
                 # the walk, so a long way is covered with longer steps.
-                hold(VK_FORWARD, min(2.0, max(0.5, distance * 6.0)), hwnd)
+                hold(VK_FORWARD, min(2.0, max(MIN_STEP, distance * 6.0)),
+                     hwnd)
         except FocusLost as exc:
             return WalkResult(distance=distance, arrived=False,
                               blocked=obstacle.blocked, steps=steps,
@@ -203,18 +218,31 @@ def walk_to(hwnd, reader, target, tolerance=0.004, timeout=120.0, trace=None):
             obstacle.turned()
             continue
         obstacle.note(moved)
+        after_distance = math.hypot(target[0] - after['pos_x'],
+                                    target[1] - after['pos_y'])
+        improved = after_distance < distance - 0.0002
         if moved < MOVED:
             # The character does not move towards the target, so it slides
-            # along the obstacle.
+            # along the obstacle. A pocket that is closed to the front is
+            # often open to one of the sides, so the other directions are
+            # tried one after the other.
+            if obstacle.next_direction(SLIDE_EVERY):
+                slide_index = (slide_index + 1) % len(SLIDE_ANGLES)
             towards = math.atan2(-(target[0] - after['pos_x']),
                                  -(target[1] - after['pos_y']))
-            slide = obstacle.slide_heading(towards)
-            if obstacle.hits == BACKWARD_AFTER:
+            slide = wrap(towards + SLIDE_ANGLES[slide_index])
+            if obstacle.consecutive_blocked % BACKWARD_AFTER == 0:
                 # The character does not move at all. Walking backwards is
                 # the way out of a rock the character stands in.
                 hold(VK_BACKWARD, 1.0, hwnd)
-        else:
+        elif improved:
+            # The character came closer, so it is free again and the aim
+            # goes back to the target.
             slide = None
+            slide_index = 0
+        # Otherwise the character moves but not towards the target: it
+        # follows the wall, and the direction of the slide is kept. Aiming
+        # at the target again would make it walk back and forth.
     return WalkResult(distance=distance, arrived=False,
                       blocked=obstacle.blocked, steps=steps,
                       traveled=obstacle.traveled, reason=reason)
