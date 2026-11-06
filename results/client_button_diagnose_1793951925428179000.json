@@ -1,0 +1,119 @@
+{
+  "run": "client_button_diagnose_1793951925428179000",
+  "status": "MEASURED",
+  "swapped_buttons": 0,
+  "buttons": [
+    [
+      961,
+      428
+    ],
+    [
+      965,
+      435
+    ],
+    [
+      938,
+      456
+    ],
+    [
+      967,
+      463
+    ],
+    [
+      937,
+      484
+    ],
+    [
+      938,
+      489
+    ],
+    [
+      964,
+      492
+    ],
+    [
+      965,
+      520
+    ],
+    [
+      967,
+      544
+    ],
+    [
+      965,
+      548
+    ],
+    [
+      967,
+      572
+    ],
+    [
+      965,
+      576
+    ],
+    [
+      967,
+      600
+    ],
+    [
+      965,
+      604
+    ],
+    [
+      961,
+      642
+    ],
+    [
+      966,
+      647
+    ]
+  ],
+  "target": [
+    966,
+    647
+  ],
+  "set_cursor_ok": 1,
+  "cursor": [
+    966,
+    647
+  ],
+  "clip_rect": null,
+  "menu_after_raw_left": true,
+  "menu_after_window_message": true,
+  "evidence": {
+    "run": "client_button_diagnose_1793951925428179000",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951925428179000_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 1348769.0865829
+      },
+      {
+        "label": "02-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951925428179000_02-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1348769.9813954
+      },
+      {
+        "label": "03-raw-left",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951925428179000_03-raw-left.png",
+        "source": "desktop",
+        "host_monotonic": 1348771.0654251
+      },
+      {
+        "label": "04-message-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951925428179000_04-message-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1348771.8322889
+      },
+      {
+        "label": "05-message-click",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951925428179000_05-message-click.png",
+        "source": "desktop",
+        "host_monotonic": 1348773.0059054
+      }
+    ],
+    "states": []
+  }
+}

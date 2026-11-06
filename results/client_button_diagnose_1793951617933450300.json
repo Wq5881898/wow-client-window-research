@@ -1,0 +1,106 @@
+{
+  "run": "client_button_diagnose_1793951617933450300",
+  "status": "MEASURED",
+  "swapped_buttons": 0,
+  "buttons": [
+    [
+      961,
+      428
+    ],
+    [
+      965,
+      435
+    ],
+    [
+      962,
+      456
+    ],
+    [
+      967,
+      463
+    ],
+    [
+      937,
+      484
+    ],
+    [
+      938,
+      489
+    ],
+    [
+      964,
+      492
+    ],
+    [
+      965,
+      520
+    ],
+    [
+      967,
+      544
+    ],
+    [
+      965,
+      548
+    ],
+    [
+      967,
+      572
+    ],
+    [
+      965,
+      576
+    ],
+    [
+      967,
+      600
+    ],
+    [
+      965,
+      604
+    ],
+    [
+      961,
+      642
+    ],
+    [
+      966,
+      647
+    ]
+  ],
+  "target": [
+    966,
+    647
+  ],
+  "set_cursor_ok": 1,
+  "cursor": [
+    966,
+    647
+  ],
+  "clip_rect": null,
+  "menu_after_raw_left": true,
+  "evidence": {
+    "run": "client_button_diagnose_1793951617933450300",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951617933450300_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 1348461.5683868
+      },
+      {
+        "label": "02-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951617933450300_02-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1348462.4742777
+      },
+      {
+        "label": "03-raw-left",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793951617933450300_03-raw-left.png",
+        "source": "desktop",
+        "host_monotonic": 1348463.5798939
+      }
+    ],
+    "states": []
+  }
+}

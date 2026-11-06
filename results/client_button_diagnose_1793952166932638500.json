@@ -1,0 +1,132 @@
+{
+  "run": "client_button_diagnose_1793952166932638500",
+  "status": "MEASURED",
+  "swapped_buttons": 0,
+  "buttons": [
+    [
+      961,
+      428
+    ],
+    [
+      965,
+      435
+    ],
+    [
+      938,
+      456
+    ],
+    [
+      967,
+      463
+    ],
+    [
+      937,
+      484
+    ],
+    [
+      938,
+      489
+    ],
+    [
+      964,
+      492
+    ],
+    [
+      965,
+      520
+    ],
+    [
+      967,
+      544
+    ],
+    [
+      965,
+      548
+    ],
+    [
+      967,
+      572
+    ],
+    [
+      965,
+      576
+    ],
+    [
+      967,
+      600
+    ],
+    [
+      965,
+      604
+    ],
+    [
+      961,
+      642
+    ],
+    [
+      966,
+      647
+    ]
+  ],
+  "target": [
+    966,
+    647
+  ],
+  "set_cursor_ok": 1,
+  "cursor": [
+    966,
+    647
+  ],
+  "physical_cursor": [
+    966,
+    647
+  ],
+  "dpi": 96,
+  "clip_rect": null,
+  "menu_after_raw_left": true,
+  "menu_after_window_message": true,
+  "set_physical_ok": 1,
+  "menu_after_physical": true,
+  "evidence": {
+    "run": "client_button_diagnose_1793952166932638500",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 1349010.5172835
+      },
+      {
+        "label": "02-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_02-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1349011.3986232
+      },
+      {
+        "label": "03-raw-left",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_03-raw-left.png",
+        "source": "desktop",
+        "host_monotonic": 1349012.5006923
+      },
+      {
+        "label": "04-message-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_04-message-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1349013.278699
+      },
+      {
+        "label": "05-message-click",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_05-message-click.png",
+        "source": "desktop",
+        "host_monotonic": 1349014.4365548
+      },
+      {
+        "label": "06-physical",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_button_diagnose_1793952166932638500_06-physical.png",
+        "source": "desktop",
+        "host_monotonic": 1349016.0656014
+      }
+    ],
+    "states": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run": "client_button_diagnose_1793951317764102500",
+  "status": "FAILED",
+  "swapped_buttons": 0,
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_button_diagnose_1793951317764102500",
+    "frames": [],
+    "states": []
+  }
+}
