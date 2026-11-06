@@ -1,0 +1,29 @@
+{
+  "run": "client_mouse_sync_1793949878173757800",
+  "status": "MEASURED",
+  "move_sent": 1,
+  "evidence": {
+    "run": "client_mouse_sync_1793949878173757800",
+    "frames": [
+      {
+        "label": "01-menu",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_sync_1793949878173757800_01-menu.png",
+        "source": "desktop",
+        "host_monotonic": 1346721.1430006
+      },
+      {
+        "label": "02-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_sync_1793949878173757800_02-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1346722.3119832
+      },
+      {
+        "label": "03-after-click",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_mouse_sync_1793949878173757800_03-after-click.png",
+        "source": "desktop",
+        "host_monotonic": 1346725.5422463
+      }
+    ],
+    "states": []
+  }
+}

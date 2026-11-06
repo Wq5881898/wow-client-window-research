@@ -21,6 +21,7 @@ from client_capture import grab_desktop
 from client_evidence import Evidence
 from client_parent_run import stamp
 from client_chat_guard import ensure_chat_closed
+from client_live_state import decode, assert_real_frame
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / '.cache' / 'desktop-check'
@@ -31,7 +32,15 @@ CHAT = (0, 640, 900, 1000)
 
 def send(hwnd, text):
     """Type the text into the chat of the client and submit it."""
-    ensure_chat_closed(hwnd, lambda: None)
+    def reader():
+        state = decode(assert_real_frame(grab_desktop()))
+        if state.get('player_guid') != '0x0000000000000008':
+            raise ValueError('unexpected player identity')
+        if state['dead'] or state['combat']:
+            raise ValueError('chat experiment requires alive and out of combat')
+        return state
+    reader()
+    ensure_chat_closed(hwnd, reader)
     d.post_key(hwnd, win32con.VK_RETURN)
     time.sleep(0.6)
     for character in text:

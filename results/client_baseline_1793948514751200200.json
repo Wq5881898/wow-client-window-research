@@ -1,0 +1,54 @@
+{
+  "run": "client_baseline_1793948514751200200",
+  "at": 1793948514.751202,
+  "session": {
+    "session": 1,
+    "remote": false,
+    "screen": [
+      1920,
+      1080
+    ]
+  },
+  "window": {
+    "hwnd": 9571632,
+    "foreground": 9571632,
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": false,
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "title": "World of Warcraft"
+  },
+  "window_after": {
+    "hwnd": 9571632,
+    "foreground": 9571632,
+    "class": "GxWindowClassD3d",
+    "visible": true,
+    "iconic": false,
+    "rect": [
+      0,
+      0,
+      1920,
+      1080
+    ],
+    "title": "World of Warcraft"
+  },
+  "display_mode": "not set",
+  "probe": {
+    "deployed": "C:\\Azerothcore\\wowclient\\WOW_3.3.5a\\Interface\\AddOns\\WowProbeWotLK\\WowProbeLive.lua",
+    "deployed_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "repo_sha256": "a8129127a4e8894ea6b684e1f8b1d023c2a5a809816f6a4d84009c2319a5249f",
+    "deployed_exists": true,
+    "same": true,
+    "protocol": "local PROTOCOL = 14"
+  },
+  "client": {
+    "process": null
+  },
+  "error": "ValueError('live telemetry absent or invalid')",
+  "status": "FAILED"
+}
