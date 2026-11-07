@@ -243,7 +243,13 @@ V14_LAYOUT = [
     ('weighted', 1),
 ]
 
-CURRENT_LAYOUT = V14_LAYOUT
+V15_LAYOUT = V14_LAYOUT[:-2] + [
+    ('ui_cursor_x', 4), ('ui_cursor_y', 4),
+    ('ui_width', 2), ('ui_height', 2), ('mouse_focus_hash', 2),
+    ('game_menu', 1),
+] + V14_LAYOUT[-2:]
+
+CURRENT_LAYOUT = V15_LAYOUT
 
 EXPRESSION_NAMES = {
     'PROTOCOL': 'protocol',
@@ -301,6 +307,12 @@ EXPRESSION_NAMES = {
     'zone_hash()': 'zone_hash',
     'subzone_hash()': 'subzone_hash',
     'map_id()': 'map_id',
+    'math.floor(cursor_x) % 4294967296': 'ui_cursor_x',
+    'math.floor(cursor_y) % 4294967296': 'ui_cursor_y',
+    'math.floor(GetScreenWidth())': 'ui_width',
+    'math.floor(GetScreenHeight())': 'ui_height',
+    'name_hash(focus_name)': 'mouse_focus_hash',
+    'GameMenuFrame and GameMenuFrame:IsShown() and 1 or 0': 'game_menu',
     'math.floor(target_distance() * 10)': 'target_distance',
     'checksum': 'checksum',
     'weighted % 256': 'weighted',

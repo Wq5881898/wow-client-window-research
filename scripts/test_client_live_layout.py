@@ -14,8 +14,8 @@ class LayoutTests(unittest.TestCase):
 
     def test_total_length_matches_declared_constants(self):
         positions, total = offsets(CURRENT_LAYOUT)
-        self.assertEqual(total, client_live_state.V14_DATA_BYTES)
-        self.assertEqual(client_live_state.V14_TOTAL, total)
+        self.assertEqual(total, client_live_state.V15_DATA_BYTES)
+        self.assertEqual(client_live_state.V15_TOTAL, total)
         for layout, name in ((V3_LAYOUT, 'V3'), (V4_LAYOUT, 'V4'),
                              (V5_LAYOUT, 'V5'), (V6_LAYOUT, 'V6'),
                              (V7_LAYOUT, 'V7')):

@@ -4,7 +4,7 @@ from PIL import Image
 from client_live_layout import (V3_LAYOUT, V4_LAYOUT, V5_LAYOUT, V6_LAYOUT,
                                  V7_LAYOUT, V8_LAYOUT, V9_LAYOUT,
                                  V10_LAYOUT, V11_LAYOUT, V12_LAYOUT,
-                                 V13_LAYOUT, V14_LAYOUT, offsets)
+                                 V13_LAYOUT, V14_LAYOUT, V15_LAYOUT, offsets)
 
 UI_BASE_HEIGHT = 768
 LEGACY_CELL_UNITS = 12
@@ -21,6 +21,10 @@ V11_DATA_BYTES = 133
 V12_DATA_BYTES = 140
 V13_DATA_BYTES = 140
 V14_DATA_BYTES = 146
+V15_DATA_BYTES = 161
+V15_CELLS = 165
+V15_TRAILER_OFFSET = 164
+V15_OFFSETS, V15_TOTAL = offsets(V15_LAYOUT)
 V3_CELLS = 107            # 3 markers + payload + end marker
 V4_CELLS = 110
 V5_CELLS = 111
@@ -371,6 +375,17 @@ def _decode_v14(data):
     return result
 
 
+def _decode_v15(data):
+    result = _decode_v14(data)
+    for name in ('ui_cursor_x', 'ui_cursor_y', 'ui_width', 'ui_height',
+                 'mouse_focus_hash', 'game_menu'):
+        offset, size = V15_OFFSETS[name]
+        result[name] = int.from_bytes(data[offset:offset + size], 'little',
+                                     signed=name in ('ui_cursor_x', 'ui_cursor_y'))
+    result['game_menu'] = bool(result['game_menu'])
+    return result
+
+
 def _checksum_ok(data, length):
     if sum(data[:length - 2]) % 256 != data[length - 2]:
         return False
@@ -473,6 +488,13 @@ def _attempt(pixels, image, y, x, pitch):
         if data is None or not _checksum_ok(data, V13_DATA_BYTES):
             return None
         return version, _decode_v13(data)
+    if version == 15:
+        if header[1] != V15_DATA_BYTES:
+            return None
+        data = _read_cells(pixels, y, x, pitch, V15_DATA_BYTES, image.width)
+        if data is None or not _checksum_ok(data, V15_DATA_BYTES):
+            return None
+        return version, _decode_v15(data)
     if version == 14:
         if header[1] != V14_DATA_BYTES:
             return None
@@ -490,7 +512,7 @@ def decode(image):
         trio_pitch = (blue - x) / 2
         # The trailing marker fixes the exact cell pitch for the whole strip.
         for trailer_left in _yellow_runs(pixels, y, blue, image.width):
-            for offset in (V14_TRAILER_OFFSET, V13_TRAILER_OFFSET,
+            for offset in (V15_TRAILER_OFFSET, V14_TRAILER_OFFSET, V13_TRAILER_OFFSET,
                            V12_TRAILER_OFFSET,
                            V11_TRAILER_OFFSET,
                            V10_TRAILER_OFFSET,

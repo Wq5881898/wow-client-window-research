@@ -2,6 +2,8 @@
 -- The panel sits at the bottom right: the top left corner is used by the
 -- target frame, by unit nameplates and by the resurrection NPC menu.
 local frame = CreateFrame("Frame", "WowProbeLiveFrame", UIParent)
+frame:SetFrameStrata("TOOLTIP")
+frame:EnableMouse(false)
 frame:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 20, 260)
 frame:SetWidth(600)
 frame:SetHeight(65)
@@ -10,9 +12,9 @@ text:SetPoint("TOPLEFT", 0, -18)
 text:SetJustifyH("LEFT")
 
 local CELL = 8
-local PROTOCOL = 14
+local PROTOCOL = 15
 local QUEUE = 4
-local DATA_BYTES = 146
+local DATA_BYTES = 161
 local CELLS = 3 + DATA_BYTES + 1
 local cells = {}
 for i = 1, CELLS do
@@ -409,6 +411,16 @@ local function update()
   number(zone_hash(), 2)
   number(subzone_hash(), 2)
   number(map_id(), 2)
+  -- Read-only UI feedback. Signed coordinates retain out-of-bounds values.
+  local cursor_x, cursor_y = GetCursorPosition()
+  local focus = GetMouseFocus and GetMouseFocus()
+  local focus_name = focus and focus:GetName() or ""
+  number(math.floor(cursor_x) % 4294967296, 4)
+  number(math.floor(cursor_y) % 4294967296, 4)
+  number(math.floor(GetScreenWidth()), 2)
+  number(math.floor(GetScreenHeight()), 2)
+  number(name_hash(focus_name), 2)
+  number(GameMenuFrame and GameMenuFrame:IsShown() and 1 or 0, 1)
   local checksum = 0
   local weighted = 0
   for j = 1, #bytes do
