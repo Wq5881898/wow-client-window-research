@@ -1,0 +1,320 @@
+{
+  "run": "client_vendor_hover_1794088197411945000",
+  "status": "INTERACTION_SENT",
+  "steps": [
+    {
+      "sequence": 5670,
+      "cursor": [
+        964,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": -1,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5674,
+      "cursor": [
+        964,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": -1,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5677,
+      "cursor": [
+        955,
+        301
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5680,
+      "cursor": [
+        955,
+        301
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5684,
+      "cursor": [
+        955,
+        329
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5688,
+      "cursor": [
+        955,
+        356
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5691,
+      "cursor": [
+        955,
+        383
+      ],
+      "unit": 5076,
+      "decision": {
+        "action": "MOVE",
+        "dx": 0,
+        "dy": -1
+      }
+    },
+    {
+      "sequence": 5695,
+      "cursor": [
+        955,
+        411
+      ],
+      "unit": 5076,
+      "decision": {
+        "action": "READY"
+      }
+    }
+  ],
+  "hover": {
+    "sequence": 5695,
+    "game_ms": 1485039701,
+    "health": 97,
+    "max_health": 97,
+    "power": 243,
+    "combat": false,
+    "dead": false,
+    "target_health": 102,
+    "target_max_health": 102,
+    "spell_range": 2,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0xF1300004BD000A3B",
+    "target_exists": true,
+    "target_attackable": false,
+    "target_dead": false,
+    "pos_x": 0.4745555809872587,
+    "pos_y": 0.41376363775082015,
+    "facing": 5.602972195589645,
+    "event_serial": 0,
+    "cast_started": 0,
+    "cast_succeeded": 0,
+    "cast_failed": 0,
+    "ui_errors": 0,
+    "event_kind": 0,
+    "event_spell": 0,
+    "event_ms": 0,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      }
+    ],
+    "chat_open": false,
+    "target_distance": 6552.6,
+    "last_error_reason": 0,
+    "spell_bits": 48,
+    "known_spells": [
+      133,
+      168
+    ],
+    "target_class": 1,
+    "target_class_name": "ordinary",
+    "corpse_x": 0.0,
+    "corpse_y": 0.0,
+    "corpse_exists": false,
+    "player_guid": "0x0000000000000008",
+    "target_name_hash": 5076,
+    "threat": 255,
+    "level": 4,
+    "xp": 2,
+    "xp_max": 2100,
+    "money": 0,
+    "bag_items": 1,
+    "npc_name_hash": 5076,
+    "cursor_name_hash": 5076,
+    "zone_hash": 48885,
+    "subzone_hash": 34168,
+    "map_id": 0,
+    "ui_cursor_x": 955,
+    "ui_cursor_y": 411,
+    "ui_width": 1517,
+    "ui_height": 853,
+    "mouse_focus_hash": 24312,
+    "game_menu": false,
+    "protocol": 15
+  },
+  "evidence": {
+    "run": "client_vendor_hover_1794088197411945000",
+    "frames": [
+      {
+        "label": "01-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_vendor_hover_1794088197411945000_01-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1485040.4129248
+      },
+      {
+        "label": "02-merchant",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_vendor_hover_1794088197411945000_02-merchant.png",
+        "source": "desktop",
+        "host_monotonic": 1485051.447241
+      }
+    ],
+    "states": [
+      {
+        "label": "01-hover",
+        "state": {
+          "sequence": 5695,
+          "game_ms": 1485039701,
+          "health": 97,
+          "max_health": 97,
+          "power": 243,
+          "combat": false,
+          "dead": false,
+          "target_health": 102,
+          "target_max_health": 102,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF1300004BD000A3B",
+          "target_exists": true,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.4745555809872587,
+          "pos_y": 0.41376363775082015,
+          "facing": 5.602972195589645,
+          "event_serial": 0,
+          "cast_started": 0,
+          "cast_succeeded": 0,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 0,
+          "event_spell": 0,
+          "event_ms": 0,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 5076,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 5076,
+          "cursor_name_hash": 5076,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "ui_cursor_x": 955,
+          "ui_cursor_y": 411,
+          "ui_width": 1517,
+          "ui_height": 853,
+          "mouse_focus_hash": 24312,
+          "game_menu": false,
+          "protocol": 15
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "run": "client_repair_inspect_1794087464380357600",
+  "status": "FAILED",
+  "error": "ValueError('live telemetry absent or invalid')",
+  "evidence": {
+    "run": "client_repair_inspect_1794087464380357600",
+    "frames": [],
+    "states": []
+  }
+}
