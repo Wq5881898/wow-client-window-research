@@ -1,0 +1,606 @@
+{
+  "run": "client_vendor_hover_1794041996899401700",
+  "status": "INTERACTION_SENT",
+  "steps": [
+    {
+      "sequence": 29130,
+      "cursor": [
+        631,
+        301
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 1
+      }
+    },
+    {
+      "sequence": 29134,
+      "cursor": [
+        657,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29138,
+      "cursor": [
+        682,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29142,
+      "cursor": [
+        716,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29145,
+      "cursor": [
+        742,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29149,
+      "cursor": [
+        767,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 3,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29153,
+      "cursor": [
+        793,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29157,
+      "cursor": [
+        802,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29161,
+      "cursor": [
+        810,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29165,
+      "cursor": [
+        819,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29168,
+      "cursor": [
+        827,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29172,
+      "cursor": [
+        827,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29176,
+      "cursor": [
+        836,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29180,
+      "cursor": [
+        844,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29183,
+      "cursor": [
+        853,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29187,
+      "cursor": [
+        861,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29190,
+      "cursor": [
+        861,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29194,
+      "cursor": [
+        878,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29199,
+      "cursor": [
+        878,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29202,
+      "cursor": [
+        887,
+        274
+      ],
+      "unit": 5381,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29206,
+      "cursor": [
+        895,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29210,
+      "cursor": [
+        904,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29214,
+      "cursor": [
+        913,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29218,
+      "cursor": [
+        921,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29221,
+      "cursor": [
+        930,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29225,
+      "cursor": [
+        930,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29229,
+      "cursor": [
+        938,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29233,
+      "cursor": [
+        947,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29237,
+      "cursor": [
+        955,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "MOVE",
+        "dx": 1,
+        "dy": 0
+      }
+    },
+    {
+      "sequence": 29241,
+      "cursor": [
+        964,
+        274
+      ],
+      "unit": 21475,
+      "decision": {
+        "action": "READY"
+      }
+    }
+  ],
+  "hover": {
+    "sequence": 29241,
+    "game_ms": 1438848401,
+    "health": 97,
+    "max_health": 97,
+    "power": 243,
+    "combat": false,
+    "dead": false,
+    "target_health": 102,
+    "target_max_health": 102,
+    "spell_range": 2,
+    "spell_learned": true,
+    "casting": false,
+    "speed": 0.0,
+    "target_guid": "0xF130000098000A39",
+    "target_exists": true,
+    "target_attackable": false,
+    "target_dead": false,
+    "pos_x": 0.47339589532310977,
+    "pos_y": 0.4162966353856718,
+    "facing": 0.7303930968360498,
+    "event_serial": 2,
+    "cast_started": 1,
+    "cast_succeeded": 1,
+    "cast_failed": 0,
+    "ui_errors": 0,
+    "event_kind": 2,
+    "event_spell": 0,
+    "event_ms": 1437335834,
+    "last_reason": 0,
+    "frost_armor": false,
+    "events": [
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      },
+      {
+        "serial": 1,
+        "kind": 1,
+        "spell": 0,
+        "at": 1437325850,
+        "reason": 0
+      },
+      {
+        "serial": 2,
+        "kind": 2,
+        "spell": 0,
+        "at": 1437335834,
+        "reason": 0
+      },
+      {
+        "serial": 0,
+        "kind": 0,
+        "spell": 0,
+        "at": 0,
+        "reason": 0
+      }
+    ],
+    "chat_open": false,
+    "target_distance": 6552.6,
+    "last_error_reason": 0,
+    "spell_bits": 48,
+    "known_spells": [
+      133,
+      168
+    ],
+    "target_class": 1,
+    "target_class_name": "ordinary",
+    "corpse_x": 0.0,
+    "corpse_y": 0.0,
+    "corpse_exists": false,
+    "player_guid": "0x0000000000000008",
+    "target_name_hash": 21475,
+    "threat": 255,
+    "level": 4,
+    "xp": 2,
+    "xp_max": 2100,
+    "money": 0,
+    "bag_items": 1,
+    "npc_name_hash": 21475,
+    "cursor_name_hash": 21475,
+    "zone_hash": 48885,
+    "subzone_hash": 34168,
+    "map_id": 0,
+    "ui_cursor_x": 964,
+    "ui_cursor_y": 274,
+    "ui_width": 1517,
+    "ui_height": 853,
+    "mouse_focus_hash": 24312,
+    "game_menu": false,
+    "protocol": 15
+  },
+  "evidence": {
+    "run": "client_vendor_hover_1794041996899401700",
+    "frames": [
+      {
+        "label": "01-hover",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_vendor_hover_1794041996899401700_01-hover.png",
+        "source": "desktop",
+        "host_monotonic": 1438849.1136427
+      },
+      {
+        "label": "02-merchant",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_vendor_hover_1794041996899401700_02-merchant.png",
+        "source": "desktop",
+        "host_monotonic": 1438860.1419874
+      }
+    ],
+    "states": [
+      {
+        "label": "01-hover",
+        "state": {
+          "sequence": 29241,
+          "game_ms": 1438848401,
+          "health": 97,
+          "max_health": 97,
+          "power": 243,
+          "combat": false,
+          "dead": false,
+          "target_health": 102,
+          "target_max_health": 102,
+          "spell_range": 2,
+          "spell_learned": true,
+          "casting": false,
+          "speed": 0.0,
+          "target_guid": "0xF130000098000A39",
+          "target_exists": true,
+          "target_attackable": false,
+          "target_dead": false,
+          "pos_x": 0.47339589532310977,
+          "pos_y": 0.4162966353856718,
+          "facing": 0.7303930968360498,
+          "event_serial": 2,
+          "cast_started": 1,
+          "cast_succeeded": 1,
+          "cast_failed": 0,
+          "ui_errors": 0,
+          "event_kind": 2,
+          "event_spell": 0,
+          "event_ms": 1437335834,
+          "last_reason": 0,
+          "frost_armor": false,
+          "events": [
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            },
+            {
+              "serial": 1,
+              "kind": 1,
+              "spell": 0,
+              "at": 1437325850,
+              "reason": 0
+            },
+            {
+              "serial": 2,
+              "kind": 2,
+              "spell": 0,
+              "at": 1437335834,
+              "reason": 0
+            },
+            {
+              "serial": 0,
+              "kind": 0,
+              "spell": 0,
+              "at": 0,
+              "reason": 0
+            }
+          ],
+          "chat_open": false,
+          "target_distance": 6552.6,
+          "last_error_reason": 0,
+          "spell_bits": 48,
+          "known_spells": [
+            133,
+            168
+          ],
+          "target_class": 1,
+          "target_class_name": "ordinary",
+          "corpse_x": 0.0,
+          "corpse_y": 0.0,
+          "corpse_exists": false,
+          "player_guid": "0x0000000000000008",
+          "target_name_hash": 21475,
+          "threat": 255,
+          "level": 4,
+          "xp": 2,
+          "xp_max": 2100,
+          "money": 0,
+          "bag_items": 1,
+          "npc_name_hash": 21475,
+          "cursor_name_hash": 21475,
+          "zone_hash": 48885,
+          "subzone_hash": 34168,
+          "map_id": 0,
+          "ui_cursor_x": 964,
+          "ui_cursor_y": 274,
+          "ui_width": 1517,
+          "ui_height": 853,
+          "mouse_focus_hash": 24312,
+          "game_menu": false,
+          "protocol": 15
+        }
+      }
+    ]
+  }
+}

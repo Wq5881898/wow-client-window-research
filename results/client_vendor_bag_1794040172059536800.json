@@ -1,0 +1,16 @@
+{
+  "run": "client_vendor_bag_1794040172059536800",
+  "status": "QUERY_SENT",
+  "evidence": {
+    "run": "client_vendor_bag_1794040172059536800",
+    "frames": [
+      {
+        "label": "01-bag",
+        "path": "C:\\APP\\opencode\\project\\WoW\u81ea\u52a8\u5316\u9884\u7814\\.cache\\desktop-check\\client_vendor_bag_1794040172059536800_01-bag.png",
+        "source": "desktop",
+        "host_monotonic": 1437024.5436925
+      }
+    ],
+    "states": []
+  }
+}
