@@ -1,6 +1,6 @@
 {
   "run": "client_path_live_20261113",
-  "at": 1794549969.976796,
+  "at": 1794554707.635162,
   "character": {
     "level": 9,
     "xp": 226,
@@ -70,24 +70,77 @@
       "visual": true
     }
   ],
-  "trail_points": 3799,
+  "trail_points": 3884,
   "drills": [],
   "path_analyses": [
     {
-      "time": 1794549921.2977612,
+      "time": 1794554434.165173,
       "target": "road3",
-      "waypoints": 4,
-      "length": 0.0021506125902546885,
-      "nodes": 4,
+      "waypoints": 2,
+      "length": 0.0011142678923039093,
+      "nodes": 2,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    },
+    {
+      "time": 1794554441.812667,
+      "target": "road2",
+      "waypoints": 10,
+      "length": 0.004267000733178346,
+      "nodes": 10,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    },
+    {
+      "time": 1794554659.0742145,
+      "target": "road2",
+      "waypoints": 1,
+      "length": 0.0002703905569034758,
+      "nodes": 1,
       "danger_edges": 0,
       "teleport_edges": 0
     }
   ],
   "refused_paths": [],
-  "fights": [],
-  "selections": 0,
-  "selection_accepted": 0,
-  "exceptions": [],
+  "fights": [
+    {
+      "guid": "0xF13000020D09D106",
+      "result": null,
+      "casts": 3,
+      "samples": 12,
+      "target_hp_before": 120,
+      "target_hp_after": null,
+      "target_max_health": 120,
+      "power_before": 378,
+      "power_after": null,
+      "cast_succeeded_before": 0,
+      "cast_succeeded_after": null,
+      "cast_failed_before": 0,
+      "cast_failed_after": null,
+      "player_health_after": null
+    },
+    {
+      "guid": "0xF13000020D09D106",
+      "result": "target_gone_unconfirmed",
+      "casts": 4,
+      "samples": 22,
+      "target_hp_before": 75,
+      "target_hp_after": 0,
+      "target_max_health": 120,
+      "power_before": 378,
+      "power_after": 344,
+      "cast_succeeded_before": 1,
+      "cast_succeeded_after": 3,
+      "cast_failed_before": 2,
+      "cast_failed_after": 4,
+      "player_health_after": 100
+    }
+  ],
+  "selections": 1,
+  "selection_accepted": 1,
+  "exceptions": [
+    "ValueError('approach failed; retreat')"
+  ],
   "deaths": 0,
   "note": "the owner and its raw report stay in .cache/desktop-check; this file is the evidence summary of the live runs"
 }
