@@ -1,6 +1,6 @@
 {
   "run": "client_path_live_20261113",
-  "at": 1794541690.6771383,
+  "at": 1794544751.7418332,
   "character": {
     "level": 9,
     "xp": 226,
@@ -70,40 +70,69 @@
       "visual": true
     }
   ],
-  "trail_points": 878,
-  "drills": [
-    {
-      "time": 1794541489.72194,
-      "op": "retreat",
-      "target": "initial"
-    }
-  ],
+  "trail_points": 2157,
+  "drills": [],
   "path_analyses": [
     {
-      "time": 1794541489.9499648,
-      "target": "initial",
-      "waypoints": 41,
-      "length": 0.026065462792744982,
-      "nodes": 41,
+      "time": 1794543858.0474725,
+      "target": "road6",
+      "waypoints": 55,
+      "length": 0.023116558657929685,
+      "nodes": 55,
       "danger_edges": 0,
       "teleport_edges": 0
     },
     {
-      "time": 1794541530.8881156,
+      "time": 1794543956.7285995,
       "target": "road1",
-      "waypoints": 4,
-      "length": 0.0024414578374535403,
-      "nodes": 4,
+      "waypoints": 55,
+      "length": 0.023675328727998685,
+      "nodes": 55,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    },
+    {
+      "time": 1794544267.6588829,
+      "target": "road6",
+      "waypoints": 50,
+      "length": 0.02049159704818108,
+      "nodes": 50,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    },
+    {
+      "time": 1794544564.049455,
+      "target": "road5",
+      "waypoints": 3,
+      "length": 0.0012031819318946936,
+      "nodes": 3,
       "danger_edges": 0,
       "teleport_edges": 0
     }
   ],
   "refused_paths": [],
-  "fights": [],
-  "selections": 0,
-  "selection_accepted": 0,
+  "fights": [
+    {
+      "guid": "0xF13000020D09CE20",
+      "result": "target_gone_unconfirmed",
+      "casts": 5,
+      "samples": 32,
+      "target_hp_before": 120,
+      "target_hp_after": 0,
+      "target_max_health": 120,
+      "power_before": 378,
+      "power_after": 327,
+      "cast_succeeded_before": 6,
+      "cast_succeeded_after": 9,
+      "cast_failed_before": 12,
+      "cast_failed_after": 17,
+      "player_health_after": 172
+    }
+  ],
+  "selections": 16,
+  "selection_accepted": 1,
   "exceptions": [
-    "RuntimeError('route no_progress')"
+    "RuntimeError('three same-cause no eligible in-range target after walked-road patrol; change strategy required')"
   ],
   "deaths": 0,
   "note": "the owner and its raw report stay in .cache/desktop-check; this file is the evidence summary of the live runs"
