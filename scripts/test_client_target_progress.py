@@ -1,4 +1,10 @@
-"""The controller must give up on a target that takes no damage."""
+"""The controller must give up on a target that takes no damage.
+
+The small-drop heuristic was removed on 2026-11-10: a partial hit or a
+projectile that is sampled in flight is progress, not evidence of resistance.
+The fight stays bounded by the attempt budget instead, and these tests keep
+that bound honest.
+"""
 import unittest
 from client_combat_controller import CombatController, MIN_TARGET_PROGRESS
 
@@ -34,17 +40,18 @@ class Driver:
 
 
 class InsufficientProgressTest(unittest.TestCase):
-    def test_a_target_that_takes_no_damage_is_abandoned(self):
+    def test_a_target_that_takes_no_damage_is_abandoned_by_the_budget(self):
         driver = Driver()
         driver.controller.bind_target(state())
         driver.warm()
-        # A cast is issued at a target with 120 health.
-        driver.controller.record_attempt(120)
-        # The health drops by one point only, which is below the progress
-        # that a spell of this level can achieve.
-        decision = driver.frame(target_health=120 - MIN_TARGET_PROGRESS + 1)
-        self.assertEqual(decision['decision'], 'RECOVER')
-        self.assertEqual(decision['reason'], 'target_resists')
+        decisions = []
+        for _ in range(driver.controller.max_attempts):
+            driver.controller.record_attempt(120)
+            decisions.append(driver.frame(target_health=120))
+        self.assertEqual(decisions[-1]['decision'], 'RECOVER')
+        self.assertEqual(decisions[-1]['reason'], 'attempt_budget_exhausted')
+        for decision in decisions[:-1]:
+            self.assertEqual(decision['decision'], 'CAST_ALLOWED')
 
     def test_a_normal_drop_keeps_the_fight_going(self):
         driver = Driver()
@@ -52,16 +59,25 @@ class InsufficientProgressTest(unittest.TestCase):
         driver.warm()
         driver.controller.record_attempt(120)
         decision = driver.frame(target_health=120 - MIN_TARGET_PROGRESS)
+        self.assertEqual(decision['decision'], 'CAST_ALLOWED')
+
+    def test_a_small_drop_is_not_read_as_resistance(self):
+        driver = Driver()
+        driver.controller.bind_target(state())
+        driver.warm()
+        driver.controller.record_attempt(120)
+        decision = driver.frame(target_health=120 - MIN_TARGET_PROGRESS + 1)
         self.assertNotEqual(decision.get('reason'), 'target_resists')
+        self.assertEqual(decision['decision'], 'CAST_ALLOWED')
 
     def test_a_quiet_frame_between_casts_is_not_a_recovery(self):
         driver = Driver()
         driver.controller.bind_target(state())
         driver.warm()
         driver.controller.record_attempt(120)
-        # The cast has not resolved yet, so the health did not change.
         decision = driver.frame(target_health=120)
         self.assertNotEqual(decision.get('reason'), 'target_resists')
+        self.assertEqual(decision['decision'], 'CAST_ALLOWED')
 
     def test_the_first_observation_is_not_a_recovery(self):
         driver = Driver()
@@ -69,6 +85,7 @@ class InsufficientProgressTest(unittest.TestCase):
         driver.warm()
         decision = driver.frame(target_health=120)
         self.assertNotEqual(decision.get('reason'), 'target_resists')
+        self.assertEqual(decision['decision'], 'CAST_ALLOWED')
 
 
 if __name__ == '__main__':

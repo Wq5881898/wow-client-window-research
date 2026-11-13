@@ -64,6 +64,7 @@ class CombatController:
         # The health of the target before the last cast, so the drop that the
         # cast caused can be judged.
         self.cast_health_before = None
+        self.ui_error_baseline = 0
 
     def _recover(self, reason):
         self.recovery = {'decision': 'RECOVER', 'reason': reason}
@@ -84,6 +85,8 @@ class CombatController:
         self.last_target_health = state['target_health']
         self.last_target_dead = bool(state.get('target_dead'))
         self.event_baseline = state.get('event_serial') or 0
+        self.last_event_serial = self.event_baseline
+        self.ui_error_baseline = state.get('ui_errors') or 0
         self.hit_serials = set()
         self.successful_casts = 0
         return {'decision': 'BOUND', 'reason': 'target_confirmed'}
@@ -102,6 +105,8 @@ class CombatController:
         self.successful_casts = 0
         self.hit_serials = set()
         self.event_baseline = state.get('event_serial') or 0
+        self.last_event_serial = self.event_baseline
+        self.ui_error_baseline = state.get('ui_errors') or 0
         self.attempts = 0
         self.recovery = None
         self.target_recovered = False
@@ -193,8 +198,9 @@ class CombatController:
         if self.cast_health_before is not None:
             drop = self.cast_health_before - state['target_health']
             self.cast_health_before = None
-            if 0 < drop < MIN_TARGET_PROGRESS:
-                return self._recover('target_resists')
+            # A small partial hit or projectile sampled in flight is progress,
+            # not evidence of resistance. The attempt/health budgets still
+            # bound a fight that cannot finish.
         if state['casting']:
             return {'decision': 'WAIT', 'reason': 'casting'}
         if not fresh:
@@ -209,6 +215,9 @@ class CombatController:
 
         # A failed cast that the probe already reported must not be retried
         # blindly; the reason decides whether closing distance can help.
+        ui_count = state.get('ui_errors') or 0
+        new_ui_error = ui_count > self.ui_error_baseline
+        self.ui_error_baseline = max(self.ui_error_baseline, ui_count)
         failure = self._latest_failure(state)
         if failure is not None:
             reason = failure['reason']
@@ -223,7 +232,7 @@ class CombatController:
                 return {'decision': 'TURN', 'reason': 'cast_' + str(reason)}
             if reason in RETRYABLE_REASONS:
                 return {'decision': 'CLOSE_DISTANCE', 'reason': 'cast_' + str(reason)}
-        if state.get('last_error_reason') == REASON_FACING:
+        if new_ui_error and state.get('last_error_reason') == REASON_FACING:
             return {'decision': 'TURN', 'reason': 'cast_' + str(REASON_FACING)}
 
         if self.attempts >= self.max_attempts:
@@ -250,14 +259,17 @@ class CombatController:
 
     def _latest_failure(self, state):
         """Return the newest failed cast event for the bound spell, if any."""
-        events = state.get('events') or []
-        for event in reversed(events):
-            if not event.get('serial'):
-                continue
-            if event.get('serial') == self.last_event_serial:
-                continue
-            if event.get('kind') in (3, 4) and event.get('spell') == self.spell_id:
-                self.last_event_serial = event['serial']
+        # Probe events are a ring, not necessarily chronological list order.
+        # Consume the newest outcome, including success, so an older failure
+        # cannot be replayed after a newer successful cast or across fights.
+        outcomes = [event for event in state.get('events') or []
+                    if event.get('spell') == self.spell_id
+                    and event.get('kind') in (2, 3, 4)
+                    and (event.get('serial') or 0) > (self.last_event_serial or 0)]
+        if outcomes:
+            event = max(outcomes, key=lambda item: item['serial'])
+            self.last_event_serial = event['serial']
+            if event['kind'] in (3, 4):
                 return event
         return None
 

@@ -1,0 +1,167 @@
+{
+  "run": "client_path_dryrun_1794536249186421900",
+  "trail_points": 219,
+  "threats": [
+    {
+      "pos": [
+        0.485999847409781,
+        0.5848935683222706
+      ],
+      "kind": "fight"
+    },
+    {
+      "pos": [
+        0.39298084992751964,
+        0.6048065918974593
+      ],
+      "kind": "death"
+    }
+  ],
+  "start": [
+    0.49542992294193944,
+    0.606027313649195
+  ],
+  "rows": [
+    {
+      "id": "initial",
+      "trail_index": 0,
+      "pos": [
+        0.4457770656900893,
+        0.6245517662317845
+      ],
+      "visual": true,
+      "legacy": {
+        "waypoints": 123,
+        "length": 0.12262114560675652,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 25
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road1",
+      "trail_index": 27,
+      "pos": [
+        0.44672312504768447,
+        0.6136568245975433
+      ],
+      "visual": false,
+      "legacy": {
+        "waypoints": 109,
+        "length": 0.11094808441426203,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 23
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road2",
+      "trail_index": 49,
+      "pos": [
+        0.4504768444342718,
+        0.6009308003356985
+      ],
+      "visual": false,
+      "legacy": {
+        "waypoints": 96,
+        "length": 0.09754026518165837,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 21
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road3",
+      "trail_index": 71,
+      "pos": [
+        0.4553749904631113,
+        0.5918364232852674
+      ],
+      "visual": false,
+      "legacy": {
+        "waypoints": 84,
+        "length": 0.08675474843595607,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 19
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road4",
+      "trail_index": 100,
+      "pos": [
+        0.4695963988708324,
+        0.5916227969787137
+      ],
+      "visual": true,
+      "legacy": {
+        "waypoints": 68,
+        "length": 0.0722510536203708,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 17
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road5",
+      "trail_index": 128,
+      "pos": [
+        0.48032349126421,
+        0.5900205996795606
+      ],
+      "visual": true,
+      "legacy": {
+        "waypoints": 56,
+        "length": 0.06118874888461555,
+        "danger_hits": 15,
+        "teleport_hits": 1,
+        "repeated_nodes": 15
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    },
+    {
+      "id": "road6",
+      "trail_index": 147,
+      "pos": [
+        0.48593881132219424,
+        0.5848020141908904
+      ],
+      "visual": true,
+      "legacy": {
+        "waypoints": 48,
+        "length": 0.05413650450628408,
+        "danger_hits": 11,
+        "teleport_hits": 2,
+        "repeated_nodes": 10
+      },
+      "safe": {
+        "refused": true,
+        "reason": "no_safe_route"
+      }
+    }
+  ],
+  "note": "offline replay of the owner retreat rule; no client input"
+}

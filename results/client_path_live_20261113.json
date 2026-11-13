@@ -1,0 +1,110 @@
+{
+  "run": "client_path_live_20261113",
+  "at": 1794541690.6771383,
+  "character": {
+    "level": 9,
+    "xp": 226,
+    "xp_max": 6500,
+    "health": 172,
+    "max_health": 172,
+    "power": 378,
+    "alive": true,
+    "out_of_combat": true,
+    "deaths_today": 0
+  },
+  "certified_points": [
+    {
+      "id": "initial",
+      "pos": [
+        0.44586861982146947,
+        0.624780651560235
+      ],
+      "visual": true
+    },
+    {
+      "id": "road1",
+      "pos": [
+        0.4470283054856184,
+        0.6130312046997788
+      ],
+      "visual": true
+    },
+    {
+      "id": "road2",
+      "pos": [
+        0.45059891660944534,
+        0.6009765774013885
+      ],
+      "visual": true
+    },
+    {
+      "id": "road3",
+      "pos": [
+        0.45525291828793774,
+        0.592111085679408
+      ],
+      "visual": true
+    },
+    {
+      "id": "road4",
+      "pos": [
+        0.4699778744182498,
+        0.5917143511100939
+      ],
+      "visual": true
+    },
+    {
+      "id": "road5",
+      "pos": [
+        0.4803387502861067,
+        0.5896543831540398
+      ],
+      "visual": true
+    },
+    {
+      "id": "road6",
+      "pos": [
+        0.485801480125124,
+        0.5848783093003739
+      ],
+      "visual": true
+    }
+  ],
+  "trail_points": 878,
+  "drills": [
+    {
+      "time": 1794541489.72194,
+      "op": "retreat",
+      "target": "initial"
+    }
+  ],
+  "path_analyses": [
+    {
+      "time": 1794541489.9499648,
+      "target": "initial",
+      "waypoints": 41,
+      "length": 0.026065462792744982,
+      "nodes": 41,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    },
+    {
+      "time": 1794541530.8881156,
+      "target": "road1",
+      "waypoints": 4,
+      "length": 0.0024414578374535403,
+      "nodes": 4,
+      "danger_edges": 0,
+      "teleport_edges": 0
+    }
+  ],
+  "refused_paths": [],
+  "fights": [],
+  "selections": 0,
+  "selection_accepted": 0,
+  "exceptions": [
+    "RuntimeError('route no_progress')"
+  ],
+  "deaths": 0,
+  "note": "the owner and its raw report stay in .cache/desktop-check; this file is the evidence summary of the live runs"
+}

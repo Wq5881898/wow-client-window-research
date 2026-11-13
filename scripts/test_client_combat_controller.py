@@ -136,8 +136,37 @@ class CombatControllerTests(unittest.TestCase):
         driver = Driver()
         driver.controller.bind_target(state())
         driver.warm()
-        decision = driver.frame(last_error_reason=REASON_FACING)
+        decision = driver.frame(last_error_reason=REASON_FACING, ui_errors=1)
         self.assertEqual(decision['decision'], 'TURN')
+
+    def test_old_ui_facing_error_does_not_retrigger_after_success(self):
+        driver = Driver()
+        driver.controller.bind_target(state(ui_errors=7, last_error_reason=5))
+        driver.warm()
+        decision = driver.frame(ui_errors=7, last_error_reason=5,
+                                events=[event(9, 2)])
+        self.assertEqual(decision['decision'], 'CAST_ALLOWED')
+
+    def test_new_ui_facing_error_is_consumed_once(self):
+        driver = Driver()
+        driver.controller.bind_target(state(ui_errors=7))
+        driver.warm()
+        self.assertEqual(driver.frame(ui_errors=8, last_error_reason=5)['decision'], 'TURN')
+        self.assertEqual(driver.frame(ui_errors=8, last_error_reason=5)['decision'], 'CAST_ALLOWED')
+
+    def test_newer_success_supersedes_failure_in_unsorted_probe_ring(self):
+        driver = Driver()
+        driver.controller.bind_target(state(event_serial=10))
+        driver.warm()
+        ring = [event(12, 2), event(11, 3, reason=5)]
+        self.assertEqual(driver.frame(events=ring)['decision'], 'CAST_ALLOWED')
+        self.assertEqual(driver.frame(events=ring)['decision'], 'CAST_ALLOWED')
+
+    def test_binding_excludes_previous_fight_failure(self):
+        driver = Driver()
+        driver.controller.bind_target(state(event_serial=10))
+        driver.warm()
+        self.assertEqual(driver.frame(events=[event(9, 3, reason=5)])['decision'], 'CAST_ALLOWED')
 
     def test_invalid_target_failure_recovers(self):
         driver = Driver()

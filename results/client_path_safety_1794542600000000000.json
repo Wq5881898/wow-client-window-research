@@ -1,0 +1,40 @@
+{
+  "trail_points": 219,
+  "walk_edges": 217,
+  "teleport_edges": 1,
+  "danger_edges": 29,
+  "danger_points": [
+    {
+      "pos": [
+        0.485999847409781,
+        0.5848935683222706
+      ],
+      "kind": "fight"
+    },
+    {
+      "pos": [
+        0.39298084992751964,
+        0.6048065918974593
+      ],
+      "kind": "death"
+    }
+  ],
+  "legacy": {
+    "waypoints": 48,
+    "length": 0.05413650450628408,
+    "danger_hits": 12,
+    "teleport_hits": 0,
+    "invented_legs": 6,
+    "repeated_nodes": 10
+  },
+  "safe": {
+    "refused": true,
+    "reason": "no_safe_route",
+    "waypoints": 0,
+    "length": 0.0,
+    "danger_hits": 0,
+    "teleport_hits": 0,
+    "repeated_nodes": 0,
+    "nodes": []
+  }
+}
