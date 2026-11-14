@@ -58,8 +58,10 @@ def main():
                            'combat': state['combat']}
         evidence.capture('01-start', state)
 
-        for command in ('resurrect', 'gm on', 'revive', 'heal', 'unlearn all'):
-            send(hwnd, '/' + command, settle=2.0)
+        # The game master commands carry a dot, not a slash: the slash form
+        # is a player command and never reached the character.
+        for command in ('.resurrect', '.gm on', '.revive', '.heal', '.unlearn all'):
+            send(hwnd, command, settle=2.0)
             try:
                 state = reader()
             except ValueError:
